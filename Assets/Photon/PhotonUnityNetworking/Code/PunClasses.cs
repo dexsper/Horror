@@ -271,7 +271,7 @@ namespace Photon.Pun
         /// If your game starts with a certain number of players, this callback can be useful to check the
         /// Room.playerCount and find out if you can start.
         /// </remarks>
-        public virtual void OnPlayerEnteredRoom(Player newPlayer)
+        public virtual void OnPlayerEnteredRoom(Player player)
         {
         }
 

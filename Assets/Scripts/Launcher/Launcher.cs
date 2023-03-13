@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
@@ -15,7 +16,10 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     [SerializeField] private Transform roomListContainer;
     [SerializeField] private RoomListItem roomItemPrefab;
-    
+
+    [SerializeField] private Transform playerList;
+    [SerializeField] private PlayerListItem playerNamePrefab;
+        
     private void Start()
     {
         EventManager.OnLeaveRoom += LeaveRoom;
@@ -31,6 +35,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     public override void OnJoinedLobby()
     {
         Debug.Log("Joined The Lobby");
+        PhotonNetwork.NickName = $"Player  {Random.Range(0, 20)}";
     }
 
     public void CreateRoom(string roomName)
@@ -46,6 +51,12 @@ public class Launcher : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         Debug.Log("Player joined the room");
+
+        Player[] players = PhotonNetwork.PlayerList;
+        for (int i = 0; i < players.Length; i++)
+        {
+            Instantiate(playerNamePrefab,playerList).SetUp(players[i]);
+        }
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -74,5 +85,10 @@ public class Launcher : MonoBehaviourPunCallbacks
         {
             Instantiate(roomItemPrefab,roomListContainer).SetUp(roomList[i]);
         }
+    }
+
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        Instantiate(playerNamePrefab,playerList).SetUp(newPlayer);
     }
 }

@@ -12,6 +12,34 @@
         <e p="Editor" t="Include">
           <e p="com.unity.mobile.notifications" t="Include" />
         </e>
+        <e p="ParrelSync" t="Include">
+          <e p="Examples" t="Include">
+            <e p="CustomArgumentExample.cs" t="Include" />
+          </e>
+          <e p="ParrelSync" t="Include">
+            <e p="Editor" t="Include">
+              <e p="AssetModBlock" t="Include">
+                <e p="EditorQuit.cs" t="Include" />
+                <e p="ParrelSyncAssetModificationProcessor.cs" t="Include" />
+              </e>
+              <e p="ClonesManager.cs" t="Include" />
+              <e p="ClonesManagerWindow.cs" t="Include" />
+              <e p="ExternalLinks.cs" t="Include" />
+              <e p="FileUtilities.cs" t="Include" />
+              <e p="NonCore" t="Include">
+                <e p="AskFeedbackDialog.cs" t="Include" />
+                <e p="OtherMenuItem.cs" t="Include" />
+              </e>
+              <e p="Preferences.cs" t="Include" />
+              <e p="Project.cs" t="Include" />
+              <e p="UpdateChecker.cs" t="Include" />
+              <e p="ValidateCopiedFoldersIntegrity.cs" t="Include" />
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="projectCloner.asmdef" t="Include" />
+          </e>
+          <e p="VERSION.txt" t="Include" />
+        </e>
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -458,6 +486,7 @@
           </e>
           <e p="Launcher" t="Include">
             <e p="Launcher.cs" t="Include" />
+            <e p="PlayerListItem.cs" t="Include" />
             <e p="RoomListItem.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
@@ -558,6 +587,7 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Online-Horror.sln" t="IncludeFlat" />
       <e p="Packages" t="ExcludeRecursive" />
+      <e p="ParrelSync.csproj" t="IncludeRecursive" />
       <e p="PhotonChat.csproj" t="IncludeRecursive" />
       <e p="PhotonRealtime.csproj" t="IncludeRecursive" />
       <e p="PhotonUnityNetworking.csproj" t="IncludeRecursive" />
