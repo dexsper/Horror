@@ -449,11 +449,16 @@
             </e>
           </e>
         </e>
+        <e p="Prefabs" t="Include" />
         <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Events" t="Include">
+            <e p="EventManager.cs" t="Include" />
+          </e>
           <e p="Launcher" t="Include">
             <e p="Launcher.cs" t="Include" />
+            <e p="RoomListItem.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
             <e p="MenuUI.cs" t="Include" />
