@@ -27,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Launcher/Launcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Launcher/Launcher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Launcher/RoomListItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Launcher/RoomListItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Room.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Launcher/RoomListItem.cs" />
         <option value="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Code/PunClasses.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Launcher/Launcher.cs" />
         <option value="$PROJECT_DIR$/Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs" />
         <option value="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/UtilityScripts/PhotonPlayer/PlayerNumbering.cs" />
         <option value="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/UtilityScripts/PhotonPlayer/PunTeams.cs" />
@@ -59,6 +59,7 @@
         <option value="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Lobby/LobbyMainPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/PunCockpit/Scripts/Lists/PlayerListView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Launcher/PlayerListItem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Launcher/Launcher.cs" />
       </list>
     </option>
   </component>
@@ -101,7 +102,7 @@
       <option name="presentableId" value="Default" />
       <updated>1678521738390</updated>
       <workItem from="1678521761336" duration="4478000" />
-      <workItem from="1678699832533" duration="6820000" />
+      <workItem from="1678699832533" duration="7405000" />
     </task>
     <servers />
   </component>
