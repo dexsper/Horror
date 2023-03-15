@@ -18,6 +18,8 @@ public class MenuUI : MonoBehaviour
     #endregion
     
     [field: SerializeField] public Room RoomMenu { get; private set; }
+
+    [SerializeField] private Transform createdRoomMenu, findGameMenu;
     
     [Range(4,12)]
     [SerializeField] private int roomNameMinLength, roomNameMaxLength;
@@ -30,6 +32,26 @@ public class MenuUI : MonoBehaviour
 
     #region OpenCloseMenues
 
+    public void OpenCreatedRoomMenu()
+    {
+        OpenMenu(createdRoomMenu);
+    }
+
+    public void CloseCreatedRoomMenu()
+    {
+        CloseMenu(createdRoomMenu);
+    }
+    
+    public void OpenFindGameMenu()
+    {
+        OpenMenu(findGameMenu);
+    }
+
+    public void CloseFindGameMenu()
+    {
+        CloseMenu(findGameMenu);
+    }
+    
     public void OpenMenu(Transform menu)
     {
         menu.DOScale(1, animationDuration).From(0).SetEase(Ease.Linear);

@@ -12,14 +12,14 @@ public class RoomListItem : MonoBehaviour
    [SerializeField] private TextMeshProUGUI roomPlayerCount;
    [SerializeField] private Button joinRoomButton;
 
-   [field: SerializeField] public int maxPlayersCount { get; private set; } = 4;
+   private RoomInfo _info;
+   [field: SerializeField] public int maxPlayersCount { get; private set; } = 4; 
 
    private void Awake()
    {
       joinRoomButton.onClick.AddListener(OnClick);
    }
-
-   private RoomInfo _info;
+   
    public void SetUp(RoomInfo roomInfo)
    {
       _info = roomInfo;
@@ -29,6 +29,8 @@ public class RoomListItem : MonoBehaviour
 
    private void OnClick()
    {
+      MenuUI.Instance.OpenCreatedRoomMenu();
+      MenuUI.Instance.CloseFindGameMenu();
       Launcher.Instance.JoinRoom(_info);
    }
 }

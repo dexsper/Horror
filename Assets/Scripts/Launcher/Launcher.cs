@@ -53,6 +53,10 @@ public class Launcher : MonoBehaviourPunCallbacks
         Debug.Log("Player joined the room");
 
         Player[] players = PhotonNetwork.PlayerList;
+        for (int i = 0; i < playerList.childCount; i++)
+        {
+            Destroy(playerList.GetChild(i).gameObject);
+        }
         for (int i = 0; i < players.Length; i++)
         {
             Instantiate(playerNamePrefab,playerList).SetUp(players[i]);
@@ -83,6 +87,8 @@ public class Launcher : MonoBehaviourPunCallbacks
         
         for (int i = 0; i < roomList.Count; i++)
         {
+            if(roomList[i].RemovedFromList)
+                continue;
             Instantiate(roomItemPrefab,roomListContainer).SetUp(roomList[i]);
         }
     }

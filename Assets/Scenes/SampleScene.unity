@@ -633,7 +633,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1156.8468}
+  m_AnchoredPosition: {x: 0, y: -5642.155}
   m_SizeDelta: {x: 750, y: 1521.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &233583870
@@ -2681,7 +2681,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -79931.5}
+  m_AnchoredPosition: {x: 0, y: -98153.23}
   m_SizeDelta: {x: 1300, y: 1876.3716}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1229330171
@@ -3316,6 +3316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <RoomMenu>k__BackingField: {fileID: 1088989725}
+  createdRoomMenu: {fileID: 1088989722}
+  findGameMenu: {fileID: 1911824581}
   roomNameMinLength: 4
   roomNameMaxLength: 12
   inputField: {fileID: 1650659469}
