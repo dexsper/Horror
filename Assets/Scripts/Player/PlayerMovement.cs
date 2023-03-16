@@ -41,19 +41,24 @@ public class PlayerMovement : MonoBehaviour
         _playerTransform = gameObject.transform;
         _playerAnimator = GetComponent<PlayerAnimator>();
     }
-    
+
     private void Update()
     {
-        _playerAnimator.SetBlendParameter(-_horizontal,_horizontal,_vertical,-_vertical);
-        
+        if (!PlayerComponents.Instance.isLocalPlayer)
+        {
+            return;
+        }
+
+        _playerAnimator.SetBlendParameter(-_horizontal, _horizontal, _vertical, -_vertical);
         if (IsRunning)
         {
             playerJoystick.enabled = false;
             _playerRb.AddForce(transform.forward * _trueSpeed);
             if (_playerRb.velocity.magnitude >= maxSpeed)
             {
-                _playerRb.velocity =_playerRb.velocity.normalized * maxSpeed;
+                _playerRb.velocity = _playerRb.velocity.normalized * maxSpeed;
             }
+
             //_playerTransform.Translate(Vector3.forward * _velocity.x);
             _playerAnimator.StartRunAnimation();
         }
@@ -66,6 +71,11 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!PlayerComponents.Instance.isLocalPlayer)
+        {
+            return;
+        }
+        
         _playerTransform.rotation = Quaternion.Euler(_playerTransform.rotation.eulerAngles.x,
             _playerCamera.rotation.eulerAngles.y, _playerTransform.rotation.eulerAngles.z);
 

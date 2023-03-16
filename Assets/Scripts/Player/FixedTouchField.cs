@@ -4,17 +4,18 @@ using UnityEngine.EventSystems;
 
 public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    [HideInInspector]
-    public Vector2 TouchDist;
-    [HideInInspector]
-    public Vector2 PointerOld;
-    [HideInInspector]
-    protected int PointerId;
-    [HideInInspector]
-    public bool Pressed;
+    [HideInInspector] public Vector2 TouchDist;
+    [HideInInspector] public Vector2 PointerOld;
+    [HideInInspector] protected int PointerId;
+    [HideInInspector] public bool Pressed;
 
     void Update()
     {
+        if (!PlayerComponents.Instance.isLocalPlayer)
+        {
+            return;
+        }
+
         if (Pressed)
         {
             if (PointerId >= 0 && PointerId < Input.touches.Length)
@@ -45,5 +46,4 @@ public class FixedTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHan
     {
         Pressed = false;
     }
-    
 }
