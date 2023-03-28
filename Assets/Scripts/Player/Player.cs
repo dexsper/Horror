@@ -1,14 +1,22 @@
+using System;
+using Cinemachine;
+using FishNet.Component.Prediction;
 using FishNet.Object;
 using UnityEngine;
 using Zenject;
 
 public class Player : NetworkBehaviour
 {
-    [SerializeField]
-    private float cameraYOffset = 0.4f;
+    [SerializeField] private float cameraYOffset = 0.4f;
+    [SerializeField] private Transform cameraLook;
+    [SerializeField] private CinemachineVirtualCamera _cameraPrefab; 
+    private PredictedObject _predictedObject;
+    public CinemachineVirtualCamera Camera { get; private set; }
 
-    public Transform PlayerCameraTransform { get; private set; }
-    public Camera PlayerCamera { get; private set; }
+    private void Awake()
+    {
+        _predictedObject = GetComponent<PredictedObject>();
+    }
 
     public override void OnStartClient()
     {
@@ -17,10 +25,14 @@ public class Player : NetworkBehaviour
         if(base.IsOwner)
         {
             FindObjectOfType<SceneContext>().Container.InjectGameObject(gameObject);
-            PlayerCamera = Camera.main;
-            PlayerCameraTransform = PlayerCamera.GetComponent<Transform>();
-            PlayerCamera.transform.position = new Vector3(transform.position.x, transform.position.y + cameraYOffset, transform.position.z);
-            PlayerCamera.transform.SetParent(transform);
+            CreateCamera();
         }
+    }
+
+    private void CreateCamera()
+    {
+        Camera = Instantiate(_cameraPrefab);
+        Camera.Follow = _predictedObject.GetGraphicalObject();
+        Camera.LookAt = cameraLook;
     }
 }

@@ -9,22 +9,21 @@ public class PlayerMovement : NetworkBehaviour
 {
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _gravityMultiplier = 4f;
-    [SerializeField] private float sensitivity;
+    [SerializeField] private float lookSensitivity = 20f;
+    
     
     private float _xRototation;
     private bool _lockCursor;
-    private Transform _playerBody;
+    
 
     private IPlayerInput _playerInput;
     private Rigidbody _rigidbody;
-    private Player _player;
+    
 
     private void Awake()
     {
         _playerInput = GetComponent<IPlayerInput>();
         _rigidbody = GetComponent<Rigidbody>();
-        _playerBody = _rigidbody.gameObject.transform;
-        _player = GetComponent<Player>();
 
         InstanceFinder.TimeManager.OnTick += TimeManager_OnTick;
         InstanceFinder.TimeManager.OnPostTick += TimeManager_OnPostTick;
@@ -64,15 +63,12 @@ public class PlayerMovement : NetworkBehaviour
         {
             Reconciliation(default, false);
             BuildMoveData(out MoveData md);
-            BuildLookData(out LookData ld);
             Move(md, false);
-            LookRotation(ld);
         }
 
         if (base.IsServer)
         {
             Move(default, true);
-            LookRotation(default);
         }
 
         AddGravity();
@@ -89,40 +85,17 @@ public class PlayerMovement : NetworkBehaviour
         }
     }
 
-    private void LookRotation(LookData ld)
-    {
-        float mouX = ld.Horizontal * sensitivity * Time.deltaTime;
-        float mouY = ld.Vertical * sensitivity * Time.deltaTime;
 
-        _xRototation -= mouY;
-        _xRototation = Mathf.Clamp(_xRototation, -90f, 35f);
-
-        
-        _player.PlayerCameraTransform.localRotation = Quaternion.Euler(_xRototation, 0f, 0f);
-
-        _playerBody.Rotate(Vector3.up * mouX);
-    }
-
-    private void BuildLookData(out LookData ld)
-    {
-        ld = default;
-        var look = _playerInput.LookDirection;
-        
-        if(look == Vector2.zero)
-            return;
-        ld = new LookData(look.x,look.y);
-    }
-
-private void BuildMoveData(out MoveData md)
+    private void BuildMoveData(out MoveData md)
     {
         md = default;
 
         var movement = _playerInput.Movement;
 
-        if (movement == Vector2.zero)
+        if (movement == Vector2.zero && _playerInput.LookDirection.x == 0f)
             return;
 
-        md = new MoveData(movement.x, movement.y);
+        md = new MoveData(movement.x, movement.y,_playerInput.LookDirection.x);
     }
 
     private void AddGravity()
@@ -133,27 +106,17 @@ private void BuildMoveData(out MoveData md)
     [Replicate]
     private void Move(MoveData md,bool asServer, Channel channel = Channel.Unreliable, bool replaying = false)
     {
-        Vector3 velocity = new Vector3(md.Horizontal, 0f, md.Vertical) * _speed;
+        float delta = (float) base.TimeManager.TickDelta;
+        
+        Quaternion forwardDirection = Quaternion.LookRotation(transform.forward, transform.up);
+        Vector3 velocity = forwardDirection * new Vector3(md.Horizontal, 0f, md.Vertical) * _speed;
         
         _rigidbody.velocity = velocity;
         
-       
+        Vector3 targetRotation = new Vector3();
+        targetRotation.y = transform.localEulerAngles.y + (md.Rotation * lookSensitivity) * delta;
+        transform.localEulerAngles = targetRotation;
     }
-
-    
-    /*private void Look(LookData ld, bool asServer, Channel channel = Channel.Unreliable, bool replaying = false)
-    {
-        
-        float mouX = ld.Horizontal * sensitivity * Time.deltaTime;
-        float mouY = ld.Vertical * sensitivity * Time.deltaTime;
-
-        _xRototation -= mouY;
-        _xRototation = Mathf.Clamp(_xRototation, -90f, 35f);
-
-        transform.localRotation = Quaternion.Euler(_xRototation, 0f, 0f);
-
-        _playerBody.Rotate(Vector3.up * mouX);
-    }*/
 
     [Reconcile]
     private void Reconciliation(ReconcileData rd, bool asServer, Channel channel = Channel.Unreliable)

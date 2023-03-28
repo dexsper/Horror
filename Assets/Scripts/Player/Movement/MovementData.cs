@@ -5,33 +5,13 @@ public struct MoveData : IReplicateData
 {
     public float Horizontal;
     public float Vertical;
-
-    public MoveData(float horizontal, float vertical)
+    public float Rotation;
+    
+    public MoveData(float horizontal, float vertical,float rotation)
     {
         Horizontal = horizontal;
         Vertical = vertical;
-        _tick = 0;
-    }
-
-    private uint _tick;
-
-    public void Dispose()
-    {
-    }
-
-    public uint GetTick() => _tick;
-    public void SetTick(uint value) => _tick = value;
-}
-
-public struct LookData : IReplicateData
-{
-    public float Horizontal;
-    public float Vertical;
-
-    public LookData(float hor, float ver)
-    {
-        Horizontal = hor;
-        Vertical = ver;
+        Rotation = rotation;
         _tick = 0;
     }
 

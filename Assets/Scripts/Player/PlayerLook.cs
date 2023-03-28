@@ -1,29 +1,29 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
+using FishNet.Object;
 using UnityEngine;
 
-public class PlayerLook : MonoBehaviour
+public class PlayerLook : NetworkBehaviour
 {
-    [SerializeField] private Transform playerBody;
-    [SerializeField] private float sensitivity = 100f;
-    private float _xRototation;
-    private bool _lockCursor;
+    /*[SerializeField] private float sensitivity;
+    [SerializeField] private Vector3 rotationAngle;
+    
+    private Player _player;
+    private IPlayerInput _playerInput;
 
-    [SerializeField] private PlayerTouchField fixedTouchField;
-    [HideInInspector] public Vector2 LockAxis;
-
-    void Update()
+    private void Awake()
     {
-        LockAxis = fixedTouchField.TouchDist;
-
-        float mouX = LockAxis.x * sensitivity * Time.deltaTime;
-        float mouY = LockAxis.y * sensitivity * Time.deltaTime;
-
-        _xRototation -= mouY;
-        _xRototation = Mathf.Clamp(_xRototation, -90f, 35f);
-
-        transform.localRotation = Quaternion.Euler(_xRototation, 0f, 0f);
-
-        playerBody.Rotate(Vector3.up * mouX);
+        _player = GetComponent<Player>();
+        _playerInput = GetComponent<IPlayerInput>();
     }
+    
+    private void Update()
+    {
+        if (!base.IsOwner)
+            return;
+        
+        transform.Rotate(rotationAngle);
+    }*/
 }

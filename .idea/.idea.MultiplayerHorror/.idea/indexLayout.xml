@@ -4,6 +4,7 @@
     <attachedFolders />
     <explicitIncludes>
       <Path>Library/PackageCache/com.unity.adaptiveperformance@4.0.1</Path>
+      <Path>Library/PackageCache/com.unity.cinemachine@2.8.9</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.17.7</Path>
       <Path>Library/PackageCache/com.unity.ext.nunit@1.0.6</Path>
       <Path>Library/PackageCache/com.unity.ide.rider@3.0.16</Path>
