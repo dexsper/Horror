@@ -1977,14 +1977,19 @@
           <e p="Installers" t="Include">
             <e p="DiContainerInstaller.cs" t="Include" />
             <e p="JoystickInstaller.cs" t="Include" />
+            <e p="TouchFieldInstaller.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="IPlayerInput.cs" t="Include" />
             <e p="Movement" t="Include">
               <e p="MovementData.cs" t="Include" />
               <e p="PlayerMovement.cs" t="Include" />
+              <e p="Surface.cs" t="Include" />
             </e>
+            <e p="Player.cs" t="Include" />
             <e p="PlayerInput.cs" t="Include" />
+            <e p="PlayerLook.cs" t="Include" />
+            <e p="PlayerTouchField.cs" t="Include" />
           </e>
           <e p="PlayerSpawner.cs" t="Include" />
           <e p="SleepTIme.cs" t="Include" />
