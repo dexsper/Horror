@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -31,6 +32,7 @@ public class PlayerTouchField : MonoBehaviour, IPointerDownHandler, IPointerUpHa
         {
             TouchDist = new Vector2();
         }
+        
     }
 
     public void OnPointerDown(PointerEventData eventData)

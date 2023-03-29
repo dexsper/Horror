@@ -7,11 +7,13 @@ using Zenject;
 
 public class Player : NetworkBehaviour
 {
-    [SerializeField] private float cameraYOffset = 0.4f;
     [SerializeField] private Transform cameraLook;
-    [SerializeField] private CinemachineVirtualCamera _cameraPrefab; 
+    [SerializeField] private CinemachineVirtualCamera _cameraPrefab;
+
     private PredictedObject _predictedObject;
+    
     public CinemachineVirtualCamera Camera { get; private set; }
+    public Transform CameraLook => cameraLook; 
 
     private void Awake()
     {

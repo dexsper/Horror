@@ -1,14 +1,11 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Cinemachine;
 using FishNet.Object;
 using UnityEngine;
 
 public class PlayerLook : NetworkBehaviour
 {
-    /*[SerializeField] private float sensitivity;
-    [SerializeField] private Vector3 rotationAngle;
+    [SerializeField] private Vector2 cameraYLookRange;
     
     private Player _player;
     private IPlayerInput _playerInput;
@@ -23,7 +20,12 @@ public class PlayerLook : NetworkBehaviour
     {
         if (!base.IsOwner)
             return;
+
+        Vector3 targetPosition = _player.CameraLook.transform.position;
+
+        targetPosition.y += _playerInput.LookDirection.y * Time.deltaTime;
+        targetPosition.y = Mathf.Clamp(targetPosition.y, cameraYLookRange.x, cameraYLookRange.y);
         
-        transform.Rotate(rotationAngle);
-    }*/
+        _player.CameraLook.transform.position = targetPosition;
+    }
 }

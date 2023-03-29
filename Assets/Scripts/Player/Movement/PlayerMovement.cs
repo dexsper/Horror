@@ -9,20 +9,21 @@ public class PlayerMovement : NetworkBehaviour
 {
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _gravityMultiplier = 4f;
-    [SerializeField] private float lookSensitivity = 20f;
-    
-    
+
+
     private float _xRototation;
     private bool _lockCursor;
     
 
     private IPlayerInput _playerInput;
+    private Player _player;
     private Rigidbody _rigidbody;
     
 
     private void Awake()
     {
         _playerInput = GetComponent<IPlayerInput>();
+        _player = GetComponent<Player>();
         _rigidbody = GetComponent<Rigidbody>();
 
         InstanceFinder.TimeManager.OnTick += TimeManager_OnTick;
@@ -108,13 +109,13 @@ public class PlayerMovement : NetworkBehaviour
     {
         float delta = (float) base.TimeManager.TickDelta;
         
-        Quaternion forwardDirection = Quaternion.LookRotation(transform.forward, transform.up);
-        Vector3 velocity = forwardDirection * new Vector3(md.Horizontal, 0f, md.Vertical) * _speed;
+        Quaternion forward = Quaternion.LookRotation(_player.CameraLook.forward);
+        Vector3 velocity = forward * new Vector3(md.Horizontal, 0f, md.Vertical) * _speed;
         
         _rigidbody.velocity = velocity;
         
         Vector3 targetRotation = new Vector3();
-        targetRotation.y = transform.localEulerAngles.y + (md.Rotation * lookSensitivity) * delta;
+        targetRotation.y = transform.localEulerAngles.y + md.Rotation  * delta;
         transform.localEulerAngles = targetRotation;
     }
 

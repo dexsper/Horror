@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497816db7f3e33b499ba1cfeb51d74dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lookSensitivity: {x: 20, y: 1}
 --- !u!114 &-1313480937129658134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +184,6 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 201277550}
   _speed: 12
   _gravityMultiplier: 6
-  lookSensitivity: 20
 --- !u!114 &5539716946378381922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +199,7 @@ MonoBehaviour:
   _componentIndexCache: 3
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
+  cameraYLookRange: {x: -3, y: 3}
 --- !u!1 &2455656388925132596
 GameObject:
   m_ObjectHideFlags: 0
