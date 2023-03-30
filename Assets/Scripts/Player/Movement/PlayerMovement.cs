@@ -93,10 +93,10 @@ public class PlayerMovement : NetworkBehaviour
 
         var movement = _playerInput.Movement;
 
-        if (movement == Vector2.zero && _playerInput.LookDirection.x == 0f)
+        if (movement == Vector2.zero && _playerInput.Look.x == 0f)
             return;
 
-        md = new MoveData(movement.x, movement.y,_playerInput.LookDirection.x);
+        md = new MoveData(movement.x, movement.y,_playerInput.Look.x);
     }
 
     private void AddGravity()

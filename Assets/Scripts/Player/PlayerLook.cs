@@ -23,7 +23,7 @@ public class PlayerLook : NetworkBehaviour
 
         Vector3 targetPosition = _player.CameraLook.transform.position;
 
-        targetPosition.y += _playerInput.LookDirection.y * Time.deltaTime;
+        targetPosition.y += _playerInput.Look.y * Time.deltaTime;
         targetPosition.y = Mathf.Clamp(targetPosition.y, cameraYLookRange.x, cameraYLookRange.y);
         
         _player.CameraLook.transform.position = targetPosition;

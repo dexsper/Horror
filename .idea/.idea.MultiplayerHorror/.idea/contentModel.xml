@@ -1973,14 +1973,23 @@
         <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
-          <e p="DiContainerRef.cs" t="Include" />
+          <e p="Input" t="Include">
+            <e p="IPlayerInput.cs" t="Include" />
+          </e>
           <e p="Installers" t="Include">
             <e p="DiContainerInstaller.cs" t="Include" />
+            <e p="InputInstaller.cs" t="Include" />
             <e p="JoystickInstaller.cs" t="Include" />
             <e p="TouchFieldInstaller.cs" t="Include" />
           </e>
+          <e p="Objects" t="Include">
+            <e p="Generator.cs" t="Include" />
+          </e>
           <e p="Player" t="Include">
-            <e p="IPlayerInput.cs" t="Include" />
+            <e p="Interaction" t="Include">
+              <e p="IInteractable.cs" t="Include" />
+              <e p="PlayerInteraction.cs" t="Include" />
+            </e>
             <e p="Movement" t="Include">
               <e p="MovementData.cs" t="Include" />
               <e p="PlayerMovement.cs" t="Include" />
@@ -1993,6 +2002,13 @@
           </e>
           <e p="PlayerSpawner.cs" t="Include" />
           <e p="SleepTIme.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="PlayerUIController.cs" t="Include" />
+            <e p="TouchField.cs" t="Include" />
+          </e>
+          <e p="Utils" t="Include">
+            <e p="DiContainerRef.cs" t="Include" />
+          </e>
         </e>
         <e p="Sprites" t="Include">
           <e p="Main Menu" t="Include" />
