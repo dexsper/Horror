@@ -5,7 +5,7 @@ using FishNet.Object;
 using UnityEngine;
 using Zenject;
 
-public class Player : NetworkBehaviour
+public class PlayerBehavior : NetworkBehaviour
 {
     [SerializeField] private Transform cameraLook;
     [SerializeField] private CinemachineVirtualCamera _cameraPrefab;
@@ -20,8 +20,8 @@ public class Player : NetworkBehaviour
     public CinemachineVirtualCamera Camera { get; private set; }
     public Transform CameraLook => cameraLook;
 
-    public static Player LocalPlayer { get; private set; }
-    public static List<Player> Players { get; private set; } = new List<Player>();
+    public static PlayerBehavior LocalPlayer { get; private set; }
+    public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
 
 
     private void Awake()

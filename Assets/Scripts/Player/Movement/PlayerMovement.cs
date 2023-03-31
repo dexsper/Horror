@@ -16,14 +16,14 @@ public class PlayerMovement : NetworkBehaviour
     
 
     private IPlayerInput _playerInput;
-    private Player _player;
+    private PlayerBehavior _player;
     private Rigidbody _rigidbody;
     
 
     private void Awake()
     {
         _playerInput = GetComponent<IPlayerInput>();
-        _player = GetComponent<Player>();
+        _player = GetComponent<PlayerBehavior>();
         _rigidbody = GetComponent<Rigidbody>();
 
         InstanceFinder.TimeManager.OnTick += TimeManager_OnTick;

@@ -7,12 +7,12 @@ public class PlayerLook : NetworkBehaviour
 {
     [SerializeField] private Vector2 cameraYLookRange;
     
-    private Player _player;
+    private PlayerBehavior _player;
     private IPlayerInput _playerInput;
 
     private void Awake()
     {
-        _player = GetComponent<Player>();
+        _player = GetComponent<PlayerBehavior>();
         _playerInput = GetComponent<IPlayerInput>();
     }
     

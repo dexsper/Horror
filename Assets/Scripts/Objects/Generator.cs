@@ -14,11 +14,11 @@ public class Generator : NetworkBehaviour, IInteractable
 
     private float _repairTime = 0f;
     private IInteractable _thisInteractable;
-    [SyncVar] private Player _repairInicitator;
+    [SyncVar] private PlayerBehavior _repairInitiator;
     [SyncVar] private bool _isRepairing = false;
     [SyncVar] private bool _isRepaired = false;
 
-    public Player RepairInicitator => _repairInicitator;
+    public PlayerBehavior RepairInitiator => _repairInitiator;
     public bool IsRepairing => _isRepairing;
     public string InteractionPrompt => _isRepairing ? "Stop Repair" : "Repair Generator";
     public Transform GetTransform() => this.transform;
@@ -33,15 +33,15 @@ public class Generator : NetworkBehaviour, IInteractable
     {
         if (_isRepairing && !_isRepaired)
         {
-            if (RepairInicitator == null)
+            if (RepairInitiator == null)
             {
                 _isRepairing = false;
                 return;
             }
 
-            if (RepairInicitator.Interaction.LookInteractable != _thisInteractable)
+            if (RepairInitiator.Interaction.LookInteractable != _thisInteractable)
             {
-                _repairInicitator = null;
+                _repairInitiator = null;
                 _isRepairing = false;
 
                 return;
@@ -62,18 +62,18 @@ public class Generator : NetworkBehaviour, IInteractable
 
 
     [ServerRpc(RequireOwnership = false)]
-    public void Interact(Player player)
+    public void Interact(PlayerBehavior player)
     {
         _isRepairing = !_isRepairing;
-        _repairInicitator = player;
+        _repairInitiator = player;
 
         if (!_isRepairing)
-            _repairInicitator = null;
+            _repairInitiator = null;
     }
 
-    public bool CanInteract(Player player)
+    public bool CanInteract(PlayerBehavior player)
     {
-        if (_isRepairing && _repairInicitator != player)
+        if (_isRepairing && _repairInitiator != player)
             return false;
 
         return !_isRepaired;

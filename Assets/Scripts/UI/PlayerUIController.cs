@@ -14,21 +14,21 @@ public class PlayerUIController : MonoBehaviour
 
     private void Interact()
     {
-        if (Player.LocalPlayer != null)
+        if (PlayerBehavior.LocalPlayer != null)
         {
-            Player.LocalPlayer.Interaction.Interact();
+            PlayerBehavior.LocalPlayer.Interaction.Interact();
         }
     }
 
     private void Update()
     {
-        Player localPlayer = Player.LocalPlayer;
+        PlayerBehavior localPlayer = PlayerBehavior.LocalPlayer;
         if (localPlayer == null) return;
         
         UpdateInteraction(localPlayer);
     }
 
-    private void UpdateInteraction(Player localPlayer)
+    private void UpdateInteraction(PlayerBehavior localPlayer)
     {
         bool canInteract = localPlayer.Interaction.CanInteract;
         _interactButton.gameObject.SetActive(canInteract);

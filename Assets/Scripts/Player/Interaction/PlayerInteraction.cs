@@ -7,7 +7,7 @@ public class PlayerInteraction : NetworkBehaviour
     [SerializeField] private float _interactionDistance = 1.5f;
 
     private IPlayerInput _playerInput;
-    private Player _player;
+    private PlayerBehavior _player;
 
     public bool CanInteract { get; private set; }
     public IInteractable LookInteractable { get; private set; }
@@ -15,7 +15,7 @@ public class PlayerInteraction : NetworkBehaviour
 
     private void Awake()
     {
-        _player = GetComponent<Player>();
+        _player = GetComponent<PlayerBehavior>();
         _playerInput = GetComponent<IPlayerInput>();
     }
 
