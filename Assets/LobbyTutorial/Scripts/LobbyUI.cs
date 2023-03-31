@@ -22,6 +22,8 @@ public class LobbyUI : MonoBehaviour {
     [SerializeField] private Button changeZombieButton;
     [SerializeField] private Button leaveLobbyButton;
 
+    [SerializeField] private Button startGameButton;
+
 
     private void Awake() {
         Instance = this;
@@ -79,6 +81,7 @@ public class LobbyUI : MonoBehaviour {
             );
 
             lobbyPlayerSingleUI.UpdatePlayer(player);
+            startGameButton.gameObject.SetActive(LobbyManager.Instance.IsLobbyHost());
         }
 
         lobbyNameText.text = lobby.Name;
