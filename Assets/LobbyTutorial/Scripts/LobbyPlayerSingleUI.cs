@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Unity.Services.Lobbies.Models;
 using UnityEngine.UI;
+using Zenject;
 
 public class LobbyPlayerSingleUI : MonoBehaviour {
 
@@ -12,9 +13,7 @@ public class LobbyPlayerSingleUI : MonoBehaviour {
     [SerializeField] private Image characterImage;
     [SerializeField] private Button kickPlayerButton;
 
-
     private Player player;
-
 
     private void Awake() {
         kickPlayerButton.onClick.AddListener(KickPlayer);

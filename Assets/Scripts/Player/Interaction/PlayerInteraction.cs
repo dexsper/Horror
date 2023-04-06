@@ -21,7 +21,7 @@ public class PlayerInteraction : NetworkBehaviour
 
     private void Update()
     {
-        if (!base.IsOwner)
+        if (!base.IsServer && !base.IsOwner)
             return;
 
         if (LookInteractable != null)

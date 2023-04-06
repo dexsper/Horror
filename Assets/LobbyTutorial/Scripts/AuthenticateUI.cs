@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
-public class AuthenticateUI : MonoBehaviour {
-
-
+public class AuthenticateUI : MonoBehaviour 
+{
     [SerializeField] private Button authenticateButton;
-
 
     private void Awake() {
         authenticateButton.onClick.AddListener(() => {

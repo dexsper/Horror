@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class LobbyCreateUI : MonoBehaviour {
 
@@ -24,7 +25,6 @@ public class LobbyCreateUI : MonoBehaviour {
     private string lobbyName;
     private bool isPrivate;
     private int maxPlayers;
-    private LobbyManager.GameMode gameMode;
 
     private void Awake() {
         Instance = this;
@@ -33,8 +33,7 @@ public class LobbyCreateUI : MonoBehaviour {
             LobbyManager.Instance.CreateLobby(
                 lobbyName,
                 maxPlayers,
-                isPrivate,
-                gameMode
+                isPrivate
             );
             Hide();
         });
@@ -66,19 +65,6 @@ public class LobbyCreateUI : MonoBehaviour {
             });
         });
 
-        gameModeButton.onClick.AddListener(() => {
-            switch (gameMode) {
-                default:
-                case LobbyManager.GameMode.CaptureTheFlag:
-                    gameMode = LobbyManager.GameMode.Conquest;
-                    break;
-                case LobbyManager.GameMode.Conquest:
-                    gameMode = LobbyManager.GameMode.CaptureTheFlag;
-                    break;
-            }
-            UpdateText();
-        });
-
         Hide();
     }
 
@@ -86,7 +72,6 @@ public class LobbyCreateUI : MonoBehaviour {
         lobbyNameText.text = lobbyName;
         publicPrivateText.text = isPrivate ? "Private" : "Public";
         maxPlayersText.text = maxPlayers.ToString();
-        gameModeText.text = gameMode.ToString();
     }
 
     private void Hide() {
@@ -99,7 +84,6 @@ public class LobbyCreateUI : MonoBehaviour {
         lobbyName = "MyLobby";
         isPrivate = false;
         maxPlayers = 4;
-        gameMode = LobbyManager.GameMode.CaptureTheFlag;
 
         UpdateText();
     }

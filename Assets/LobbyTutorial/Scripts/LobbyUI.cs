@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using FishNet;
+using FishNet.Managing.Scened;
 using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LobbyUI : MonoBehaviour {
-
-
+public class LobbyUI : MonoBehaviour
+{
     public static LobbyUI Instance { get; private set; }
 
 
@@ -16,7 +15,6 @@ public class LobbyUI : MonoBehaviour {
     [SerializeField] private Transform container;
     [SerializeField] private TextMeshProUGUI lobbyNameText;
     [SerializeField] private TextMeshProUGUI playerCountText;
-    [SerializeField] private TextMeshProUGUI gameModeText;
     [SerializeField] private Button changeMarineButton;
     [SerializeField] private Button changeNinjaButton;
     [SerializeField] private Button changeZombieButton;
@@ -24,85 +22,118 @@ public class LobbyUI : MonoBehaviour {
 
     [SerializeField] private Button startGameButton;
 
+    private LobbyManager _lobbyManager;
 
-    private void Awake() {
+
+    private void Awake()
+    {
         Instance = this;
+        _lobbyManager = LobbyManager.Instance;
 
         playerSingleTemplate.gameObject.SetActive(false);
 
-        changeMarineButton.onClick.AddListener(() => {
-            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Marine);
+        changeMarineButton.onClick.AddListener(() =>
+        {
+            _lobbyManager.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Marine);
         });
-        changeNinjaButton.onClick.AddListener(() => {
-            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Ninja);
+        changeNinjaButton.onClick.AddListener(() =>
+        {
+            _lobbyManager.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Ninja);
         });
-        changeZombieButton.onClick.AddListener(() => {
-            LobbyManager.Instance.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Zombie);
+        changeZombieButton.onClick.AddListener(() =>
+        {
+            _lobbyManager.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Zombie);
         });
 
-        leaveLobbyButton.onClick.AddListener(() => {
-            LobbyManager.Instance.LeaveLobby();
+        leaveLobbyButton.onClick.AddListener(() =>
+        {
+            _lobbyManager.LeaveLobby();
+        });
+        startGameButton.onClick.AddListener(() =>
+        {
+            SceneLoadData sld = new SceneLoadData("Game");
+            sld.ReplaceScenes = ReplaceOption.All;
+
+            InstanceFinder.SceneManager.LoadGlobalScenes(sld);
         });
     }
 
-    private void Start() {
-        LobbyManager.Instance.OnJoinedLobby += UpdateLobby_Event;
-        LobbyManager.Instance.OnJoinedLobbyUpdate += UpdateLobby_Event;
-        LobbyManager.Instance.OnLeftLobby += LobbyManager_OnLeftLobby;
-        LobbyManager.Instance.OnKickedFromLobby += LobbyManager_OnLeftLobby;
+    private void Start()
+    {
+        _lobbyManager.OnJoinedLobby += UpdateLobby_Event;
+        _lobbyManager.OnJoinedLobbyUpdate += UpdateLobby_Event;
+        _lobbyManager.OnLeftLobby += LobbyManager_OnLeftLobby;
+        _lobbyManager.OnKickedFromLobby += LobbyManager_OnLeftLobby;
 
         Hide();
     }
 
-    private void LobbyManager_OnLeftLobby(object sender, System.EventArgs e) {
+    private void OnDestroy()
+    {
+        _lobbyManager.OnJoinedLobby -= UpdateLobby_Event;
+        _lobbyManager.OnJoinedLobbyUpdate -= UpdateLobby_Event;
+        _lobbyManager.OnLeftLobby -= LobbyManager_OnLeftLobby;
+        _lobbyManager.OnKickedFromLobby -= LobbyManager_OnLeftLobby;
+    }
+
+    private void LobbyManager_OnLeftLobby(object sender, System.EventArgs e)
+    {
         ClearLobby();
         Hide();
     }
 
-    private void UpdateLobby_Event(object sender, LobbyManager.LobbyEventArgs e) {
+    private void UpdateLobby_Event(object sender, LobbyEventArgs e)
+    {
         UpdateLobby();
     }
 
-    private void UpdateLobby() {
-        UpdateLobby(LobbyManager.Instance.GetJoinedLobby());
+    private void UpdateLobby()
+    {
+        UpdateLobby(_lobbyManager.GetJoinedLobby());
     }
 
-    private void UpdateLobby(Lobby lobby) {
+    private void UpdateLobby(Lobby lobby)
+    {
         ClearLobby();
 
-        foreach (Player player in lobby.Players) {
+        foreach (Player player in lobby.Players)
+        {
             Transform playerSingleTransform = Instantiate(playerSingleTemplate, container);
             playerSingleTransform.gameObject.SetActive(true);
+
             LobbyPlayerSingleUI lobbyPlayerSingleUI = playerSingleTransform.GetComponent<LobbyPlayerSingleUI>();
 
             lobbyPlayerSingleUI.SetKickPlayerButtonVisible(
-                LobbyManager.Instance.IsLobbyHost() &&
-                player.Id != AuthenticationService.Instance.PlayerId // Don't allow kick self
+                _lobbyManager.IsLobbyHost() &&
+                player.Id != AuthenticationService.Instance.PlayerId
             );
 
             lobbyPlayerSingleUI.UpdatePlayer(player);
-            startGameButton.gameObject.SetActive(LobbyManager.Instance.IsLobbyHost());
         }
 
+        startGameButton.gameObject.SetActive(_lobbyManager.IsLobbyHost());
         lobbyNameText.text = lobby.Name;
         playerCountText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
-        gameModeText.text = lobby.Data[LobbyManager.KEY_GAME_MODE].Value;
 
         Show();
     }
 
-    private void ClearLobby() {
-        foreach (Transform child in container) {
+    private void ClearLobby()
+    {
+        foreach (Transform child in container)
+        {
             if (child == playerSingleTemplate) continue;
             Destroy(child.gameObject);
         }
     }
 
-    private void Hide() {
+    private void Hide()
+    {
         gameObject.SetActive(false);
     }
 
-    private void Show() {
+    private void Show()
+    {
         gameObject.SetActive(true);
     }
 

@@ -120,7 +120,6 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   _networkBehaviours:
   - {fileID: 1565754455094126377}
-  - {fileID: 4180018828644962658}
   - {fileID: -1313480937129658134}
   - {fileID: 5539716946378381922}
   - {fileID: 8662986836516071234}
@@ -146,12 +145,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 303449598114786579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfea33f6f62d4804c8237da0d73333ee, type: 3}
+  m_Script: {fileID: 11500000, guid: b4df72fc7c89c77409519694db037a21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 1
+  _componentIndexCache: 255
   _addedNetworkObject: {fileID: 201277550}
-  _networkObjectCache: {fileID: 201277550}
+  _networkObjectCache: {fileID: 0}
   cameraLook: {fileID: 8738820238795575076}
   _cameraPrefab: {fileID: 8219904518885446878, guid: 5864c824e2936df4298f5f535e571ace,
     type: 3}
@@ -180,7 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 586eadd4dea8ca84a867c59986b8138f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 2
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
   _speed: 12
@@ -197,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e06a264c98808647915b79d406fb296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 3
+  _componentIndexCache: 2
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
   cameraYLookRange: {x: -3, y: 3}
@@ -213,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7133cd8ba10d5e849a043520b0d94411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 4
+  _componentIndexCache: 3
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
   _interactableMask:

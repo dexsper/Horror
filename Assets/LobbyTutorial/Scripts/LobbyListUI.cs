@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class LobbyListUI : MonoBehaviour {
 
@@ -16,10 +17,13 @@ public class LobbyListUI : MonoBehaviour {
     [SerializeField] private Transform container;
     [SerializeField] private Button refreshButton;
     [SerializeField] private Button createLobbyButton;
+ 
+    private LobbyManager _lobbyManager;
 
 
     private void Awake() {
         Instance = this;
+        _lobbyManager = LobbyManager.Instance;
 
         lobbySingleTemplate.gameObject.SetActive(false);
 
@@ -28,13 +32,13 @@ public class LobbyListUI : MonoBehaviour {
     }
 
     private void Start() {
-        LobbyManager.Instance.OnLobbyListChanged += LobbyManager_OnLobbyListChanged;
-        LobbyManager.Instance.OnJoinedLobby += LobbyManager_OnJoinedLobby;
-        LobbyManager.Instance.OnLeftLobby += LobbyManager_OnLeftLobby;
-        LobbyManager.Instance.OnKickedFromLobby += LobbyManager_OnKickedFromLobby;
+        _lobbyManager.OnLobbyListChanged += LobbyManager_OnLobbyListChanged;
+        _lobbyManager.OnJoinedLobby += LobbyManager_OnJoinedLobby;
+        _lobbyManager.OnLeftLobby += LobbyManager_OnLeftLobby;
+        _lobbyManager.OnKickedFromLobby += LobbyManager_OnKickedFromLobby;
     }
 
-    private void LobbyManager_OnKickedFromLobby(object sender, LobbyManager.LobbyEventArgs e) {
+    private void LobbyManager_OnKickedFromLobby(object sender, LobbyEventArgs e) {
         Show();
     }
 
@@ -42,11 +46,11 @@ public class LobbyListUI : MonoBehaviour {
         Show();
     }
 
-    private void LobbyManager_OnJoinedLobby(object sender, LobbyManager.LobbyEventArgs e) {
+    private void LobbyManager_OnJoinedLobby(object sender, LobbyEventArgs e) {
         Hide();
     }
 
-    private void LobbyManager_OnLobbyListChanged(object sender, LobbyManager.OnLobbyListChangedEventArgs e) {
+    private void LobbyManager_OnLobbyListChanged(object sender, OnLobbyListChangedEventArgs e) {
         UpdateLobbyList(e.lobbyList);
     }
 
@@ -66,7 +70,7 @@ public class LobbyListUI : MonoBehaviour {
     }
 
     private void RefreshButtonClick() {
-        LobbyManager.Instance.RefreshLobbyList();
+        _lobbyManager.RefreshLobbyList();
     }
 
     private void CreateLobbyButtonClick() {
