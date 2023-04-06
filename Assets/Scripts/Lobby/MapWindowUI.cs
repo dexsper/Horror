@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FishNet.Object.Synchronizing;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;

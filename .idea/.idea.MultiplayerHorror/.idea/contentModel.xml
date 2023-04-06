@@ -53,6 +53,7 @@
           </e>
         </e>
         <e p="Adaptive Performance" t="Include">
+          <e p="Provider" t="Include" />
           <e p="settings" t="Include" />
         </e>
         <e p="Assets" t="Include">

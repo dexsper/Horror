@@ -23,37 +23,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/AuthenticateUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/AuthenticateUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/EditPlayerName.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/EditPlayerName.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyAssets.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyAssets.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyCreateUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyCreateUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyEvents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyEvents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyListSingleUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyListSingleUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyListUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyListUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyPlayerSingleUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyPlayerSingleUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Adaptive Performance/AdaptivePerformanceGeneralSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/AdaptivePerformanceGeneralSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,12 +45,17 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/LobbyManagerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.7.3/Runtime/BurstCompiler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../MultiplayerHorror_clone_0/Assets/Scripts/Player/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/CreateLobbyOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerTouchField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/UpdatePlayerOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ConnectionConntroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Lobby.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Player/FixedTouchField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/DiContainerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
@@ -121,6 +106,11 @@
         <option value="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/Prediction/PredictedObject.Rigidbodies.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/CreateLobbyOptions.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/DataObject.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Lobby.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
       </list>
     </option>
   </component>
@@ -181,7 +171,8 @@
       <workItem from="1680160724275" duration="525000" />
       <workItem from="1680262598698" duration="10248000" />
       <workItem from="1680537962092" duration="852000" />
-      <workItem from="1680808526734" duration="4310000" />
+      <workItem from="1680808526734" duration="7210000" />
+      <workItem from="1680818895258" duration="121000" />
     </task>
     <servers />
   </component>

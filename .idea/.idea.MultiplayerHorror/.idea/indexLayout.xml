@@ -3,7 +3,8 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
-      <Path>Library/PackageCache/com.unity.adaptiveperformance@4.0.1</Path>
+      <Path>Library/PackageCache/com.unity.adaptiveperformance.samsung.android@5.0.0</Path>
+      <Path>Library/PackageCache/com.unity.adaptiveperformance@5.0.0</Path>
       <Path>Library/PackageCache/com.unity.burst@1.7.3</Path>
       <Path>Library/PackageCache/com.unity.cinemachine@2.8.9</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.17.7</Path>
@@ -23,7 +24,6 @@
       <Path>Library/PackageCache/com.unity.services.lobby@1.0.3</Path>
       <Path>Library/PackageCache/com.unity.services.qos@1.1.0</Path>
       <Path>Library/PackageCache/com.unity.services.relay@1.0.5</Path>
-      <Path>Library/PackageCache/com.unity.subsystemregistration@1.1.0</Path>
       <Path>Library/PackageCache/com.unity.test-framework@1.1.31</Path>
       <Path>Library/PackageCache/com.unity.textmeshpro@3.0.6</Path>
       <Path>Library/PackageCache/com.unity.timeline@1.6.4</Path>
@@ -37,7 +37,6 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>

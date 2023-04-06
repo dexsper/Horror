@@ -11,6 +11,7 @@ public class LobbyManager : MonoBehaviour
     public const string KEY_PLAYER_NAME = "PlayerName";
     public const string KEY_PLAYER_CHARACTER = "Character";
     public const string KEY_CONNECTION_CODE = "ConnectionJoinCode";
+    public string KEY_MAP_NAME = "MapName";
 
     private static LobbyManager _instance;
     private float _heartbeatTimer;
@@ -182,7 +183,7 @@ public class LobbyManager : MonoBehaviour
                     {
                         KEY_CONNECTION_CODE, new DataObject(
                             visibility: DataObject.VisibilityOptions.Member,
-                        value: "")
+                            value: "")
                     }
                 }
         };
