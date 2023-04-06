@@ -4,7 +4,7 @@
     <attachedFolders />
     <explicitIncludes>
       <Path>Library/PackageCache/com.unity.adaptiveperformance@4.0.1</Path>
-      <Path>Library/PackageCache/com.unity.burst@1.6.6</Path>
+      <Path>Library/PackageCache/com.unity.burst@1.7.3</Path>
       <Path>Library/PackageCache/com.unity.cinemachine@2.8.9</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@1.17.7</Path>
       <Path>Library/PackageCache/com.unity.collections@1.2.4</Path>
@@ -17,6 +17,7 @@
       <Path>Library/PackageCache/com.unity.mobile.notifications@2.1.0</Path>
       <Path>Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2</Path>
       <Path>Library/PackageCache/com.unity.profiling.core@1.0.2</Path>
+      <Path>Library/PackageCache/com.unity.searcher@4.9.1</Path>
       <Path>Library/PackageCache/com.unity.services.authentication@2.3.1</Path>
       <Path>Library/PackageCache/com.unity.services.core@1.6.0</Path>
       <Path>Library/PackageCache/com.unity.services.lobby@1.0.3</Path>
