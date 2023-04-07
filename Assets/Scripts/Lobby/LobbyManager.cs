@@ -11,13 +11,14 @@ public class LobbyManager : MonoBehaviour
     public const string KEY_PLAYER_NAME = "PlayerName";
     public const string KEY_PLAYER_CHARACTER = "Character";
     public const string KEY_CONNECTION_CODE = "ConnectionJoinCode";
-    public string KEY_MAP_NAME = "MapName";
+    public const string KEY_MAP_NAME = "MapName";
 
     private static LobbyManager _instance;
     private float _heartbeatTimer;
     private float _lobbyPollTimer;
     private float _refreshLobbyListTimer = 5f;
     private string _playerName;
+    private string _mapName;
 
 
     public Lobby JoinedLobby;
@@ -170,6 +171,11 @@ public class LobbyManager : MonoBehaviour
         });
     }
 
+    public string GetMap()
+    {
+        return _mapName;
+    }
+
     public async void CreateLobby(string lobbyName, int maxPlayers, bool isPrivate)
     {
         Player player = GetPlayer();
@@ -184,6 +190,10 @@ public class LobbyManager : MonoBehaviour
                         KEY_CONNECTION_CODE, new DataObject(
                             visibility: DataObject.VisibilityOptions.Member,
                             value: "")
+                    },
+                    {
+                        KEY_MAP_NAME,new DataObject(visibility: DataObject.VisibilityOptions.Public,
+                        value: "Backrooms")
                     }
                 }
         };
@@ -200,6 +210,25 @@ public class LobbyManager : MonoBehaviour
         Debug.Log("Created Lobby " + lobby.Name);
     }
 
+    public async void UpdateLobbyMap(string mapName)
+    {
+        this._mapName = mapName;
+        
+        UpdateLobbyOptions options = new UpdateLobbyOptions();
+
+        options.Data = new Dictionary<string, DataObject>()
+        {
+            {
+                KEY_MAP_NAME, new DataObject(DataObject.VisibilityOptions.Public, mapName)
+            }
+        };
+
+        Lobby lobby = await LobbyService.Instance.UpdateLobbyAsync(JoinedLobby.Id, options);
+        JoinedLobby = lobby;
+        
+        OnJoinedLobbyUpdate?.Invoke(this,new LobbyEventArgs{lobby = JoinedLobby});
+    }
+    
     public async void RefreshLobbyList()
     {
         try

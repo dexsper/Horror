@@ -20,6 +20,10 @@ public class MapWindowUI : MonoBehaviour
     {
         nextButton.onClick.AddListener(NextCharacter);
         UpdateUI(0);
+        if (!LobbyManager.Instance.IsLobbyHost())
+        {
+            nextButton.interactable = false;
+        }
     }
 
     private void NextCharacter()
@@ -35,8 +39,23 @@ public class MapWindowUI : MonoBehaviour
 
     private void UpdateUI(int index)
     {
-        mapNameText.text = $"{maps[index].MapName}";
-        mapImage.sprite = maps[index].MapSprite;
+        LobbyManager.Instance.UpdateLobbyMap(maps[index].MapName);
+        mapNameText.text = $"{LobbyManager.Instance.GetMap()}";
+        mapImage.sprite = maps[GetCurrentMapIndex()].MapSprite;
+    }
+
+    private int GetCurrentMapIndex()
+    {
+        var index = 0;
+        for (int i = 0; i < maps.Count; i++)
+        {
+            if (maps[i].MapName == LobbyManager.Instance.GetMap())
+            {
+                index = i;
+            }
+        }
+
+        return index;
     }
 }
 [Serializable    ]
