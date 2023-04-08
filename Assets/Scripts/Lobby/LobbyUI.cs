@@ -53,7 +53,7 @@ public class LobbyUI : MonoBehaviour
         });
         startGameButton.onClick.AddListener(() =>
         {
-            SceneLoadData sld = new SceneLoadData("Game");
+            SceneLoadData sld = new SceneLoadData("Backrooms");
             sld.ReplaceScenes = ReplaceOption.All;
 
             InstanceFinder.SceneManager.LoadGlobalScenes(sld);
@@ -66,7 +66,6 @@ public class LobbyUI : MonoBehaviour
         _lobbyManager.OnJoinedLobbyUpdate += UpdateLobby_Event;
         _lobbyManager.OnLeftLobby += LobbyManager_OnLeftLobby;
         _lobbyManager.OnKickedFromLobby += LobbyManager_OnLeftLobby;
-
         Hide();
     }
 

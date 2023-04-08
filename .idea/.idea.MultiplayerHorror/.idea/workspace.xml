@@ -21,15 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1b8bade5-bc85-4c23-a6df-f5fa08c5b075" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/InputWindow/UI_InputWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/InputWindow/UI_InputWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +167,7 @@
       <workItem from="1680808526734" duration="7210000" />
       <workItem from="1680818895258" duration="121000" />
       <workItem from="1680875828121" duration="4529000" />
-      <workItem from="1680941981275" duration="2787000" />
+      <workItem from="1680941981275" duration="3804000" />
     </task>
     <servers />
   </component>
