@@ -15,14 +15,25 @@ public class MapWindowUI : MonoBehaviour
     [SerializeField] private Image mapImage;
 
     private int _nextMap = 0;
+    private LobbyManager _lobbyManager;
+
+    public void SetMapNameText(string mapName)
+    {
+        mapNameText.text = mapName;
+    }
+
+    public void NextButtonStatus(bool status)
+    {
+        nextButton.gameObject.SetActive(status);
+    }
     
     private void Awake()
     {
         nextButton.onClick.AddListener(NextCharacter);
         UpdateUI(0);
-        if (!LobbyManager.Instance.IsLobbyHost())
+        if (LobbyManager.Instance.IsLobbyHost())
         {
-            nextButton.interactable = false;
+            nextButton.interactable = true;
         }
     }
 
@@ -41,24 +52,23 @@ public class MapWindowUI : MonoBehaviour
     {
         LobbyManager.Instance.UpdateLobbyMap(maps[index].MapName);
         mapNameText.text = $"{LobbyManager.Instance.GetMap()}";
-        mapImage.sprite = maps[GetCurrentMapIndex()].MapSprite;
     }
-
-    private int GetCurrentMapIndex()
+    
+    public void SetCurrentMapSprite(string mapName)
     {
         var index = 0;
         for (int i = 0; i < maps.Count; i++)
         {
-            if (maps[i].MapName == LobbyManager.Instance.GetMap())
+            if (maps[i].MapName == mapName)
             {
                 index = i;
             }
         }
 
-        return index;
+        mapImage.sprite = maps[index].MapSprite;
     }
 }
-[Serializable    ]
+[Serializable]
 public class Map
 {
     [SerializeField] private Sprite mapSprite;

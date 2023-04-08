@@ -6826,12 +6826,12 @@ MonoBehaviour:
   container: {fileID: 574415428}
   lobbyNameText: {fileID: 1126027971}
   playerCountText: {fileID: 359901299}
-  lobbyMapNameText: {fileID: 1732866115}
   changeMarineButton: {fileID: 1785842086}
   changeNinjaButton: {fileID: 413568413}
   changeZombieButton: {fileID: 635455931}
   leaveLobbyButton: {fileID: 1878239947}
   startGameButton: {fileID: 538283801}
+  mapWindowUI: {fileID: 1267549619}
 --- !u!1 &964784302
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,8 +15,6 @@ public class LobbyUI : MonoBehaviour
     [SerializeField] private Transform container;
     [SerializeField] private TextMeshProUGUI lobbyNameText;
     [SerializeField] private TextMeshProUGUI playerCountText;
-    [SerializeField] private TextMeshProUGUI lobbyMapNameText;
-    [SerializeField] private Image lobbyMapImage;
     [SerializeField] private Button changeMarineButton;
     [SerializeField] private Button changeNinjaButton;
     [SerializeField] private Button changeZombieButton;
@@ -24,7 +22,9 @@ public class LobbyUI : MonoBehaviour
 
     [SerializeField] private Button startGameButton;
 
+    [SerializeField] private MapWindowUI mapWindowUI;
     private LobbyManager _lobbyManager;
+    
 
 
     private void Awake()
@@ -114,10 +114,11 @@ public class LobbyUI : MonoBehaviour
         }
 
         startGameButton.gameObject.SetActive(_lobbyManager.IsLobbyHost());
+        mapWindowUI.NextButtonStatus(_lobbyManager.IsLobbyHost());
         lobbyNameText.text = lobby.Name;
         playerCountText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
-        lobbyMapNameText.text = lobby.Data[LobbyManager.KEY_MAP_NAME].Value;
-
+        mapWindowUI.SetMapNameText(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
+        mapWindowUI.SetCurrentMapSprite(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
         Show();
     }
 

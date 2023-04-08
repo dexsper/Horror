@@ -12,6 +12,7 @@ public class LobbyManager : MonoBehaviour
     public const string KEY_PLAYER_CHARACTER = "Character";
     public const string KEY_CONNECTION_CODE = "ConnectionJoinCode";
     public const string KEY_MAP_NAME = "MapName";
+    public Sprite KEY_MAP_ICON;
 
     private static LobbyManager _instance;
     private float _heartbeatTimer;
