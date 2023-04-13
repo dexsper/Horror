@@ -79,16 +79,17 @@ public class LobbyUI : MonoBehaviour
     private void UpdateLobby(Lobby lobby)
     {
         ClearLobby();
-
         foreach (Player player in lobby.Players)
         {
+            Debug.Log("1");
             Transform playerSingleTransform = Instantiate(playerSingleTemplate, container);
-            //playerSingleTransform.gameObject.SetActive(true);
-
+            
+            playerSingleTransform.gameObject.SetActive(true);
+            
             LobbyPlayerSingleUI lobbyPlayerSingleUI = playerSingleTransform.GetComponent<LobbyPlayerSingleUI>();
 
             lobbyPlayerSingleUI.SetKickPlayerButtonVisible(
-                _lobbyManager.IsLobbyHost() &&
+                LobbyManager.Instance.IsLobbyHost() &&
                 player.Id != AuthenticationService.Instance.PlayerId
             );
 
