@@ -5,6 +5,7 @@ using Unity.Services.Core;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using Zenject;
 
 public class LobbyManager : MonoBehaviour
 {
@@ -12,17 +13,16 @@ public class LobbyManager : MonoBehaviour
     public const string KEY_PLAYER_CHARACTER = "Character";
     public const string KEY_CONNECTION_CODE = "ConnectionJoinCode";
     public const string KEY_MAP_NAME = "MapName";
-    public Sprite KEY_MAP_ICON;
 
     private static LobbyManager _instance;
     private float _heartbeatTimer;
     private float _lobbyPollTimer;
     private float _refreshLobbyListTimer = 5f;
     private string _playerName;
-    private string _mapName;
 
+    [Inject] private CharacterWindowUI _characterWindowUI;
 
-    public Lobby JoinedLobby;
+    public Lobby JoinedLobby { get; private set; }
     public event EventHandler OnLeftLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobbyUpdate;
@@ -40,14 +40,6 @@ public class LobbyManager : MonoBehaviour
             return _instance;
         }
     }
-
-    public enum PlayerCharacter
-    {
-        Marine,
-        Ninja,
-        Zombie
-    }
-
 
     private void Update()
     {
@@ -133,16 +125,10 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
-    public Lobby GetJoinedLobby()
-    {
-        return JoinedLobby;
-    }
-
     public bool IsLobbyHost()
     {
         return JoinedLobby != null && JoinedLobby.HostId == AuthenticationService.Instance.PlayerId;
     }
-
     private bool IsPlayerInLobby()
     {
         if (JoinedLobby != null && JoinedLobby.Players != null)
@@ -159,27 +145,18 @@ public class LobbyManager : MonoBehaviour
 
         return false;
     }
-
-    private Player GetPlayer()
+    private Player GetNewPlayerInstance()
     {
         return new Player(AuthenticationService.Instance.PlayerId, null, new Dictionary<string, PlayerDataObject>
         {
             {KEY_PLAYER_NAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, _playerName)},
-            {
-                KEY_PLAYER_CHARACTER,
-                new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, PlayerCharacter.Marine.ToString())
-            }
         });
     }
-
-    public string GetMap()
-    {
-        return _mapName;
-    }
+    public string GetMap() => JoinedLobby.Data[KEY_MAP_NAME].Value;
 
     public async void CreateLobby(string lobbyName, int maxPlayers, bool isPrivate)
     {
-        Player player = GetPlayer();
+        Player player = GetNewPlayerInstance();
 
         CreateLobbyOptions options = new CreateLobbyOptions
         {
@@ -213,8 +190,6 @@ public class LobbyManager : MonoBehaviour
 
     public async void UpdateLobbyMap(string mapName)
     {
-        this._mapName = mapName;
-        
         UpdateLobbyOptions options = new UpdateLobbyOptions();
 
         options.Data = new Dictionary<string, DataObject>()
@@ -226,10 +201,10 @@ public class LobbyManager : MonoBehaviour
 
         Lobby lobby = await LobbyService.Instance.UpdateLobbyAsync(JoinedLobby.Id, options);
         JoinedLobby = lobby;
-        
-        OnJoinedLobbyUpdate?.Invoke(this,new LobbyEventArgs{lobby = JoinedLobby});
+
+        OnJoinedLobbyUpdate?.Invoke(this, new LobbyEventArgs { lobby = JoinedLobby });
     }
-    
+
     public async void RefreshLobbyList()
     {
         try
@@ -267,7 +242,7 @@ public class LobbyManager : MonoBehaviour
 
     public async void JoinLobbyByCode(string lobbyCode)
     {
-        Player player = GetPlayer();
+        Player player = GetNewPlayerInstance();
 
         Lobby lobby = await LobbyService.Instance.JoinLobbyByCodeAsync(lobbyCode, new JoinLobbyByCodeOptions
         {
@@ -281,7 +256,7 @@ public class LobbyManager : MonoBehaviour
 
     public async void JoinLobby(Lobby lobby)
     {
-        Player player = GetPlayer();
+        Player player = GetNewPlayerInstance();
 
         JoinedLobby = await LobbyService.Instance.JoinLobbyByIdAsync(lobby.Id, new JoinLobbyByIdOptions
         {
@@ -324,7 +299,7 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
-    public async void UpdatePlayerCharacter(PlayerCharacter playerCharacter)
+    public async void UpdatePlayerCharacter(string character)
     {
         if (JoinedLobby != null)
         {
@@ -337,7 +312,7 @@ public class LobbyManager : MonoBehaviour
                     {
                         KEY_PLAYER_CHARACTER, new PlayerDataObject(
                             visibility: PlayerDataObject.VisibilityOptions.Public,
-                            value: playerCharacter.ToString())
+                            value: character)
                     }
                 };
 

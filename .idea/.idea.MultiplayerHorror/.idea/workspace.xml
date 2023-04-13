@@ -20,8 +20,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b8bade5-bc85-4c23-a6df-f5fa08c5b075" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MultiplayerHorror/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Adaptive Performance/AdaptivePerformanceGeneralSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Adaptive Performance/AdaptivePerformanceGeneralSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Models/3 Pipe Head/Materials/Pipe_Head004.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Models/3 Pipe Head/Materials/Pipe_Head004.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Models/Light Bulb Head/Materials 2/Light Bulb Head.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Models/Light Bulb Head/Materials 2/Light Bulb Head.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Example/Prefabs/NetworkManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Example/Prefabs/NetworkManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue/BatchedReceiveQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue/BatchedReceiveQueue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue/BatchedReceiveQueue.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue/BatchedReceiveQueue.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue/BatchedSendQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue/BatchedSendQueue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue/BatchedSendQueue.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/BatchedQueue/BatchedSendQueue.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/ConnectionAddressData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/ConnectionAddressData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/ConnectionAddressData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/ConnectionAddressData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ClientSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ClientSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ClientSocket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ClientSocket.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/CommonSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/CommonSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/CommonSocket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/CommonSocket.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ProtocolType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ProtocolType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/SendTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/SendTarget.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/SendTarget.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/SendTarget.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ServerSocket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ServerSocket.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ServerSocket.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/Core/ServerSocket.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/FishyUnityTransport.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/FishyUnityTransport.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/FishyUnityTransport.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/FishyUnityTransport.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/FishyUnityTransport.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/FishyUnityTransport.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/FishyUnityTransport.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/FishyUnityTransport.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/SimulatorParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Plugins/FishyUnityTransport/SimulatorParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/Prediction/PredictedObject.Rigidbodies.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/Prediction/PredictedObject.Rigidbodies.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CharactersModels/PipeHeadCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/CharactersModels/PipeHeadCharacter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Backrooms.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Backrooms.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Forest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OnlineScene.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OnlineScene.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyAssets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyPlayerSingleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyPlayerSingleUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_/InputWindow/UI_InputWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/InputWindow/UI_InputWindow.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,32 +84,36 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/LobbyManagerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.7.3/Runtime/BurstCompiler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../MultiplayerHorror_clone_0/Assets/Scripts/Player/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/CreateLobbyOptions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Http/ResponseHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/WrappedLobbyService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerTouchField.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/UpdatePlayerOptions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/UpdateLobbyOptions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/CharacterWindowInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.8.9/Runtime/Core/AxisState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ConnectionConntroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Lobby.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ConnectionConntroller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/UpdatePlayerOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Player/FixedTouchField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Dictionary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/DiContainerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/DataObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Player/FixedTouchField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Player/PlayerLock.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/DataObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/WrappedLobbyService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/CharactersData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/CreateLobbyOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../PixelFisher/Assets/Scripts/UI/RewardedAdMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/UpdateLobbyOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/JoinLobbyByIdOptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Installers/LobbyManagerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../MultiplayerHorror_clone_0/Assets/Scripts/Player/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerTouchField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Http/ResponseHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/LobbyService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerComponents.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FixedTouchField.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLock.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/MovementData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
@@ -95,14 +151,19 @@
         <option value="$PROJECT_DIR$/Assets/LobbyTutorial/Scripts/LobbyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/FishNet/Runtime/Generated/Component/Prediction/PredictedObject.Rigidbodies.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/DataObject.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Lobby.cs" />
         <option value="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/CreateLobbyOptions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/MapWindowUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/CharacterConfig.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/CharacterData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/CharactersData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Installers/CharacterWindowInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyAssets.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
       </list>
     </option>
@@ -167,7 +228,12 @@
       <workItem from="1680808526734" duration="7210000" />
       <workItem from="1680818895258" duration="121000" />
       <workItem from="1680875828121" duration="4529000" />
-      <workItem from="1680941981275" duration="3804000" />
+      <workItem from="1680941981275" duration="4776000" />
+      <workItem from="1681224656215" duration="1190000" />
+      <workItem from="1681240224218" duration="326000" />
+      <workItem from="1681387509868" duration="628000" />
+      <workItem from="1681388795891" duration="4033000" />
+      <workItem from="1681397470286" duration="330000" />
     </task>
     <servers />
   </component>
@@ -265,5 +331,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="788" y="190" key="RiderGenerateDialog/0.0.1920.1032@0.0.1920.1032" timestamp="1679408337489" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1681392092732">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1681392092732" />
   </component>
 </project>

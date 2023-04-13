@@ -1,52 +1,73 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CharacterWindowUI : MonoBehaviour
 {
-    [SerializeField] private List<Character> characters = new List<Character>();
+    [Title("Data", TitleAlignment = TitleAlignments.Centered)]
+    [SerializeField] private CharactersData _characters;
 
-    [SerializeField] private Button nextButton, prevButton;
-    [SerializeField] private TextMeshProUGUI characterNameText;
+    [Title("Interface", TitleAlignment = TitleAlignments.Centered)]
+    [SerializeField] private TextMeshProUGUI _characterNameText;
+    [SerializeField] private Button _nextButton, _prevButton;
 
-    private int _nextCharacter = 0;
+    [Title("Characters Models", TitleAlignment = TitleAlignments.Centered)]
+    [SerializeField] private Transform _previewParent;
+
+    private int _selectedCharacter = 0;
+    private Dictionary<string, GameObject> _spawnedCharacters;
+
+    public string SelectedCharacterName { get; private set; }
 
     private void Awake()
     {
-        nextButton.onClick.AddListener(NextCharacter);
-        UpdateUI(0);
+        _nextButton.onClick.AddListener(NextCharacter);
+        _prevButton.onClick.AddListener(PreviousCharacter);
+
+        _spawnedCharacters = new Dictionary<string, GameObject>();
+
+        foreach (var (characterName, character) in _characters.Characters)
+        {
+            _spawnedCharacters.Add(characterName, Instantiate(character, _previewParent));
+        }
+
+        UpdateUI();
     }
 
     private void NextCharacter()
     {
-        _nextCharacter = (_nextCharacter + 1) % characters.Count;
-        UpdateUI(_nextCharacter);
+        _selectedCharacter = (_selectedCharacter + 1) % _characters.Characters.Count;
+
+        UpdateUI();
     }
 
     private void PreviousCharacter()
     {
-        
+        _selectedCharacter--;
+
+        if (_selectedCharacter < 0)
+            _selectedCharacter = _spawnedCharacters.Count - 1;
+
+        UpdateUI();
     }
 
-    private void UpdateUI(int index)
+    private void UpdateUI()
     {
-        foreach (var character in characters)
+        foreach (var (characterName, character) in _spawnedCharacters)
         {
-            character.Model.gameObject.SetActive(false);
+            character.gameObject.SetActive(false);
         }
-        characterNameText.text = $"{characters[index].Name}";
-        characters[index].Model.SetActive(true);
-    }
-}
 
-[Serializable]
-public class Character
-{
-    [SerializeField] private string name;
-    [SerializeField] private GameObject model;
-    public string Name => name;
-    public GameObject Model => model;
+        var characterInfo = _spawnedCharacters.ElementAt(_selectedCharacter);
+
+        SelectedCharacterName = characterInfo.Key;
+
+        _characterNameText.text = characterInfo.Key;
+        characterInfo.Value.SetActive(true);
+    }
 }

@@ -52,9 +52,13 @@
             </e>
           </e>
         </e>
+        <e p="_README_CODEMONKEY.txt" t="Include" />
         <e p="Adaptive Performance" t="Include">
           <e p="Provider" t="Include" />
           <e p="settings" t="Include" />
+        </e>
+        <e p="Animations" t="Include">
+          <e p="Player" t="Include" />
         </e>
         <e p="Assets" t="Include">
           <e p="Animations" t="Include" />
@@ -109,8 +113,36 @@
             </e>
           </e>
         </e>
+        <e p="Audio" t="Include">
+          <e p="Player" t="Include" />
+        </e>
+        <e p="Data" t="Include" />
         <e p="Editor" t="Include">
           <e p="com.unity.mobile.notifications" t="Include" />
+        </e>
+        <e p="FindReference2" t="Include">
+          <e p="Editor" t="Include">
+            <e p="Script" t="Include">
+              <e p="FR2_Asset.cs" t="Include" />
+              <e p="FR2_AssetType.cs" t="Include" />
+              <e p="FR2_Cache.cs" t="Include" />
+              <e p="FR2_CacheEditor.cs" t="Include" />
+              <e p="FR2_Duplicate.cs" t="Include" />
+              <e p="FR2_Export.cs" t="Include" />
+              <e p="FR2_Helper.cs" t="Include" />
+              <e p="FR2_Ref.cs" t="Include" />
+              <e p="FR2_SceneCache.cs" t="Include" />
+              <e p="FR2_SceneWindow.cs" t="Include" />
+              <e p="FR2_Selection.cs" t="Include" />
+              <e p="FR2_TreeUI.cs" t="Include" />
+              <e p="FR2_TreeUI2.cs" t="Include" />
+              <e p="FR2_Unity.cs" t="Include" />
+              <e p="FR2_UsedInBuild.cs" t="Include" />
+              <e p="FR2_Window.cs" t="Include" />
+              <e p="FR2_WindowAll.cs" t="Include" />
+              <e p="FR2_WindowBase.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="FishNet" t="Include">
           <e p="CodeGenerating" t="Include">
@@ -463,6 +495,7 @@
               </e>
               <e p="FishyUnityTransport.asmdef" t="Include" />
               <e p="FishyUnityTransport.cs" t="Include" />
+              <e p="FishyUnityTransportRelayManager.cs" t="Include" />
               <e p="INetworkStreamDriverConstructor.cs" t="Include" />
               <e p="SimulatorParameters.cs" t="Include" />
             </e>
@@ -984,6 +1017,54 @@
               </e>
               <e p="readme.txt" t="Include" />
             </e>
+          </e>
+          <e p="Sirenix" t="Include">
+            <e p="Assemblies" t="Include">
+              <e p="link.xml" t="Include" />
+              <e p="NoEditor" t="Include" />
+              <e p="NoEmitAndNoEditor" t="Include" />
+              <e p="Sirenix.OdinInspector.Attributes.xml" t="Include" />
+              <e p="Sirenix.OdinInspector.Editor.xml" t="Include" />
+              <e p="Sirenix.Serialization.Config.xml" t="Include" />
+              <e p="Sirenix.Utilities.Editor.xml" t="Include" />
+              <e p="Sirenix.Utilities.xml" t="Include" />
+            </e>
+            <e p="Odin Inspector" t="Include">
+              <e p="Assets" t="Include">
+                <e p="Editor" t="Include" />
+              </e>
+              <e p="Config" t="Include">
+                <e p="Editor" t="Include" />
+                <e p="Resources" t="Include">
+                  <e p="Sirenix" t="Include" />
+                </e>
+              </e>
+              <e p="Modules" t="Include">
+                <e p="Unity.Mathematics" t="Include">
+                  <e p="manifest.txt" t="Include" />
+                  <e p="MathematicsDrawers.cs" t="Include" />
+                  <e p="Sirenix.OdinInspector.Modules.UnityMathematics.asmdef" t="Include" />
+                </e>
+              </e>
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="AssemblyImportSettingsAutomation.cs" t="Include" />
+                  <e p="BuildAOTAutomation.cs" t="Include" />
+                  <e p="EnsureOdinInspectorDefine.cs" t="Include" />
+                  <e p="FixBrokenUnityObjectWrapperDrawer.cs" t="Include" />
+                  <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.asmdef" t="Include" />
+                  <e p="SyncListDrawer.cs" t="Include" />
+                  <e p="SyncVarAttributeDrawer.cs" t="Include" />
+                  <e p="Vector2IntMinMaxAttributeDrawer.cs" t="Include" />
+                  <e p="VectorIntDrawers.cs" t="Include" />
+                  <e p="VectorIntPropertyResolvers.cs" t="Include" />
+                </e>
+                <e p="SerializedNetworkBehaviour.cs" t="Include" />
+                <e p="Sirenix.OdinInspector.CompatibilityLayer.asmdef" t="Include" />
+                <e p="VectorIntFormatters.cs" t="Include" />
+              </e>
+            </e>
+            <e p="readme.txt" t="Include" />
           </e>
           <e p="Zenject" t="Include">
             <e p="LICENSE.txt" t="Include" />
@@ -2087,6 +2168,9 @@
         <e p="Resources" t="Include" />
         <e p="Scenes" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="Characters" t="Include">
+            <e p="CharactersData.cs" t="Include" />
+          </e>
           <e p="Game" t="Include">
             <e p="GameController.cs" t="Include" />
           </e>
@@ -2094,6 +2178,7 @@
             <e p="IPlayerInput.cs" t="Include" />
           </e>
           <e p="Installers" t="Include">
+            <e p="CharacterWindowInstaller.cs" t="Include" />
             <e p="DiContainerInstaller.cs" t="Include" />
             <e p="InputInstaller.cs" t="Include" />
             <e p="LobbyManagerInstaller.cs" t="Include" />
@@ -2114,6 +2199,7 @@
           </e>
           <e p="Network" t="Include">
             <e p="ConnectionConntroller.cs" t="Include" />
+            <e p="Dictionary.cs" t="Include" />
             <e p="PlayerSpawner.cs" t="Include" />
           </e>
           <e p="Objects" t="Include">
@@ -2253,6 +2339,9 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="ParrelSync.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" t="IncludeRecursive" />
       <e p="Temp\Bin" t="ExcludeRecursive" />
       <e p="Unity.FishNet.Codegen.csproj" t="IncludeRecursive" />
       <e p="Zenject-Editor.csproj" t="IncludeRecursive" />

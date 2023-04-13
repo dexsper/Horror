@@ -1,5 +1,6 @@
 using FishNet;
 using FishNet.Managing.Scened;
+using Sirenix.OdinInspector;
 using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Lobbies.Models;
@@ -10,22 +11,21 @@ public class LobbyUI : MonoBehaviour
 {
     public static LobbyUI Instance { get; private set; }
 
-
+    [Title("References")]
     [SerializeField] private Transform playerSingleTemplate;
     [SerializeField] private Transform container;
+
+    [Title("Text")]
     [SerializeField] private TextMeshProUGUI lobbyNameText;
     [SerializeField] private TextMeshProUGUI playerCountText;
-    [SerializeField] private Button changeMarineButton;
-    [SerializeField] private Button changeNinjaButton;
-    [SerializeField] private Button changeZombieButton;
-    [SerializeField] private Button leaveLobbyButton;
 
+    [Title("Buttons")]
+    [SerializeField] private Button leaveLobbyButton;
     [SerializeField] private Button startGameButton;
 
     [SerializeField] private MapWindowUI mapWindowUI;
-    private LobbyManager _lobbyManager;
-    
 
+    private LobbyManager _lobbyManager;
 
     private void Awake()
     {
@@ -33,19 +33,6 @@ public class LobbyUI : MonoBehaviour
         _lobbyManager = LobbyManager.Instance;
 
         playerSingleTemplate.gameObject.SetActive(false);
-
-        changeMarineButton.onClick.AddListener(() =>
-        {
-            _lobbyManager.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Marine);
-        });
-        changeNinjaButton.onClick.AddListener(() =>
-        {
-            _lobbyManager.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Ninja);
-        });
-        changeZombieButton.onClick.AddListener(() =>
-        {
-            _lobbyManager.UpdatePlayerCharacter(LobbyManager.PlayerCharacter.Zombie);
-        });
 
         leaveLobbyButton.onClick.AddListener(() =>
         {
@@ -66,6 +53,7 @@ public class LobbyUI : MonoBehaviour
         _lobbyManager.OnJoinedLobbyUpdate += UpdateLobby_Event;
         _lobbyManager.OnLeftLobby += LobbyManager_OnLeftLobby;
         _lobbyManager.OnKickedFromLobby += LobbyManager_OnLeftLobby;
+
         Hide();
     }
 
@@ -85,12 +73,7 @@ public class LobbyUI : MonoBehaviour
 
     private void UpdateLobby_Event(object sender, LobbyEventArgs e)
     {
-        UpdateLobby();
-    }
-
-    private void UpdateLobby()
-    {
-        UpdateLobby(_lobbyManager.GetJoinedLobby());
+        UpdateLobby(_lobbyManager.JoinedLobby);
     }
 
     private void UpdateLobby(Lobby lobby)
@@ -100,7 +83,7 @@ public class LobbyUI : MonoBehaviour
         foreach (Player player in lobby.Players)
         {
             Transform playerSingleTransform = Instantiate(playerSingleTemplate, container);
-            playerSingleTransform.gameObject.SetActive(true);
+            //playerSingleTransform.gameObject.SetActive(true);
 
             LobbyPlayerSingleUI lobbyPlayerSingleUI = playerSingleTransform.GetComponent<LobbyPlayerSingleUI>();
 
@@ -118,6 +101,7 @@ public class LobbyUI : MonoBehaviour
         playerCountText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
         mapWindowUI.SetMapNameText(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
         mapWindowUI.SetCurrentMapSprite(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
+        
         Show();
     }
 

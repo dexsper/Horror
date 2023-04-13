@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cdcee4396754c63a1574492499cffc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _protocolType: 0
+  _protocolType: 1
   _maxPacketQueueSize: 128
   _maxPayloadSize: 6144
   _heartbeatTimeoutMS: 500
@@ -215,7 +215,7 @@ MonoBehaviour:
     PacketDelayMS: 0
     PacketJitterMS: 0
     PacketDropRate: 0
-  _maximumClients: 32767
+  _maximumClients: 4095
 --- !u!114 &5185823220288843692
 MonoBehaviour:
   m_ObjectHideFlags: 0

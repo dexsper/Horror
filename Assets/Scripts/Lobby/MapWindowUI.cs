@@ -30,7 +30,6 @@ public class MapWindowUI : MonoBehaviour
     private void Awake()
     {
         nextButton.onClick.AddListener(NextCharacter);
-        UpdateUI(0);
         if (LobbyManager.Instance.IsLobbyHost())
         {
             nextButton.interactable = true;
