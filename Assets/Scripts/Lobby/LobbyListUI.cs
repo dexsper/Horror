@@ -71,7 +71,7 @@ public class LobbyListUI : MonoBehaviour
         {
             if (child == _lobbyTemplate) continue;
 
-            Destroy(child.gameObject);
+            //Destroy(child.gameObject);
         }
 
         foreach (Lobby lobby in lobbyList)

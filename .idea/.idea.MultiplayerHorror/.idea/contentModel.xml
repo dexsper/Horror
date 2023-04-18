@@ -62,6 +62,10 @@
         </e>
         <e p="Assets" t="Include">
           <e p="Animations" t="Include" />
+          <e p="BackRooms" t="Include">
+            <e p="Source" t="Include" />
+            <e p="Textures" t="Include" />
+          </e>
           <e p="Models" t="Include">
             <e p="3 Pipe Head" t="Include">
               <e p="Materials" t="Include">
@@ -111,6 +115,17 @@
                 <e p="Textures" t="Include" />
               </e>
             </e>
+          </e>
+          <e p="School" t="Include">
+            <e p="material" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Prefabs" t="Include">
+              <e p="props" t="Include" />
+              <e p="road" t="Include" />
+            </e>
+            <e p="props" t="Include" />
+            <e p="road" t="Include" />
           </e>
         </e>
         <e p="Audio" t="Include">

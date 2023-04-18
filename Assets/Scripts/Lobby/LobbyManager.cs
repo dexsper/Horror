@@ -203,6 +203,7 @@ public class LobbyManager : MonoBehaviour
         JoinedLobby = lobby;
 
         OnJoinedLobbyUpdate?.Invoke(this, new LobbyEventArgs { lobby = JoinedLobby });
+        Debug.Log(GetMap());
     }
 
     public async void RefreshLobbyList()

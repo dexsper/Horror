@@ -40,7 +40,7 @@ public class LobbyUI : MonoBehaviour
         });
         startGameButton.onClick.AddListener(() =>
         {
-            SceneLoadData sld = new SceneLoadData("Backrooms");
+            SceneLoadData sld = new SceneLoadData(LobbyManager.Instance.GetMap());
             sld.ReplaceScenes = ReplaceOption.All;
 
             InstanceFinder.SceneManager.LoadGlobalScenes(sld);
@@ -79,17 +79,16 @@ public class LobbyUI : MonoBehaviour
     private void UpdateLobby(Lobby lobby)
     {
         ClearLobby();
+
         foreach (Player player in lobby.Players)
         {
-            Debug.Log("1");
             Transform playerSingleTransform = Instantiate(playerSingleTemplate, container);
-            
             playerSingleTransform.gameObject.SetActive(true);
-            
+
             LobbyPlayerSingleUI lobbyPlayerSingleUI = playerSingleTransform.GetComponent<LobbyPlayerSingleUI>();
 
             lobbyPlayerSingleUI.SetKickPlayerButtonVisible(
-                LobbyManager.Instance.IsLobbyHost() &&
+                _lobbyManager.IsLobbyHost() &&
                 player.Id != AuthenticationService.Instance.PlayerId
             );
 
@@ -102,7 +101,6 @@ public class LobbyUI : MonoBehaviour
         playerCountText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
         mapWindowUI.SetMapNameText(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
         mapWindowUI.SetCurrentMapSprite(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
-        
         Show();
     }
 

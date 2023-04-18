@@ -27,21 +27,6 @@ public class PlayerSpawner : MonoBehaviour
         Quaternion rotation;
         SetSpawn(out position, out rotation);
 
-        string connectionAddress = conn.GetAddress();
-        Debug.Log("Connection id: " + conn.ClientId);
-        Debug.Log("Connection address: " + connectionAddress);
-
-        Debug.Log("Players:");
-
-        foreach(var p in LobbyManager.Instance.JoinedLobby.Players)
-        {
-            Debug.Log(p.Id);
-        }
-
-        Player lobbyPlayer = LobbyManager.Instance.JoinedLobby.Players.First(p => p.Id == connectionAddress);
-
-        Debug.Log(lobbyPlayer.Data[LobbyManager.KEY_PLAYER_CHARACTER]);
-
         NetworkObject nob = _networkManager.GetPooledInstantiated(_prefab, true);
         nob.transform.SetPositionAndRotation(position, rotation);
         _networkManager.ServerManager.Spawn(nob, conn);
