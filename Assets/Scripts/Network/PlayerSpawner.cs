@@ -4,20 +4,23 @@ using FishNet;
 using FishNet.Connection;
 using FishNet.Managing;
 using FishNet.Object;
-using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
+    [SerializeField] private CharactersData _characterData;
     [SerializeField] private NetworkObject _prefab;
     [SerializeField] private List<Transform> _spawns;
 
     private NetworkManager _networkManager;
+    private LobbyManager _lobbyManager;
+
     private int _nextSpawn = 0;
 
     private void Awake()
     {
         _networkManager = InstanceFinder.NetworkManager;
+        _lobbyManager = LobbyManager.Instance;
     }
 
     [Server]
@@ -27,8 +30,17 @@ public class PlayerSpawner : MonoBehaviour
         Quaternion rotation;
         SetSpawn(out position, out rotation);
 
+        var player = conn.GetPlayer();
+
+        if (player == null) return;
+
+        var prefab = _characterData[player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value];
+
+        Debug.Log(prefab);
+
         NetworkObject nob = _networkManager.GetPooledInstantiated(_prefab, true);
         nob.transform.SetPositionAndRotation(position, rotation);
+
         _networkManager.ServerManager.Spawn(nob, conn);
     }
 

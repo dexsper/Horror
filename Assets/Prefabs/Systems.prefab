@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1e42f3eacb31b4986cd7f37a9e5479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterData: {fileID: 11400000, guid: 026af8e03a0f1b144892d98db4bb3f3d, type: 2}
   _prefab: {fileID: 201277550, guid: 1e03388a5f06c66459e32aafd02b7fed, type: 3}
   _spawns:
   - {fileID: 0}

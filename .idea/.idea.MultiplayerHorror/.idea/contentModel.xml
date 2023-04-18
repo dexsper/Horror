@@ -2216,6 +2216,7 @@
             <e p="ConnectionConntroller.cs" t="Include" />
             <e p="Dictionary.cs" t="Include" />
             <e p="PlayerSpawner.cs" t="Include" />
+            <e p="UnityServicesAuthenticator.cs" t="Include" />
           </e>
           <e p="Objects" t="Include">
             <e p="Generator.cs" t="Include" />
