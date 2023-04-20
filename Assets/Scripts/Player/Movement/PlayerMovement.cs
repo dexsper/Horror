@@ -10,15 +10,14 @@ public class PlayerMovement : NetworkBehaviour
     [SerializeField] private float _speed = 2f;
     [SerializeField] private float _gravityMultiplier = 4f;
 
-
     private float _xRototation;
     private bool _lockCursor;
-    
 
     private IPlayerInput _playerInput;
     private PlayerBehavior _player;
     private Rigidbody _rigidbody;
-    
+
+    public bool IsMove;
 
     private void Awake()
     {
@@ -73,6 +72,16 @@ public class PlayerMovement : NetworkBehaviour
         }
 
         AddGravity();
+        UpdateMoveStatus();
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void UpdateMoveStatus()
+    {
+        if (_rigidbody.velocity != Vector3.zero)
+            IsMove = true;
+        else
+            IsMove = false;
     }
 
     private void TimeManager_OnPostTick()

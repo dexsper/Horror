@@ -6,7 +6,7 @@ using FishNet.Managing;
 using FishNet.Object;
 using UnityEngine;
 
-public class PlayerSpawner : MonoBehaviour
+public class PlayerSpawner : NetworkBehaviour
 {
     [SerializeField] private CharactersData _characterData;
     [SerializeField] private NetworkObject _prefab;
@@ -34,16 +34,19 @@ public class PlayerSpawner : MonoBehaviour
 
         if (player == null) return;
 
-        var prefab = _characterData[player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value];
-
-        Debug.Log(prefab);
-
         NetworkObject nob = _networkManager.GetPooledInstantiated(_prefab, true);
         nob.transform.SetPositionAndRotation(position, rotation);
-
         _networkManager.ServerManager.Spawn(nob, conn);
+        UpdatePlayerModel(nob,player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value);
     }
 
+    [ObserversRpc(BufferLast = true)]
+    private void UpdatePlayerModel(NetworkObject nob,string prefabName)
+    {
+        var prefab = _characterData[prefabName];
+        nob.GetComponent<PlayerBehavior>().CreateModel(prefab);
+    }
+    
     private void SetSpawn(out Vector3 pos, out Quaternion rot)
     {
         if (_spawns.Count == 0)

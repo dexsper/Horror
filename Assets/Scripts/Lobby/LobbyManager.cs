@@ -20,6 +20,8 @@ public class LobbyManager : MonoBehaviour
     private float _refreshLobbyListTimer = 5f;
     private string _playerName;
 
+    [field: SerializeField] public LobbyUI LobbyUI { get; private set; }
+    
     [Inject] private CharacterWindowUI _characterWindowUI;
 
     public Lobby JoinedLobby { get; private set; }

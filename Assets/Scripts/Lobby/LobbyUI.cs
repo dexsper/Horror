@@ -47,6 +47,12 @@ public class LobbyUI : MonoBehaviour
         });
     }
 
+    public void ActivateStartButton()
+    {
+        if(LobbyManager.Instance.IsLobbyHost())
+            startGameButton.gameObject.SetActive(true);
+    }
+
     private void Start()
     {
         _lobbyManager.OnJoinedLobby += UpdateLobby_Event;
@@ -95,7 +101,7 @@ public class LobbyUI : MonoBehaviour
             lobbyPlayerSingleUI.UpdatePlayer(player);
         }
 
-        startGameButton.gameObject.SetActive(_lobbyManager.IsLobbyHost());
+        //startGameButton.gameObject.SetActive(_lobbyManager.IsLobbyHost());
         mapWindowUI.NextButtonStatus(_lobbyManager.IsLobbyHost());
         lobbyNameText.text = lobby.Name;
         playerCountText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;

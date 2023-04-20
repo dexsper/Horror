@@ -12,4 +12,12 @@ public class CharactersData : SerializedScriptableObject
     {
         get => Characters[characterName];
     }
+
+    public GameObject GetModel(string name)
+    {
+        if (!Characters.ContainsKey(name))
+            return null;
+        else
+            return Characters[name].gameObject;
+    }
 }

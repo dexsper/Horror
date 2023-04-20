@@ -66,25 +66,28 @@
             <e p="Source" t="Include" />
             <e p="Textures" t="Include" />
           </e>
-          <e p="Models" t="Include">
+          <e p="HorrorModels" t="Include">
             <e p="3 Pipe Head" t="Include">
               <e p="Materials" t="Include">
+                <e p="Anims" t="Include" />
                 <e p="Textures" t="Include" />
               </e>
             </e>
             <e p="4 Head" t="Include">
-              <e p="Materials" t="Include" />
+              <e p="Materials" t="Include">
+                <e p="Anims" t="Include" />
+                <e p="Skin_1" t="Include" />
+              </e>
             </e>
             <e p="Light Bulb Head" t="Include">
-              <e p="Materials 2" t="Include" />
+              <e p="Materials 2" t="Include">
+                <e p="Anims" t="Include" />
+              </e>
             </e>
             <e p="Light Head First" t="Include">
               <e p="Materials 1" t="Include" />
             </e>
             <e p="Megahorn Head" t="Include">
-              <e p="Materials" t="Include" />
-            </e>
-            <e p="Pipe Head" t="Include">
               <e p="Materials" t="Include" />
             </e>
             <e p="Pipe Light Head" t="Include">
@@ -96,23 +99,14 @@
                 <e p="Textures" t="Include" />
               </e>
             </e>
-            <e p="Siren Head" t="Include">
-              <e p="Materials" t="Include">
-                <e p="Animation" t="Include" />
-                <e p="Base mesh" t="Include">
-                  <e p="Materials" t="Include" />
-                </e>
-                <e p="Texture" t="Include">
-                  <e p="Skin_1" t="Include" />
-                </e>
-              </e>
-            </e>
             <e p="Traffic Head" t="Include">
               <e p="Materials" t="Include" />
             </e>
             <e p="TV Head" t="Include">
               <e p="Materials" t="Include">
-                <e p="Textures" t="Include" />
+                <e p="Textures" t="Include">
+                  <e p="Skin_1" t="Include" />
+                </e>
               </e>
             </e>
           </e>

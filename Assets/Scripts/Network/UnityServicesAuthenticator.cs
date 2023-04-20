@@ -97,6 +97,8 @@ public class UnityServicesAuthenticator : Authenticator
     {
         string result = (rb.Passed) ? "Authentication complete." : "Authenitcation failed.";
         NetworkManager.Log(result);
+        if(rb.Passed)
+            LobbyManager.Instance.LobbyUI.ActivateStartButton();
     }
 
     /// <summary>
