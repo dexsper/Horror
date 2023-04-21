@@ -1,6 +1,7 @@
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using UnityEngine;
+using Zenject;
 
 [System.Serializable]
 public struct GeneratorSettings
@@ -12,8 +13,12 @@ public class Generator : NetworkBehaviour, IInteractable
 {
     [SerializeField] private GeneratorSettings _settings = default;
 
+    [SerializeField] private ParticleSystem repairEffect;
+    [SerializeField] private GameObject light;
+    
     private float _repairTime = 0f;
     private IInteractable _thisInteractable;
+    [Inject] private ObjectsController _objectsController;
     [SyncVar] private PlayerBehavior _repairInitiator;
     [SyncVar] private bool _isRepairing = false;
     [SyncVar] private bool _isRepaired = false;
@@ -51,7 +56,7 @@ public class Generator : NetworkBehaviour, IInteractable
 
             if (_repairTime >= _settings.RepairTime)
             {
-                _isRepaired = true;
+                RepairGenerator();
             }
         }
         else
@@ -60,6 +65,14 @@ public class Generator : NetworkBehaviour, IInteractable
         }
     }
 
+    [ObserversRpc(BufferLast = true)]
+    private void RepairGenerator()
+    {
+        _isRepaired = true;
+        _objectsController.OnGeneratorRepaired(this);
+        repairEffect.Play();
+        light.SetActive(true);
+    }
 
     [ServerRpc(RequireOwnership = false)]
     public void Interact(PlayerBehavior player)

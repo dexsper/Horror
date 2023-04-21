@@ -66,6 +66,16 @@
             <e p="Source" t="Include" />
             <e p="Textures" t="Include" />
           </e>
+          <e p="ElecticBox" t="Include">
+            <e p="Electric box" t="Include">
+              <e p="Material.001" t="Include" />
+              <e p="Material.006" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Material.015" t="Include" />
+              <e p="None" t="Include" />
+            </e>
+          </e>
           <e p="HorrorModels" t="Include">
             <e p="3 Pipe Head" t="Include">
               <e p="Materials" t="Include">
@@ -2174,9 +2184,12 @@
         </e>
         <e p="Prefabs" t="Include">
           <e p="CharactersModels" t="Include" />
+          <e p="Objects" t="Include" />
         </e>
         <e p="Resources" t="Include" />
-        <e p="Scenes" t="Include" />
+        <e p="Scenes" t="Include">
+          <e p="BackRooms" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Characters" t="Include">
             <e p="CharactersData.cs" t="Include" />
@@ -2192,6 +2205,7 @@
             <e p="DiContainerInstaller.cs" t="Include" />
             <e p="InputInstaller.cs" t="Include" />
             <e p="LobbyManagerInstaller.cs" t="Include" />
+            <e p="ObjectControllerInstaller.cs" t="Include" />
           </e>
           <e p="Lobby" t="Include">
             <e p="AuthenticateUI.cs" t="Include" />
@@ -2215,6 +2229,7 @@
           </e>
           <e p="Objects" t="Include">
             <e p="Generator.cs" t="Include" />
+            <e p="ObjectsController.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Interaction" t="Include">

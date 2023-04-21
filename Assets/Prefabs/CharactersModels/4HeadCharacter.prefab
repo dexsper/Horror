@@ -121,6 +121,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.78296804
       objectReference: {fileID: 0}
+    - target: {fileID: 1572465737172266769, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572465737172266769, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1659899492155348240, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -286,6 +296,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -47.36413
       objectReference: {fileID: 0}
+    - target: {fileID: 3049163432765972967, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3049163432765972967, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3126714495539036486, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -345,6 +365,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 9.146243
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561150050043794672, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3561150050043794672, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3683380629774781046, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
         type: 3}
@@ -725,6 +755,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 7.039767
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404519335701529778, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404519335701529778, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7435551046953948093, guid: 461f124e6f80929439a3d8e1f8e0fd5e,
         type: 3}

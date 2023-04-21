@@ -152,7 +152,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
   cameraLook: {fileID: 8738820238795575076}
-  _cameraPrefab: {fileID: 2020794176453871096, guid: 69b3baedd5400164fa78c2f01603c0ed,
+  _cameraPrefab: {fileID: 7648576990740199698, guid: a2e5a4e7c583e5a48beada3f1343c55e,
     type: 3}
 --- !u!114 &-5254058266770781800
 MonoBehaviour:
@@ -184,6 +184,7 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 201277550}
   _speed: 12
   _gravityMultiplier: 6
+  IsMove: 0
 --- !u!114 &5539716946378381922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +200,7 @@ MonoBehaviour:
   _componentIndexCache: 3
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
-  cameraYLookRange: {x: -3, y: 3}
+  cameraYLookRange: {x: -6, y: 7}
 --- !u!114 &8662986836516071234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,8 +218,8 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 201277550}
   _interactableMask:
     serializedVersion: 2
-    m_Bits: 1
-  _interactionDistance: 1.5
+    m_Bits: 64
+  _interactionDistance: 3
 --- !u!1 &2455656388925132596
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8738820238795575076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CameraLook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1513002186894805729}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Graphical
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,15 +1,32 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class PlayerUIController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _interactionText;
     [SerializeField] private Button _interactButton;
 
+    [SerializeField] private TextMeshProUGUI repairedObjectsCount;
+
+
+    [Inject] private ObjectsController _objectsController;
     private void Awake()
     {
         _interactButton.onClick.AddListener(Interact);
+        repairedObjectsCount.text = $"Generators left : {_objectsController.ObjectsCount}";
+    }
+
+    private void OnEnable()
+    {
+        _objectsController.OnObjectRepaired += UpdateRepairedObjects;
+    }
+
+    private void OnDestroy()
+    {
+        _objectsController.OnObjectRepaired -= UpdateRepairedObjects;
     }
 
     private void Interact()
@@ -40,5 +57,10 @@ public class PlayerUIController : MonoBehaviour
         }
 
         _interactionText.text = "";
+    }
+
+    private void UpdateRepairedObjects(int count)
+    {
+        repairedObjectsCount.text = $"Generators left : {count}";
     }
 }
