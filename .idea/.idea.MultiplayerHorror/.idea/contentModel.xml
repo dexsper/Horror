@@ -947,6 +947,7 @@
           <e p="Upgrading" t="Include" />
           <e p="VERSION.txt" t="Include" />
         </e>
+        <e p="HorrorModels" t="Include" />
         <e p="Joystick Pack" t="Include">
           <e p="Examples" t="Include">
             <e p="JoystickPlayerExample.cs" t="Include" />
