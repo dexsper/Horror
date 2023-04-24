@@ -76,6 +76,21 @@
               <e p="None" t="Include" />
             </e>
           </e>
+          <e p="Epic Toon FX" t="Include">
+            <e p="Materials" t="Include">
+              <e p="Misc" t="Include">
+                <e p="Lightning" t="Include" />
+              </e>
+            </e>
+            <e p="Prefabs" t="Include">
+              <e p="Environment" t="Include">
+                <e p="Lightning" t="Include">
+                  <e p="Soft" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Textures" t="Include" />
+          </e>
           <e p="HorrorModels" t="Include">
             <e p="3 Pipe Head" t="Include">
               <e p="Materials" t="Include">
@@ -2205,7 +2220,6 @@
             <e p="DiContainerInstaller.cs" t="Include" />
             <e p="InputInstaller.cs" t="Include" />
             <e p="LobbyManagerInstaller.cs" t="Include" />
-            <e p="ObjectControllerInstaller.cs" t="Include" />
           </e>
           <e p="Lobby" t="Include">
             <e p="AuthenticateUI.cs" t="Include" />
@@ -2229,7 +2243,6 @@
           </e>
           <e p="Objects" t="Include">
             <e p="Generator.cs" t="Include" />
-            <e p="ObjectsController.cs" t="Include" />
           </e>
           <e p="Player" t="Include">
             <e p="Interaction" t="Include">

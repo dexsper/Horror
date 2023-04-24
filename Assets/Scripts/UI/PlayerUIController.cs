@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,24 +10,27 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _interactionText;
     [SerializeField] private Button _interactButton;
 
-    [SerializeField] private TextMeshProUGUI repairedObjectsCount;
-
-
-    [Inject] private ObjectsController _objectsController;
+    [SerializeField] private TextMeshProUGUI repairedGeneratorsCount;
+    
     private void Awake()
     {
         _interactButton.onClick.AddListener(Interact);
-        repairedObjectsCount.text = $"Generators left : {_objectsController.ObjectsCount}";
+    }
+
+    private void Start()
+    {
+        UpdateRepairedGeneratorsText(Generator.Generators.Count);
     }
 
     private void OnEnable()
     {
-        _objectsController.OnObjectRepaired += UpdateRepairedObjects;
+        Generator.OnRepaired += OnGeneratorRepaired;
+
     }
 
     private void OnDestroy()
     {
-        _objectsController.OnObjectRepaired -= UpdateRepairedObjects;
+        Generator.OnRepaired -= OnGeneratorRepaired;
     }
 
     private void Interact()
@@ -59,8 +63,13 @@ public class PlayerUIController : MonoBehaviour
         _interactionText.text = "";
     }
 
-    private void UpdateRepairedObjects(int count)
+    private void UpdateRepairedGeneratorsText(int count)
     {
-        repairedObjectsCount.text = $"Generators left : {count}";
+        repairedGeneratorsCount.text = $"Generators Left {count}";
+    }
+    
+    private void OnGeneratorRepaired(Generator generator)
+    {
+        UpdateRepairedGeneratorsText(Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count());
     }
 }

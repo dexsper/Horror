@@ -17,7 +17,7 @@ public class PlayerMovement : NetworkBehaviour
     private PlayerBehavior _player;
     private Rigidbody _rigidbody;
 
-    public bool IsMove;
+    public bool IsMove { get; private set; }
 
     private void Awake()
     {
@@ -72,16 +72,6 @@ public class PlayerMovement : NetworkBehaviour
         }
 
         AddGravity();
-        UpdateMoveStatus();
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    private void UpdateMoveStatus()
-    {
-        if (_rigidbody.velocity != Vector3.zero)
-            IsMove = true;
-        else
-            IsMove = false;
     }
 
     private void TimeManager_OnPostTick()
@@ -126,6 +116,7 @@ public class PlayerMovement : NetworkBehaviour
         Vector3 targetRotation = new Vector3();
         targetRotation.y = transform.localEulerAngles.y + md.Rotation  * delta;
         transform.localEulerAngles = targetRotation;
+        IsMove = velocity.sqrMagnitude > 0;
     }
 
     [Reconcile]

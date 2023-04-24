@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using UnityEngine;
@@ -11,6 +13,8 @@ public struct GeneratorSettings
 
 public class Generator : NetworkBehaviour, IInteractable
 {
+    public static List<Generator> Generators = new List<Generator>();
+    
     [SerializeField] private GeneratorSettings _settings = default;
 
     [SerializeField] private ParticleSystem repairEffect;
@@ -18,19 +22,23 @@ public class Generator : NetworkBehaviour, IInteractable
     
     private float _repairTime = 0f;
     private IInteractable _thisInteractable;
-    [Inject] private ObjectsController _objectsController;
+  
     [SyncVar] private PlayerBehavior _repairInitiator;
     [SyncVar] private bool _isRepairing = false;
-    [SyncVar] private bool _isRepaired = false;
+    [SyncVar(OnChange = nameof(On_RepairedChange))] private bool _isRepaired = false;
 
     public PlayerBehavior RepairInitiator => _repairInitiator;
     public bool IsRepairing => _isRepairing;
+    public bool IsRepaired => _isRepaired;
     public string InteractionPrompt => _isRepairing ? "Stop Repair" : "Repair Generator";
     public Transform GetTransform() => this.transform;
 
+    public static event Action<Generator> OnRepaired;
+    
     private void Awake()
     {
         _thisInteractable = (IInteractable)this;
+        Generators.Add(this);
     }
 
     [Server]
@@ -56,7 +64,7 @@ public class Generator : NetworkBehaviour, IInteractable
 
             if (_repairTime >= _settings.RepairTime)
             {
-                RepairGenerator();
+                _isRepaired = true;
             }
         }
         else
@@ -65,13 +73,14 @@ public class Generator : NetworkBehaviour, IInteractable
         }
     }
 
-    [ObserversRpc(BufferLast = true)]
-    private void RepairGenerator()
+    private void On_RepairedChange(bool prev, bool next, bool asServer)
     {
-        _isRepaired = true;
-        _objectsController.OnGeneratorRepaired(this);
-        repairEffect.Play();
-        light.SetActive(true);
+        if (next)
+        {
+            OnRepaired?.Invoke(this);
+            repairEffect.Play();
+            light.SetActive(true);
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Cinemachine;
+using FishNet;
 using FishNet.Component.Animating;
 using FishNet.Component.Prediction;
 using FishNet.Object;
@@ -17,6 +18,7 @@ public class PlayerBehavior : NetworkBehaviour
     private PlayerMovement _movement;
 
     private Animator _playerAnimator;
+    private NetworkAnimator _networkAnimator;
 
     public PredictedObject PredictedObject => _predictedObject;
     public PlayerInteraction Interaction => _interaction;
@@ -34,6 +36,18 @@ public class PlayerBehavior : NetworkBehaviour
         _predictedObject = GetComponent<PredictedObject>();
         _interaction = GetComponent<PlayerInteraction>();
         _movement = GetComponent<PlayerMovement>();
+        _networkAnimator = GetComponent<NetworkAnimator>();
+        
+        InstanceFinder.TimeManager.OnTick += OnTick;
+        InstanceFinder.TimeManager.OnPostTick += OnTick;
+    }
+
+    private void OnTick()
+    {
+        if (_networkAnimator != null && _networkAnimator.Animator != null)
+        {
+            _networkAnimator.Play(Movement.IsMove ? "Run" : "Idle");
+        }
     }
 
     public override void OnStartClient()
@@ -69,21 +83,11 @@ public class PlayerBehavior : NetworkBehaviour
         Camera.Follow = _predictedObject.GetGraphicalObject();
         Camera.LookAt = cameraLook;
     }
-    
-    public void LateUpdate()
-    {
-        if (_playerAnimator != null)
-        {
-            if(_playerAnimator != null && _movement.IsMove)
-                _playerAnimator.SetBool("IsMove",true);
-            else
-                _playerAnimator.SetBool("IsMove",false);
-        }
-    }
 
     public void CreateModel(GameObject model)
     {
         Model = Instantiate(model, _predictedObject.GetGraphicalObject());
         _playerAnimator = Model.GetComponent<Animator>();
+        _networkAnimator.SetAnimator(_playerAnimator);
     }
 }
