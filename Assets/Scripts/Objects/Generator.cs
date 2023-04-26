@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using UnityEngine;
-using Zenject;
+using Sirenix.OdinInspector;
 
 [System.Serializable]
 public struct GeneratorSettings
@@ -14,30 +14,38 @@ public struct GeneratorSettings
 public class Generator : NetworkBehaviour, IInteractable
 {
     public static List<Generator> Generators = new List<Generator>();
-    
+
     [SerializeField] private GeneratorSettings _settings = default;
 
-    [SerializeField] private ParticleSystem repairEffect;
-    [SerializeField] private GameObject light;
-    
+    [Title("Interaction")]
+    [SerializeField] private string _startRepair = "Repair Generator";
+    [SerializeField] private string _stopRepair = "Stop Repair";
+
+    [Title("Effects")]
+    [SerializeField] private ParticleSystem _repairedEffect;
+    [SerializeField] private GameObject _lightEffect;
+
     private float _repairTime = 0f;
     private IInteractable _thisInteractable;
-  
-    [SyncVar] private PlayerBehavior _repairInitiator;
-    [SyncVar] private bool _isRepairing = false;
-    [SyncVar(OnChange = nameof(On_RepairedChange))] private bool _isRepaired = false;
 
-    public PlayerBehavior RepairInitiator => _repairInitiator;
-    public bool IsRepairing => _isRepairing;
-    public bool IsRepaired => _isRepaired;
-    public string InteractionPrompt => _isRepairing ? "Stop Repair" : "Repair Generator";
+    [SyncVar, HideInInspector] private bool _isRepairing = false;
+    [SyncVar(OnChange = nameof(On_RepairedChange)), HideInInspector] private bool _isRepaired = false;
+    [SyncVar, HideInInspector] private PlayerBehavior _repairInitiator;
+
+    [Title("Current State")]
+    [ShowInInspector] public bool IsRepairing => _isRepairing;
+    [ShowInInspector] public bool IsRepaired => _isRepaired;
+    [ShowInInspector] public PlayerBehavior RepairInitiator => _repairInitiator;
+
+    public string InteractionPrompt => _isRepairing ? _stopRepair : _startRepair;
     public Transform GetTransform() => this.transform;
 
     public static event Action<Generator> OnRepaired;
-    
+
     private void Awake()
     {
         _thisInteractable = (IInteractable)this;
+
         Generators.Add(this);
     }
 
@@ -78,8 +86,9 @@ public class Generator : NetworkBehaviour, IInteractable
         if (next)
         {
             OnRepaired?.Invoke(this);
-            repairEffect.Play();
-            light.SetActive(true);
+
+            _repairedEffect.Play();
+            _lightEffect.SetActive(true);
         }
     }
 

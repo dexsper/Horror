@@ -1,4 +1,7 @@
-﻿using FishNet.Connection;
+﻿#if UNITY_EDITOR || DEVELOPMENT_BUILD
+#define DEVELOPMENT
+#endif
+using FishNet.Connection;
 using FishNet.Documenting;
 using FishNet.Managing.Logging;
 using FishNet.Managing.Server;
@@ -18,6 +21,14 @@ namespace FishNet.Component.Transforming
     public sealed class NetworkTransform : NetworkBehaviour
     {
         #region Types.
+        [System.Serializable]
+        public enum ComponentConfigurationType
+        {
+            Disabled = 0,
+            CharacterController = 1,
+            Rigidbody = 2,
+            Rigidbody2D = 3,
+        }
         private struct ReceivedData
         {
             public List<bool> HasData;
@@ -251,6 +262,12 @@ namespace FishNet.Component.Transforming
 
         #region Serialized.
         /// <summary>
+        /// Attached movement component to automatically configure.
+        /// </summary>
+        [Tooltip("Attached movement component to automatically configure.")]
+        [SerializeField]
+        private ComponentConfigurationType _componentConfiguration = ComponentConfigurationType.Disabled;
+        /// <summary>
         /// True to synchronize when this transform changes parent.
         /// </summary>
         [Tooltip("True to synchronize when this transform changes parent.")]
@@ -465,6 +482,14 @@ namespace FishNet.Component.Transforming
         /// </summary>
         private static Stack<GoalData> _goalDataCache = new Stack<GoalData>();
         /// <summary>
+        /// Cache of TransformDatas to prevent allocations.
+        /// </summary>
+        private static Stack<TransformData> _transformDataCache = new Stack<TransformData>();
+        /// <summary>
+        /// Cache of List<bool> to prevent allocations.
+        /// </summary>
+        private static Stack<List<bool>> _listBoolCache = new Stack<List<bool>>();
+        /// <summary>
         /// True if the transform has changed since it started.
         /// </summary>
         private bool _changedSinceStart;
@@ -502,18 +527,8 @@ namespace FishNet.Component.Transforming
         public override void OnStartServer()
         {
             base.OnStartServer();
-
-            _receivedClientData.HasData = new List<bool>();
-
-            //Initialize for LODs.
-            for (int i = 0; i < base.ObserverManager.GetLevelOfDetailDistances().Count; i++)
-            {
-                _changedWriters.Add(WriterPool.GetWriter());
-                _lastSentTransformDatas.Add(new TransformData());
-                _receivedClientData.HasData.Add(false);
-                _serverChangedSinceReliable.Add(ChangedDelta.Unset);
-            }
-
+            ConfigureComponents();
+            AddCollections(true);
             SetDefaultGoalData();
             /* Server must always subscribe.
              * Server needs to relay client auth in
@@ -545,17 +560,8 @@ namespace FishNet.Component.Transforming
         public override void OnStartClient()
         {
             base.OnStartClient();
-
-            //Initialize for LOD if client only.
-            if (base.IsClientOnly)
-            {
-                for (int i = 0; i < base.ObserverManager.GetLevelOfDetailDistances().Count; i++)
-                {
-                    _changedWriters.Add(WriterPool.GetWriter());
-                    _lastSentTransformDatas.Add(new TransformData());
-                }
-            }
-
+            ConfigureComponents();
+            AddCollections(false);
             SetDefaultGoalData();
         }
 
@@ -597,12 +603,7 @@ namespace FishNet.Component.Transforming
             base.OnStopServer();
             //Always unsubscribe; if the server stopped so did client.
             ChangeTickSubscription(false);
-            for (int i = 0; i < base.ObserverManager.GetLevelOfDetailDistances().Count; i++)
-            {
-                _lastSentTransformDatas[i].Reset();
-                _serverChangedSinceReliable[i] = ChangedDelta.Unset;
-                _receivedClientData.SetHasData(false, (byte)i);
-            }
+            CacheCollections(true);
         }
 
         public override void OnStopClient()
@@ -611,13 +612,143 @@ namespace FishNet.Component.Transforming
             //If not also server unsubscribe from ticks.
             if (!base.IsServer)
                 ChangeTickSubscription(false);
+
+            CacheCollections(false);
         }
+
 
         private void Update()
         {
             MoveToTarget();
         }
 
+        /// <summary>
+        /// Adds collections required.
+        /// </summary>
+        private void AddCollections(bool asServer)
+        {
+            //Do not add for client if also server, as server would have already added.
+            if (!asServer && base.IsServer)
+                return;
+
+            if (_changedWriters.Count > 0)
+            {
+                base.NetworkManager.LogWarning($"ChangedWriters collection contains values. This should not be possible.");
+                _changedWriters.Clear();
+            }
+            if (_lastSentTransformDatas.Count > 0)
+            {
+                base.NetworkManager.LogWarning($"LastSentTransformDatas collection contains values. This should not be possible.");
+                _lastSentTransformDatas.Clear();
+            }
+
+            if (asServer)
+            {
+                _receivedClientData.HasData = RetrieveListBool();
+                if (_serverChangedSinceReliable.Count > 0)
+                {
+                    base.NetworkManager.LogWarning($"ServerChangedSinceReliable collection contains values. This should not be possible.");
+                    _serverChangedSinceReliable.Clear();
+                }
+            }
+
+            //Initialize for LODs.
+            for (int i = 0; i < base.ObserverManager.GetLevelOfDetailDistances().Count; i++)
+            {
+                _changedWriters.Add(WriterPool.GetWriter());
+                _lastSentTransformDatas.Add(RetrieveTransformData());
+                if (asServer)
+                {
+                    _receivedClientData.HasData.Add(false);
+                    _serverChangedSinceReliable.Add(ChangedDelta.Unset);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Caches collections which have allocating types.
+        /// </summary>
+        private void CacheCollections(bool asServer)
+        {
+            //Do not remove for client if also server, as server would have already added.
+            if (!asServer && base.IsServer)
+                return;
+
+            //Reset writers.
+            foreach (PooledWriter writer in _changedWriters)
+                WriterPool.Recycle(writer);
+            _changedWriters.Clear();
+            //Reset LastSentTransformDatas.
+            foreach (TransformData td in _lastSentTransformDatas)
+                StoreTransformData(td);
+            _lastSentTransformDatas.Clear();
+
+            if (asServer)
+            {
+                StoreListBool(_receivedClientData.HasData);
+                _receivedClientData.HasData = null;
+                _serverChangedSinceReliable.Clear();
+            }
+        }
+
+        /// <summary>
+        /// Configures components automatically.
+        /// </summary>
+        private void ConfigureComponents()
+        {
+            //Disabled.
+            if (_componentConfiguration == ComponentConfigurationType.Disabled)
+            {
+                return;
+            }
+            //RB.
+            else if (_componentConfiguration == ComponentConfigurationType.Rigidbody)
+            {
+
+                if (TryGetComponent<Rigidbody>(out Rigidbody c))
+                {
+                    bool isKinematic = (!base.IsOwner || base.IsServerOnly);
+                    c.isKinematic = isKinematic;
+                    c.interpolation = RigidbodyInterpolation.None;
+                }
+            }
+            //RB2D
+            else if (_componentConfiguration == ComponentConfigurationType.Rigidbody2D)
+            {
+                //Only client authoritative needs to be configured.
+                if (!_clientAuthoritative)
+                    return;
+                if (TryGetComponent<Rigidbody2D>(out Rigidbody2D c))
+                {
+                    bool isKinematic = (!base.IsOwner || base.IsServerOnly);
+                    c.isKinematic = isKinematic;
+                    c.simulated = !isKinematic;
+                    c.interpolation = RigidbodyInterpolation2D.None;
+                }
+            }
+            //CC
+            else if (_componentConfiguration == ComponentConfigurationType.CharacterController)
+            {
+                if (TryGetComponent<CharacterController>(out CharacterController c))
+                {
+                    //Client auth.
+                    if (_clientAuthoritative)
+                    {
+                        c.enabled = base.IsOwner;
+                    }
+                    //Server auth.
+                    else
+                    {
+                        //Not CSP.
+                        if (_sendToOwner)
+                            c.enabled = base.IsServer;
+                        //Most likely CSP.
+                        else
+                            c.enabled = (base.IsServer || base.IsOwner);
+                    }
+                }
+            }
+        }
 
         /// <summary>
         /// Called when a tick occurs.
@@ -771,8 +902,7 @@ namespace FishNet.Component.Transforming
             /* Do not use compression when nested. Depending
              * on the scale of the parent compression may
              * not be accurate enough. */
-            TransformPackingData packing = (ChangedContains(changed, ChangedDelta.Nested)) ?
-                _unpacked : _packing;
+            TransformPackingData packing = ChangedContains(changed, ChangedDelta.Nested) ? _unpacked : _packing;
 
             int startIndexA = writer.Position;
             writer.Reserve(1);
@@ -1146,7 +1276,7 @@ namespace FishNet.Component.Transforming
                 if (queueCount > 0)
                 {
                     _currentGoalData.Reset();
-                    _goalDataCache.Push(_currentGoalData);
+                    StoreGoalData(_currentGoalData);
                     SetCurrentGoalData(_goalDataQueue.Dequeue());
                     if (leftOver > 0f)
                         MoveToTarget(leftOver);
@@ -1175,7 +1305,7 @@ namespace FishNet.Component.Transforming
         private void SendToClients(byte lodIndex)
         {
             //True if clientAuthoritative and there is an owner.
-            bool clientAuthoritativeWithOwner = (_clientAuthoritative && base.Owner.IsValid);
+            bool clientAuthoritativeWithOwner = (_clientAuthoritative && base.Owner.IsValid && !base.Owner.IsLocalClient);
             //Channel to send rpc on.
             Channel channel = Channel.Unreliable;
             //If relaying from client.
@@ -1236,17 +1366,29 @@ namespace FishNet.Component.Transforming
                 //Send out changes.
                 if (dataChanged)
                 {
-                    foreach (NetworkConnection nc in base.Observers)
+                    ArraySegment<byte> dataSegment = _changedWriters[lodIndex].GetArraySegment();
+                    //todo - resolve networklod sending 0 count data properly. Count should never be 0.
+                    if (dataSegment.Count > 0)
                     {
-                        byte lod;
-                        if (!nc.LevelOfDetails.TryGetValue(base.NetworkObject, out lod))
-                            lod = 0;
-                        //Not high enough index to send to conn.
-                        if (lod > lodIndex)
-                            continue;
-                        //No need for server to send to local client (clientHost).
+                        foreach (NetworkConnection nc in base.Observers)
+                        {
+                            //If to not send to owner.
+                            if (!_sendToOwner && nc == base.Owner)
+                                continue;
+
+                            byte lod;
+                            if (!nc.LevelOfDetails.TryGetValue(base.NetworkObject, out lod))
+                                lod = 0;
+                            //Not high enough index to send to conn.
+                            if (lod > lodIndex)
+                                continue;
+                            //No need for server to send to local client (clientHost).
+                            //Still send if development for stat tracking.
+#if !DEVELOPMENT
                         if (!nc.IsLocalClient)
-                            TargetUpdateTransform(nc, _changedWriters[lodIndex].GetArraySegment(), channel);
+#endif
+                            TargetUpdateTransform(nc, dataSegment, channel);
+                        }
                     }
                 }
             }
@@ -1258,6 +1400,14 @@ namespace FishNet.Component.Transforming
         /// </summary>
         private void SendToServer(TransformData lastSentTransformData)
         {
+            /* ClientHost does not need to send to the server.
+             * Ideally this would still occur and the data be ignored
+             * for statistics tracking but to keep the code more simple
+             * we won't be doing that. Server out however still is tracked,
+             * which is generally considered more important data. */
+            if (base.IsServer)
+                return;
+
             //Not client auth or not owner.
             if (!_clientAuthoritative || !base.IsOwner)
                 return;
@@ -1620,6 +1770,17 @@ namespace FishNet.Component.Transforming
         [TargetRpc(ValidateTarget = false)]
         private void TargetUpdateTransform(NetworkConnection conn, ArraySegment<byte> data, Channel channel)
         {
+#if DEVELOPMENT
+            //If receiver is client host then do nothing, clientHost need not process.
+            if (base.IsServer && conn.IsLocalClient)
+                return;
+#endif
+            /* Zero data was sent, this should not be possible.
+             * This is a patch to a NetworkLOD bug until it can
+             * be resolved properly. */
+            if (data.Count == 0)
+                return;
+
             byte lod;
             /* Get cached LOD for connection receiving this. It will of course
              * always be the local client for conn. */
@@ -1718,7 +1879,7 @@ namespace FishNet.Component.Transforming
             RateData prevRd = _lastCalculatedRateData;
             ChangedFull changedFull = new ChangedFull();
 
-            GoalData nextGd = GetCachedGoalData();
+            GoalData nextGd = RetrieveGoalData();
             TransformData nextTd = nextGd.Transforms;
             UpdateTransformData(data, prevTd, nextTd, ref changedFull);
             OnDataReceived?.Invoke(prevTd, nextTd);
@@ -1800,7 +1961,7 @@ namespace FishNet.Component.Transforming
                 while (_goalDataQueue.Count > _interpolation)
                 {
                     GoalData tmpGd = _goalDataQueue.Dequeue();
-                    _goalDataCache.Push(tmpGd);
+                    StoreGoalData(tmpGd);
                 }
                 //Snap to the next data to fix any smoothing timings.
                 SetCurrentGoalData(_goalDataQueue.Dequeue());
@@ -1838,16 +1999,57 @@ namespace FishNet.Component.Transforming
             nextTransformData.Tick = base.TimeManager.LastPacketTick;
         }
 
+        #region Caches.
         /// <summary>
         /// Returns a GoalData from the cache.
         /// </summary>
         /// <returns></returns>
-        private GoalData GetCachedGoalData()
+        private GoalData RetrieveGoalData()
         {
             GoalData result = (_goalDataCache.Count > 0) ? _goalDataCache.Pop() : new GoalData();
-            result.Reset();
             return result;
         }
+        /// <summary>
+        /// Stores a GoalData to the cache.
+        /// </summary>
+        private void StoreGoalData(GoalData gd)
+        {
+            gd.Reset();
+            _goalDataCache.Push(gd);
+        }
+        /// <summary>
+        /// Returns a TransformData from the cache.
+        /// </summary>
+        private TransformData RetrieveTransformData()
+        {
+            TransformData result = (_transformDataCache.Count > 0) ? _transformDataCache.Pop() : new TransformData();
+            return result;
+        }
+        /// <summary>
+        /// Stores a TransformData to the cache.
+        /// </summary>
+        private void StoreTransformData(TransformData td)
+        {
+            td.Reset();
+            _transformDataCache.Push(td);
+        }
+        /// <summary>
+        /// Returns a List<bool> from the cache.
+        /// </summary>
+        private List<bool> RetrieveListBool()
+        {
+            List<bool> result = (_listBoolCache.Count > 0) ? _listBoolCache.Pop() : new List<bool>();
+            return result;
+        }
+        /// <summary>
+        /// Stores a TransformData to the cache.
+        /// </summary>
+        private void StoreListBool(List<bool> lst)
+        {
+            lst.Clear();
+            _listBoolCache.Push(lst);
+        }
+        #endregion
 
         /// <summary>
         /// Configures this NetworkTransform for CSP.
@@ -1857,6 +2059,12 @@ namespace FishNet.Component.Transforming
             _clientAuthoritative = false;
             if (base.IsServer)
                 _sendToOwner = false;
+
+            /* If other or CC then needs to be configured.
+             * When CC it will be configured properly, if there
+             * is no CC then no action will be taken. */
+            _componentConfiguration = ComponentConfigurationType.CharacterController;
+            ConfigureComponents();
         }
 
         /// <summary>

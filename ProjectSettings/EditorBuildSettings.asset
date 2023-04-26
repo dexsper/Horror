@@ -5,12 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/FishNet/Example/All/Prediction/Rigidbody/RigidbodyPrediction.unity
-    guid: 005289ca292137448ba5edc0e1163f4a
-  - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: 44712ad626ccd344bb44575f10c24dab
   - enabled: 1
     path: Assets/Scenes/OfflineScene.unity
     guid: c850ee8c3b14cc8459e7e186857cf567
