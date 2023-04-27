@@ -30,7 +30,6 @@ public class PlayerMovement : NetworkBehaviour
         InstanceFinder.TimeManager.OnTick += TimeManager_OnTick;
         InstanceFinder.TimeManager.OnPostTick += TimeManager_OnPostTick;
     }
-
     private void OnDestroy()
     {
         if (InstanceFinder.TimeManager != null)
@@ -45,7 +44,6 @@ public class PlayerMovement : NetworkBehaviour
         base.OnStartClient();
         base.PredictionManager.OnPreReplicateReplay += PredictionManager_OnPreReplicateReplay;
     }
-
     public override void OnStopClient()
     {
         base.OnStopClient();
@@ -57,8 +55,6 @@ public class PlayerMovement : NetworkBehaviour
         if (!base.IsServer)
             AddGravity();
     }
-
-
     private void TimeManager_OnTick()
     {
         if (base.IsOwner)
@@ -74,8 +70,12 @@ public class PlayerMovement : NetworkBehaviour
         }
 
         AddGravity();
-    }
 
+        if (base.IsOwner || base.IsServer)
+        {
+            UpdateStates();
+        }
+    }
     private void TimeManager_OnPostTick()
     {
         if (base.IsServer)
@@ -86,7 +86,6 @@ public class PlayerMovement : NetworkBehaviour
             Reconciliation(rd, true);
         }
     }
-
 
     private void BuildMoveData(out MoveData md)
     {
@@ -99,10 +98,13 @@ public class PlayerMovement : NetworkBehaviour
 
         md = new MoveData(movement.x, movement.y, _player.Input.Look.x);
     }
-
     private void AddGravity()
     {
         _rigidbody.AddForce(Physics.gravity * _gravityMultiplier);
+    }
+    private void UpdateStates()
+    {
+        IsMove = _rigidbody.velocity.sqrMagnitude > 0f;
     }
 
     [Replicate]
@@ -116,8 +118,6 @@ public class PlayerMovement : NetworkBehaviour
         Vector3 velocity = Quaternion.LookRotation(_player.transform.forward) * new Vector3(md.Horizontal, 0f, md.Vertical);
 
         _rigidbody.velocity = velocity * _speed;
-
-        IsMove = _rigidbody.velocity.sqrMagnitude > 0f;
     }
 
     [Reconcile]
