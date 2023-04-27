@@ -43,11 +43,12 @@ public class PlayerInteraction : NetworkBehaviour
 
     private void UpdateLookInteractable()
     {
-        RaycastHit hit;
-        
-        Vector3 direction = _playerCamera.CameraLook.position - transform.position;
+        if (_playerCamera.Camera == null)
+            return;
 
-        if (Physics.Raycast(transform.position, direction, out hit, _interactionDistance, _interactableMask))
+        RaycastHit hit;
+
+        if (Physics.Raycast(_playerCamera.Camera.transform.position, _playerCamera.Camera.transform.forward, out hit, _interactionDistance, _interactableMask))
         {
             if (hit.collider.TryGetComponent(out IInteractable interactable))
             {
@@ -62,5 +63,14 @@ public class PlayerInteraction : NetworkBehaviour
 
         CanInteract = false;
         LookInteractable = null;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (_playerCamera.Camera == null)
+            return;
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(_playerCamera.Camera.transform.position, _playerCamera.Camera.transform.forward * _interactionDistance);
     }
 }
