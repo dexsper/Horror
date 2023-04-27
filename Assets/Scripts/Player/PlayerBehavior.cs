@@ -68,6 +68,7 @@ public class PlayerBehavior : NetworkBehaviour
     public void UpdateModel(GameObject model)
     {
         Model = Instantiate(model, PredictedObject.GetGraphicalObject());
+        Model.gameObject.SetActive(!base.IsOwner);
 
         _playerAnimator = Model.GetComponent<Animator>();
     }
