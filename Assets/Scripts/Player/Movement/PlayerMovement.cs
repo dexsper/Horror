@@ -112,6 +112,8 @@ public class PlayerMovement : NetworkBehaviour
         Vector3 velocity = Quaternion.LookRotation(_player.transform.forward) * new Vector3(md.Horizontal, 0f, md.Vertical);
 
         _rigidbody.velocity = velocity * _speed;
+
+        IsMove = _rigidbody.velocity.sqrMagnitude > 0f;
     }
 
     [Reconcile]
