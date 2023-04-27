@@ -35,8 +35,10 @@ public class PlayerSpawner : NetworkBehaviour
         if (player == null) return;
 
         NetworkObject nob = _networkManager.GetPooledInstantiated(_prefab, true);
+
         nob.transform.SetPositionAndRotation(position, rotation);
         _networkManager.ServerManager.Spawn(nob, conn);
+        
         UpdatePlayerModel(nob,player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value);
     }
 

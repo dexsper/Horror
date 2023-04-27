@@ -1,13 +1,14 @@
 using FishNet.Object;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerBehavior), typeof(PlayerCamera))]
 public class PlayerInteraction : NetworkBehaviour
 {
     [SerializeField] private LayerMask _interactableMask;
     [SerializeField] private float _interactionDistance = 1.5f;
 
-    private IPlayerInput _playerInput;
     private PlayerBehavior _player;
+    private PlayerCamera _playerCamera;
 
     public bool CanInteract { get; private set; }
     public IInteractable LookInteractable { get; private set; }
@@ -16,7 +17,7 @@ public class PlayerInteraction : NetworkBehaviour
     private void Awake()
     {
         _player = GetComponent<PlayerBehavior>();
-        _playerInput = GetComponent<IPlayerInput>();
+        _playerCamera = GetComponent<PlayerCamera>();
     }
 
     private void Update()
@@ -43,7 +44,8 @@ public class PlayerInteraction : NetworkBehaviour
     private void UpdateLookInteractable()
     {
         RaycastHit hit;
-        Vector3 direction = _player.CameraLook.position - transform.position;
+        
+        Vector3 direction = _playerCamera.CameraLook.position - transform.position;
 
         if (Physics.Raycast(transform.position, direction, out hit, _interactionDistance, _interactableMask))
         {

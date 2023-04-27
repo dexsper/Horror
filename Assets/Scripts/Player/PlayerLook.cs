@@ -1,19 +1,18 @@
-using System;
-using Cinemachine;
 using FishNet.Object;
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerBehavior), typeof(PlayerCamera))]
 public class PlayerLook : NetworkBehaviour
 {
     [SerializeField] private Vector2 cameraYLookRange;
     
     private PlayerBehavior _player;
-    private IPlayerInput _playerInput;
+    private PlayerCamera _playerCamera;
 
     private void Awake()
     {
         _player = GetComponent<PlayerBehavior>();
-        _playerInput = GetComponent<IPlayerInput>();
+        _playerCamera = GetComponent<PlayerCamera>();
     }
     
     private void Update()
@@ -21,11 +20,11 @@ public class PlayerLook : NetworkBehaviour
         if (!base.IsOwner)
             return;
 
-        Vector3 targetPosition = _player.CameraLook.transform.position;
+        Vector3 targetPosition = _playerCamera.CameraLook.transform.position;
 
-        targetPosition.y += _playerInput.Look.y * Time.deltaTime;
+        targetPosition.y += _player.Input.Look.y * Time.deltaTime;
         targetPosition.y = Mathf.Clamp(targetPosition.y, cameraYLookRange.x, cameraYLookRange.y);
         
-        _player.CameraLook.transform.position = targetPosition;
+        _playerCamera.CameraLook.transform.position = targetPosition;
     }
 }

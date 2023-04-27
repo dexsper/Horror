@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: -1313480937129658134}
   - component: {fileID: 5539716946378381922}
   - component: {fileID: 8662986836516071234}
-  - component: {fileID: 6901708401860671568}
+  - component: {fileID: 6428369254693963360}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -135,7 +135,7 @@ MonoBehaviour:
   - {fileID: -1313480937129658134}
   - {fileID: 5539716946378381922}
   - {fileID: 8662986836516071234}
-  - {fileID: 6901708401860671568}
+  - {fileID: 6428369254693963360}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   _isNetworked: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 2
+  <PrefabId>k__BackingField: 1
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 0
   <SceneId>k__BackingField: 0
@@ -164,9 +164,6 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
-  cameraLook: {fileID: 8738820238795575076}
-  _cameraPrefab: {fileID: 7648576990740199698, guid: a2e5a4e7c583e5a48beada3f1343c55e,
-    type: 3}
 --- !u!114 &-5254058266770781800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +229,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _interactionDistance: 3
---- !u!114 &6901708401860671568
+--- !u!114 &6428369254693963360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,18 +238,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 303449598114786579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8cac635f24954048aad3a6ff9110beb, type: 3}
+  m_Script: {fileID: 11500000, guid: f4f460738d6b16041961d297de40bdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _componentIndexCache: 5
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
-  IgnoredParameters: []
-  _animator: {fileID: 0}
-  _smoothFloats: 1
-  _interpolation: 2
-  _clientAuthoritative: 1
-  _sendToOwner: 0
+  _cameraPrefab: {fileID: 7648576990740199698, guid: a2e5a4e7c583e5a48beada3f1343c55e,
+    type: 3}
+  _cameraLook: {fileID: 8738820238795575076}
 --- !u!1 &2455656388925132596
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using FishNet.Object.Prediction;
 using FishNet.Transporting;
 using UnityEngine;
 
-
+[RequireComponent(typeof(PlayerBehavior), typeof(Rigidbody))]
 public class PlayerMovement : NetworkBehaviour
 {
     [SerializeField] private float _speed = 2f;
@@ -13,7 +13,6 @@ public class PlayerMovement : NetworkBehaviour
     private float _xRototation;
     private bool _lockCursor;
 
-    private IPlayerInput _playerInput;
     private PlayerBehavior _player;
     private Rigidbody _rigidbody;
 
@@ -21,7 +20,6 @@ public class PlayerMovement : NetworkBehaviour
 
     private void Awake()
     {
-        _playerInput = GetComponent<IPlayerInput>();
         _player = GetComponent<PlayerBehavior>();
         _rigidbody = GetComponent<Rigidbody>();
 
@@ -90,12 +88,12 @@ public class PlayerMovement : NetworkBehaviour
     {
         md = default;
 
-        var movement = _playerInput.Movement;
+        var movement = _player.Input.Movement;
 
-        if (movement == Vector2.zero && _playerInput.Look.x == 0f)
+        if (movement == Vector2.zero && _player.Input.Look.x == 0f)
             return;
 
-        md = new MoveData(movement.x, movement.y,_playerInput.Look.x);
+        md = new MoveData(movement.x, movement.y, _player.Input.Look.x);
     }
 
     private void AddGravity()
@@ -104,19 +102,16 @@ public class PlayerMovement : NetworkBehaviour
     }
 
     [Replicate]
-    private void Move(MoveData md,bool asServer, Channel channel = Channel.Unreliable, bool replaying = false)
+    private void Move(MoveData md, bool asServer, Channel channel = Channel.Unreliable, bool replaying = false)
     {
-        float delta = (float) base.TimeManager.TickDelta;
-        
-        Quaternion forward = Quaternion.LookRotation(_player.CameraLook.forward);
-        Vector3 velocity = forward * new Vector3(md.Horizontal, 0f, md.Vertical) * _speed;
-        
-        _rigidbody.velocity = velocity;
-        
-        Vector3 targetRotation = new Vector3();
-        targetRotation.y = transform.localEulerAngles.y + md.Rotation  * delta;
+        float delta = (float)base.TimeManager.TickDelta;
+
+        Vector3 targetRotation = new Vector3(0, transform.localEulerAngles.y + md.Rotation * delta);
         transform.localEulerAngles = targetRotation;
-        IsMove = velocity.sqrMagnitude > 0;
+
+        Vector3 velocity = Quaternion.LookRotation(_player.transform.forward) * new Vector3(md.Horizontal, 0f, md.Vertical);
+
+        _rigidbody.velocity = velocity * _speed;
     }
 
     [Reconcile]
