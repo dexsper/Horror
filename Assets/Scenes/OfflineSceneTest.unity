@@ -511,7 +511,7 @@ MonoBehaviour:
   _intermediateLayer: {fileID: 0}
   _latencySimulator:
     _enabled: 0
-    _simulateHost: 1
+    _simulateHost: 0
     _latency: 80
     _outOfOrder: 0
     _packetLoss: 0

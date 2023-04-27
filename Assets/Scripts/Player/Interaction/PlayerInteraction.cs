@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerBehavior), typeof(PlayerCamera))]
 public class PlayerInteraction : NetworkBehaviour
 {
+    [SerializeField] private Transform _playerEyes;
     [SerializeField] private LayerMask _interactableMask;
     [SerializeField] private float _interactionDistance = 1.5f;
 
@@ -43,12 +44,13 @@ public class PlayerInteraction : NetworkBehaviour
 
     private void UpdateLookInteractable()
     {
-        if (_playerCamera.Camera == null)
+        if (_playerEyes == null)
             return;
 
         RaycastHit hit;
+        Vector3 direction = _playerCamera.CameraLook.position - _playerEyes.position;
 
-        if (Physics.Raycast(_playerCamera.Camera.transform.position, _playerCamera.Camera.transform.forward, out hit, _interactionDistance, _interactableMask))
+        if (Physics.Raycast(_playerEyes.position, direction, out hit, _interactionDistance, _interactableMask))
         {
             if (hit.collider.TryGetComponent(out IInteractable interactable))
             {
@@ -68,11 +70,13 @@ public class PlayerInteraction : NetworkBehaviour
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        if (!Application.isPlaying || _playerCamera.Camera == null)
+        if (!Application.isPlaying || _playerEyes == null)
             return;
 
+        Vector3 direction = _playerCamera.CameraLook.position - _playerEyes.position;
+
         Gizmos.color = Color.green;
-        Gizmos.DrawRay(_playerCamera.Camera.transform.position, _playerCamera.Camera.transform.forward * _interactionDistance);
+        Gizmos.DrawRay(_playerEyes.position, direction);
     }
 #endif
 }
