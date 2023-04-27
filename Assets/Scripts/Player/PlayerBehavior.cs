@@ -27,7 +27,6 @@ public class PlayerBehavior : NetworkBehaviour
         Input = GetComponent<IPlayerInput>();
     }
 
-
     public override void OnStartClient()
     {
         base.OnStartClient();
@@ -44,7 +43,6 @@ public class PlayerBehavior : NetworkBehaviour
             Players.Add(this);
         }
     }
-
     public override void OnStopClient()
     {
         base.OnStopClient();
@@ -54,7 +52,20 @@ public class PlayerBehavior : NetworkBehaviour
         Players.Remove(this);
     }
 
-    public void CreateModel(GameObject model)
+    private void Update()
+    {
+        UpdateAnimations();
+    }
+
+    private void UpdateAnimations()
+    {
+        if (_playerAnimator == null)
+            return;
+        
+        _playerAnimator.SetBool(nameof(Movement.IsMove), Movement.IsMove);
+    }
+
+    public void UpdateModel(GameObject model)
     {
         Model = Instantiate(model, PredictedObject.GetGraphicalObject());
 

@@ -46,7 +46,7 @@ public class PlayerSpawner : NetworkBehaviour
     private void UpdatePlayerModel(NetworkObject nob,string prefabName)
     {
         var prefab = _characterData[prefabName];
-        nob.GetComponent<PlayerBehavior>().CreateModel(prefab);
+        nob.GetComponent<PlayerBehavior>().UpdateModel(prefab);
     }
     
     private void SetSpawn(out Vector3 pos, out Quaternion rot)

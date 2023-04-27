@@ -3,6 +3,7 @@ using FishNet.Object;
 using FishNet.Object.Prediction;
 using FishNet.Object.Synchronizing;
 using FishNet.Transporting;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerBehavior), typeof(Rigidbody))]
@@ -17,7 +18,8 @@ public class PlayerMovement : NetworkBehaviour
     private PlayerBehavior _player;
     private Rigidbody _rigidbody;
 
-    [field: SyncVar]
+    [field: SyncVar, HideInInspector]
+    [Title("Current State"), ShowInInspector, ReadOnly]
     public bool IsMove { get; [ServerRpc(RunLocally = true)] private set; }
 
     private void Awake()

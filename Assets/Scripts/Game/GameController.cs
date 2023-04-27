@@ -1,8 +1,8 @@
 using FishNet;
+using FishNet.Connection;
 using FishNet.Managing;
 using FishNet.Managing.Scened;
 using FishNet.Object;
-
 
 public class GameController : NetworkBehaviour
 {
@@ -35,17 +35,23 @@ public class GameController : NetworkBehaviour
         _networkManager = InstanceFinder.NetworkManager;
         _sceneManager = InstanceFinder.SceneManager;
 
-        _sceneManager.OnClientPresenceChangeEnd += OnClientJoinGame;
+        _sceneManager.OnClientPresenceChangeEnd += OnClientPresenceChangeEnd;
     }
 
     [Server]
-    private void OnClientJoinGame(ClientPresenceChangeEventArgs args)
+    private void OnClientPresenceChangeEnd(ClientPresenceChangeEventArgs args)
     {
         if (args.Scene != gameObject.scene) return;
 
-        if (PlayerBehavior.Players.Exists(p => p.Owner == args.Connection))
+        OnClientJoin(args.Connection);
+    }
+
+    [Server]
+    private void OnClientJoin(NetworkConnection connection)
+    {
+        if (PlayerBehavior.Players.Exists(p => p.Owner == connection))
             return;
 
-        _spawner.SpawnPlayer(args.Connection);
+        _spawner.SpawnPlayer(connection);
     }
 }
