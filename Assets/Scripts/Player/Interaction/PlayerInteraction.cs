@@ -65,12 +65,14 @@ public class PlayerInteraction : NetworkBehaviour
         LookInteractable = null;
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        if (_playerCamera.Camera == null)
+        if (!Application.isPlaying || _playerCamera.Camera == null)
             return;
 
         Gizmos.color = Color.green;
         Gizmos.DrawRay(_playerCamera.Camera.transform.position, _playerCamera.Camera.transform.forward * _interactionDistance);
     }
+#endif
 }
