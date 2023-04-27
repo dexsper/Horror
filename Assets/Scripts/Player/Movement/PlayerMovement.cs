@@ -1,6 +1,7 @@
 using FishNet;
 using FishNet.Object;
 using FishNet.Object.Prediction;
+using FishNet.Object.Synchronizing;
 using FishNet.Transporting;
 using UnityEngine;
 
@@ -16,7 +17,8 @@ public class PlayerMovement : NetworkBehaviour
     private PlayerBehavior _player;
     private Rigidbody _rigidbody;
 
-    public bool IsMove { get; private set; }
+    [field: SyncVar]
+    public bool IsMove { get; [ServerRpc(RunLocally = true)] private set; }
 
     private void Awake()
     {
