@@ -1,16 +1,31 @@
 using FishNet.Object;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.AI;
+
+[System.Serializable]
+public struct ManiacSettings
+{
+    [Title("Patrol")]
+    [Range(0.5f, 15f)] public float PatrolSleepTime;
+}
 
 public class ManiacBehaviour : NetworkBehaviour
 {
-    public Vector2 Movement;
+    [SerializeField] private ManiacSettings _settings;
 
-    private Rigidbody _rb;
+    public ManiacSettings Settings => _settings;
+    public NavMeshAgent Agent { get; private set; }
+
+    public StateMachine StateMachine { get; private set; }
+    public ManiacPatrolState PatrolState { get; private set; }
 
     private void Awake()
     {
-        _rb = GetComponent<Rigidbody>();
+        Agent = GetComponent<NavMeshAgent>();
+
+        PatrolState = new ManiacPatrolState(this);
+        StateMachine = new StateMachine(PatrolState);
     }
 
     [Server]
@@ -19,6 +34,9 @@ public class ManiacBehaviour : NetworkBehaviour
         if (!IsServer)
             return;
 
-        _rb.velocity = new Vector3(Movement.x, 0f, -Movement.y);
+        if (StateMachine != null && StateMachine.CurrentState != null)
+        {
+            StateMachine.CurrentState.Update();
+        }
     }
 }
