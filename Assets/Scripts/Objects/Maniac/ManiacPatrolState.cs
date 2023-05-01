@@ -9,16 +9,7 @@ public class ManiacPatrolState : ManiacState
     public ManiacPatrolState(ManiacBehaviour behavior) : base(behavior)
     {
     }
-
-    public override void Enter()
-    {
-        base.Enter();
-
-        _sleepTime = Behavior.Settings.PatrolSleepTime;
-
-        NextGenerator();
-    }
-
+    
     public override void Exit()
     {
         base.Exit();

@@ -10,6 +10,9 @@ public struct ManiacSettings
     [Range(0.5f, 15f)] public float PatrolSleepTime;
 
     [Title("Attack")]
+    [Range(1f, 5f)] public float AttackDistance;
+    [Range(0.5f, 5f)] public float AttackDelayTime;
+    [Range(1, 100f)] public float AttackDamage;
     [Range(0.2f, 3f)] public float ResetTargetTime;
 }
 
@@ -17,7 +20,6 @@ public struct ManiacSettings
 public class ManiacBehaviour : NetworkBehaviour
 {
     [SerializeField] private ManiacSettings _settings;
-
 
     [Title("Current State")]
     [ShowInInspector, ReadOnly] public PlayerBehavior CurrentTarget { get; private set; }

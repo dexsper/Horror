@@ -4,11 +4,14 @@ using FishNet.Object;
 using UnityEngine;
 using Zenject;
 
+[RequireComponent(typeof(PredictedObject), typeof(PlayerInteraction))]
+[RequireComponent(typeof(PlayerMovement), typeof(Health))]
 public class PlayerBehavior : NetworkBehaviour
 {
     private Animator _playerAnimator;
 
     public PredictedObject PredictedObject { get; private set; }
+    public Health Health { get; private set; }
     public PlayerInteraction Interaction { get; private set; }
     public PlayerMovement Movement { get; private set; }
     public IPlayerInput Input { get; private set; }
@@ -18,10 +21,10 @@ public class PlayerBehavior : NetworkBehaviour
     public static PlayerBehavior LocalPlayer { get; private set; }
     public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
 
-
     private void Awake()
     {
         PredictedObject = GetComponent<PredictedObject>();
+        Health = GetComponent<Health>();
         Interaction = GetComponent<PlayerInteraction>();
         Movement = GetComponent<PlayerMovement>();
         Input = GetComponent<IPlayerInput>();
@@ -64,7 +67,6 @@ public class PlayerBehavior : NetworkBehaviour
         
         _playerAnimator.SetBool(nameof(Movement.IsMove), Movement.IsMove);
     }
-
     public void UpdateModel(GameObject model)
     {
         Model = Instantiate(model, PredictedObject.GetGraphicalObject());
