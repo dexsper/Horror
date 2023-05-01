@@ -45,6 +45,18 @@ public class FieldOfView : MonoBehaviour
         }
     }
 
+    public T GetObject<T>() where T : Component
+    {
+        foreach (var obj in _objects)
+        {
+            if (obj.TryGetComponent<T>(out T component))
+            {
+                return component;
+            }
+        }
+
+        return null;
+    }
     public bool IsInSight(GameObject obj)
     {
         Vector3 origin = transform.position;

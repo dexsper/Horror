@@ -19,9 +19,22 @@ public class ManiacPatrolState : ManiacState
         NextGenerator();
     }
 
+    public override void Exit()
+    {
+        base.Exit();
+
+        _sleepTime = 0f;
+    }
+
     public override void Update()
     {
         base.Update();
+
+        if (Behavior.CurrentTarget != null)
+        {
+            Behavior.StateMachine.SwitchState(Behavior.ChaseState);
+            return;
+        }
 
         if (_sleepTime > 0f)
         {
@@ -35,10 +48,10 @@ public class ManiacPatrolState : ManiacState
         if (Behavior.Agent.destination != _targetGenerator.transform.position)
             Behavior.Agent.SetDestination(_targetGenerator.transform.position);
 
-        if (Vector3.Distance(Behavior.transform.position, _targetGenerator.transform.position) <= Behavior.Agent.stoppingDistance)
+        if (Vector3.Distance(Behavior.transform.position, _targetGenerator.transform.position) <= (Behavior.Agent.stoppingDistance * 1.5f))
         {
             NextGenerator();
-            
+
             _sleepTime = Behavior.Settings.PatrolSleepTime;
         }
     }
