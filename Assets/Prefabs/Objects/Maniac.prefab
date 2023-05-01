@@ -17,7 +17,8 @@ GameObject:
   - component: {fileID: 201277550}
   - component: {fileID: 5267370223021591571}
   - component: {fileID: 6190449770149522619}
-  m_Layer: 0
+  - component: {fileID: 6875461384141732129}
+  m_Layer: 7
   m_Name: Maniac
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,6 +249,32 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 201277550}
   _settings:
     PatrolSleepTime: 5
+--- !u!114 &6875461384141732129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303449598114786579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdd7a44888f547449991ec8d97724a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distance: 15
+  _angle: 30
+  _height: 4
+  _scanFrequency: 30
+  _scanMask:
+    serializedVersion: 2
+    m_Bits: 128
+  _occlusionMask:
+    serializedVersion: 2
+    m_Bits: 1
+  _debug: 1
+  _distanceColor: {r: 0, g: 0, b: 1, a: 1}
+  _meshColor: {r: 0.014599085, g: 1, b: 0, a: 0.039215688}
+  _scanObjectColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &5907126838762052697
 GameObject:
   m_ObjectHideFlags: 0
