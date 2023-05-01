@@ -52,6 +52,9 @@ public class Generator : NetworkBehaviour, IInteractable
     [Server]
     private void Update()
     {
+        if (!IsServer)
+            return;
+
         if (_isRepairing && !_isRepaired)
         {
             if (RepairInitiator == null)
