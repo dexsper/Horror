@@ -26,9 +26,7 @@ public class PlayerSpawner : NetworkBehaviour
     [Server]
     public void SpawnPlayer(NetworkConnection conn)
     {
-        Vector3 position;
-        Quaternion rotation;
-        SetSpawn(out position, out rotation);
+        SetSpawn(out Vector3 position, out Quaternion rotation);
 
         var player = conn.GetPlayer();
 

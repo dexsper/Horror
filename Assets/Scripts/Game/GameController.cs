@@ -3,9 +3,13 @@ using FishNet.Connection;
 using FishNet.Managing;
 using FishNet.Managing.Scened;
 using FishNet.Object;
+using FishNet.Utility;
+using UnityEngine;
 
 public class GameController : NetworkBehaviour
 {
+    [SerializeField, Scene] private string _deathRoomScene;
+
     private static GameController _instance;
 
     private PlayerSpawner _spawner;
@@ -35,7 +39,16 @@ public class GameController : NetworkBehaviour
         _networkManager = InstanceFinder.NetworkManager;
         _sceneManager = InstanceFinder.SceneManager;
 
+        _sceneManager.LoadGlobalScenes(new SceneLoadData(_deathRoomScene));
+
+        PlayerBehavior.OnDead += OnPlayerDead;
         _sceneManager.OnClientPresenceChangeEnd += OnClientPresenceChangeEnd;
+    }
+
+    [Server]
+    private void OnPlayerDead(PlayerBehavior player)
+    {
+        DeathRoom.Instance.AddPlayer(player);
     }
 
     [Server]
