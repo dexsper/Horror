@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using FishNet.Component.Prediction;
 using FishNet.Object;
@@ -20,6 +21,7 @@ public class PlayerBehavior : NetworkBehaviour
 
     public static PlayerBehavior LocalPlayer { get; private set; }
     public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
+    public static event Action<PlayerBehavior> OnDead;
 
     private void Awake()
     {
@@ -28,6 +30,8 @@ public class PlayerBehavior : NetworkBehaviour
         Interaction = GetComponent<PlayerInteraction>();
         Movement = GetComponent<PlayerMovement>();
         Input = GetComponent<IPlayerInput>();
+
+        Health.OnDead += () => OnDead?.Invoke(this);
     }
 
     public override void OnStartClient()
