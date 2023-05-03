@@ -20,11 +20,11 @@ public class PlayerLook : NetworkBehaviour
         if (!base.IsOwner)
             return;
 
-        Vector3 targetPosition = _playerCamera.CameraLook.transform.position;
+        Vector3 targetPosition = _playerCamera.CameraLook.transform.localPosition;
 
         targetPosition.y += _player.Input.Look.y * Time.deltaTime;
         targetPosition.y = Mathf.Clamp(targetPosition.y, cameraYLookRange.x, cameraYLookRange.y);
         
-        _playerCamera.CameraLook.transform.position = targetPosition;
+        _playerCamera.CameraLook.transform.localPosition = targetPosition;
     }
 }
