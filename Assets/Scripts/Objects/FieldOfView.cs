@@ -181,7 +181,7 @@ public class FieldOfView : MonoBehaviour
     }
     private void OnDrawGizmosSelected()
     {
-        if (_debugMesh)
+        if (_debug && _debugMesh)
         {
             Gizmos.color = _meshColor;
             Gizmos.DrawMesh(_debugMesh, transform.position, transform.rotation);
