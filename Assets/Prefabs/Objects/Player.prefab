@@ -264,10 +264,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71fd7f855ec523429999fc4e14a1928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _overrideType: 1
+  _overrideType: 2
   _updateHostVisibility: 1
-  _observerConditions:
-  - {fileID: 11400000, guid: 5f33eb0e5b83b5546822cfe42a305657, type: 2}
+  _observerConditions: []
 --- !u!114 &755230378346370276
 MonoBehaviour:
   m_ObjectHideFlags: 0
