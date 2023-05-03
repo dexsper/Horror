@@ -22,6 +22,7 @@ public class PlayerBehavior : NetworkBehaviour
     public static PlayerBehavior LocalPlayer { get; private set; }
     public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
     public static event Action<PlayerBehavior> OnDead;
+    public static event Action<PlayerBehavior> OnRespawned;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class PlayerBehavior : NetworkBehaviour
         Input = GetComponent<IPlayerInput>();
 
         Health.OnDead += () => OnDead?.Invoke(this);
+        Health.OnRestored += () => OnRespawned?.Invoke(this);
     }
 
     public override void OnStartClient()
