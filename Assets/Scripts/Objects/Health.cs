@@ -15,6 +15,7 @@ public class Health : NetworkBehaviour
 
     public bool IsDead => CurrentHealth <= 0f;
     public event Action OnDead;
+    public event Action OnRestored;
 
     [Server]
     public void Damage(float amount)
@@ -23,6 +24,14 @@ public class Health : NetworkBehaviour
             return;
 
         CurrentHealth = Mathf.Clamp(CurrentHealth - amount, 0, 100f);
+    }
+
+    [Server]
+    public void Restore()
+    {
+        CurrentHealth = _maxHealth;
+
+        OnRestored?.Invoke();
     }
 
     private void On_HealthChange(float prev, float next, bool asServer)
