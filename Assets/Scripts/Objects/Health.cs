@@ -36,7 +36,7 @@ public class Health : NetworkBehaviour
 
     private void On_HealthChange(float prev, float next, bool asServer)
     {
-        if (next <= 0f)
+        if (next <= 0f && !IsDead)
         {
             OnDead?.Invoke();
         }
