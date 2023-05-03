@@ -7,7 +7,7 @@ using FishNet.Transporting;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
 
 public class FakePlayer : MonoBehaviour
 {

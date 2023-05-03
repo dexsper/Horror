@@ -88,11 +88,17 @@ public class Generator : NetworkBehaviour, IInteractable
     {
         if (next)
         {
-            OnRepaired?.Invoke(this);
-
+            _repairInitiator = null;
             _repairedEffect.Play();
             _lightEffect.SetActive(true);
+
+            OnRepaired?.Invoke(this);
         }
+    }
+
+    public bool IsInteract(PlayerBehavior player)
+    {
+        return _isRepairing && _repairInitiator == player;
     }
 
     [ServerRpc(RequireOwnership = false)]

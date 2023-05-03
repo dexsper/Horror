@@ -62,6 +62,8 @@ public class PlayerMovement : NetworkBehaviour
             Reconciliation(default, false);
             BuildMoveData(out MoveData md);
             Move(md, false);
+
+            UpdateStates();
         }
 
         if (base.IsServer)
@@ -70,11 +72,6 @@ public class PlayerMovement : NetworkBehaviour
         }
 
         AddGravity();
-
-        if (base.IsOwner || base.IsServer)
-        {
-            UpdateStates();
-        }
     }
     private void TimeManager_OnPostTick()
     {

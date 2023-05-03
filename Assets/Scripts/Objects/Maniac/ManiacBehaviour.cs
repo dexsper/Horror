@@ -1,4 +1,5 @@
 using FishNet.Object;
+using FishNet.Object.Synchronizing;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.AI;
@@ -23,6 +24,7 @@ public class ManiacBehaviour : NetworkBehaviour
 
     [Title("Current State")]
     [ShowInInspector, ReadOnly] public PlayerBehavior CurrentTarget { get; private set; }
+    [field: SyncVar, ReadOnly] public bool IsMove { get; private set; }
 
     public ManiacSettings Settings => _settings;
 
@@ -76,5 +78,7 @@ public class ManiacBehaviour : NetworkBehaviour
 
             CurrentTarget = View.GetObject<PlayerBehavior>();
         }
+
+        IsMove = Agent.velocity.sqrMagnitude > 0f;
     }
 }

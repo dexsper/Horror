@@ -40,18 +40,24 @@ public class GameController : NetworkBehaviour
         _networkManager = InstanceFinder.NetworkManager;
         _sceneManager = InstanceFinder.SceneManager;
 
-        _sceneManager.LoadGlobalScenes(new SceneLoadData(_deathRoomScene));
         _sceneManager.OnClientPresenceChangeEnd += OnClientPresenceChangeEnd;
-
         DeathRoom.OnPlayerLeave += OnPlayerLeaveDeathRoom;
         PlayerBehavior.OnDead += OnPlayerDead;
+    }
+
+    private void Start()
+    {
+        if (base.IsServer)
+        {
+            _sceneManager.LoadGlobalScenes(new SceneLoadData(_deathRoomScene));
+        }
     }
 
     [Server]
     private void OnPlayerLeaveDeathRoom(PlayerBehavior player)
     {
         _spawner.RespawnPlayer(player.NetworkObject);
-        
+
         player.Health.Restore();
     }
 
@@ -60,7 +66,6 @@ public class GameController : NetworkBehaviour
     {
         DeathRoom.Instance.AddPlayer(player);
     }
-
 
     [Server]
     private void OnClientPresenceChangeEnd(ClientPresenceChangeEventArgs args)

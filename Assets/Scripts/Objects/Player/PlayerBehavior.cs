@@ -72,6 +72,7 @@ public class PlayerBehavior : NetworkBehaviour
             return;
         
         _playerAnimator.SetBool(nameof(Movement.IsMove), Movement.IsMove);
+        _playerAnimator.SetBool(nameof(Interaction.IsInteract), Interaction.IsInteract);
     }
     public void UpdateModel(GameObject model)
     {

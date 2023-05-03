@@ -12,6 +12,7 @@ public class PlayerInteraction : NetworkBehaviour
     private PlayerCamera _playerCamera;
 
     public bool CanInteract { get; private set; }
+    public bool IsInteract { get; private set; }
     public IInteractable LookInteractable { get; private set; }
 
 
@@ -23,12 +24,10 @@ public class PlayerInteraction : NetworkBehaviour
 
     private void Update()
     {
-        if (!base.IsServer && !base.IsOwner)
-            return;
-
         if (LookInteractable != null)
         {
             CanInteract = LookInteractable.CanInteract(_player);
+            IsInteract = LookInteractable.IsInteract(_player);
         }
 
         UpdateLookInteractable();
