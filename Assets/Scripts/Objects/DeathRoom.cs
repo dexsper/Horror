@@ -1,13 +1,18 @@
+using System;
 using System.Collections.Generic;
+using FishNet.Connection;
 using FishNet.Object;
 using UnityEngine;
 
 public class DeathRoom : NetworkBehaviour
 {
+    [SerializeField] private int _leaveProgressAmount;
     [SerializeField] private List<Transform> _spawns;
+    [SerializeField] private GameObject _interface;
 
     private static DeathRoom _instance;
     private int _nextSpawn = 0;
+    private Dictionary<PlayerBehavior, int> _leaveProgress = new();
 
     public static DeathRoom Instance
     {
@@ -23,6 +28,7 @@ public class DeathRoom : NetworkBehaviour
 
         private set => _instance = value;
     }
+    public static event Action<PlayerBehavior> OnPlayerLeave;
 
     private void Awake()
     {
@@ -32,11 +38,42 @@ public class DeathRoom : NetworkBehaviour
     [Server]
     public void AddPlayer(PlayerBehavior player)
     {
-        SetSpawn(out Vector3 position, out Quaternion rotation);
+        _leaveProgress.Add(player, 0);
+
+        GetSpawn(out Vector3 position, out Quaternion rotation);
         player.transform.SetPositionAndRotation(position, rotation);
+
+        RPC_SetInterfaceActive(player.Owner, true);
     }
 
-    private void SetSpawn(out Vector3 pos, out Quaternion rot)
+    [Server]
+    private void RemovePlayer(PlayerBehavior player)
+    {
+        RPC_SetInterfaceActive(player.Owner, false);
+
+        OnPlayerLeave?.Invoke(player);
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    public void AddLeaveProgress(PlayerBehavior player)
+    {
+        _leaveProgress[player]++;
+
+        if (_leaveProgress[player] >= _leaveProgressAmount)
+        {
+            _leaveProgress.Remove(player);
+
+            RemovePlayer(player);
+        }
+    }
+
+    [TargetRpc]
+    private void RPC_SetInterfaceActive(NetworkConnection conn, bool active)
+    {
+        _interface.gameObject.SetActive(active);
+    }
+
+    private void GetSpawn(out Vector3 pos, out Quaternion rot)
     {
         if (_spawns.Count == 0)
         {
@@ -53,4 +90,5 @@ public class DeathRoom : NetworkBehaviour
 
         _nextSpawn = (_nextSpawn + 1) % _spawns.Count;
     }
+
 }

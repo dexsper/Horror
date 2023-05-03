@@ -26,7 +26,7 @@ public class PlayerSpawner : NetworkBehaviour
     [Server]
     public void SpawnPlayer(NetworkConnection conn)
     {
-        SetSpawn(out Vector3 position, out Quaternion rotation);
+        GetSpawn(out Vector3 position, out Quaternion rotation);
 
         var player = conn.GetPlayer();
 
@@ -36,18 +36,25 @@ public class PlayerSpawner : NetworkBehaviour
 
         nob.transform.SetPositionAndRotation(position, rotation);
         _networkManager.ServerManager.Spawn(nob, conn);
-        
-        UpdatePlayerModel(nob,player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value);
+
+        UpdatePlayerModel(nob, player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value);
+    }
+
+    [Server]
+    public void RespawnPlayer(NetworkObject playerObject)
+    {
+        GetSpawn(out Vector3 position, out Quaternion rotation);
+        playerObject.transform.SetPositionAndRotation(position, rotation);
     }
 
     [ObserversRpc(BufferLast = true)]
-    private void UpdatePlayerModel(NetworkObject nob,string prefabName)
+    private void UpdatePlayerModel(NetworkObject nob, string prefabName)
     {
         var prefab = _characterData[prefabName];
         nob.GetComponent<PlayerBehavior>().UpdateModel(prefab);
     }
-    
-    private void SetSpawn(out Vector3 pos, out Quaternion rot)
+
+    private void GetSpawn(out Vector3 pos, out Quaternion rot)
     {
         if (_spawns.Count == 0)
         {
