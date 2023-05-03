@@ -13,7 +13,7 @@ public class Health : NetworkBehaviour
     [field: SyncVar(OnChange = nameof(On_HealthChange))]
     public float CurrentHealth { get; private set; }
 
-    public bool IsDead => CurrentHealth <= 0f;
+    public bool IsDead { get; private set; }
     public event Action OnDead;
     public event Action OnRestored;
 
@@ -30,15 +30,22 @@ public class Health : NetworkBehaviour
     public void Restore()
     {
         CurrentHealth = _maxHealth;
-
-        OnRestored?.Invoke();
     }
 
     private void On_HealthChange(float prev, float next, bool asServer)
     {
         if (next <= 0f && !IsDead)
         {
+            IsDead = true;
+
             OnDead?.Invoke();
+        }
+
+        if (next > 0f && IsDead)
+        {
+            IsDead = false;
+            
+            OnRestored?.Invoke();
         }
     }
 
@@ -46,7 +53,7 @@ public class Health : NetworkBehaviour
     {
         base.OnValidate();
 
-        if(CurrentHealth > _maxHealth)
+        if (CurrentHealth > _maxHealth)
         {
             CurrentHealth = _maxHealth;
         }

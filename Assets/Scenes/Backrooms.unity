@@ -4084,7 +4084,6 @@ MonoBehaviour:
   <PredictedSpawn>k__BackingField: {fileID: 0}
   _networkBehaviours:
   - {fileID: 3353939863789235065}
-  - {fileID: 3353939863789235067}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   _isNetworked: 1
@@ -4114,12 +4113,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 220218517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07754b2b6c45e4b498d4d5c560179db2, type: 3}
+  m_Script: {fileID: 11500000, guid: d00ec1e9c67e31341ab2ad9e50d1fcca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 1
+  _componentIndexCache: 255
   _addedNetworkObject: {fileID: 3353939863789235066}
-  _networkObjectCache: {fileID: 3353939863789235066}
+  _networkObjectCache: {fileID: 0}
   _deathRoomScene: Assets/Scenes/DeathRoom.unity
 --- !u!114 &3353939863910327916
 MonoBehaviour:

@@ -1,3 +1,4 @@
+using System;
 using FishNet;
 using FishNet.Connection;
 using FishNet.Managing;
@@ -40,9 +41,18 @@ public class GameController : NetworkBehaviour
         _sceneManager = InstanceFinder.SceneManager;
 
         _sceneManager.LoadGlobalScenes(new SceneLoadData(_deathRoomScene));
-
-        PlayerBehavior.OnDead += OnPlayerDead;
         _sceneManager.OnClientPresenceChangeEnd += OnClientPresenceChangeEnd;
+
+        DeathRoom.OnPlayerLeave += OnPlayerLeaveDeathRoom;
+        PlayerBehavior.OnDead += OnPlayerDead;
+    }
+
+    [Server]
+    private void OnPlayerLeaveDeathRoom(PlayerBehavior player)
+    {
+        _spawner.RespawnPlayer(player.NetworkObject);
+        
+        player.Health.Restore();
     }
 
     [Server]
@@ -50,6 +60,7 @@ public class GameController : NetworkBehaviour
     {
         DeathRoom.Instance.AddPlayer(player);
     }
+
 
     [Server]
     private void OnClientPresenceChangeEnd(ClientPresenceChangeEventArgs args)
