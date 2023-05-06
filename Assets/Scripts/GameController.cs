@@ -56,9 +56,9 @@ public class GameController : NetworkBehaviour
     [Server]
     private void OnPlayerLeaveDeathRoom(PlayerBehavior player)
     {
-        _spawner.RespawnPlayer(player.NetworkObject);
-
         player.Health.Restore();
+
+        _spawner.RespawnPlayer(player.NetworkObject);
     }
 
     [Server]

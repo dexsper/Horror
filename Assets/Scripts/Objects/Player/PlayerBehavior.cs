@@ -21,6 +21,9 @@ public class PlayerBehavior : NetworkBehaviour
 
     public static PlayerBehavior LocalPlayer { get; private set; }
     public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
+
+    public static event Action<PlayerBehavior> OnPlayerSpawned;
+    public static event Action<PlayerBehavior> OnPlayerDestroy;
     public static event Action<PlayerBehavior> OnDead;
     public static event Action<PlayerBehavior> OnRespawned;
 
@@ -51,6 +54,8 @@ public class PlayerBehavior : NetworkBehaviour
         {
             Players.Add(this);
         }
+        
+        OnPlayerSpawned?.Invoke(this);
     }
     public override void OnStopClient()
     {
@@ -59,6 +64,7 @@ public class PlayerBehavior : NetworkBehaviour
         if (base.IsOwner) LocalPlayer = null;
 
         Players.Remove(this);
+        OnPlayerDestroy?.Invoke(this);
     }
 
     private void Update()
