@@ -374,8 +374,7 @@ namespace FishNet.Managing.Client
         /// </summary>
         /// <param name="reader"></param>
         internal void CacheSpawn(PooledReader reader)
-        {
-            Debug.Log("Caching spawn.");
+        {            
             sbyte initializeOrder;
             ushort collectionId;
             int objectId = reader.ReadNetworkObjectForSpawn(out initializeOrder, out collectionId, out _);
