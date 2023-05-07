@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using FishNet.Component.Prediction;
 using FishNet.Object;
+using FishNet.Object.Synchronizing;
 using UnityEngine;
 using Zenject;
 
@@ -15,9 +16,12 @@ public class PlayerBehavior : NetworkBehaviour
     public Health Health { get; private set; }
     public PlayerInteraction Interaction { get; private set; }
     public PlayerMovement Movement { get; private set; }
+    public PlayerCamera Camera { get; private set; }
     public IPlayerInput Input { get; private set; }
 
     public GameObject Model { get; private set; }
+
+    [field: SyncVar] public bool IsLeaved { get; private set; }
 
     public static PlayerBehavior LocalPlayer { get; private set; }
     public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
@@ -33,6 +37,7 @@ public class PlayerBehavior : NetworkBehaviour
         Health = GetComponent<Health>();
         Interaction = GetComponent<PlayerInteraction>();
         Movement = GetComponent<PlayerMovement>();
+        Camera = GetComponent<PlayerCamera>();
         Input = GetComponent<IPlayerInput>();
 
         Health.OnDead += () => OnDead?.Invoke(this);
@@ -54,7 +59,7 @@ public class PlayerBehavior : NetworkBehaviour
         {
             Players.Add(this);
         }
-        
+
         OnPlayerSpawned?.Invoke(this);
     }
     public override void OnStopClient()
@@ -76,7 +81,7 @@ public class PlayerBehavior : NetworkBehaviour
     {
         if (_playerAnimator == null)
             return;
-        
+
         _playerAnimator.SetBool(nameof(Movement.IsMove), Movement.IsMove);
         _playerAnimator.SetBool(nameof(Interaction.IsInteract), Interaction.IsInteract);
     }
@@ -86,5 +91,19 @@ public class PlayerBehavior : NetworkBehaviour
         Model.gameObject.SetActive(!base.IsOwner);
 
         _playerAnimator = Model.GetComponent<Animator>();
+    }
+
+    [Server]
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!base.IsServer)
+            return;
+
+        if (other.TryGetComponent(out LeaveZone zone))
+        {
+            IsLeaved = true;
+            
+            Camera.SetActive(base.Owner, false);
+        }
     }
 }

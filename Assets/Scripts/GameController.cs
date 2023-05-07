@@ -1,9 +1,9 @@
-using System;
 using FishNet;
 using FishNet.Connection;
 using FishNet.Managing;
 using FishNet.Managing.Scened;
 using FishNet.Object;
+using FishNet.Object.Synchronizing;
 using FishNet.Utility;
 using UnityEngine;
 
@@ -31,6 +31,7 @@ public class GameController : NetworkBehaviour
 
         private set => _instance = value;
     }
+    [field: SyncVar] public bool GameFinished { get; private set; }
 
     private void Awake()
     {
@@ -39,17 +40,34 @@ public class GameController : NetworkBehaviour
         _spawner = GetComponent<PlayerSpawner>();
         _networkManager = InstanceFinder.NetworkManager;
         _sceneManager = InstanceFinder.SceneManager;
-
-        _sceneManager.OnClientPresenceChangeEnd += OnClientPresenceChangeEnd;
-        DeathRoom.OnPlayerLeave += OnPlayerLeaveDeathRoom;
-        PlayerBehavior.OnDead += OnPlayerDead;
     }
 
+    [Server]
     private void Start()
     {
         if (base.IsServer)
         {
+            DeathRoom.OnPlayerLeave += OnPlayerLeaveDeathRoom;
+            PlayerBehavior.OnDead += OnPlayerDead;
+            Generator.OnRepaired += OnGeneratorRepaired;
+
+            _sceneManager.OnClientPresenceChangeEnd += OnClientPresenceChangeEnd;
             _sceneManager.LoadGlobalScenes(new SceneLoadData(_deathRoomScene));
+        }
+    }
+
+    [Server]
+    private void OnGeneratorRepaired(Generator generator)
+    {
+        for (int i = 0; i < Generator.Generators.Count; i++)
+        {
+            if (!Generator.Generators[i].IsRepaired)
+                return;
+        }
+
+        foreach(var zone in LeaveZone.LeaveZones)
+        {
+            zone.Activate();
         }
     }
 
@@ -70,7 +88,7 @@ public class GameController : NetworkBehaviour
     [Server]
     private void OnClientPresenceChangeEnd(ClientPresenceChangeEventArgs args)
     {
-        if (args.Scene != gameObject.scene) return;
+        if (args.Scene != gameObject.scene || !args.Added) return;
 
         OnClientJoin(args.Connection);
     }

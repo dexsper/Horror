@@ -15,7 +15,10 @@ public class PlayersStateUI : MonoBehaviour
 
     private void OnPlayerDestroy(PlayerBehavior player)
     {
-        if(_playersState.ContainsKey(player))
+        if (player == null)
+            return;
+            
+        if (_playersState.ContainsKey(player))
         {
             Destroy(_playersState[player].gameObject);
 
@@ -25,7 +28,7 @@ public class PlayersStateUI : MonoBehaviour
 
     private void OnPlayerSpawned(PlayerBehavior player)
     {
-        if(!_playersState.ContainsKey(player))
+        if (!_playersState.ContainsKey(player))
         {
             var playerStateUI = Instantiate(_playerUIPrefab, transform);
             playerStateUI.SetPlayer(player);

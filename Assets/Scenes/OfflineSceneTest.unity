@@ -440,7 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _useNetworkLod: 0
   _levelOfDetailDistances: []
-  _updateHostVisibility: 1
+  _updateHostVisibility: 0
   _defaultConditions:
   - {fileID: 11400000, guid: 2033f54fd2794464bae08fa5a55c8996, type: 2}
 --- !u!114 &2578737770063864152
