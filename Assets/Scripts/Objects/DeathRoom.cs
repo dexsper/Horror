@@ -12,7 +12,7 @@ public class DeathRoom : NetworkBehaviour
 
     private static DeathRoom _instance;
     private int _nextSpawn = 0;
-    private Dictionary<PlayerBehavior, int> _leaveProgress = new();
+    private Dictionary<PlayerBehavior, int> _leaveProgress = new Dictionary<PlayerBehavior, int>();
 
     public static DeathRoom Instance
     {
