@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using FishNet.Component.Prediction;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using Sirenix.OdinInspector;
@@ -15,28 +17,28 @@ public struct ManiacSettings
     [Range(0.5f, 5f)] public float AttackDelayTime;
     [Range(1, 100f)] public float AttackDamage;
     [Range(0.2f, 3f)] public float ResetTargetTime;
+
+    [Title("Visual")]
+    [SerializeField] public List<GameObject> Models;
 }
 
-[RequireComponent(typeof(NavMeshAgent), typeof(FieldOfView))]
+[RequireComponent(typeof(NavMeshAgent), typeof(FieldOfView), typeof(PredictedObject))]
 public class ManiacBehaviour : NetworkBehaviour
 {
     [SerializeField] private ManiacSettings _settings;
-    
-    [SerializeField] private Transform graphicalTransform;
 
     [Title("Current State")]
     [ShowInInspector, ReadOnly] public PlayerBehavior CurrentTarget { get; private set; }
-    [field: SyncVar, ReadOnly] public bool IsMove { get; private set; }
-    [field: SyncVar, ReadOnly] public bool IsAttack { get; private set; }
+    [ShowInInspector, ReadOnly][field: SyncVar, HideInInspector] public bool IsMove { get; private set; }
+    [ShowInInspector, ReadOnly][field: SyncVar, HideInInspector] public bool IsAttack { get; private set; }
 
     public ManiacSettings Settings => _settings;
 
     public NavMeshAgent Agent { get; private set; }
-    
-    public ManiacAnimator ManiacAnimator { get; private set; }
-    
-    public ManiacApperaence ManiacApperaence { get; private set; }
+    public Animator Animator { get; private set; }
     public FieldOfView View { get; private set; }
+    public PredictedObject PredictedObject { get; private set; }
+
     public StateMachine StateMachine { get; private set; }
     public ManiacPatrolState PatrolState { get; private set; }
     public ManiacChaseState ChaseState { get; private set; }
@@ -47,21 +49,22 @@ public class ManiacBehaviour : NetworkBehaviour
     {
         Agent = GetComponent<NavMeshAgent>();
         View = GetComponent<FieldOfView>();
-        ManiacApperaence = GetComponent<ManiacApperaence>();
-        ManiacAnimator = GetComponent<ManiacAnimator>();
+        PredictedObject = GetComponent<PredictedObject>();
 
         PatrolState = new ManiacPatrolState(this);
         ChaseState = new ManiacChaseState(this);
         StateMachine = new StateMachine(PatrolState);
     }
 
-    private void Start()
+    [Server]
+    public override void OnStartServer()
     {
-        var model = Instantiate(ManiacApperaence.GetManiacApperaence(), graphicalTransform.position, Quaternion.identity,
-            graphicalTransform);
-        ManiacAnimator.SetAnimator(model.GetComponent<Animator>());
+        base.OnStartServer();
+
+        int index = Random.Range(0, _settings.Models.Count);
+        CreateModel_RPC(index);
     }
-    
+
     [Server]
     private void Update()
     {
@@ -97,5 +100,13 @@ public class ManiacBehaviour : NetworkBehaviour
 
         IsMove = Agent.velocity.sqrMagnitude > 0f;
         IsAttack = ChaseState.IsAttack;
+    }
+
+    [ObserversRpc(BufferLast = true, RunLocally = true)]
+    private void CreateModel_RPC(int modelIndex)
+    {
+        var model = Instantiate(_settings.Models[modelIndex], PredictedObject.GetGraphicalObject());
+
+        Animator = model.GetComponent<Animator>();
     }
 }

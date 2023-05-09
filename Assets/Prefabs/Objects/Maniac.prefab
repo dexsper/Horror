@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 303449598114786577}
   - component: {fileID: 201277549}
-  - component: {fileID: 8218950634396684218}
+  - component: {fileID: 5491469320894981359}
   - component: {fileID: 7792017491526380617}
   - component: {fileID: 6994838840491510024}
   - component: {fileID: 1565754455094126377}
@@ -18,7 +18,6 @@ GameObject:
   - component: {fileID: 5267370223021591571}
   - component: {fileID: 6190449770149522619}
   - component: {fileID: 6875461384141732129}
-  - component: {fileID: 5717838736219464685}
   - component: {fileID: 6819077025746865953}
   m_Layer: 7
   m_Name: Maniac
@@ -59,8 +58,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &8218950634396684218
-BoxCollider:
+--- !u!136 &5491469320894981359
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -69,8 +68,9 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.3, y: 4, z: 1.3}
+  m_Radius: 1.2
+  m_Height: 4.5
+  m_Direction: 1
   m_Center: {x: 0, y: 2, z: 0}
 --- !u!195 &7792017491526380617
 NavMeshAgent:
@@ -259,7 +259,10 @@ MonoBehaviour:
     AttackDelayTime: 1.5
     AttackDamage: 30
     ResetTargetTime: 2
-  graphicalTransform: {fileID: 1513002186894805729}
+    Models:
+    - {fileID: 4541679674416110024, guid: cca136b5d1eb2af4aac66eed13187f0e, type: 3}
+    - {fileID: 7304419865448423158, guid: ea51b48e0079a6a45a58e0534751aedb, type: 3}
+    - {fileID: 9147701965099312063, guid: 4c70581e818115e4ca95875dbe739646, type: 3}
   <IsMove>k__BackingField: 0
   <IsAttack>k__BackingField: 0
 --- !u!114 &6875461384141732129
@@ -288,22 +291,6 @@ MonoBehaviour:
   _distanceColor: {r: 0, g: 0, b: 1, a: 1}
   _meshColor: {r: 0.014599085, g: 1, b: 0, a: 0.039215688}
   _scanObjectColor: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &5717838736219464685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303449598114786579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf1acb3a607124f459a720d5e471ec3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 4541679674416110024, guid: cca136b5d1eb2af4aac66eed13187f0e, type: 3}
-  - {fileID: 7304419865448423158, guid: ea51b48e0079a6a45a58e0534751aedb, type: 3}
-  - {fileID: 9147701965099312063, guid: 4c70581e818115e4ca95875dbe739646, type: 3}
 --- !u!114 &6819077025746865953
 MonoBehaviour:
   m_ObjectHideFlags: 0
