@@ -4,6 +4,7 @@ public class ManiacChaseState : ManiacState
 {
     private float _attackDelayTimer;
 
+    public bool IsAttack { get; private set; }
     public ManiacChaseState(ManiacBehaviour behavior) : base(behavior)
     {
     }
@@ -32,8 +33,13 @@ public class ManiacChaseState : ManiacState
         if (Vector3.Distance(Behavior.transform.position, destination) <= Behavior.Settings.AttackDistance)
         {
             Behavior.CurrentTarget.Health.Damage(Behavior.Settings.AttackDamage);
+            IsAttack = true;
 
             _attackDelayTimer = Behavior.Settings.AttackDelayTime;
+        }
+        else
+        {
+            IsAttack = false;
         }
     }
 }

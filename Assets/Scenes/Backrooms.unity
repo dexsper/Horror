@@ -194,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 2948829331850969861, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
@@ -253,6 +253,18 @@ PrefabInstance:
       objectReference: {fileID: 3353939863789235066}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47f006d4abf5fea46a47c5d428012ae1, type: 3}
+--- !u!114 &22105483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
+    type: 3}
+  m_PrefabInstance: {fileID: 22105482}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &22105484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2948829331850969860, guid: 47f006d4abf5fea46a47c5d428012ae1,
@@ -1028,12 +1040,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <IsNested>k__BackingField: 0
-  _usesPrediction: 0
   <ComponentIndex>k__BackingField: 0
   <PredictedSpawn>k__BackingField: {fileID: 0}
   _networkBehaviours: []
   <ParentNetworkObject>k__BackingField: {fileID: 0}
-  <ChildNetworkObjects>k__BackingField: []
+  <ChildNetworkObjects>k__BackingField:
+  - {fileID: 1802949042}
+  - {fileID: 1280850577}
+  - {fileID: 2062311569}
+  - {fileID: 22105483}
+  - {fileID: 1490904061}
+  - {fileID: 9054639270913801965}
+  SerializedTransformProperties:
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 1}
+    LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
   _isGlobal: 0
   _initializeOrder: 0
@@ -1389,7 +1410,7 @@ PrefabInstance:
     - target: {fileID: 2948829331850969861, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
@@ -1448,6 +1469,18 @@ PrefabInstance:
       objectReference: {fileID: 3353939863789235066}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47f006d4abf5fea46a47c5d428012ae1, type: 3}
+--- !u!114 &1280850577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1280850576}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1280850578 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2948829331850969860, guid: 47f006d4abf5fea46a47c5d428012ae1,
@@ -1662,7 +1695,7 @@ PrefabInstance:
     - target: {fileID: 2948829331850969861, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
@@ -2315,7 +2348,7 @@ PrefabInstance:
     - target: {fileID: 2948829331850969861, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
@@ -3325,7 +3358,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <IsNested>k__BackingField: 0
-  _usesPrediction: 0
   <ComponentIndex>k__BackingField: 0
   <PredictedSpawn>k__BackingField: {fileID: 0}
   _networkBehaviours:
@@ -3333,6 +3365,10 @@ MonoBehaviour:
   - {fileID: 3353939863789235067}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
+  SerializedTransformProperties:
+    Position: {x: 6.615185, y: 6.426758, z: -0.39451146}
+    Rotation: {x: -0, y: -0, z: -0, w: 1}
+    LocalScale: {x: 1, y: 1, z: 1}
   _isNetworked: 1
   _isGlobal: 0
   _initializeOrder: 0
@@ -3364,7 +3400,6 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 3353939863789235066}
   _networkObjectCache: {fileID: 3353939863789235066}
-  _leaveZones: []
   _deathRoomScene: Assets/Scenes/DeathRoom.unity
   <GameFinished>k__BackingField: 0
 --- !u!114 &3353939863910327916
