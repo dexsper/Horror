@@ -8,6 +8,8 @@ public class ManiacAnimationEvents : MonoBehaviour
 {
     [SerializeField] private List<AudioClip> stepSounds = new List<AudioClip>();
 
+    [SerializeField] private AudioClip repairClip;
+    
     private AudioSource _source;
 
     private void Awake()
@@ -18,5 +20,10 @@ public class ManiacAnimationEvents : MonoBehaviour
     public void PlayStepSound()
     {
         _source.PlayOneShot(stepSounds[Random.Range(0,stepSounds.Count)]);
+    }
+
+    public void PlayRepairSound()
+    {
+        _source.PlayOneShot(repairClip);
     }
 }

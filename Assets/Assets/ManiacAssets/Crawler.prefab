@@ -68,10 +68,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepSounds:
-  - {fileID: 8300000, guid: eae3f0063da39af44a13ca8aa9272ae7, type: 3}
-  - {fileID: 8300000, guid: 6ebd7a48d0064314ab783166f2d0f903, type: 3}
-  - {fileID: 8300000, guid: 7dbb01564a2a0ea4597b8d0a510cdaf8, type: 3}
-  - {fileID: 8300000, guid: 7763a407306b1ca48838a52a31051e93, type: 3}
+  - {fileID: 8300000, guid: de54abb2cbf087246bcadec6cac9ae6a, type: 3}
+  - {fileID: 8300000, guid: c3b5b0af342f48946820bd3c80baa1e9, type: 3}
+  - {fileID: 8300000, guid: c7753d53c5acc274a9d8e8e0e20db42e, type: 3}
+  - {fileID: 8300000, guid: bf2c3b54c369d9c48a70dcbdb75c9c62, type: 3}
 --- !u!82 &-307905269301955753
 AudioSource:
   m_ObjectHideFlags: 0
@@ -788,7 +788,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c923ce7b27e0166479a4712e4ba8e28e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 653710fe865326f4788f9d2f5b75a870, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

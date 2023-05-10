@@ -26,9 +26,11 @@ public class Generator : NetworkBehaviour, IInteractable
     [Title("Effects")]
     [SerializeField] private ParticleSystem _repairedEffect;
     [SerializeField] private GameObject _lightEffect;
+    [SerializeField] private AudioClip repairClip;
 
     private float _repairTime = 0f;
     private IInteractable _thisInteractable;
+    private AudioSource _source;
 
     [SyncVar, HideInInspector] private bool _isRepairing = false;
     [SyncVar(OnChange = nameof(On_RepairedChange)), HideInInspector] private bool _isRepaired = false;
@@ -48,6 +50,7 @@ public class Generator : NetworkBehaviour, IInteractable
 
     private void Awake()
     {
+        _source = GetComponent<AudioSource>();
         _thisInteractable = (IInteractable)this;
 
         Generators.Add(this);
@@ -95,6 +98,7 @@ public class Generator : NetworkBehaviour, IInteractable
             _repairInitiator = null;
             _repairedEffect.Play();
             _lightEffect.SetActive(true);
+            _source.PlayOneShot(repairClip);
 
             OnRepaired?.Invoke(this);
             OnAllGeneratorsRepairedCallBackRPC();
