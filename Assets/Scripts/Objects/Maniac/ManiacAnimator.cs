@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class ManiacAnimator : MonoBehaviour
 {
-    private Animator _animator;
-
     private ManiacBehaviour _maniacBehaviour;
 
     public bool IsMove => _maniacBehaviour.IsMove;
@@ -17,17 +15,12 @@ public class ManiacAnimator : MonoBehaviour
         _maniacBehaviour = GetComponent<ManiacBehaviour>();
     }
 
-    public void SetAnimator(Animator animator)
-    {
-        _animator = animator;
-    }
-
     private void Update()
     {
-        if (_animator != null)
+        if (_maniacBehaviour.Animator != null)
         {
-            _animator.SetBool(nameof(IsMove),IsMove);
-            _animator.SetBool(nameof(IsAttack),IsAttack);
+            _maniacBehaviour.Animator.SetBool(nameof(IsMove),IsMove);
+            _maniacBehaviour.Animator.SetBool(nameof(IsAttack), IsAttack);
         }
     }
 }

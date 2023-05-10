@@ -207,6 +207,7 @@
         <e p="Audio" t="Include">
           <e p="Player" t="Include" />
         </e>
+        <e p="Generator Anims" t="Include" />
         <e p="Materials" t="Include" />
         <e p="MazeGenerator" t="Include">
           <e p="Animations" t="Include" />
@@ -2385,7 +2386,6 @@
             <e p="Maniac" t="Include">
               <e p="ManiacAnimationEvents.cs" t="Include" />
               <e p="ManiacAnimator.cs" t="Include" />
-              <e p="ManiacApperaence.cs" t="Include" />
               <e p="ManiacAttackAnimationCanceler.cs" t="Include" />
               <e p="ManiacBehaviour.cs" t="Include" />
               <e p="ManiacChaseState.cs" t="Include" />

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5267370223021591571}
   - component: {fileID: 6190449770149522619}
   - component: {fileID: 6875461384141732129}
-  - component: {fileID: 6819077025746865953}
+  - component: {fileID: 5375998994614888260}
   m_Layer: 7
   m_Name: Maniac
   m_TagString: Untagged
@@ -254,12 +254,15 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 201277550}
   _networkObjectCache: {fileID: 201277550}
   _settings:
+    ModelsList:
+    - {fileID: 9147701965099312063, guid: 4c70581e818115e4ca95875dbe739646, type: 3}
+    - {fileID: 7304419865448423158, guid: ea51b48e0079a6a45a58e0534751aedb, type: 3}
+    - {fileID: 4541679674416110024, guid: cca136b5d1eb2af4aac66eed13187f0e, type: 3}
     PatrolSleepTime: 5
     AttackDistance: 2
     AttackDelayTime: 1.5
     AttackDamage: 30
     ResetTargetTime: 2
-  graphicalTransform: {fileID: 0}
   <IsMove>k__BackingField: 0
   <IsAttack>k__BackingField: 0
 --- !u!114 &6875461384141732129
@@ -288,7 +291,7 @@ MonoBehaviour:
   _distanceColor: {r: 0, g: 0, b: 1, a: 1}
   _meshColor: {r: 0.014599085, g: 1, b: 0, a: 0.039215688}
   _scanObjectColor: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &6819077025746865953
+--- !u!114 &5375998994614888260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -297,10 +300,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 303449598114786579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e264429f31d2d439889065a9ce8683, type: 3}
+  m_Script: {fileID: 11500000, guid: 48a566273b828664d9ebc21279a18502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
 --- !u!1 &5907126838762052697
 GameObject:
   m_ObjectHideFlags: 0
