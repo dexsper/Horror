@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Office.unity
     guid: 22fd8ada03d783a478f6bcbff853d93b
+  - enabled: 1
+    path: Assets/Scenes/Labyrint.unity
+    guid: 5d55e41d4f85b5b4fac6866a32764c52
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 962fc19f93b0dd44b83064f43b026341,
       type: 2}

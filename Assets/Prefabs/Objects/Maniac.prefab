@@ -259,10 +259,7 @@ MonoBehaviour:
     AttackDelayTime: 1.5
     AttackDamage: 30
     ResetTargetTime: 2
-    Models:
-    - {fileID: 4541679674416110024, guid: cca136b5d1eb2af4aac66eed13187f0e, type: 3}
-    - {fileID: 7304419865448423158, guid: ea51b48e0079a6a45a58e0534751aedb, type: 3}
-    - {fileID: 9147701965099312063, guid: 4c70581e818115e4ca95875dbe739646, type: 3}
+  graphicalTransform: {fileID: 0}
   <IsMove>k__BackingField: 0
   <IsAttack>k__BackingField: 0
 --- !u!114 &6875461384141732129
@@ -300,9 +297,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 303449598114786579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39a945bd95ee60241b7a60157cbed011, type: 3}
+  m_Script: {fileID: 11500000, guid: 22e264429f31d2d439889065a9ce8683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  models: []
 --- !u!1 &5907126838762052697
 GameObject:
   m_ObjectHideFlags: 0

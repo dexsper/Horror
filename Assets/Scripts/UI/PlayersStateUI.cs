@@ -5,12 +5,12 @@ public class PlayersStateUI : MonoBehaviour
 {
     [SerializeField] private PlayerStateUI _playerUIPrefab;
 
-    private Dictionary<PlayerBehavior, PlayerStateUI> _playersState = new();
+    private Dictionary<PlayerBehavior, PlayerStateUI> _playersState = new Dictionary<PlayerBehavior, PlayerStateUI>();
 
     private void Awake()
     {
-        PlayerBehavior.OnPlayerSpawned += OnPlayerSpawned;
-        PlayerBehavior.OnPlayerDestroy += OnPlayerDestroy;
+        PlayerBehavior.OnRespawned += OnPlayerSpawned;
+        PlayerBehavior.OnDead += OnPlayerDestroy;
     }
 
     private void OnPlayerDestroy(PlayerBehavior player)

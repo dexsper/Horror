@@ -1,5 +1,4 @@
 using Cinemachine;
-using FishNet.Connection;
 using FishNet.Object;
 using UnityEngine;
 
@@ -35,11 +34,5 @@ public class PlayerCamera : NetworkBehaviour
 
         Camera.Follow = _player.PredictedObject.GetGraphicalObject();
         Camera.LookAt = _cameraLook;
-    }
-
-    [TargetRpc]
-    public void SetActive(NetworkConnection conn, bool active)
-    {   
-        Camera.gameObject.SetActive(active);
     }
 }

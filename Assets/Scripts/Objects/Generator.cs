@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using UnityEngine;
@@ -20,6 +21,7 @@ public class Generator : NetworkBehaviour, IInteractable
     [Title("Interaction")]
     [SerializeField] private string _startRepair = "Repair Generator";
     [SerializeField] private string _stopRepair = "Stop Repair";
+    [SerializeField] private int neededRepairedGeneratorsCount; 
 
     [Title("Effects")]
     [SerializeField] private ParticleSystem _repairedEffect;
@@ -41,6 +43,8 @@ public class Generator : NetworkBehaviour, IInteractable
     public Transform GetTransform() => this.transform;
 
     public static event Action<Generator> OnRepaired;
+
+    public static event Action OnAllGeneratorsRepaired;
 
     private void Awake()
     {
@@ -93,6 +97,7 @@ public class Generator : NetworkBehaviour, IInteractable
             _lightEffect.SetActive(true);
 
             OnRepaired?.Invoke(this);
+            OnAllGeneratorsRepairedCallBackRPC();
         }
     }
 
@@ -117,5 +122,14 @@ public class Generator : NetworkBehaviour, IInteractable
             return false;
 
         return !_isRepaired;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void OnAllGeneratorsRepairedCallBackRPC()
+    {
+        if (Generators.Where((generator1 => !generator1.IsRepaired)).Count() == neededRepairedGeneratorsCount)
+        {
+            OnAllGeneratorsRepaired?.Invoke();
+        }
     }
 }
