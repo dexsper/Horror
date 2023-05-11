@@ -22,7 +22,7 @@ public class LobbyManager : MonoBehaviour
 
     [field: SerializeField] public LobbyUI LobbyUI { get; private set; }
     
-    [Inject] private CharacterWindowUI _characterWindowUI;
+    [SerializeField] private CharacterWindowUI _characterWindowUI;
 
     public Lobby JoinedLobby { get; private set; }
     public event EventHandler OnLeftLobby;
@@ -158,6 +158,7 @@ public class LobbyManager : MonoBehaviour
 
     public async void CreateLobby(string lobbyName, int maxPlayers, bool isPrivate)
     {
+        _characterWindowUI.gameObject.SetActive(true);
         Player player = GetNewPlayerInstance();
 
         CreateLobbyOptions options = new CreateLobbyOptions

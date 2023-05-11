@@ -30,6 +30,7 @@ public class MapWindowUI : MonoBehaviour
     private void Awake()
     {
         nextButton.onClick.AddListener(NextCharacter);
+        prevButton.onClick.AddListener(PreviousCharacter);
         if (LobbyManager.Instance.IsLobbyHost())
         {
             nextButton.interactable = true;
@@ -44,7 +45,12 @@ public class MapWindowUI : MonoBehaviour
 
     private void PreviousCharacter()
     {
-        
+        _nextMap--;
+
+        if (_nextMap < 0)
+            _nextMap = maps.Count - 1;
+
+        UpdateUI(_nextMap);
     }
 
     private void UpdateUI(int index)
