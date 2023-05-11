@@ -2427,6 +2427,21 @@
           </e>
         </e>
         <e p="Sounds" t="Include">
+          <e p="Gameplay BG" t="Include">
+            <e p="Source" t="Include" />
+          </e>
+          <e p="Menu BG" t="Include">
+            <e p="Source" t="Include" />
+          </e>
+          <e p="Monster Sounds" t="Include">
+            <e p="Source" t="Include" />
+          </e>
+          <e p="Monster Steps" t="Include">
+            <e p="Source" t="Include" />
+          </e>
+          <e p="Repair" t="Include">
+            <e p="Source" t="Include" />
+          </e>
           <e p="Sounds" t="Include">
             <e p="backgrounds" t="Include">
               <e p="city" t="Include" />
@@ -2452,6 +2467,9 @@
               <e p="grass" t="Include" />
               <e p="hard ground" t="Include" />
             </e>
+          </e>
+          <e p="Win" t="Include">
+            <e p="Source" t="Include" />
           </e>
         </e>
         <e p="Sprites" t="Include">
