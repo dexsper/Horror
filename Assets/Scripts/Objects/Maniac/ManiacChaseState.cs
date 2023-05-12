@@ -11,6 +11,11 @@ public class ManiacChaseState : ManiacState
     {
     }
 
+    public void SetAttackDelayTimer(float value)
+    {
+        _attackDelayTimer = value;
+    }
+    
     public override void Update()
     {
         base.Update();
@@ -32,12 +37,11 @@ public class ManiacChaseState : ManiacState
             return;
         }
 
-        if (Vector3.Distance(Behavior.transform.position, destination) <= Behavior.Settings.AttackDistance)
+        if (Vector3.Distance(Behavior.transform.position, destination) <= Behavior.Settings.AttackDistance && _attackDelayTimer <= 0f)
         {
             Behavior.CurrentTarget.Health.Damage(Behavior.Settings.AttackDamage);
-            IsAttack = true;
-            
             _attackDelayTimer = Behavior.Settings.AttackDelayTime;
+            IsAttack = true;
         }
         else
         {

@@ -1460,6 +1460,7 @@ GameObject:
   - component: {fileID: 7303191331167828442}
   - component: {fileID: -6884469031527845699}
   - component: {fileID: -1149137017406495581}
+  - component: {fileID: 8766915895230706975}
   m_Layer: 0
   m_Name: Ghoul
   m_TagString: Untagged
@@ -1524,6 +1525,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c3b5b0af342f48946820bd3c80baa1e9, type: 3}
   - {fileID: 8300000, guid: c7753d53c5acc274a9d8e8e0e20db42e, type: 3}
   - {fileID: 8300000, guid: bf2c3b54c369d9c48a70dcbdb75c9c62, type: 3}
+  repairClip: {fileID: 0}
 --- !u!82 &-1149137017406495581
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1620,6 +1622,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8766915895230706975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7304419865448423158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f9517c6e07ece4e9f39c88e4b720df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7304429671216058642
 GameObject:
   m_ObjectHideFlags: 0

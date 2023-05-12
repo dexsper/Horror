@@ -6,7 +6,6 @@ using UnityEngine;
 public class ManiacAttackAnimationCanceler : MonoBehaviour
 {
     private Animator _animator;
-
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -16,6 +15,6 @@ public class ManiacAttackAnimationCanceler : MonoBehaviour
 
     public void CancelAttack()
     {
-        _animator.SetBool(nameof(IsAttack),false);
+        _animator.SetBool("IsAttack",false);
     }
 }
