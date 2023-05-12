@@ -207,6 +207,111 @@
         <e p="Audio" t="Include">
           <e p="Player" t="Include" />
         </e>
+        <e p="Cliff Mansion" t="Include">
+          <e p="model" t="Include">
+            <e p="Balustrade" t="Include" />
+            <e p="Bathroom" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Bed" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Bookshelf" t="Include" />
+            <e p="Dining" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Doors" t="Include">
+              <e p="Entrance" t="Include">
+                <e p="Materials" t="Include" />
+                <e p="Textures" t="Include" />
+              </e>
+              <e p="Wood" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+            </e>
+            <e p="Gate" t="Include">
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Kitchen" t="Include" />
+            <e p="lamps" t="Include">
+              <e p="Ceiling" t="Include" />
+              <e p="Chandelier" t="Include" />
+              <e p="Stage Light" t="Include">
+                <e p="tex" t="Include" />
+              </e>
+            </e>
+            <e p="Living Room" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Nature" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include">
+                <e p="indoor-tree" t="Include" />
+                <e p="outdoor-tree" t="Include" />
+              </e>
+            </e>
+            <e p="Pool" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Rocks" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Sofa" t="Include">
+              <e p="Materials" t="Include" />
+              <e p="Textures" t="Include" />
+            </e>
+            <e p="Table" t="Include" />
+            <e p="Walls" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Wardrobe" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+            <e p="Window" t="Include">
+              <e p="Materials" t="Include" />
+            </e>
+          </e>
+          <e p="scene" t="Include">
+            <e p="scene" t="Include" />
+          </e>
+          <e p="Skies" t="Include" />
+          <e p="Surfaces" t="Include">
+            <e p="Camo" t="Include" />
+            <e p="Faded White Brick" t="Include" />
+            <e p="Gold" t="Include" />
+            <e p="grass" t="Include" />
+            <e p="Hexagonal Tile" t="Include" />
+            <e p="Leather" t="Include" />
+            <e p="Marble Wall" t="Include" />
+            <e p="Medieval Pavement" t="Include" />
+            <e p="Mossy Coblestone" t="Include" />
+            <e p="Muddy Wet Sand" t="Include" />
+            <e p="Parquet" t="Include" />
+            <e p="Pavement" t="Include" />
+            <e p="Royal Silk" t="Include" />
+            <e p="Rustic Antique" t="Include" />
+            <e p="Rustic Brick 1" t="Include" />
+            <e p="Rustic Brick 2" t="Include" />
+            <e p="Steel" t="Include" />
+            <e p="Stone Cladding" t="Include" />
+            <e p="StonePavement Green" t="Include" />
+            <e p="StoneWall Brown" t="Include" />
+            <e p="Tile 1" t="Include" />
+            <e p="Tile 2" t="Include" />
+            <e p="Tile 3" t="Include" />
+            <e p="Tile 4" t="Include" />
+            <e p="White Marble" t="Include" />
+            <e p="Wood" t="Include" />
+          </e>
+          <e p="Terrain" t="Include" />
+          <e p="URP" t="Include" />
+          <e p="Water" t="Include">
+            <e p="Graphs" t="Include" />
+            <e p="Materials" t="Include" />
+          </e>
+        </e>
         <e p="Generator Anims" t="Include" />
         <e p="Materials" t="Include" />
         <e p="MazeGenerator" t="Include">

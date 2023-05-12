@@ -19,29 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/Crawler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/Crawler.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/Ghoul.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/Ghoul.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/True_Horror_Creatures/Horror_creature6_v1.0/Attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/True_Horror_Creatures/Horror_creature6_v1.0/Attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/_GhoulZombie/Attack1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/_GhoulZombie/Attack1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/thc6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/thc6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/True_Horror/True_Crawler/attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/True_Horror/True_Crawler/attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Maniac.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Maniac.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/PlayerModels/4HeadCharacter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/PlayerModels/4HeadCharacter.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Office.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Office.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineSceneTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineSceneTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacAttackAnimationCanceler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacAttackAnimationCanceler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacChaseState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacChaseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +49,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2Pb6LPb3YtwCg8nSOArSsgKddIi" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -120,7 +101,7 @@
       <workItem from="1683720187422" duration="1219000" />
       <workItem from="1683723189506" duration="223000" />
       <workItem from="1683817372609" duration="425000" />
-      <workItem from="1683881879527" duration="1886000" />
+      <workItem from="1683881879527" duration="1895000" />
     </task>
     <servers />
   </component>
