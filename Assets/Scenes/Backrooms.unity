@@ -194,7 +194,7 @@ PrefabInstance:
     - target: {fileID: 2948829331850969861, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
@@ -1067,13 +1067,9 @@ MonoBehaviour:
   <SceneId>k__BackingField: 13091025140488863622
   <AssetPathHash>k__BackingField: 0
   _sceneNetworkObjects:
-  - {fileID: 22105483}
   - {fileID: 845875232}
-  - {fileID: 1280850577}
   - {fileID: 1454965319}
-  - {fileID: 1490904061}
   - {fileID: 1802949042}
-  - {fileID: 2062311569}
   - {fileID: 3353939863789235066}
   - {fileID: 9054639270913801965}
 --- !u!82 &845875233
@@ -1511,7 +1507,7 @@ PrefabInstance:
     - target: {fileID: 2948829331850969861, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
@@ -1796,7 +1792,7 @@ PrefabInstance:
     - target: {fileID: 2948829331850969861, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
@@ -2449,7 +2445,7 @@ PrefabInstance:
     - target: {fileID: 2948829331850969861, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
@@ -3481,13 +3477,9 @@ MonoBehaviour:
   <SceneId>k__BackingField: 13091025140585683090
   <AssetPathHash>k__BackingField: 0
   _sceneNetworkObjects:
-  - {fileID: 22105483}
   - {fileID: 845875232}
-  - {fileID: 1280850577}
   - {fileID: 1454965319}
-  - {fileID: 1490904061}
   - {fileID: 1802949042}
-  - {fileID: 2062311569}
   - {fileID: 3353939863789235066}
   - {fileID: 9054639270913801965}
 --- !u!114 &3353939863789235067

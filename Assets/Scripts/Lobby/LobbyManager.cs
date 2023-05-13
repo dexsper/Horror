@@ -24,6 +24,7 @@ public class LobbyManager : MonoBehaviour
     
     [SerializeField] private CharacterWindowUI _characterWindowUI;
 
+    public string PlayerName => _playerName;
     public Lobby JoinedLobby { get; private set; }
     public event EventHandler OnLeftLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobby;

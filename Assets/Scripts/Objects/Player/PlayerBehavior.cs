@@ -18,6 +18,8 @@ public class PlayerBehavior : NetworkBehaviour
     public PlayerInteraction Interaction { get; private set; }
     public PlayerMovement Movement { get; private set; }
     public IPlayerInput Input { get; private set; }
+    
+    public PlayerUI PlayerUI { get; private set; }
 
     public GameObject Model { get; private set; }
 
@@ -25,7 +27,6 @@ public class PlayerBehavior : NetworkBehaviour
     [ShowInInspector, ReadOnly]
     [field: SyncVar, HideInInspector]
     public bool IsLeaved { get; private set; }
-
     public static PlayerBehavior LocalPlayer { get; private set; }
     public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
     public static event Action<PlayerBehavior> OnDead;
@@ -39,11 +40,12 @@ public class PlayerBehavior : NetworkBehaviour
         Interaction = GetComponent<PlayerInteraction>();
         Movement = GetComponent<PlayerMovement>();
         Input = GetComponent<IPlayerInput>();
+        PlayerUI = GetComponent<PlayerUI>();
 
         Health.OnDead += () => OnDead?.Invoke(this);
         Health.OnRestored += () => OnRespawned?.Invoke(this);
-
-        //this.Owner.GetPlayer().Data["nic"]
+        
+        PlayerUI.SetPlayerNickNameOnUI(Owner.GetPlayer().Data[LobbyManager.KEY_PLAYER_NAME].ToString());
     }
 
     public override void OnStartClient()

@@ -3,6 +3,7 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
+      <Path>Assets</Path>
       <Path>Library/PackageCache/com.unity.adaptiveperformance.samsung.android@5.0.0</Path>
       <Path>Library/PackageCache/com.unity.adaptiveperformance@5.0.0</Path>
       <Path>Library/PackageCache/com.unity.burst@1.8.2</Path>
