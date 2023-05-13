@@ -9,8 +9,14 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerBehavior), typeof(Rigidbody))]
 public class PlayerMovement : NetworkBehaviour
 {
-    [SerializeField] private float _speed = 2f;
+    [Title("Climb")]
+    [SerializeField] private Transform _stepUpper;
+    [SerializeField] private Transform _stepLower;
+    [SerializeField] private float _stepSmooth = 0.1f;
     [SerializeField] private float _gravityMultiplier = 4f;
+
+    [Title("Movement")]
+    [SerializeField] private float _speed = 2f;
 
     private float _xRototation;
     private bool _lockCursor;
@@ -18,9 +24,14 @@ public class PlayerMovement : NetworkBehaviour
     private PlayerBehavior _player;
     private Rigidbody _rigidbody;
 
+    [Title("Current State")]
+    [ShowInInspector, ReadOnly]
     [field: SyncVar, HideInInspector]
-    [Title("Current State"), ShowInInspector, ReadOnly]
     public bool IsMove { get; [ServerRpc(RunLocally = true)] private set; }
+
+    [ShowInInspector, ReadOnly]
+    [field: SyncVar, HideInInspector]
+    public bool IsStep { get; [ServerRpc(RunLocally = true)] private set; }
 
     private void Awake()
     {
@@ -97,11 +108,25 @@ public class PlayerMovement : NetworkBehaviour
     }
     private void AddGravity()
     {
-        _rigidbody.AddForce(Physics.gravity * _gravityMultiplier);
+        IsStep = false;
+
+        if (IsMove)
+        {
+            if (Physics.Raycast(_stepLower.position, transform.TransformDirection(Vector3.forward), out RaycastHit lowerHit, 0.4f))
+            {
+                if (!Physics.Raycast(_stepUpper.position, transform.TransformDirection(Vector3.forward), out RaycastHit upperHit, 0.4f))
+                {
+                    IsStep = true;
+                }
+            }
+        }
+
+        if (!IsStep)
+            _rigidbody.AddForce(Physics.gravity * _gravityMultiplier);
     }
     private void UpdateStates()
     {
-        IsMove = _rigidbody.velocity.sqrMagnitude > 0f;
+        IsMove = _rigidbody.velocity.sqrMagnitude >= 0.1f;
     }
 
     [Replicate]
@@ -113,6 +138,7 @@ public class PlayerMovement : NetworkBehaviour
         transform.localEulerAngles = targetRotation;
 
         Vector3 velocity = Quaternion.LookRotation(_player.transform.forward) * new Vector3(md.Horizontal, 0f, md.Vertical);
+        velocity.y = IsStep ? _stepSmooth : 0f;
 
         _rigidbody.velocity = velocity * _speed;
     }
