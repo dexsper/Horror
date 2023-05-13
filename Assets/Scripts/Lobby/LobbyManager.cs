@@ -21,8 +21,6 @@ public class LobbyManager : MonoBehaviour
     private string _playerName;
 
     [field: SerializeField] public LobbyUI LobbyUI { get; private set; }
-    
-    [SerializeField] private CharacterWindowUI _characterWindowUI;
 
     public string PlayerName => _playerName;
     public Lobby JoinedLobby { get; private set; }
@@ -159,7 +157,6 @@ public class LobbyManager : MonoBehaviour
 
     public async void CreateLobby(string lobbyName, int maxPlayers, bool isPrivate)
     {
-        _characterWindowUI.gameObject.SetActive(true);
         Player player = GetNewPlayerInstance();
 
         CreateLobbyOptions options = new CreateLobbyOptions

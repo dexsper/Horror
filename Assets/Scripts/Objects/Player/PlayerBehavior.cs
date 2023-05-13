@@ -45,7 +45,7 @@ public class PlayerBehavior : NetworkBehaviour
         Health.OnDead += () => OnDead?.Invoke(this);
         Health.OnRestored += () => OnRespawned?.Invoke(this);
         
-        PlayerUI.SetPlayerNickNameOnUI(Owner.GetPlayer().Data[LobbyManager.KEY_PLAYER_NAME].ToString());
+        //PlayerUI.SetPlayerNickNameOnUI(this.Owner.GetPlayer());
     }
 
     public override void OnStartClient()
