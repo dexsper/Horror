@@ -34,6 +34,8 @@ public class ManiacChaseState : ManiacState
         if (_attackDelayTimer > 0f)
         {
             _attackDelayTimer -= Time.deltaTime;
+            IsAttack = false;
+            
             return;
         }
 

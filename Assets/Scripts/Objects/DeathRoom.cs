@@ -1,18 +1,26 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using FishNet.Connection;
 using FishNet.Object;
+using FishNet.Object.Synchronizing;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class DeathRoom : NetworkBehaviour
 {
-    [SerializeField] private int _leaveProgressAmount;
+    [SerializeField] private float _leaveProgressStep;
+    [SerializeField] private float _leaveProgressAmount;
+
+    [Title("Interface")]
+    [SerializeField] private DeathRoomUI _ui;
+
+    [Title("Room")]
     [SerializeField] private List<Transform> _spawns;
-    [SerializeField] private GameObject _interface;
 
     private static DeathRoom _instance;
     private int _nextSpawn = 0;
-    private Dictionary<PlayerBehavior, int> _leaveProgress = new Dictionary<PlayerBehavior, int>();
+    [SyncObject] private readonly SyncDictionary<PlayerBehavior, float> _leaveProgress = new();
 
     public static DeathRoom Instance
     {
@@ -33,6 +41,30 @@ public class DeathRoom : NetworkBehaviour
     private void Awake()
     {
         Instance = this;
+
+        _leaveProgress.OnChange += OnLeaveProgressChange;
+    }
+
+    private void OnLeaveProgressChange(SyncDictionaryOperation op, PlayerBehavior key, float value, bool asServer)
+    {
+        if (asServer)
+            return;
+
+        if (key != PlayerBehavior.LocalPlayer)
+            return;
+
+       _ui.UpdateProgress(value);
+    }
+
+    [Server]
+    private void Update()
+    {
+        var keys = _leaveProgress.Keys.ToList();
+
+        foreach(var key in keys)
+        {
+            _leaveProgress[key] -= Time.deltaTime;
+        }
     }
 
     [Server]
@@ -57,7 +89,7 @@ public class DeathRoom : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     public void AddLeaveProgress(PlayerBehavior player)
     {
-        _leaveProgress[player]++;
+        _leaveProgress[player] += _leaveProgressStep;
 
         if (_leaveProgress[player] >= _leaveProgressAmount)
         {
@@ -70,7 +102,7 @@ public class DeathRoom : NetworkBehaviour
     [TargetRpc]
     private void RPC_SetInterfaceActive(NetworkConnection conn, bool active)
     {
-        _interface.gameObject.SetActive(active);
+        _ui.gameObject.SetActive(active);
     }
 
     private void GetSpawn(out Vector3 pos, out Quaternion rot)

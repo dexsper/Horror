@@ -641,12 +641,13 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 5097552341839561800}
   _networkObjectCache: {fileID: 5097552341839561800}
+  _leaveProgressStep: 0
   _leaveProgressAmount: 3
+  _ui: {fileID: 0}
   _spawns:
   - {fileID: 5097552341835232134}
   - {fileID: 5097552341697222995}
   - {fileID: 5097552342172046872}
-  _interface: {fileID: 0}
 --- !u!114 &5097552341839561800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -677,7 +678,7 @@ MonoBehaviour:
   NetworkObserver: {fileID: 0}
   <PrefabId>k__BackingField: 4
   <SpawnableCollectionId>k__BackingField: 0
-  _scenePathHash: 0
+  _scenePathHash: 1911933677
   <SceneId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 9444193360127451697
   _sceneNetworkObjects:

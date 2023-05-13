@@ -42,6 +42,8 @@ public class PlayerBehavior : NetworkBehaviour
 
         Health.OnDead += () => OnDead?.Invoke(this);
         Health.OnRestored += () => OnRespawned?.Invoke(this);
+
+        //this.Owner.GetPlayer().Data["nic"]
     }
 
     public override void OnStartClient()
