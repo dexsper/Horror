@@ -51,6 +51,8 @@ public class PlayerBehavior : NetworkBehaviour
         {
             Players.Add(this);
         }
+
+        OnRespawned?.Invoke(this);
     }
     public override void OnStopClient()
     {
@@ -77,7 +79,11 @@ public class PlayerBehavior : NetworkBehaviour
     public void UpdateModel(GameObject model)
     {
         Model = Instantiate(model, PredictedObject.GetGraphicalObject());
-        Model.gameObject.SetActive(!base.IsOwner);
+       
+        foreach(var render in Model.GetComponentsInChildren<Renderer>())
+        {
+            render.enabled = !base.IsOwner;
+        }
 
         _playerAnimator = Model.GetComponent<Animator>();
     }

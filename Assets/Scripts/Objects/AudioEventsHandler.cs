@@ -1,10 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class ManiacAnimationEvents : MonoBehaviour
+public class AudioEventsHandler : MonoBehaviour
 {
     [SerializeField] private List<AudioClip> stepSounds = new List<AudioClip>();
 

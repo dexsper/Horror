@@ -259,7 +259,7 @@ MonoBehaviour:
     - {fileID: 7304419865448423158, guid: ea51b48e0079a6a45a58e0534751aedb, type: 3}
     - {fileID: 4541679674416110024, guid: cca136b5d1eb2af4aac66eed13187f0e, type: 3}
     PatrolSleepTime: 5
-    AttackDistance: 2
+    AttackDistance: 3
     AttackDelayTime: 2
     AttackDamage: 35
     ResetTargetTime: 2
