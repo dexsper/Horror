@@ -74,7 +74,7 @@ public class LobbyCreateUI : MonoBehaviour {
         maxPlayersText.text = maxPlayers.ToString();
     }
 
-    private void Hide() {
+    public void Hide() {
         gameObject.SetActive(false);
     }
 
