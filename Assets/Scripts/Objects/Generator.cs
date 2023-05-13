@@ -46,8 +46,6 @@ public class Generator : NetworkBehaviour, IInteractable
 
     public static event Action<Generator> OnRepaired;
 
-    public static event Action OnAllGeneratorsRepaired;
-
     private void Awake()
     {
         _source = GetComponent<AudioSource>();
@@ -101,7 +99,6 @@ public class Generator : NetworkBehaviour, IInteractable
             _source.PlayOneShot(repairClip);
 
             OnRepaired?.Invoke(this);
-            OnAllGeneratorsRepairedCallBackRPC();
         }
     }
 
@@ -126,14 +123,5 @@ public class Generator : NetworkBehaviour, IInteractable
             return false;
 
         return !_isRepaired;
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    private void OnAllGeneratorsRepairedCallBackRPC()
-    {
-        if (Generators.Where((generator1 => !generator1.IsRepaired)).Count() == neededRepairedGeneratorsCount)
-        {
-            OnAllGeneratorsRepaired?.Invoke();
-        }
     }
 }

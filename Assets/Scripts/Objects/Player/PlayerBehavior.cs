@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using FishNet.Component.Prediction;
 using FishNet.Object;
+using FishNet.Object.Synchronizing;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using Zenject;
 
@@ -19,9 +21,15 @@ public class PlayerBehavior : NetworkBehaviour
 
     public GameObject Model { get; private set; }
 
+    [Title("Current State")]
+    [ShowInInspector, ReadOnly]
+    [field: SyncVar, HideInInspector]
+    public bool IsLeaved { get; private set; }
+
     public static PlayerBehavior LocalPlayer { get; private set; }
     public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
     public static event Action<PlayerBehavior> OnDead;
+    public static event Action<PlayerBehavior> OnLeaved;
     public static event Action<PlayerBehavior> OnRespawned;
 
     private void Awake()
@@ -67,20 +75,32 @@ public class PlayerBehavior : NetworkBehaviour
     {
         UpdateAnimations();
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (IsLeaved)
+            return;
+
+        if (other.TryGetComponent(out LeaveZone leaveZone))
+        {
+            IsLeaved = true;
+            OnLeaved?.Invoke(this);
+        }
+    }
 
     private void UpdateAnimations()
     {
         if (_playerAnimator == null)
             return;
-        
+
         _playerAnimator.SetBool(nameof(Movement.IsMove), Movement.IsMove);
         _playerAnimator.SetBool(nameof(Interaction.IsInteract), Interaction.IsInteract);
     }
+
     public void UpdateModel(GameObject model)
     {
         Model = Instantiate(model, PredictedObject.GetGraphicalObject());
-       
-        foreach(var render in Model.GetComponentsInChildren<Renderer>())
+
+        foreach (var render in Model.GetComponentsInChildren<Renderer>())
         {
             render.enabled = !base.IsOwner;
         }

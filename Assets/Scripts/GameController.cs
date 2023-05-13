@@ -38,11 +38,14 @@ public class GameController : NetworkBehaviour
 
         _spawner = GetComponent<PlayerSpawner>();
         _networkManager = InstanceFinder.NetworkManager;
-        _sceneManager = InstanceFinder.SceneManager;
 
+        _sceneManager = InstanceFinder.SceneManager;
         _sceneManager.OnClientPresenceChangeEnd += OnClientPresenceChangeEnd;
+
         DeathRoom.OnPlayerLeave += OnPlayerLeaveDeathRoom;
+        Generator.OnRepaired += OnGeneratorRepaired;
         PlayerBehavior.OnDead += OnPlayerDead;
+        PlayerBehavior.OnLeaved += OnPlayerLeaveZone;
     }
 
     private void Start()
@@ -51,6 +54,39 @@ public class GameController : NetworkBehaviour
         {
             _sceneManager.LoadGlobalScenes(new SceneLoadData(_deathRoomScene));
         }
+    }
+
+    #region Game State
+
+    [Server]
+    private void OnGeneratorRepaired(Generator generator)
+    {
+        for (int i = 0; i < Generator.Generators.Count; i++)
+        {
+            if (!Generator.Generators[i].IsRepaired)
+                return;
+        }
+
+        Debug.Log("All generators repaired");
+
+        for (int i = 0; i < LeaveZone.LeaveZones.Count; i++)
+        {
+            LeaveZone.LeaveZones[i].Activate();
+        }
+    }
+
+    [Server]
+    private void OnPlayerLeaveZone(PlayerBehavior player)
+    {
+        player.transform.position = Vector3.zero;
+
+        for (int i = 0; i < PlayerBehavior.Players.Count; i++)
+        {
+            if (!PlayerBehavior.Players[i].IsLeaved)
+                return;
+        }
+
+        _networkManager.ServerManager.StopConnection(true);
     }
 
     [Server]
@@ -66,6 +102,10 @@ public class GameController : NetworkBehaviour
     {
         DeathRoom.Instance.AddPlayer(player);
     }
+
+    #endregion
+
+    #region Connection State
 
     [Server]
     private void OnClientPresenceChangeEnd(ClientPresenceChangeEventArgs args)
@@ -83,4 +123,6 @@ public class GameController : NetworkBehaviour
 
         _spawner.SpawnPlayer(connection);
     }
+
+    #endregion
 }
