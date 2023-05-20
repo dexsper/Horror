@@ -27,11 +27,14 @@ public class PlayerBehavior : NetworkBehaviour
     [ShowInInspector, ReadOnly]
     [field: SyncVar, HideInInspector]
     public bool IsLeaved { get; private set; }
+
     public static PlayerBehavior LocalPlayer { get; private set; }
     public static List<PlayerBehavior> Players { get; private set; } = new List<PlayerBehavior>();
+
     public static event Action<PlayerBehavior> OnDead;
     public static event Action<PlayerBehavior> OnLeaved;
     public static event Action<PlayerBehavior> OnRespawned;
+    public static event Action OnPlayerRemoved;
 
     private void Awake()
     {
@@ -73,6 +76,7 @@ public class PlayerBehavior : NetworkBehaviour
         if (base.IsOwner) LocalPlayer = null;
 
         Players.Remove(this);
+        OnPlayerRemoved?.Invoke();
     }
 
     private void Update()

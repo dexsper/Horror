@@ -45,8 +45,10 @@ public class GameController : NetworkBehaviour
 
         DeathRoom.OnPlayerLeave += OnPlayerLeaveDeathRoom;
         Generator.OnRepaired += OnGeneratorRepaired;
+
         PlayerBehavior.OnDead += OnPlayerDead;
         PlayerBehavior.OnLeaved += OnPlayerLeaveZone;
+        PlayerBehavior.OnPlayerRemoved += OnPlayerRemoved;
     }
 
     private void Start()
@@ -91,8 +93,6 @@ public class GameController : NetworkBehaviour
         {
             FinishGame_RPC(PlayerBehavior.Players[i].Owner, _winReward);
         }
-
-        _networkManager.ServerManager.StopConnection(true);
     }
 
     [Server]
@@ -108,6 +108,16 @@ public class GameController : NetworkBehaviour
     {
         DeathRoom.Instance.AddPlayer(player);
     }
+
+    [Server]
+    private void OnPlayerRemoved()
+    {
+        if(PlayerBehavior.Players.Count == 0)
+        {
+            _networkManager.ServerManager.StopConnection(true);
+        }
+    }
+
 
     #endregion
 
@@ -134,6 +144,9 @@ public class GameController : NetworkBehaviour
     private void FinishGame_RPC(NetworkConnection conn, int reward)
     {
         PlayerEconomy.Instance.IncrementBalance(reward);
+        
+        _networkManager.ClientManager.StopConnection();
+        LobbyManager.Instance.LeaveLobby();
     }
 
     #endregion

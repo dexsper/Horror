@@ -40,6 +40,14 @@ public class LobbyListUI : MonoBehaviour
         _lobbyManager.OnKickedFromLobby += LobbyManager_OnKickedFromLobby;
     }
 
+    private void OnDestroy()
+    {
+        _lobbyManager.OnLobbyListChanged -= LobbyManager_OnLobbyListChanged;
+        _lobbyManager.OnJoinedLobby -= LobbyManager_OnJoinedLobby;
+        _lobbyManager.OnLeftLobby -= LobbyManager_OnLeftLobby;
+        _lobbyManager.OnKickedFromLobby -= LobbyManager_OnKickedFromLobby;
+    }
+
     private void LobbyManager_OnKickedFromLobby(object sender, LobbyEventArgs e)
     {
         Show();
@@ -70,8 +78,6 @@ public class LobbyListUI : MonoBehaviour
         foreach (Transform child in _lobbyContainer)
         {
             if (child == _lobbyTemplate) continue;
-
-            //Destroy(child.gameObject);
         }
 
         foreach (Lobby lobby in lobbyList)
