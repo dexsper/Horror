@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class GameController : NetworkBehaviour
 {
+    [SerializeField] private int _winReward = 10;
     [SerializeField, Scene] private string _deathRoomScene;
 
     private static GameController _instance;
@@ -86,6 +87,11 @@ public class GameController : NetworkBehaviour
                 return;
         }
 
+        for (int i = 0; i < PlayerBehavior.Players.Count; i++)
+        {
+            FinishGame_RPC(PlayerBehavior.Players[i].Owner, _winReward);
+        }
+
         _networkManager.ServerManager.StopConnection(true);
     }
 
@@ -122,6 +128,12 @@ public class GameController : NetworkBehaviour
             return;
 
         _spawner.SpawnPlayer(connection);
+    }
+
+    [TargetRpc]
+    private void FinishGame_RPC(NetworkConnection conn, int reward)
+    {
+        PlayerEconomy.Instance.IncrementBalance(reward);
     }
 
     #endregion

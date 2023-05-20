@@ -53,7 +53,7 @@ public class DeathRoom : NetworkBehaviour
         if (key != PlayerBehavior.LocalPlayer)
             return;
 
-       _ui.UpdateProgress(value);
+        _ui.UpdateProgress(value);
     }
 
     [Server]
@@ -61,9 +61,12 @@ public class DeathRoom : NetworkBehaviour
     {
         var keys = _leaveProgress.Keys.ToList();
 
-        foreach(var key in keys)
+        foreach (var key in keys)
         {
-            _leaveProgress[key] -= Time.deltaTime;
+            if (_leaveProgress[key] > 0f)
+                _leaveProgress[key] -= Time.deltaTime;
+            else
+                _leaveProgress[key] = 0f;
         }
     }
 
@@ -86,9 +89,12 @@ public class DeathRoom : NetworkBehaviour
         OnPlayerLeave?.Invoke(player);
     }
 
-    [ServerRpc(RequireOwnership = false)]
+    [ServerRpc(RequireOwnership = false, RunLocally = true)]
     public void AddLeaveProgress(PlayerBehavior player)
     {
+        if (!_leaveProgress.ContainsKey(player))
+            return;
+
         _leaveProgress[player] += _leaveProgressStep;
 
         if (_leaveProgress[player] >= _leaveProgressAmount)

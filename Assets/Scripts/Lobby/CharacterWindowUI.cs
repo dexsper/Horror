@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -29,11 +27,27 @@ public class CharacterWindowUI : MonoBehaviour
         _nextButton.onClick.AddListener(NextCharacter);
         _prevButton.onClick.AddListener(PreviousCharacter);
 
+        PlayerEconomy.OnDataRefreshed += UpdateCharacters;
+    }
+
+    private void UpdateCharacters()
+    {
+        if (_spawnedCharacters != null)
+        {
+            UpdateUI();
+
+            return;
+        }
+
         _spawnedCharacters = new Dictionary<string, GameObject>();
+        var charactersDefinitions = PlayerEconomy.Instance.InventoryDefinitions.Select(x => x.Name).ToList();
 
         foreach (var (characterName, character) in _characters.Characters)
         {
-            _spawnedCharacters.Add(characterName, Instantiate(character, _previewParent));
+            if (charactersDefinitions.Contains(characterName))
+            {
+                _spawnedCharacters.Add(characterName, Instantiate(character, _previewParent));
+            }
         }
 
         UpdateUI();
@@ -41,7 +55,7 @@ public class CharacterWindowUI : MonoBehaviour
 
     private void NextCharacter()
     {
-        _selectedCharacter = (_selectedCharacter + 1) % _characters.Characters.Count;
+        _selectedCharacter = (_selectedCharacter + 1) % _spawnedCharacters.Count;
 
         UpdateUI();
     }

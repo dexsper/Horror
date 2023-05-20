@@ -8577,8 +8577,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5504587241890311679, guid: c720f6bf0c39a6342b2d4a9979051ffb,
         type: 3}
-      propertyPath: _characterWindowUI
+      propertyPath: <LobbyUI>k__BackingField
       value: 
-      objectReference: {fileID: 1913864690}
+      objectReference: {fileID: 942565719}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c720f6bf0c39a6342b2d4a9979051ffb, type: 3}

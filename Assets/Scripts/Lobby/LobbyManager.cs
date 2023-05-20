@@ -5,7 +5,6 @@ using Unity.Services.Core;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
-using Zenject;
 
 public class LobbyManager : MonoBehaviour
 {
@@ -20,15 +19,16 @@ public class LobbyManager : MonoBehaviour
     private float _refreshLobbyListTimer = 5f;
     private string _playerName;
 
-    [field: SerializeField] public LobbyUI LobbyUI { get; private set; }
-
     public string PlayerName => _playerName;
     public Lobby JoinedLobby { get; private set; }
+
+    public static event Action OnServicesInitialized;
     public event EventHandler OnLeftLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobby;
     public event EventHandler<LobbyEventArgs> OnJoinedLobbyUpdate;
     public event EventHandler<LobbyEventArgs> OnKickedFromLobby;
     public event EventHandler<OnLobbyListChangedEventArgs> OnLobbyListChanged;
+
     public static LobbyManager Instance
     {
         get
@@ -44,7 +44,6 @@ public class LobbyManager : MonoBehaviour
 
     private void Update()
     {
-        //HandleRefreshLobbyList(); // Disabled Auto Refresh for testing with multiple builds
         HandleLobbyHeartbeat();
         HandleLobbyPolling();
     }
@@ -52,14 +51,15 @@ public class LobbyManager : MonoBehaviour
     public async void Authenticate(string playerName)
     {
         this._playerName = playerName;
+
         InitializationOptions initializationOptions = new InitializationOptions();
         initializationOptions.SetProfile(playerName);
 
         await UnityServices.InitializeAsync(initializationOptions);
+        OnServicesInitialized?.Invoke();
 
         AuthenticationService.Instance.SignedIn += () =>
         {
-            // do nothing
             Debug.Log("Signed in! " + AuthenticationService.Instance.PlayerId);
 
             RefreshLobbyList();
