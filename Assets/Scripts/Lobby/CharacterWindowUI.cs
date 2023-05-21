@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -12,6 +13,8 @@ public class CharacterWindowUI : MonoBehaviour
 
     [Title("Interface", TitleAlignment = TitleAlignments.Centered)]
     [SerializeField] private TextMeshProUGUI _characterNameText;
+    [SerializeField] private TextMeshProUGUI _characterActionText;
+    [SerializeField] private Button _actionButton;
     [SerializeField] private Button _nextButton, _prevButton;
 
     [Title("Characters Models", TitleAlignment = TitleAlignments.Centered)]
@@ -26,8 +29,27 @@ public class CharacterWindowUI : MonoBehaviour
     {
         _nextButton.onClick.AddListener(NextCharacter);
         _prevButton.onClick.AddListener(PreviousCharacter);
+        _actionButton.onClick.AddListener(OnActionButton);
 
         PlayerEconomy.OnDataRefreshed += UpdateCharacters;
+    }
+
+    private void OnActionButton()
+    {
+        string characterName = _spawnedCharacters.ElementAt(_selectedCharacter).Key;
+
+        if (CharacterIsPurchased(characterName))
+        {
+            SelectedCharacterName = characterName;
+
+            UpdateUI();
+        }
+        else
+        {
+            var itemDefention = PlayerEconomy.Instance.InventoryDefinitions.First(x => x.Name == characterName);
+
+            PlayerEconomy.Instance.MakePurchase(itemDefention.Id);
+        }
     }
 
     private void UpdateCharacters()
@@ -48,6 +70,14 @@ public class CharacterWindowUI : MonoBehaviour
             {
                 _spawnedCharacters.Add(characterName, Instantiate(character, _previewParent));
             }
+        }
+
+        if (PlayerEconomy.Instance.PlayersInventoryItems.Count > 0)
+        {
+            string firstBuyedCharacter = PlayerEconomy.Instance.PlayersInventoryItems[0].GetItemDefinition().Name;
+
+            SelectedCharacterName = firstBuyedCharacter;
+            _selectedCharacter = _spawnedCharacters.Keys.ToList().IndexOf(firstBuyedCharacter);
         }
 
         UpdateUI();
@@ -72,14 +102,46 @@ public class CharacterWindowUI : MonoBehaviour
 
     private void UpdateUI()
     {
-        foreach (var (characterName, character) in _spawnedCharacters)
+        foreach (var (_, character) in _spawnedCharacters)
         {
             character.gameObject.SetActive(false);
         }
 
         var characterInfo = _spawnedCharacters.ElementAt(_selectedCharacter);
-        
-        _characterNameText.text = characterInfo.Key;
+        string characterName = characterInfo.Key;
+
         characterInfo.Value.SetActive(true);
+        _characterNameText.text = characterName;
+
+        if (CharacterIsPurchased(characterName))
+        {
+            if (SelectedCharacterName == characterName)
+            {
+                _actionButton.interactable = false;
+                _characterActionText.text = "Selected";
+            }
+            else
+            {
+                _actionButton.interactable = true;
+                _characterActionText.text = "Select";
+            }
+        }
+        else
+        {
+            _actionButton.interactable = true;
+            _characterActionText.text = "Buy";
+        }
+    }
+
+    private bool CharacterIsPurchased(string name)
+    {
+        bool purchased = PlayerEconomy.Instance.PlayersInventoryItems.Exists((x) =>
+        {
+            var defention = x.GetItemDefinition();
+
+            return defention.Name == name;
+        });
+
+        return purchased;
     }
 }
