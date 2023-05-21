@@ -21,7 +21,19 @@ public class ConnectionConntroller : MonoBehaviour
         _lobbyManager = GetComponent<LobbyManager>();
 
         _lobbyManager.OnJoinedLobby += OnJoinedLobby;
+        _lobbyManager.OnLeftLobby += OnLeftLobby;
         _lobbyManager.OnJoinedLobbyUpdate += OnJoinedLobbyUpdate;
+    }
+
+    private void OnLeftLobby(object sender, EventArgs e)
+    {
+        if (_lobbyManager.IsLobbyHost())
+        {
+            _networkManager.ServerManager.StopConnection(true);
+            return;
+        }
+
+        _networkManager.ClientManager.StopConnection();
     }
 
     private void OnJoinedLobbyUpdate(object sender, LobbyEventArgs args)

@@ -145,7 +145,6 @@ public class GameController : NetworkBehaviour
     {
         PlayerEconomy.Instance.IncrementBalance(reward);
         
-        _networkManager.ClientManager.StopConnection();
         LobbyManager.Instance.LeaveLobby();
     }
 

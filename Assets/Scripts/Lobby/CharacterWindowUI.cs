@@ -78,9 +78,7 @@ public class CharacterWindowUI : MonoBehaviour
         }
 
         var characterInfo = _spawnedCharacters.ElementAt(_selectedCharacter);
-
-        SelectedCharacterName = characterInfo.Key;
-
+        
         _characterNameText.text = characterInfo.Key;
         characterInfo.Value.SetActive(true);
     }
