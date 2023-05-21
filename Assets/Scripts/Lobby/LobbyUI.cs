@@ -38,6 +38,7 @@ public class LobbyUI : MonoBehaviour
         {
             _lobbyManager.LeaveLobby();
         });
+        
         startGameButton.onClick.AddListener(() =>
         {
             SceneLoadData sld = new SceneLoadData(LobbyManager.Instance.GetMap());

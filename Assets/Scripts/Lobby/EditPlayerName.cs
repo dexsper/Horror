@@ -1,35 +1,31 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
-
-public class EditPlayerName : MonoBehaviour {
 
 
-    public static EditPlayerName Instance { get; private set; }
-
-
-    public event EventHandler OnNameChanged;
-
-
+public class EditPlayerName : MonoBehaviour
+{
     [SerializeField] private TextMeshProUGUI playerNameText;
-
 
     private string playerName = "Player";
 
+    public static EditPlayerName Instance { get; private set; }
+    public event EventHandler OnNameChanged;
 
-    private void Awake() {
+    private void Awake()
+    {
         Instance = this;
 
-        GetComponent<Button>().onClick.AddListener(() => {
+        GetComponent<Button>().onClick.AddListener(() =>
+        {
             UI_InputWindow.Show_Static("Player Name", playerName, "abcdefghijklmnopqrstuvxywzABCDEFGHIJKLMNOPQRSTUVXYWZ .,-", 20,
-            () => {
+            () =>
+            {
                 // Cancel
             },
-            (string newName) => {
+            (string newName) =>
+            {
                 playerName = newName;
 
                 playerNameText.text = playerName;
@@ -41,15 +37,18 @@ public class EditPlayerName : MonoBehaviour {
         playerNameText.text = playerName;
     }
 
-    private void Start() {
+    private void Start()
+    {
         OnNameChanged += EditPlayerName_OnNameChanged;
     }
 
-    private void EditPlayerName_OnNameChanged(object sender, EventArgs e) {
+    private void EditPlayerName_OnNameChanged(object sender, EventArgs e)
+    {
         LobbyManager.Instance.UpdatePlayerName(GetPlayerName());
     }
 
-    public string GetPlayerName() {
+    public string GetPlayerName()
+    {
         return playerName;
     }
 

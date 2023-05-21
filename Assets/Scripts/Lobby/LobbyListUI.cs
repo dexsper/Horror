@@ -24,8 +24,8 @@ public class LobbyListUI : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        _lobbyManager = LobbyManager.Instance;
 
+        _lobbyManager = LobbyManager.Instance;
         _lobbyTemplate.gameObject.SetActive(false);
 
         refreshButton.onClick.AddListener(RefreshButtonClick);

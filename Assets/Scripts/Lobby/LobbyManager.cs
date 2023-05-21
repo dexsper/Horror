@@ -20,6 +20,7 @@ public class LobbyManager : MonoBehaviour
     private string _playerName;
 
     public string PlayerName => _playerName;
+    public bool IsAuthenticated { get; private set; }
     public Lobby JoinedLobby { get; private set; }
 
     public static event Action OnServicesInitialized;
@@ -61,7 +62,8 @@ public class LobbyManager : MonoBehaviour
         AuthenticationService.Instance.SignedIn += () =>
         {
             Debug.Log("Signed in! " + AuthenticationService.Instance.PlayerId);
-
+            
+            IsAuthenticated = true;
             RefreshLobbyList();
         };
 
@@ -88,6 +90,7 @@ public class LobbyManager : MonoBehaviour
         if (IsLobbyHost())
         {
             _heartbeatTimer -= Time.deltaTime;
+
             if (_heartbeatTimer < 0f)
             {
                 float heartbeatTimerMax = 15f;
@@ -104,6 +107,7 @@ public class LobbyManager : MonoBehaviour
         if (JoinedLobby != null)
         {
             _lobbyPollTimer -= Time.deltaTime;
+
             if (_lobbyPollTimer < 0f)
             {
                 float lobbyPollTimerMax = 1.1f;
@@ -115,11 +119,9 @@ public class LobbyManager : MonoBehaviour
 
                 if (!IsPlayerInLobby())
                 {
-                    // Player was kicked out of this lobby
                     Debug.Log("Kicked from Lobby!");
 
                     OnKickedFromLobby?.Invoke(this, new LobbyEventArgs { lobby = JoinedLobby });
-
                     JoinedLobby = null;
                 }
             }
@@ -138,7 +140,6 @@ public class LobbyManager : MonoBehaviour
             {
                 if (player.Id == AuthenticationService.Instance.PlayerId)
                 {
-                    // This player is in this lobby
                     return true;
                 }
             }
