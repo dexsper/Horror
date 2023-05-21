@@ -33,6 +33,11 @@ public class CharacterWindowUI : MonoBehaviour
 
         PlayerEconomy.OnDataRefreshed += UpdateCharacters;
     }
+    private void OnDestroy()
+    {
+        PlayerEconomy.OnDataRefreshed -= UpdateCharacters;
+    }
+
 
     private void OnActionButton()
     {

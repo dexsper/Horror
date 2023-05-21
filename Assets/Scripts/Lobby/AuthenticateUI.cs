@@ -11,7 +11,8 @@ public class AuthenticateUI : MonoBehaviour
 
         if (LobbyManager.Instance.IsAuthenticated)
         {
-            LobbyManager.Instance.RefreshLobbyList();
+            PlayerEconomy.Instance.Refresh();
+
             Hide();
         }
     }

@@ -37,7 +37,7 @@ public class PlayerEconomy : MonoBehaviour
         AuthenticationService.Instance.SignedIn += Refresh;
     }
 
-    private async void Refresh()
+    public async void Refresh()
     {
         await EconomyService.Instance.Configuration.SyncConfigurationAsync();
 
