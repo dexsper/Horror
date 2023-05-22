@@ -36,6 +36,8 @@ public class Generator : NetworkBehaviour, IInteractable
     [SyncVar(OnChange = nameof(On_RepairedChange)), HideInInspector] private bool _isRepaired = false;
     [SyncVar, HideInInspector] private PlayerBehavior _repairInitiator;
 
+    [SyncVar] public float RepairingProgress;
+
     [Title("Current State")]
     [ShowInInspector] public bool IsRepairing => _isRepairing;
     [ShowInInspector] public bool IsRepaired => _isRepaired;
@@ -76,6 +78,8 @@ public class Generator : NetworkBehaviour, IInteractable
                 return;
             }
 
+            float repairingPercents = 1f / _settings.RepairTime;
+            RepairingProgress = repairingPercents * _repairTime;
             _repairTime += Time.deltaTime;
 
             if (_repairTime >= _settings.RepairTime)
@@ -86,9 +90,15 @@ public class Generator : NetworkBehaviour, IInteractable
         else
         {
             _repairTime = 0f;
+            RepairingProgress = 0f;
         }
     }
 
+    public float GetRepairProgress()
+    {
+        return RepairingProgress;
+    }
+    
     private void On_RepairedChange(bool prev, bool next, bool asServer)
     {
         if (next)

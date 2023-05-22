@@ -209,8 +209,6 @@
         </e>
         <e p="Cliff Mansion" t="Include">
           <e p="model" t="Include">
-            <e p="Doors" t="Include" />
-            <e p="lamps" t="Include" />
             <e p="Nature" t="Include">
               <e p="Textures" t="Include" />
             </e>
@@ -2339,6 +2337,7 @@
         <e p="Scripts" t="Include">
           <e p="Data" t="Include">
             <e p="CharactersData.cs" t="Include" />
+            <e p="PlayerEconomy.cs" t="Include" />
           </e>
           <e p="GameController.cs" t="Include" />
           <e p="Input" t="Include">
@@ -2423,6 +2422,7 @@
               <e p="StateMachine.cs" t="Include" />
             </e>
           </e>
+          <e p="OfflineScene.cs" t="Include" />
           <e p="SleepTIme.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="DeathRoomUI.cs" t="Include" />

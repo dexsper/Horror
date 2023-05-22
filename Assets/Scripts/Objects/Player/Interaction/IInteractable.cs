@@ -9,4 +9,6 @@ public interface IInteractable
     bool IsInteract(PlayerBehavior player);
     bool CanInteract(PlayerBehavior player);
     void Interact(PlayerBehavior player);
+
+    float GetRepairProgress();
 }

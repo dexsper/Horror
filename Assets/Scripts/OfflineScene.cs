@@ -2,7 +2,6 @@ using System.IO;
 using FishNet.Managing;
 using FishNet.Transporting;
 using FishNet.Utility;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 using UnitySceneManager = UnityEngine.SceneManagement.SceneManager;
