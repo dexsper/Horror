@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Linq;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,15 +15,28 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI repairedGeneratorsCount;
 
     [SerializeField] private Slider interactionSlider;
-    
+
+    [SerializeField] private Button openSettingsButton, closeSettingsButton;
+    [SerializeField] private Image settingsPanel;
+
     private void Awake()
     {
         _interactButton.onClick.AddListener(Interact);
         _leaveButton.onClick.AddListener(Leave);
+        
+        openSettingsButton.onClick.AddListener(OnSettingsButtonClick);
+        closeSettingsButton.onClick.AddListener(InSettingsButtonClick);
     }
 
     private void Start()
     {
+        StartCoroutine(PlayerTextAtStart());
+    }
+
+    private IEnumerator PlayerTextAtStart()
+    {
+        repairedGeneratorsCount.text = "Find Generators";
+        yield return new WaitForSeconds(5f);
         UpdateRepairedGeneratorsText(Generator.Generators.Count);
     }
     private void OnEnable()
@@ -41,6 +56,16 @@ public class PlayerUIController : MonoBehaviour
         UpdateInteraction(localPlayer);
     }
 
+    private void OnSettingsButtonClick()
+    {
+        settingsPanel.transform.DOScale(1f, 0.25f).From(0f).SetEase(Ease.Linear);
+    }
+
+    private void InSettingsButtonClick()
+    {
+        settingsPanel.transform.DOScale(0f, 0.25f).From(1f).SetEase(Ease.Linear);
+    }
+    
     private void UpdateInteraction(PlayerBehavior localPlayer)
     {
         bool canInteract = localPlayer.Interaction.CanInteract;
@@ -71,14 +96,14 @@ public class PlayerUIController : MonoBehaviour
 
     private void UpdateRepairedGeneratorsText(int count)
     {
-        repairedGeneratorsCount.text = $"Generators Left {count}";
+        repairedGeneratorsCount.text = $"Generators left {count}";
     }  
     private void OnGeneratorRepaired(Generator generator)
     {
         UpdateRepairedGeneratorsText(Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count());
         if (Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count() == 0)
         {
-            repairedGeneratorsCount.text = "All Generators Repaired, Run Away!";
+            repairedGeneratorsCount.text = "Run!";
         }
     }
 

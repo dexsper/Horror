@@ -10,7 +10,6 @@ public class LobbyListUI : MonoBehaviour
     public static LobbyListUI Instance { get; private set; }
 
     [Title("References")]
-    [SerializeField] private CharacterWindowUI _characterWindow;
     [SerializeField] private LobbyListSingleUI _lobbyTemplate;
     [SerializeField] private Transform _lobbyContainer;
 
@@ -55,17 +54,13 @@ public class LobbyListUI : MonoBehaviour
 
     private void LobbyManager_OnLeftLobby(object sender, EventArgs e)
     {
-        _characterWindow.gameObject.SetActive(true);
-
         Show();
     }
 
     private void LobbyManager_OnJoinedLobby(object sender, LobbyEventArgs e)
     {
         Hide();
-
-        _characterWindow.gameObject.SetActive(false);
-        _lobbyManager.UpdatePlayerCharacter(_characterWindow.SelectedCharacterName);
+        //_lobbyManager.UpdatePlayerCharacter(_characterWindow.SelectedCharacterName);
     }
 
     private void LobbyManager_OnLobbyListChanged(object sender, OnLobbyListChangedEventArgs e)

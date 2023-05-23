@@ -2412,6 +2412,7 @@
               </e>
               <e p="PlayerBehavior.cs" t="Include" />
               <e p="PlayerCamera.cs" t="Include" />
+              <e p="PlayerCameraMarkers.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
               <e p="PlayerLook.cs" t="Include" />
               <e p="PlayerTouchField.cs" t="Include" />
@@ -2430,6 +2431,8 @@
             <e p="PlayersStateUI.cs" t="Include" />
             <e p="PlayerStateUI.cs" t="Include" />
             <e p="PlayerUIController.cs" t="Include" />
+            <e p="PlayerUIMarkers.cs" t="Include" />
+            <e p="TargetWaypoint.cs" t="Include" />
             <e p="TouchField.cs" t="Include" />
           </e>
           <e p="Utils" t="Include">

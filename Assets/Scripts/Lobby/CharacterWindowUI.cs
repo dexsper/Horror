@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using TMPro;
+using Unity.Services.Economy.Model;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,15 +15,20 @@ public class CharacterWindowUI : MonoBehaviour
     [Title("Interface", TitleAlignment = TitleAlignments.Centered)]
     [SerializeField] private TextMeshProUGUI _characterNameText;
     [SerializeField] private TextMeshProUGUI _characterActionText;
+    [SerializeField] private TextMeshProUGUI _playerCurrentMoney;
     [SerializeField] private Button _actionButton;
     [SerializeField] private Button _nextButton, _prevButton;
 
     [Title("Characters Models", TitleAlignment = TitleAlignments.Centered)]
     [SerializeField] private Transform _previewParent;
 
+    [Title("LobbyList", TitleAlignment = TitleAlignments.Centered)]
+    [SerializeField] private LobbyListUI lobbyListUI;
+    
     private int _selectedCharacter = 0;
     private Dictionary<string, GameObject> _spawnedCharacters;
 
+    private PlayerBalance _playerBalance;
     public string SelectedCharacterName { get; private set; }
 
     private void Awake()
@@ -32,13 +38,20 @@ public class CharacterWindowUI : MonoBehaviour
         _actionButton.onClick.AddListener(OnActionButton);
 
         PlayerEconomy.OnDataRefreshed += UpdateCharacters;
+        PlayerEconomy.OnDataRefreshed += GetPlayerBalance;
     }
     private void OnDestroy()
     {
         PlayerEconomy.OnDataRefreshed -= UpdateCharacters;
+        PlayerEconomy.OnDataRefreshed -= GetPlayerBalance;
     }
 
-
+    private async void GetPlayerBalance()
+    {
+        _playerBalance = await PlayerEconomy.Instance.CurrencyDefinition.GetPlayerBalanceAsync();
+        _playerCurrentMoney.text = $"{_playerBalance.Balance}";
+    }
+    
     private void OnActionButton()
     {
         string characterName = _spawnedCharacters.ElementAt(_selectedCharacter).Key;
@@ -55,6 +68,9 @@ public class CharacterWindowUI : MonoBehaviour
 
             PlayerEconomy.Instance.MakePurchase(itemDefention.Id);
         }
+        lobbyListUI.gameObject.SetActive(true);
+        LobbyManager.Instance.RefreshLobbyList();
+        gameObject.SetActive(false);
     }
 
     private void UpdateCharacters()
@@ -122,7 +138,7 @@ public class CharacterWindowUI : MonoBehaviour
         {
             if (SelectedCharacterName == characterName)
             {
-                _actionButton.interactable = false;
+                _actionButton.interactable = true;
                 _characterActionText.text = "Selected";
             }
             else

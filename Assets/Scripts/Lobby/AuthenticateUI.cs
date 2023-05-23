@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class AuthenticateUI : MonoBehaviour
 {
     [SerializeField] private Button authenticateButton;
+    [SerializeField] private GameObject editPlayerName;
+    [SerializeField] private GameObject characterWindowUI;
 
     private void Awake()
     {
@@ -25,6 +27,8 @@ public class AuthenticateUI : MonoBehaviour
 
     private void Hide()
     {
+        characterWindowUI.SetActive(true);
+        editPlayerName.SetActive(false);
         gameObject.SetActive(false);
     }
 }

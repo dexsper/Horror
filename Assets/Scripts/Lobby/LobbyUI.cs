@@ -29,6 +29,7 @@ public class LobbyUI : MonoBehaviour
 
     private void Awake()
     {
+        startGameButton.gameObject.SetActive(false);
         Instance = this;
         _lobbyManager = LobbyManager.Instance;
 
@@ -48,10 +49,16 @@ public class LobbyUI : MonoBehaviour
         });
     }
 
-    public void ActivateStartButton()
+    public void EnableStartGameButton()
     {
-        if(LobbyManager.Instance.IsLobbyHost())
+        if(startGameButton != null)
             startGameButton.gameObject.SetActive(true);
+    }
+
+    public void DisableStartGameButton()
+    {
+        if(startGameButton != null)
+            startGameButton.gameObject.SetActive(false);
     }
 
     private void Start()

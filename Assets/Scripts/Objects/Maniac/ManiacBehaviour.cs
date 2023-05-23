@@ -55,6 +55,8 @@ public class ManiacBehaviour : NetworkBehaviour
         PatrolState = new ManiacPatrolState(this);
         ChaseState = new ManiacChaseState(this);
         StateMachine = new StateMachine(PatrolState);
+
+        Generator.OnRepaired += OnGeneratorRepaired;
     }
 
     [Server]
@@ -102,10 +104,17 @@ public class ManiacBehaviour : NetworkBehaviour
         IsAttack = ChaseState.IsAttack;
     }
 
+    [Server]
+    private void OnGeneratorRepaired(Generator generator)
+    {
+        gameObject.SetActive(true);
+    }
+    
     [ObserversRpc(BufferLast = true, RunLocally = true)]
     private void CreateModelRPC(int modelIndex)
     {
         var model = Instantiate(_settings.ModelsList[modelIndex], PredictedObject.GetGraphicalObject());
         Animator = model.GetComponent<Animator>();
+        gameObject.SetActive(false);
     }
 }

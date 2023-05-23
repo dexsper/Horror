@@ -34,5 +34,6 @@ public class PlayerCamera : NetworkBehaviour
 
         Camera.Follow = _player.PredictedObject.GetGraphicalObject();
         Camera.LookAt = _cameraLook;
+        Camera.GetComponent<PlayerCameraMarkers>().AddWaypointsItemsToList(PlayerUIMarkers.Instance.GetList());
     }
 }

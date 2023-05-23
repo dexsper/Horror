@@ -56,6 +56,11 @@ public class Generator : NetworkBehaviour, IInteractable
         Generators.Add(this);
     }
 
+    private void Start()
+    {
+        PlayerUIMarkers.Instance.AddGenerators();
+    }
+
     [Server]
     private void Update()
     {
