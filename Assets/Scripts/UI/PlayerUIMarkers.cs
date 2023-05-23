@@ -1,40 +1,18 @@
-using System;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerUIMarkers : MonoBehaviour
 {
-    public static PlayerUIMarkers Instance;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
+    [SerializeField] private Marker _markerPrefab;
+    [SerializeField] private Transform _markersParent;
 
     private void Start()
     {
-        AddGenerators();
-    }
+        var markerTargets = FindObjectsOfType<MarkerTarget>();
 
-    [SerializeField] private List<Marker> markers = new List<Marker>();
-
-    public IReadOnlyList<Marker> Markers => markers;
-
-    private void AddGenerators()
-    {
-        for (int i = 0; i < markers.Count; i++)
+        for (int i = 0; i < markerTargets.Length; i++)
         {
-            markers[i].Generator = Generator.Generators[i];
+            var marker = Instantiate(_markerPrefab, _markersParent);
+            marker.SetTarget(markerTargets[i]);
         }
     }
-}
-
-[Serializable]
-public class Marker
-{
-    public Image MarkerImage;
-    public TextMeshProUGUI MarkerDistance;
-    public Generator Generator;
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5950004225691186468}
   - component: {fileID: 6404867816674683952}
   - component: {fileID: -3181303144306766270}
+  - component: {fileID: 3975962652758919202}
   m_Layer: 0
   m_Name: LeaveZone
   m_TagString: Untagged
@@ -127,12 +128,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <IsNested>k__BackingField: 0
-  _usesPrediction: 0
   <ComponentIndex>k__BackingField: 0
   <PredictedSpawn>k__BackingField: {fileID: 0}
   _networkBehaviours: []
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
+  SerializedTransformProperties:
+    Position: {x: 0, y: 0, z: 0}
+    Rotation: {x: 0, y: 0, z: 0, w: 0}
+    LocalScale: {x: 0, y: 0, z: 0}
   _isNetworked: 1
   _isGlobal: 0
   _initializeOrder: 0
@@ -144,3 +148,15 @@ MonoBehaviour:
   <SceneId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 7147082627148952722
   _sceneNetworkObjects: []
+--- !u!114 &3975962652758919202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8404529871612315269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f369e4e1571f6db479d6b3ae6f250ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
