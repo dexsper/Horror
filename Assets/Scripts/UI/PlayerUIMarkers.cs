@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,15 +13,16 @@ public class PlayerUIMarkers : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        AddGenerators();
+    }
+
     [SerializeField] private List<Marker> markers = new List<Marker>();
 
     public IReadOnlyList<Marker> Markers => markers;
-    public List<Marker> GetList()
-    {
-        return markers;
-    }
 
-    public void AddGenerators()
+    private void AddGenerators()
     {
         for (int i = 0; i < markers.Count; i++)
         {

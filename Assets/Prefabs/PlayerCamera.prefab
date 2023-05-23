@@ -83,7 +83,7 @@ MonoBehaviour:
   img: {fileID: 0}
   _distanceText: {fileID: 0}
   target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 3, z: 0}
 --- !u!1 &5591632666215121852
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   img: {fileID: 0}
   _distanceText: {fileID: 0}
   target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 3, z: 0}
 --- !u!1 &5599776020421540022
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   img: {fileID: 0}
   _distanceText: {fileID: 0}
   target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 3, z: 0}
 --- !u!1 &7037259520841950343
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
   img: {fileID: 0}
   _distanceText: {fileID: 0}
   target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 3, z: 0}
 --- !u!1 &7508285595693311671
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,4 +446,4 @@ MonoBehaviour:
   img: {fileID: 0}
   _distanceText: {fileID: 0}
   target: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 3, z: 0}

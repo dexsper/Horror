@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class TargetWaypoint : MonoBehaviour
 {
-    [SerializeField] private Image img;
-    [SerializeField] private TextMeshProUGUI _distanceText;
-
-    [SerializeField] private Transform target;
-
     [SerializeField] private Vector3 offset;
+    
+    private Image img;
+    private TextMeshProUGUI _distanceText;
+
+    private Transform target;
 
     private Camera _camera;
 
@@ -32,27 +32,19 @@ public class TargetWaypoint : MonoBehaviour
         img.gameObject.SetActive(false);
         _distanceText.gameObject.SetActive(false);
     }
-    
+
     private void Awake()
     {
         _camera = Camera.main;
     }
 
-    public void SetImage(Image image)
+    public void SetMarker(Marker marker)
     {
-        img = image;
+        img = marker.MarkerImage;
+        _distanceText = marker.MarkerDistance;
+        target = marker.Generator.transform;
     }
 
-    public void SetText(TextMeshProUGUI text)
-    {
-        _distanceText = text;
-    }
-
-    public void SetTarget(Transform target)
-    {
-        this.target = target;
-    }
-    
     private void Update()
     {
         if (img != null)
@@ -67,7 +59,6 @@ public class TargetWaypoint : MonoBehaviour
 
             if (Vector3.Dot((target.position - transform.position), transform.forward) < 0)
             {
-
                 if (pos.x < Screen.width / 2)
                 {
                     pos.x = maxX;
