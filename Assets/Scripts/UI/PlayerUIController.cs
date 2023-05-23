@@ -78,7 +78,6 @@ public class PlayerUIController : MonoBehaviour
             UpdateSlider(localPlayer.Interaction.LookInteractable.GetRepairProgress());
             return;
         }
-
         _interactionText.text = "";
     }
     private void Interact()

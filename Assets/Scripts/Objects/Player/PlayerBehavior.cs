@@ -19,6 +19,7 @@ public class PlayerBehavior : NetworkBehaviour
     public PlayerMovement Movement { get; private set; }
     public IPlayerInput Input { get; private set; }
     
+    public PlayerCamera PlayerCamera { get; private set; }
     public PlayerUI PlayerUI { get; private set; }
 
     public GameObject Model { get; private set; }
@@ -44,6 +45,7 @@ public class PlayerBehavior : NetworkBehaviour
         Movement = GetComponent<PlayerMovement>();
         Input = GetComponent<IPlayerInput>();
         PlayerUI = GetComponent<PlayerUI>();
+        PlayerCamera = GetComponent<PlayerCamera>();
 
         Health.OnDead += () => OnDead?.Invoke(this);
         Health.OnRestored += () => OnRespawned?.Invoke(this);

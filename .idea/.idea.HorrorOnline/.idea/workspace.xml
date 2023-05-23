@@ -20,29 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/FishNet/Runtime/Observing/Conditions/ScriptableObjects/DistanceCondition.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/FishNet/Runtime/Observing/Conditions/ScriptableObjects/DistanceCondition.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerCamera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DeathRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DeathRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Office.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Office.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCamera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCameraMarkers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCameraMarkers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_/InputWindow/UI_InputWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_/InputWindow/UI_InputWindow.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TargetWaypoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TargetWaypoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +58,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacAttackAnimationCanceler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacChaseState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/Interaction/IInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OfflineScene.cs" />
         <option value="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" />
@@ -81,13 +66,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCameraMarkers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCamera.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TargetWaypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCameraMarkers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/TargetWaypoint.cs" />
       </list>
     </option>
   </component>
@@ -149,7 +135,7 @@
       <workItem from="1684749894886" duration="2571000" />
       <workItem from="1684767279052" duration="3054000" />
       <workItem from="1684777229660" duration="2417000" />
-      <workItem from="1684833669645" duration="6578000" />
+      <workItem from="1684833669645" duration="8211000" />
     </task>
     <servers />
   </component>

@@ -16,6 +16,7 @@ public class PlayerUIMarkers : MonoBehaviour
 
     [SerializeField] private List<Marker> markers = new List<Marker>();
 
+    public IReadOnlyList<Marker> Markers => markers;
     public List<Marker> GetList()
     {
         return markers;
