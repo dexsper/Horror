@@ -13,33 +13,50 @@ public class CharacterWindowUI : MonoBehaviour
     [SerializeField] private CharactersData _characters;
 
     [Title("Interface", TitleAlignment = TitleAlignments.Centered)]
-    [SerializeField] private TextMeshProUGUI _characterNameText;
-    [SerializeField] private TextMeshProUGUI _characterActionText;
     [SerializeField] private TextMeshProUGUI _playerCurrentMoney;
-    [SerializeField] private Button _actionButton;
-    [SerializeField] private Button _nextButton, _prevButton;
+    [SerializeField] private CharacterUI _characterViewPrefab;
+    [SerializeField] private Transform _charactersContent;
 
-    [Title("Characters Models", TitleAlignment = TitleAlignments.Centered)]
-    [SerializeField] private Transform _previewParent;
-
-    [Title("LobbyList", TitleAlignment = TitleAlignments.Centered)]
-    [SerializeField] private LobbyListUI lobbyListUI;
-    
-    private int _selectedCharacter = 0;
-    private Dictionary<string, GameObject> _spawnedCharacters;
-
+    private static CharacterWindowUI _instance;
+    private Dictionary<string, CharacterUI> _spawnedCharacters;
     private PlayerBalance _playerBalance;
+
+    public static CharacterWindowUI Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<CharacterWindowUI>();
+            }
+
+            return _instance;
+        }
+
+        set => _instance = value;
+    }
+    public event Action OnCharacterSelected;
     public string SelectedCharacterName { get; private set; }
 
     private void Awake()
     {
-        _nextButton.onClick.AddListener(NextCharacter);
-        _prevButton.onClick.AddListener(PreviousCharacter);
-        _actionButton.onClick.AddListener(OnActionButton);
+        if (Instance != this)
+        {
+            Destroy(this);
+            return;
+        }
+
+        Instance = this;
 
         PlayerEconomy.OnDataRefreshed += UpdateCharacters;
         PlayerEconomy.OnDataRefreshed += GetPlayerBalance;
     }
+    
+    private void Start()
+    {
+        gameObject.SetActive(false);
+    }
+   
     private void OnDestroy()
     {
         PlayerEconomy.OnDataRefreshed -= UpdateCharacters;
@@ -51,16 +68,15 @@ public class CharacterWindowUI : MonoBehaviour
         _playerBalance = await PlayerEconomy.Instance.CurrencyDefinition.GetPlayerBalanceAsync();
         _playerCurrentMoney.text = $"{_playerBalance.Balance}";
     }
-    
-    private void OnActionButton()
-    {
-        string characterName = _spawnedCharacters.ElementAt(_selectedCharacter).Key;
 
+    public void CharacterAction(string characterName)
+    {
         if (CharacterIsPurchased(characterName))
         {
             SelectedCharacterName = characterName;
+            OnCharacterSelected?.Invoke();
 
-            UpdateUI();
+            gameObject.SetActive(false);
         }
         else
         {
@@ -68,9 +84,6 @@ public class CharacterWindowUI : MonoBehaviour
 
             PlayerEconomy.Instance.MakePurchase(itemDefention.Id);
         }
-        lobbyListUI.gameObject.SetActive(true);
-        LobbyManager.Instance.RefreshLobbyList();
-        gameObject.SetActive(false);
     }
 
     private void UpdateCharacters()
@@ -82,81 +95,45 @@ public class CharacterWindowUI : MonoBehaviour
             return;
         }
 
-        _spawnedCharacters = new Dictionary<string, GameObject>();
+        _spawnedCharacters = new Dictionary<string, CharacterUI>();
         var charactersDefinitions = PlayerEconomy.Instance.InventoryDefinitions.Select(x => x.Name).ToList();
 
         foreach (var (characterName, character) in _characters.Characters)
         {
             if (charactersDefinitions.Contains(characterName))
             {
-                _spawnedCharacters.Add(characterName, Instantiate(character, _previewParent));
+                var characterUI = Instantiate(_characterViewPrefab, _charactersContent);
+
+                var itemDefention = PlayerEconomy.Instance.InventoryDefinitions.First(x => x.Name == characterName);
+                var price = PlayerEconomy.Instance.GetItemPrice(itemDefention.Id);
+
+                characterUI.Initialize(characterName, price, _characters[characterName]);
+
+                _spawnedCharacters.Add(characterName, characterUI);
             }
         }
 
-        if (PlayerEconomy.Instance.PlayersInventoryItems.Count > 0)
+        if (PlayerEconomy.Instance.InventoryItems.Count > 0)
         {
-            string firstBuyedCharacter = PlayerEconomy.Instance.PlayersInventoryItems[0].GetItemDefinition().Name;
+            string firstBuyedCharacter = PlayerEconomy.Instance.InventoryItems[0].GetItemDefinition().Name;
 
             SelectedCharacterName = firstBuyedCharacter;
-            _selectedCharacter = _spawnedCharacters.Keys.ToList().IndexOf(firstBuyedCharacter);
         }
-
-        UpdateUI();
-    }
-
-    private void NextCharacter()
-    {
-        _selectedCharacter = (_selectedCharacter + 1) % _spawnedCharacters.Count;
-
-        UpdateUI();
-    }
-
-    private void PreviousCharacter()
-    {
-        _selectedCharacter--;
-
-        if (_selectedCharacter < 0)
-            _selectedCharacter = _spawnedCharacters.Count - 1;
 
         UpdateUI();
     }
 
     private void UpdateUI()
     {
-        foreach (var (_, character) in _spawnedCharacters)
+        foreach (var (_, characterUI) in _spawnedCharacters)
         {
-            character.gameObject.SetActive(false);
-        }
-
-        var characterInfo = _spawnedCharacters.ElementAt(_selectedCharacter);
-        string characterName = characterInfo.Key;
-
-        characterInfo.Value.SetActive(true);
-        _characterNameText.text = characterName;
-
-        if (CharacterIsPurchased(characterName))
-        {
-            if (SelectedCharacterName == characterName)
-            {
-                _actionButton.interactable = true;
-                _characterActionText.text = "Selected";
-            }
-            else
-            {
-                _actionButton.interactable = true;
-                _characterActionText.text = "Select";
-            }
-        }
-        else
-        {
-            _actionButton.interactable = true;
-            _characterActionText.text = "Buy";
+            characterUI.UpdateUI();
         }
     }
 
-    private bool CharacterIsPurchased(string name)
+    public bool CharacterIsPurchased(string name)
     {
-        bool purchased = PlayerEconomy.Instance.PlayersInventoryItems.Exists((x) =>
+        bool purchased = PlayerEconomy.Instance.InventoryItems.Exists((x) =>
         {
             var defention = x.GetItemDefinition();
 

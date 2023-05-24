@@ -37,6 +37,17 @@ public class LobbyListUI : MonoBehaviour
         _lobbyManager.OnJoinedLobby += LobbyManager_OnJoinedLobby;
         _lobbyManager.OnLeftLobby += LobbyManager_OnLeftLobby;
         _lobbyManager.OnKickedFromLobby += LobbyManager_OnKickedFromLobby;
+
+        CharacterWindowUI.Instance.OnCharacterSelected += SetActive;
+
+        gameObject.SetActive(false);
+    }
+
+    private void SetActive()
+    {
+        gameObject.SetActive(true);
+
+        LobbyManager.Instance.RefreshLobbyList();
     }
 
     private void OnDestroy()
@@ -45,6 +56,7 @@ public class LobbyListUI : MonoBehaviour
         _lobbyManager.OnJoinedLobby -= LobbyManager_OnJoinedLobby;
         _lobbyManager.OnLeftLobby -= LobbyManager_OnLeftLobby;
         _lobbyManager.OnKickedFromLobby -= LobbyManager_OnKickedFromLobby;
+        CharacterWindowUI.Instance.OnCharacterSelected -= SetActive;
     }
 
     private void LobbyManager_OnKickedFromLobby(object sender, LobbyEventArgs e)

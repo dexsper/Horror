@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using Unity.Services.Authentication;
 using Unity.Services.Economy;
@@ -14,7 +15,8 @@ public class PlayerEconomy : MonoBehaviour
     [field: Title("Services Configuration", TitleAlignment = TitleAlignments.Centered)]
     [field: ShowInInspector, ReadOnly] public CurrencyDefinition CurrencyDefinition { get; private set; }
     [field: ShowInInspector, ReadOnly] public List<InventoryItemDefinition> InventoryDefinitions { get; private set; }
-    [field: ShowInInspector, ReadOnly] public List<PlayersInventoryItem> PlayersInventoryItems { get; private set;}
+    [field: ShowInInspector, ReadOnly] public List<PlayersInventoryItem> InventoryItems { get; private set; }
+    [field: ShowInInspector, ReadOnly] public List<VirtualPurchaseDefinition> VirtualPurchases { get; private set; }
 
     public static PlayerEconomy Instance { get; private set; }
     public static event Action OnDataRefreshed;
@@ -43,15 +45,16 @@ public class PlayerEconomy : MonoBehaviour
 
         CurrencyDefinition = EconomyService.Instance.Configuration.GetCurrency(CURRENCY_ID);
         InventoryDefinitions = EconomyService.Instance.Configuration.GetInventoryItems();
+        VirtualPurchases = EconomyService.Instance.Configuration.GetVirtualPurchases();
 
         GetInventoryResult inventoryResult = await EconomyService.Instance.PlayerInventory.GetInventoryAsync();
-        PlayersInventoryItems = inventoryResult.PlayersInventoryItems;
+        InventoryItems = inventoryResult.PlayersInventoryItems;
 
-        if(PlayersInventoryItems.Count == 0)
+        if (InventoryItems.Count == 0)
         {
             var balanceInfo = await CurrencyDefinition.GetPlayerBalanceAsync();
 
-            if(balanceInfo.Balance == 0)
+            if (balanceInfo.Balance == 0)
             {
                 MakePurchase(DEFAULT_ID);
             }
@@ -64,9 +67,37 @@ public class PlayerEconomy : MonoBehaviour
     {
         string purchaseID = $"{id}_PURCHASE";
 
-        MakeVirtualPurchaseResult purchaseResult = await EconomyService.Instance.Purchases.MakeVirtualPurchaseAsync(purchaseID);
+        try
+        {
+            MakeVirtualPurchaseResult purchaseResult = await EconomyService.Instance.Purchases.MakeVirtualPurchaseAsync(purchaseID);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError(e);
+        }
 
         Refresh();
+    }
+
+    public int GetItemPrice(string id)
+    {
+        string purchaseID = $"{id}_PURCHASE";
+        var purchase = VirtualPurchases.FirstOrDefault(p => p.Id == purchaseID);
+
+        if (purchase != null)
+        {
+            var moneyCost = purchase.Costs.FirstOrDefault((c) =>
+            {
+                var itemDefention = c.Item.GetReferencedConfigurationItem();
+
+                return itemDefention.Id == CurrencyDefinition.Id;
+            });
+
+            if (moneyCost != null)
+                return moneyCost.Amount;
+        }
+
+        return 0;
     }
 
     public async void IncrementBalance(int amount)
