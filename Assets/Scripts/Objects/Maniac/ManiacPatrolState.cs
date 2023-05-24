@@ -9,6 +9,11 @@ public class ManiacPatrolState : ManiacState
     public ManiacPatrolState(ManiacBehaviour behavior) : base(behavior)
     {
     }
+
+    public void SetTargetGenerator(Generator targetGenerator)
+    {
+        _targetGenerator = targetGenerator;
+    }
     
     public override void Exit()
     {

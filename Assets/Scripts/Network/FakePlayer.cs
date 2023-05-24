@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class FakePlayer : MonoBehaviour
 {
-    [SerializeField] private string _characterName;
+    public string CharacterName;
 
     private ServerManager _serverManager;
 
@@ -30,7 +30,7 @@ public class FakePlayer : MonoBehaviour
                 Data = new Dictionary<string, PlayerDataObject>
                 {
                     {LobbyManager.KEY_PLAYER_NAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, $"Fake_{_serverManager.Clients.Count}_Player")},
-                    {LobbyManager.KEY_PLAYER_CHARACTER, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, _characterName)}
+                    {LobbyManager.KEY_PLAYER_CHARACTER, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, CharacterName)}
                 }
             };
         }

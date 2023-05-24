@@ -46,6 +46,13 @@ public class UnityServicesAuthenticator : Authenticator
         base.NetworkManager.ClientManager.RegisterBroadcast<ResponseBroadcast>(OnResponseBroadcast);
     }
 
+    private void OnDestroy()
+    {
+        base.NetworkManager.ClientManager.OnClientConnectionState -= ClientManager_OnClientConnectionState;
+        base.NetworkManager.ServerManager.UnregisterBroadcast<AuthenticationBroadcast>(OnAuthBroadcast);
+        base.NetworkManager.ClientManager.UnregisterBroadcast<ResponseBroadcast>(OnResponseBroadcast);
+    }
+
     /// <summary>
     /// Called when a connection state changes for the local client.
     /// </summary>
@@ -96,7 +103,7 @@ public class UnityServicesAuthenticator : Authenticator
     private void OnResponseBroadcast(ResponseBroadcast rb)
     {
         string result = (rb.Passed) ? "Authentication complete." : "Authenitcation failed.";
-        
+
         NetworkManager.Log(result);
     }
 

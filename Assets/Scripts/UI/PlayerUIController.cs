@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using DG.Tweening;
+using FishNet;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,7 +24,7 @@ public class PlayerUIController : MonoBehaviour
     {
         _interactButton.onClick.AddListener(Interact);
         _leaveButton.onClick.AddListener(Leave);
-        
+
         openSettingsButton.onClick.AddListener(OnSettingsButtonClick);
         closeSettingsButton.onClick.AddListener(InSettingsButtonClick);
     }
@@ -52,7 +53,7 @@ public class PlayerUIController : MonoBehaviour
     {
         PlayerBehavior localPlayer = PlayerBehavior.LocalPlayer;
         if (localPlayer == null) return;
-        
+
         UpdateInteraction(localPlayer);
     }
 
@@ -65,7 +66,7 @@ public class PlayerUIController : MonoBehaviour
     {
         settingsPanel.transform.DOScale(0f, 0.25f).From(1f).SetEase(Ease.Linear);
     }
-    
+
     private void UpdateInteraction(PlayerBehavior localPlayer)
     {
         bool canInteract = localPlayer.Interaction.CanInteract;
@@ -90,16 +91,24 @@ public class PlayerUIController : MonoBehaviour
 
     private void Leave()
     {
-        LobbyManager.Instance.LeaveLobby();
+        if (LobbyManager.Instance.JoinedLobby != null)
+        {
+            LobbyManager.Instance.LeaveLobby();
+        }
+        else
+        {
+            InstanceFinder.ServerManager.StopConnection(true);
+        }
     }
 
     private void UpdateRepairedGeneratorsText(int count)
     {
         repairedGeneratorsCount.text = $"Generators left {count}";
-    }  
+    }
     private void OnGeneratorRepaired(Generator generator)
     {
         UpdateRepairedGeneratorsText(Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count());
+
         if (Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count() == 0)
         {
             repairedGeneratorsCount.text = "Run!";

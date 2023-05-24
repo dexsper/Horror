@@ -109,12 +109,11 @@ public class LobbyUI : MonoBehaviour
             lobbyPlayerSingleUI.UpdatePlayer(player);
         }
 
-        //startGameButton.gameObject.SetActive(_lobbyManager.IsLobbyHost());
-        mapWindowUI.NextButtonStatus(_lobbyManager.IsLobbyHost());
         lobbyNameText.text = lobby.Name;
         playerCountText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
-        mapWindowUI.SetMapNameText(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
-        mapWindowUI.SetCurrentMapSprite(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
+
+        mapWindowUI.UpdateMap(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
+
         Show();
     }
 

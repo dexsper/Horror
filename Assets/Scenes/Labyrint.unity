@@ -280,27 +280,27 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 682903272}
+      objectReference: {fileID: 263915679}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 263915679}
+      objectReference: {fileID: 291960122}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 291960122}
+      objectReference: {fileID: 682903272}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 1020077371}
+      objectReference: {fileID: 693298025}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 1980954760}
+      objectReference: {fileID: 951734488}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[5]
@@ -310,17 +310,17 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 951734488}
+      objectReference: {fileID: 1020077371}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 693298025}
+      objectReference: {fileID: 1214638084}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[8]
       value: 
-      objectReference: {fileID: 1214638084}
+      objectReference: {fileID: 1980954760}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: <ParentNetworkObject>k__BackingField
@@ -602,27 +602,27 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 682903272}
+      objectReference: {fileID: 263915679}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 263915679}
+      objectReference: {fileID: 291960122}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 291960122}
+      objectReference: {fileID: 682903272}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 1020077371}
+      objectReference: {fileID: 693298025}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 1980954760}
+      objectReference: {fileID: 951734488}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[5]
@@ -632,17 +632,17 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 951734488}
+      objectReference: {fileID: 1020077371}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 693298025}
+      objectReference: {fileID: 1214638084}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[8]
       value: 
-      objectReference: {fileID: 1214638084}
+      objectReference: {fileID: 1980954760}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: <ParentNetworkObject>k__BackingField
@@ -1229,27 +1229,27 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 682903272}
+      objectReference: {fileID: 263915679}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 263915679}
+      objectReference: {fileID: 291960122}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 291960122}
+      objectReference: {fileID: 682903272}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 1020077371}
+      objectReference: {fileID: 693298025}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 1980954760}
+      objectReference: {fileID: 951734488}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[5]
@@ -1259,17 +1259,17 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 951734488}
+      objectReference: {fileID: 1020077371}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 693298025}
+      objectReference: {fileID: 1214638084}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[8]
       value: 
-      objectReference: {fileID: 1214638084}
+      objectReference: {fileID: 1980954760}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: <ParentNetworkObject>k__BackingField
@@ -1552,6 +1552,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 951734488}
   _networkObjectCache: {fileID: 951734488}
+  _winReward: 10
   _deathRoomScene: Assets/Scenes/DeathRoom.unity
 --- !u!114 &951734490
 MonoBehaviour:
@@ -1746,27 +1747,27 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 682903272}
+      objectReference: {fileID: 263915679}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 263915679}
+      objectReference: {fileID: 291960122}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 291960122}
+      objectReference: {fileID: 682903272}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 1020077371}
+      objectReference: {fileID: 693298025}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 1980954760}
+      objectReference: {fileID: 951734488}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[5]
@@ -1776,17 +1777,17 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 951734488}
+      objectReference: {fileID: 1020077371}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 693298025}
+      objectReference: {fileID: 1214638084}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[8]
       value: 
-      objectReference: {fileID: 1214638084}
+      objectReference: {fileID: 1980954760}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: <ParentNetworkObject>k__BackingField
@@ -1949,23 +1950,23 @@ PrefabInstance:
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 682903272}
+      objectReference: {fileID: 263915679}
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 263915679}
+      objectReference: {fileID: 291960122}
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 291960122}
+      objectReference: {fileID: 682903272}
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 1020077371}
+      objectReference: {fileID: 693298025}
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 1980954760}
+      objectReference: {fileID: 951734488}
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[5]
       value: 
@@ -1973,15 +1974,15 @@ PrefabInstance:
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 951734488}
+      objectReference: {fileID: 1020077371}
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 693298025}
+      objectReference: {fileID: 1214638084}
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[8]
       value: 
-      objectReference: {fileID: 1214638084}
+      objectReference: {fileID: 1980954760}
     - target: {fileID: 201277550, guid: 74fa38e70d401024691693d16b81e116, type: 3}
       propertyPath: SerializedTransformProperties.Position.x
       value: 12.252
@@ -2228,27 +2229,27 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 682903272}
+      objectReference: {fileID: 263915679}
     - target: {fileID: -3181303144306766270, guid: 3d86058049ea9164bb7682bfca6ea0bc,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 263915679}
+      objectReference: {fileID: 291960122}
     - target: {fileID: -3181303144306766270, guid: 3d86058049ea9164bb7682bfca6ea0bc,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 291960122}
+      objectReference: {fileID: 682903272}
     - target: {fileID: -3181303144306766270, guid: 3d86058049ea9164bb7682bfca6ea0bc,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 1020077371}
+      objectReference: {fileID: 693298025}
     - target: {fileID: -3181303144306766270, guid: 3d86058049ea9164bb7682bfca6ea0bc,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 1980954760}
+      objectReference: {fileID: 951734488}
     - target: {fileID: -3181303144306766270, guid: 3d86058049ea9164bb7682bfca6ea0bc,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[5]
@@ -2258,17 +2259,17 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 951734488}
+      objectReference: {fileID: 1020077371}
     - target: {fileID: -3181303144306766270, guid: 3d86058049ea9164bb7682bfca6ea0bc,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 693298025}
+      objectReference: {fileID: 1214638084}
     - target: {fileID: -3181303144306766270, guid: 3d86058049ea9164bb7682bfca6ea0bc,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[8]
       value: 
-      objectReference: {fileID: 1214638084}
+      objectReference: {fileID: 1980954760}
     - target: {fileID: -3181303144306766270, guid: 3d86058049ea9164bb7682bfca6ea0bc,
         type: 3}
       propertyPath: <ParentNetworkObject>k__BackingField
@@ -3313,27 +3314,27 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 682903272}
+      objectReference: {fileID: 263915679}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 263915679}
+      objectReference: {fileID: 291960122}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[2]
       value: 
-      objectReference: {fileID: 291960122}
+      objectReference: {fileID: 682903272}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 1020077371}
+      objectReference: {fileID: 693298025}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[4]
       value: 
-      objectReference: {fileID: 1980954760}
+      objectReference: {fileID: 951734488}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[5]
@@ -3343,17 +3344,17 @@ PrefabInstance:
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 951734488}
+      objectReference: {fileID: 1020077371}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 693298025}
+      objectReference: {fileID: 1214638084}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: _sceneNetworkObjects.Array.data[8]
       value: 
-      objectReference: {fileID: 1214638084}
+      objectReference: {fileID: 1980954760}
     - target: {fileID: 2948829331850969883, guid: 47f006d4abf5fea46a47c5d428012ae1,
         type: 3}
       propertyPath: <ParentNetworkObject>k__BackingField

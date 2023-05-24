@@ -12,7 +12,7 @@ using Random = UnityEngine.Random;
 public struct ManiacSettings
 {
     [Title("Models")] public List<GameObject> ModelsList;
-    
+
     [Title("Patrol")]
     [Range(0.5f, 15f)] public float PatrolSleepTime;
 
@@ -30,8 +30,8 @@ public class ManiacBehaviour : NetworkBehaviour
 
     [Title("Current State")]
     [ShowInInspector, ReadOnly] public PlayerBehavior CurrentTarget { get; private set; }
-    [ShowInInspector,ReadOnly][field: SyncVar, HideInInspector] public bool IsMove { get; private set; }
-    [ShowInInspector,ReadOnly][field: SyncVar, HideInInspector] public bool IsAttack { get; private set; }
+    [ShowInInspector, ReadOnly][field: SyncVar, HideInInspector] public bool IsMove { get; private set; }
+    [ShowInInspector, ReadOnly][field: SyncVar, HideInInspector] public bool IsAttack { get; private set; }
 
     public ManiacSettings Settings => _settings;
     public NavMeshAgent Agent { get; private set; }
@@ -64,7 +64,9 @@ public class ManiacBehaviour : NetworkBehaviour
     {
         base.OnStartServer();
         int index = Random.Range(0, _settings.ModelsList.Count);
+
         CreateModelRPC(index);
+        SetActive_RPC(false);
     }
 
     [Server]
@@ -107,14 +109,25 @@ public class ManiacBehaviour : NetworkBehaviour
     [Server]
     private void OnGeneratorRepaired(Generator generator)
     {
-        gameObject.SetActive(true);
+        PatrolState.SetTargetGenerator(generator);
+
+        if (!gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+            SetActive_RPC(true);
+        }
     }
-    
+
     [ObserversRpc(BufferLast = true, RunLocally = true)]
     private void CreateModelRPC(int modelIndex)
     {
         var model = Instantiate(_settings.ModelsList[modelIndex], PredictedObject.GetGraphicalObject());
         Animator = model.GetComponent<Animator>();
-        gameObject.SetActive(false);
+    }
+
+    [ObserversRpc(BufferLast = true, RunLocally = true)]
+    private void SetActive_RPC(bool active)
+    {
+        gameObject.SetActive(active);
     }
 }

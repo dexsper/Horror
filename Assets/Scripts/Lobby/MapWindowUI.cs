@@ -15,53 +15,55 @@ public class MapWindowUI : MonoBehaviour
     [SerializeField] private Image mapImage;
 
     private int _nextMap = 0;
-    private LobbyManager _lobbyManager;
+
+    public static MapWindowUI Instance { get; private set; }
+    public string SelectedMap { get; private set; }
+
+    private void Awake()
+    {
+        nextButton.onClick.AddListener(NextMap);
+        prevButton.onClick.AddListener(PreviousMap);
+
+        prevButton.interactable = LobbyManager.Instance.JoinedLobby == null || LobbyManager.Instance.IsLobbyHost();
+        nextButton.interactable = LobbyManager.Instance.JoinedLobby == null || LobbyManager.Instance.IsLobbyHost();
+
+        Instance = this;
+
+        UpdateMap(maps[0].MapName);
+    }
 
     public void SetMapNameText(string mapName)
     {
         mapNameText.text = mapName;
     }
 
-    public void NextButtonStatus(bool status)
-    {
-        nextButton.gameObject.SetActive(status);
-    }
-    
-    private void Awake()
-    {
-        nextButton.onClick.AddListener(NextCharacter);
-        prevButton.onClick.AddListener(PreviousCharacter);
-        if (LobbyManager.Instance.IsLobbyHost())
-        {
-            nextButton.interactable = true;
-        }
-    }
-
-    private void NextCharacter()
+    private void NextMap()
     {
         _nextMap = (_nextMap + 1) % maps.Count;
-        UpdateUI(_nextMap);
+
+        UpdateMap(maps[_nextMap].MapName);
     }
 
-    private void PreviousCharacter()
+    private void PreviousMap()
     {
         _nextMap--;
 
         if (_nextMap < 0)
             _nextMap = maps.Count - 1;
 
-        UpdateUI(_nextMap);
+        UpdateMap(maps[_nextMap].MapName);
     }
 
-    private void UpdateUI(int index)
+    public void UpdateMap(string mapName)
     {
-        LobbyManager.Instance.UpdateLobbyMap(maps[index].MapName);
-        mapNameText.text = $"{LobbyManager.Instance.GetMap()}";
-    }
-    
-    public void SetCurrentMapSprite(string mapName)
-    {
+        if (LobbyManager.Instance.JoinedLobby != null)
+            LobbyManager.Instance.UpdateLobbyMap(mapName);
+
+        SelectedMap = mapName;
+        mapNameText.text = mapName;
+
         var index = 0;
+
         for (int i = 0; i < maps.Count; i++)
         {
             if (maps[i].MapName == mapName)
@@ -73,6 +75,7 @@ public class MapWindowUI : MonoBehaviour
         mapImage.sprite = maps[index].MapSprite;
     }
 }
+
 [Serializable]
 public class Map
 {
