@@ -69,6 +69,8 @@ public class ConnectionConntroller : MonoBehaviour
 
         _lobbyManager.UpdateConnectionCode(joinCode);
         _transport.SetRelayServerData(new RelayServerData(hostAllocation, "dtls"));
+        
+        _multipassTransport.SetClientTransport(1);
         _multipassTransport.StartConnection(true, 1);
 
         while (!_networkManager.IsServer)
@@ -100,6 +102,8 @@ public class ConnectionConntroller : MonoBehaviour
         JoinAllocation joinAllocation = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
         _transport.SetRelayServerData(new RelayServerData(joinAllocation, "dtls"));
+
+        _multipassTransport.SetClientTransport(1);
         _multipassTransport.StartConnection(false, 1);
 
         while (!_networkManager.ClientManager.Started)

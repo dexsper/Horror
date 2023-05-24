@@ -4024,7 +4024,7 @@ MonoBehaviour:
   lobbyNameText: {fileID: 1126027971}
   playerCountText: {fileID: 359901299}
   leaveLobbyButton: {fileID: 1878239947}
-  startGameButton: {fileID: 538283801}
+  _startButton: {fileID: 538283801}
   mapWindowUI: {fileID: 1267549619}
 --- !u!1 &964784302
 GameObject:

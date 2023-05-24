@@ -56,7 +56,7 @@ public class MapWindowUI : MonoBehaviour
 
     public void UpdateMap(string mapName)
     {
-        if (LobbyManager.Instance.JoinedLobby != null)
+        if (LobbyManager.Instance.JoinedLobby != null && LobbyManager.Instance.GetMap() != mapName)
             LobbyManager.Instance.UpdateLobbyMap(mapName);
 
         SelectedMap = mapName;

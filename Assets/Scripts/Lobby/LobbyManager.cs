@@ -14,8 +14,6 @@ public class LobbyManager : MonoBehaviour
     public const string KEY_CONNECTION_CODE = "ConnectionJoinCode";
     public const string KEY_MAP_NAME = "MapName";
 
-    [SerializeField] private LobbyUI lobbyUI;
-
     private static LobbyManager _instance;
     private float _heartbeatTimer;
     private float _lobbyPollTimer;
@@ -67,7 +65,6 @@ public class LobbyManager : MonoBehaviour
             Debug.Log("Signed in! " + AuthenticationService.Instance.PlayerId);
 
             IsAuthenticated = true;
-            //RefreshLobbyList();
         };
 
         await AuthenticationService.Instance.SignInAnonymouslyAsync();
@@ -104,11 +101,11 @@ public class LobbyManager : MonoBehaviour
 
                 if (IsPlayerInLobby())
                 {
-                    lobbyUI.EnableStartGameButton();
+                    LobbyUI.Instance.EnableStartGameButton();
                 }
                 else
                 {
-                    lobbyUI.DisableStartGameButton();
+                    LobbyUI.Instance.DisableStartGameButton();
                 }
             }
         }
@@ -166,6 +163,7 @@ public class LobbyManager : MonoBehaviour
         return new Player(AuthenticationService.Instance.PlayerId, null, new Dictionary<string, PlayerDataObject>
         {
             {KEY_PLAYER_NAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, _playerName)},
+            {KEY_PLAYER_CHARACTER, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, CharacterWindowUI.Instance.SelectedCharacterName)},
         });
     }
 
@@ -317,7 +315,7 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
-    public async void UpdatePlayerCharacter(string character)
+    private async void UpdatePlayerCharacter(string character)
     {
         if (JoinedLobby != null)
         {
@@ -384,6 +382,7 @@ public class LobbyManager : MonoBehaviour
         try
         {
             QuickJoinLobbyOptions options = new QuickJoinLobbyOptions();
+            options.Player = GetNewPlayerInstance();
 
             Lobby lobby = await LobbyService.Instance.QuickJoinLobbyAsync(options);
             JoinedLobby = lobby;

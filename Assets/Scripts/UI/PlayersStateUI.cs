@@ -13,6 +13,12 @@ public class PlayersStateUI : MonoBehaviour
         PlayerBehavior.OnDead += OnPlayerDestroy;
     }
 
+    private void OnDestroy()
+    {
+        PlayerBehavior.OnRespawned -= OnPlayerSpawned;
+        PlayerBehavior.OnDead -= OnPlayerDestroy;
+    }
+
     private void OnPlayerDestroy(PlayerBehavior player)
     {
         if (player == null)

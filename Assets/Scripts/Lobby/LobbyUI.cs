@@ -21,7 +21,7 @@ public class LobbyUI : MonoBehaviour
 
     [Title("Buttons")]
     [SerializeField] private Button leaveLobbyButton;
-    [SerializeField] private Button startGameButton;
+    [SerializeField] private Button _startButton;
 
     [SerializeField] private MapWindowUI mapWindowUI;
 
@@ -29,8 +29,9 @@ public class LobbyUI : MonoBehaviour
 
     private void Awake()
     {
-        startGameButton.gameObject.SetActive(false);
         Instance = this;
+
+        _startButton.gameObject.SetActive(false);
         _lobbyManager = LobbyManager.Instance;
 
         playerSingleTemplate.gameObject.SetActive(false);
@@ -40,7 +41,7 @@ public class LobbyUI : MonoBehaviour
             _lobbyManager.LeaveLobby();
         });
         
-        startGameButton.onClick.AddListener(() =>
+        _startButton.onClick.AddListener(() =>
         {
             SceneLoadData sld = new SceneLoadData(LobbyManager.Instance.GetMap());
             sld.ReplaceScenes = ReplaceOption.All;
@@ -51,14 +52,14 @@ public class LobbyUI : MonoBehaviour
 
     public void EnableStartGameButton()
     {
-        if(startGameButton != null)
-            startGameButton.gameObject.SetActive(true);
+        if(_startButton != null)
+            _startButton.gameObject.SetActive(true);
     }
 
     public void DisableStartGameButton()
     {
-        if(startGameButton != null)
-            startGameButton.gameObject.SetActive(false);
+        if(_startButton != null)
+            _startButton.gameObject.SetActive(false);
     }
 
     private void Start()
