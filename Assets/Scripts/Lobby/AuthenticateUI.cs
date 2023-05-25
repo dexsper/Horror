@@ -13,13 +13,6 @@ public class AuthenticateUI : MonoBehaviour
     {
         authenticateButton.onClick.AddListener(Authenticate);
         singlePlayerButton.onClick.AddListener(SinglePlayer);
-
-        if (LobbyManager.Instance.IsAuthenticated)
-        {
-            PlayerEconomy.Instance.Refresh();
-
-            Hide();
-        }
     }
 
     private void SinglePlayer()
@@ -30,10 +23,18 @@ public class AuthenticateUI : MonoBehaviour
 
     private void Authenticate()
     {
-        LobbyManager.Instance.Authenticate(EditPlayerName.Instance.GetPlayerName());
-
-        Hide();
         characterWindowUI.SetActive(true);
+
+        if (LobbyManager.Instance.IsAuthenticated)
+        {
+            PlayerEconomy.Instance.Refresh();
+
+            Hide();
+            return;
+        }
+        
+        LobbyManager.Instance.Authenticate(EditPlayerName.Instance.GetPlayerName());
+        Hide();
     }
 
     private void Hide()
