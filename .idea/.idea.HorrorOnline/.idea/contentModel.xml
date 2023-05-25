@@ -222,7 +222,6 @@
           </e>
         </e>
         <e p="Generator Anims" t="Include" />
-        <e p="Localization" t="Include" />
         <e p="Materials" t="Include" />
         <e p="MazeGenerator" t="Include">
           <e p="Animations" t="Include" />
@@ -2677,6 +2676,7 @@
             <e p="PlayerUIMarkers.cs" t="Include" />
             <e p="SinglePlayerUI.cs" t="Include" />
             <e p="TouchField.cs" t="Include" />
+            <e p="VoiceMute.cs" t="Include" />
           </e>
           <e p="Utils" t="Include">
             <e p="DiContainerRef.cs" t="Include" />

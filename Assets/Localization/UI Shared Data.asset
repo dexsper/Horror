@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: e927d1eb1aac5154abe2c304870f8989
+  m_Entries:
+  - m_Id: 54480474112
+    m_Key: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 515036024832
+    m_Key: SinglePlayer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 765716992000
+    m_Key: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 918284800000
+    m_Key: CreateLobby
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1104549646336
+    m_Key: Create
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2182611603456
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2276438183936
+    m_Key: Auth
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2504235028480
+    m_Key: JoinedLobby
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2621943975936
+    m_Key: START
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2748410630144
+    m_Key: LOBBYNAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2828945461248
+    m_Key: PLAYERS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3392794136576
+    m_Key: LobbyList
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3690690383872
+    m_Key: LEAVE
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4356854991305834546
+  references:
+    version: 2
+    RefIds:
+    - rid: 4356854991305834546
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1685043508167

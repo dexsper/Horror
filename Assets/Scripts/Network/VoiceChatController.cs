@@ -26,6 +26,8 @@ public class VoiceChatController : MonoBehaviour
 
         _engine = RtcEngine.CreateAgoraRtcEngine();
         _engine.Initialize(context);
+        
+        SetMute(false);
     }
 
     private void Start()

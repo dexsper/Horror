@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_ru
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ru
+  m_SharedData: {fileID: 11400000, guid: e927d1eb1aac5154abe2c304870f8989, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 54480474112
+    m_Localized: "\u041D\u0410\u0427\u0410\u0422\u042C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 515036024832
+    m_Localized: "\u041E\u0434\u0438\u043D\u043E\u0447\u043D\u0430\u044F \u0438\u0433\u0440\u0430"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 765716992000
+    m_Localized: "\u041E\u0442\u043C\u0435\u043D\u0430"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 918284800000
+    m_Localized: "\u0421\u041E\u0417\u0414\u0410\u0422\u042C \u041B\u041E\u0411\u0411\u0418"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1104549646336
+    m_Localized: "\u0421\u041E\u0417\u0414\u0410\u0422\u042C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2276438183936
+    m_Localized: "\u0410\u0423\u0422\u0415\u041D\u0422\u0418\u0424\u0418\u041A\u0410\u0426\u0418\u042F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2504235028480
+    m_Localized: "\u0422\u0415\u041A\u0423\u0429\u0415\u0415 \u041B\u041E\u0411\u0411\u0418"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2621943975936
+    m_Localized: "\u041D\u0410\u0427\u0410\u0422\u042C \u0418\u0413\u0420\u0423"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2748410630144
+    m_Localized: "\u0418\u043C\u044F \u041B\u043E\u0431\u0431\u0438"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2828945461248
+    m_Localized: "\u0418\u0433\u0440\u043E\u043A\u0438"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3392794136576
+    m_Localized: "\u0421\u041F\u0418\u0421\u041E\u041A \u041B\u041E\u0411\u0411\u0418"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3690690383872
+    m_Localized: "\u0412\u044B\u0439\u0442\u0438"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
