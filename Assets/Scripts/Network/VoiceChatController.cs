@@ -42,6 +42,11 @@ public class VoiceChatController : MonoBehaviour
         PermissionHelper.RequestMicrophontPermission();
     }
 
+    public void SetMute(bool mute)
+    {
+        _engine.AdjustRecordingSignalVolume(mute ? 0 : 120);
+    }
+
     private void OnJoinedLobby(object sender, LobbyEventArgs args)
     {
         JoinChannel(args.lobby.Name);
@@ -55,6 +60,7 @@ public class VoiceChatController : MonoBehaviour
     private void JoinChannel(string channelName)
     {
         _engine.EnableAudio();
+        _engine.AdjustRecordingSignalVolume(120);
         _engine.JoinChannel("", channelName);
     }
 
