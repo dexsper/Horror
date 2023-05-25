@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class CharacterUI : MonoBehaviour

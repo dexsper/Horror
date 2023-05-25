@@ -7,8 +7,6 @@ using FishNet.Transporting;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 
-#if UNITY_EDITOR || DEVELOPMENT_BUILD
-
 public class FakePlayer : MonoBehaviour
 {
     public string CharacterName;
@@ -36,5 +34,3 @@ public class FakePlayer : MonoBehaviour
         }
     }
 }
-
-#endif
