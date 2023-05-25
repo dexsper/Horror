@@ -56,6 +56,13 @@
           <e p="Provider" t="Include" />
           <e p="Settings" t="Include" />
         </e>
+        <e p="AddressableAssetsData" t="Include">
+          <e p="AssetGroups" t="Include">
+            <e p="Schemas" t="Include" />
+          </e>
+          <e p="AssetGroupTemplates" t="Include" />
+          <e p="DataBuilders" t="Include" />
+        </e>
         <e p="Animations" t="Include" />
         <e p="Assets" t="Include">
           <e p="BackRooms" t="Include">
@@ -215,6 +222,7 @@
           </e>
         </e>
         <e p="Generator Anims" t="Include" />
+        <e p="Localization" t="Include" />
         <e p="Materials" t="Include" />
         <e p="MazeGenerator" t="Include">
           <e p="Animations" t="Include" />
@@ -2366,6 +2374,7 @@
           </e>
           <e p="Lobby" t="Include">
             <e p="AuthenticateUI.cs" t="Include" />
+            <e p="CharacterUI.cs" t="Include" />
             <e p="CharacterWindowUI.cs" t="Include" />
             <e p="EditPlayerName.cs" t="Include" />
             <e p="LobbyAssets.cs" t="Include" />
@@ -2412,7 +2421,6 @@
               </e>
               <e p="PlayerBehavior.cs" t="Include" />
               <e p="PlayerCamera.cs" t="Include" />
-              <e p="PlayerCameraMarkers.cs" t="Include" />
               <e p="PlayerInput.cs" t="Include" />
               <e p="PlayerLook.cs" t="Include" />
               <e p="PlayerTouchField.cs" t="Include" />
@@ -2428,11 +2436,14 @@
           <e p="UI" t="Include">
             <e p="DeathRoomUI.cs" t="Include" />
             <e p="JailedPlayers.cs" t="Include" />
+            <e p="LocalizationUI.cs" t="Include" />
+            <e p="Marker.cs" t="Include" />
+            <e p="MarkerTarget.cs" t="Include" />
             <e p="PlayersStateUI.cs" t="Include" />
             <e p="PlayerStateUI.cs" t="Include" />
             <e p="PlayerUIController.cs" t="Include" />
             <e p="PlayerUIMarkers.cs" t="Include" />
-            <e p="TargetWaypoint.cs" t="Include" />
+            <e p="SinglePlayerUI.cs" t="Include" />
             <e p="TouchField.cs" t="Include" />
           </e>
           <e p="Utils" t="Include">

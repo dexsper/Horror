@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: e927d1eb1aac5154abe2c304870f8989, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 107441950720
+    m_Localized: Lobby name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391106924544
+    m_Localized: Players
+    m_Metadata:
+      m_Items: []
+  - m_Id: 550893129728
+    m_Localized: LOBBY LIST
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2104324919296
+    m_Localized: JOINED LOBBY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2428834025472
+    m_Localized: Start Game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2623516839936
+    m_Localized: AUTHENTICATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2929831055360
+    m_Localized: SIngle Player
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3171557183488
+    m_Localized: CREATE LOBBY
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3302918590464
+    m_Localized: CREATE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3482640322560
+    m_Localized: CANCEL
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

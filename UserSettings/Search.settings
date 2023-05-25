@@ -10,6 +10,12 @@ scopes = {
 	"last_search.DE949528" = "NavMesh"
 	"OpenInspectorPreview.DE949528" = "0"
 	"currentGroup.DE949528" = "all"
+	"last_search.B655092D" = "st:Sta"
+	"OpenInspectorPreview.B655092D" = "0"
+	"currentGroup.B655092D" = "all"
+	"last_search.DE94955A" = "Locali"
+	"OpenInspectorPreview.DE94955A" = "0"
+	"currentGroup.DE94955A" = "all"
 }
 providers = {
 	adb = {
@@ -52,10 +58,22 @@ providers = {
 		priority = 50
 		defaultAction = null
 	}
+	at = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
+	st = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
 }
 objectSelectors = {
 }
 recentSearches = [
+	"st:LobbyName"
+	"https://www.youtube.com/watch?v=NFn74l2WA_8"
 ]
 searchItemFavorites = [
 ]

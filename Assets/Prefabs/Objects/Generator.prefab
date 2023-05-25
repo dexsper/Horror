@@ -108,8 +108,10 @@ MonoBehaviour:
   _networkObjectCache: {fileID: 2948829331850969883}
   _settings:
     RepairTime: 10
-  _startRepair: Repair Generator
-  _stopRepair: Stop Repair
+  _startRepairRu: "\u041D\u0430\u0447\u0430\u0442\u044C \u0440\u0435\u043C\u043E\u043D\u0442"
+  _startRepairEn: Start Repair
+  _stopRepairRu: "\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0420\u0435\u043C\u043E\u043D\u0442"
+  _stopRepairEn: Stop Repair
   neededRepairedGeneratorsCount: 0
   _repairedEffect: {fileID: 1660099001397583359}
   _lightEffect: {fileID: 4740812467335796762}

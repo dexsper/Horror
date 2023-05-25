@@ -30,3 +30,7 @@ EditorBuildSettings:
       guid: d9a68a636684caa41b2c769a1ff163ba, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: fb94ddd18e5837a4992df280308d7549, type: 2}
+    com.unity.addressableassets: {fileID: 11400000, guid: 6c4a53681e0f89e4aa9a46c6a5f1258b,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: f6e041562a9ce5c46844660659873942,
+      type: 2}

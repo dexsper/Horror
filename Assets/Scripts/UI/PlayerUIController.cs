@@ -20,6 +20,10 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField] private Button openSettingsButton, closeSettingsButton;
     [SerializeField] private Image settingsPanel;
 
+    [SerializeField] private string startTextRu, startTextEn;
+    [SerializeField] private string generatorsTextRu, generatorsTextEn;
+    [SerializeField] private string finalTextRu, finalTextEn;
+    
     private void Awake()
     {
         _interactButton.onClick.AddListener(Interact);
@@ -36,7 +40,8 @@ public class PlayerUIController : MonoBehaviour
 
     private IEnumerator PlayerTextAtStart()
     {
-        repairedGeneratorsCount.text = "Find Generators";
+        repairedGeneratorsCount.text =
+            LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? startTextRu : startTextEn;
         yield return new WaitForSeconds(5f);
         UpdateRepairedGeneratorsText(Generator.Generators.Count);
     }
@@ -103,7 +108,9 @@ public class PlayerUIController : MonoBehaviour
 
     private void UpdateRepairedGeneratorsText(int count)
     {
-        repairedGeneratorsCount.text = $"Generators left {count}";
+        repairedGeneratorsCount.text = LocalizationUI.Instance.GetCurrentLocaleName() == "ru"
+            ? $"{generatorsTextRu} {count}"
+            : $"{generatorsTextEn} {count}";
     }
     private void OnGeneratorRepaired(Generator generator)
     {
@@ -111,7 +118,8 @@ public class PlayerUIController : MonoBehaviour
 
         if (Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count() == 0)
         {
-            repairedGeneratorsCount.text = "Run!";
+            repairedGeneratorsCount.text =
+                LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? finalTextRu : finalTextEn;
         }
     }
 
