@@ -7,7 +7,7 @@ public class PlayerUIMarkers : MonoBehaviour
 
     private void Start()
     {
-        var markerTargets = FindObjectsOfType<MarkerTarget>();
+        var markerTargets = FindObjectsOfType<MarkerTarget>(true);
 
         for (int i = 0; i < markerTargets.Length; i++)
         {
