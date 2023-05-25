@@ -1,3 +1,4 @@
+using FishNet.Object;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,13 @@ public class Marker : MonoBehaviour
 
     private Camera _camera; 
     private MarkerTarget _target;
-
+    
+    public void DisableMarker()
+    {
+        _target = null;
+        gameObject.SetActive(false);
+    }
+    
     private void Awake()
     {
         _camera = Camera.main;
@@ -19,6 +26,7 @@ public class Marker : MonoBehaviour
     public void SetTarget(MarkerTarget target)
     {
         _target = target;
+        _target.SetMarker(this);
     } 
 
     private void Update()

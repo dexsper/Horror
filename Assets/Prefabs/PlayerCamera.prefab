@@ -45,7 +45,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5762303393566008248}
-  - component: {fileID: 8634360539214153494}
   m_Layer: 0
   m_Name: GeneratorMarker (3)
   m_TagString: Untagged
@@ -68,22 +67,6 @@ Transform:
   m_Father: {fileID: 314042874239849100}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8634360539214153494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518449432651463143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce6d974adfdd14aa955d60bce8cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  img: {fileID: 0}
-  _distanceText: {fileID: 0}
-  target: {fileID: 0}
-  offset: {x: 0, y: 3, z: 0}
 --- !u!1 &5591632666215121852
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,7 +76,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8750704728161915274}
-  - component: {fileID: 856865378280492850}
   m_Layer: 0
   m_Name: GeneratorMarker (2)
   m_TagString: Untagged
@@ -116,22 +98,6 @@ Transform:
   m_Father: {fileID: 314042874239849100}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &856865378280492850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5591632666215121852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce6d974adfdd14aa955d60bce8cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  img: {fileID: 0}
-  _distanceText: {fileID: 0}
-  target: {fileID: 0}
-  offset: {x: 0, y: 3, z: 0}
 --- !u!1 &5599776020421540022
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,7 +107,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4532246277024446168}
-  - component: {fileID: 8755088583635188849}
   m_Layer: 0
   m_Name: GeneratorMarker (1)
   m_TagString: Untagged
@@ -164,22 +129,6 @@ Transform:
   m_Father: {fileID: 314042874239849100}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8755088583635188849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5599776020421540022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce6d974adfdd14aa955d60bce8cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  img: {fileID: 0}
-  _distanceText: {fileID: 0}
-  target: {fileID: 0}
-  offset: {x: 0, y: 3, z: 0}
 --- !u!1 &7037259520841950343
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +138,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4394146212744843162}
-  - component: {fileID: 5213182483779740479}
   m_Layer: 0
   m_Name: GeneratorMarker (4)
   m_TagString: Untagged
@@ -212,22 +160,6 @@ Transform:
   m_Father: {fileID: 314042874239849100}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5213182483779740479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7037259520841950343}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce6d974adfdd14aa955d60bce8cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  img: {fileID: 0}
-  _distanceText: {fileID: 0}
-  target: {fileID: 0}
-  offset: {x: 0, y: 3, z: 0}
 --- !u!1 &7508285595693311671
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,7 +170,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1023900539196680765}
   - component: {fileID: 7648576990740199698}
-  - component: {fileID: 2960022618031327924}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -301,24 +232,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1101188076326920042}
---- !u!114 &2960022618031327924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7508285595693311671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c5e518de65f65a4c9b2e58b81bdc7e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetWaypoints:
-  - {fileID: 7158638249358523129}
-  - {fileID: 8755088583635188849}
-  - {fileID: 856865378280492850}
-  - {fileID: 8634360539214153494}
-  - {fileID: 5213182483779740479}
 --- !u!1 &7628496399458330058
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +321,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4058965770977420511}
-  - component: {fileID: 7158638249358523129}
   m_Layer: 0
   m_Name: GeneratorMarker
   m_TagString: Untagged
@@ -431,19 +343,3 @@ Transform:
   m_Father: {fileID: 314042874239849100}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7158638249358523129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8650722948733119265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dce6d974adfdd14aa955d60bce8cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  img: {fileID: 0}
-  _distanceText: {fileID: 0}
-  target: {fileID: 0}
-  offset: {x: 0, y: 3, z: 0}

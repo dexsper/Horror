@@ -90,6 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c859ba4db1f98444b9a0877cfbfb075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 255
+  _addedNetworkObject: {fileID: 0}
+  _networkObjectCache: {fileID: 0}
   _image: {fileID: 6998295725864489528}
   _distanceText: {fileID: 6136422942895027982}
   _offset: {x: 0, y: 3, z: 0}
