@@ -53,19 +53,12 @@ public class PlayerMovement : NetworkBehaviour
     public override void OnStartClient()
     {
         base.OnStartClient();
-        base.PredictionManager.OnPreReplicateReplay += PredictionManager_OnPreReplicateReplay;
     }
     public override void OnStopClient()
     {
         base.OnStopClient();
-        base.PredictionManager.OnPreReplicateReplay -= PredictionManager_OnPreReplicateReplay;
     }
 
-    private void PredictionManager_OnPreReplicateReplay(uint arg1, PhysicsScene arg2, PhysicsScene2D arg3)
-    {
-        if (!base.IsServer)
-            AddGravity();
-    }
     private void TimeManager_OnTick()
     {
         if (base.IsOwner)
@@ -80,9 +73,8 @@ public class PlayerMovement : NetworkBehaviour
         if (base.IsServer)
         {
             Move(default, true);
+            AddGravity();
         }
-
-        AddGravity();
     }
     private void TimeManager_OnPostTick()
     {

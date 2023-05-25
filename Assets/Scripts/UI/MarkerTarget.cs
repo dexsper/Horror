@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class MarkerTarget : MonoBehaviour
@@ -8,9 +7,12 @@ public class MarkerTarget : MonoBehaviour
 
     private void Awake()
     {
-        if(GetComponent<Generator>())
+        if (GetComponent<Generator>())
+        {
             _generator = GetComponent<Generator>();
-        Generator.OnRepaired += OnGeneratorRepaired;
+            
+            Generator.OnRepaired += OnGeneratorRepaired;
+        }
     }
 
     private void OnDestroy()
@@ -25,7 +27,7 @@ public class MarkerTarget : MonoBehaviour
 
     private void OnGeneratorRepaired(Generator repairedGenerator)
     {
-        if (repairedGenerator == _generator)
+        if (_marker != null && repairedGenerator == _generator)
         {
             _marker.DisableMarker();
         }
