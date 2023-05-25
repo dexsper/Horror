@@ -8,7 +8,8 @@ public class MarkerTarget : MonoBehaviour
 
     private void Awake()
     {
-        _generator = GetComponent<Generator>();
+        if(GetComponent<Generator>())
+            _generator = GetComponent<Generator>();
         Generator.OnRepaired += OnGeneratorRepaired;
     }
 

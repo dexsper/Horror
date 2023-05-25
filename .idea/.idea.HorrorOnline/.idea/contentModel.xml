@@ -249,6 +249,238 @@
         </e>
         <e p="Models" t="Include" />
         <e p="Packages" t="Include">
+          <e p="Agora-RTC-Plugin" t="Include">
+            <e p="Agora-Unity-RTC-SDK" t="Include">
+              <e p="Code" t="Include">
+                <e p="Rtc" t="Include">
+                  <e p="Event" t="Include">
+                    <e p="CloudAudioEngineEventHandler.cs" t="Include" />
+                    <e p="MediaPlayerSourceObserver.cs" t="Include" />
+                    <e p="MediaRecorderObserver.cs" t="Include" />
+                    <e p="RtcEngineEventHandler.cs" t="Include" />
+                  </e>
+                  <e p="IAudioDeviceManager.cs" t="Include" />
+                  <e p="IAudioEncodedFrameObserver.cs" t="Include" />
+                  <e p="IAudioFrameObserver.cs" t="Include" />
+                  <e p="IAudioSpectrumObserver.cs" t="Include" />
+                  <e p="IMediaPlayer.cs" t="Include" />
+                  <e p="IMediaPlayerCacheManager.cs" t="Include" />
+                  <e p="IMediaPlayerCustomDataProvider.cs" t="Include" />
+                  <e p="IMediaPlayerFrameObserver.cs" t="Include" />
+                  <e p="IMediaPlayerSourceObserver.cs" t="Include" />
+                  <e p="IMediaRecorder.cs" t="Include" />
+                  <e p="IMediaRecorderObserver.cs" t="Include" />
+                  <e p="IMetadataObserver.cs" t="Include" />
+                  <e p="Impl" t="Include">
+                    <e p="AudioDeviceManager.cs" t="Include" />
+                    <e p="MediaPlayer.cs" t="Include" />
+                    <e p="MediaPlayerCacheManager.cs" t="Include" />
+                    <e p="MediaRecorder.cs" t="Include" />
+                    <e p="MusicContentCenter.cs" t="Include" />
+                    <e p="MusicPlayer.cs" t="Include" />
+                    <e p="Private" t="Include">
+                      <e p="AgoraGameObject.cs" t="Include" />
+                      <e p="Impl" t="Include">
+                        <e p="AudioDeviceManagerImpl.cs" t="Include" />
+                        <e p="MediaPlayerCacheManagerImpl.cs" t="Include" />
+                        <e p="MediaPlayerImpl.cs" t="Include" />
+                        <e p="MediaRecorderImpl.cs" t="Include" />
+                        <e p="MusicContentCenterImpl.cs" t="Include" />
+                        <e p="MusicPlayerImpl.cs" t="Include" />
+                        <e p="RtcEngineImpl.cs" t="Include" />
+                        <e p="SpatialAudioEngineImpl.cs" t="Include" />
+                        <e p="VideoDeviceManagerImpl.cs" t="Include" />
+                      </e>
+                      <e p="Native" t="Include">
+                        <e p="AgoraApiType.cs" t="Include" />
+                        <e p="AgoraMediaBaseNative.cs" t="Include" />
+                        <e p="AgoraRtcApiNative.cs" t="Include" />
+                      </e>
+                      <e p="Observer" t="Include">
+                        <e p="AudioEncodedFrameObserverNative.cs" t="Include" />
+                        <e p="AudioFrameObserverNative.cs" t="Include" />
+                        <e p="AudioSpectrumObserverNative.cs" t="Include" />
+                        <e p="MediaPlayerAudioFrameObserverNative.cs" t="Include" />
+                        <e p="MediaPlayerAudioSpectrumObserverNative.cs" t="Include" />
+                        <e p="MediaPlayerCustomDataProviderNative.cs" t="Include" />
+                        <e p="MediaPlayerSourceObserverNative.cs" t="Include" />
+                        <e p="MediaRecorderObserverNative.cs" t="Include" />
+                        <e p="MetaDataObserverNative.cs" t="Include" />
+                        <e p="MusicContentCenterEventHandlerNative.cs" t="Include" />
+                        <e p="RtcEngineEventHandlerNative.cs" t="Include" />
+                        <e p="VideoEncodedImageReceiverNative.cs" t="Include" />
+                        <e p="VideoFrameObserverNative.cs" t="Include" />
+                      </e>
+                    </e>
+                    <e p="RtcEngine.cs" t="Include" />
+                    <e p="SpatialAudio.cs" t="Include" />
+                    <e p="VideoDeviceManager.cs" t="Include" />
+                  </e>
+                  <e p="IMusicContentCenter.cs" t="Include" />
+                  <e p="IMusicContentCenterEventHandler.cs" t="Include" />
+                  <e p="IMusicPlayer.cs" t="Include" />
+                  <e p="IRtcEngine.cs" t="Include" />
+                  <e p="IRtcEngineEventHandler.cs" t="Include" />
+                  <e p="ISpatialAudio.cs" t="Include" />
+                  <e p="IVideoDeviceManager.cs" t="Include" />
+                  <e p="IVideoEncodedFrameObserver.cs" t="Include" />
+                  <e p="IVideoFrameObserver.cs" t="Include" />
+                  <e p="Types" t="Include">
+                    <e p="AgoraBase.cs" t="Include" />
+                    <e p="AgoraMediaBase.cs" t="Include" />
+                    <e p="AgoraMediaPlayerTypesBase.cs" t="Include" />
+                    <e p="Base.cs" t="Include" />
+                    <e p="IAgoraLogBase.cs" t="Include" />
+                    <e p="IAgoraMediaEngine.cs" t="Include" />
+                    <e p="IAgoraMusicContentCenterBase.cs" t="Include" />
+                    <e p="IAgoraRhythmPlayerBase.cs" t="Include" />
+                    <e p="IAgoraRtcEngineBase.cs" t="Include" />
+                    <e p="IAgoraRtcEngineExBase.cs" t="Include" />
+                    <e p="IAgoraSpatialAudioBase.cs" t="Include" />
+                  </e>
+                  <e p="VideoRender" t="Include">
+                    <e p="TextureManager.cs" t="Include" />
+                    <e p="TextureManagerYUV.cs" t="Include" />
+                    <e p="VideoRender.cs" t="Include" />
+                    <e p="VideoSurface.cs" t="Include" />
+                    <e p="VideoSurfaceYUV.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Tools" t="Include">
+                  <e p="AgoraCallbackObject.cs" t="Include" />
+                  <e p="AgoraCallbackQueue.cs" t="Include" />
+                  <e p="AgoraLog.cs" t="Include" />
+                  <e p="AgoraOptional.cs" t="Include" />
+                  <e p="AgoraUtil.cs" t="Include" />
+                  <e p="litjson-0.17.0" t="Include">
+                    <e p="src" t="Include">
+                      <e p="LitJson" t="Include">
+                        <e p="IJsonWrapper.cs" t="Include" />
+                        <e p="JsonData.cs" t="Include" />
+                        <e p="JsonException.cs" t="Include" />
+                        <e p="JsonMapper.cs" t="Include" />
+                        <e p="JsonMockWrapper.cs" t="Include" />
+                        <e p="JsonReader.cs" t="Include" />
+                        <e p="JsonWriter.cs" t="Include" />
+                        <e p="Lexer.cs" t="Include" />
+                        <e p="Netstandard15Polyfill.cs" t="Include" />
+                        <e p="ParserToken.cs" t="Include" />
+                      </e>
+                    </e>
+                  </e>
+                  <e p="ObsoleteMethodWarning.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Editor" t="Include">
+                <e p="BL_BuildPostProcess.cs" t="Include" />
+              </e>
+              <e p="Plugins" t="Include">
+                <e p="Android" t="Include">
+                  <e p="AgoraRtcEngineKit.plugin" t="Include">
+                    <e p="AndroidManifest.xml" t="Include" />
+                    <e p="libs" t="Include">
+                      <e p="arm64-v8a" t="Include" />
+                      <e p="armeabi-v7a" t="Include" />
+                      <e p="x86" t="Include" />
+                      <e p="x86_64" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="iOS" t="Include" />
+                <e p="macOS" t="Include" />
+                <e p="x86" t="Include" />
+                <e p="x86_64" t="Include" />
+              </e>
+              <e p="Resources" t="Include">
+                <e p="UI-RendererShader601.shader" t="Include" />
+                <e p="Unlit-RendererShader601.shader" t="Include" />
+              </e>
+              <e p="Tools" t="Include" />
+            </e>
+            <e p="API-Example" t="Include">
+              <e p="AppIdInput" t="Include">
+                <e p="AppIdInput.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="CommandBuild.cs" t="Include" />
+              </e>
+              <e p="Examples" t="Include">
+                <e p="Advanced" t="Include">
+                  <e p="AudioMixing" t="Include">
+                    <e p="AudioMixing.cs" t="Include" />
+                  </e>
+                  <e p="AudioSpectrum" t="Include">
+                    <e p="AudioSpectrum.cs" t="Include" />
+                  </e>
+                  <e p="ChannelMediaRelay" t="Include">
+                    <e p="ChannelMediaRelay.cs" t="Include" />
+                  </e>
+                  <e p="CustomCaptureAudio" t="Include">
+                    <e p="CustomCaptureAudio.cs" t="Include" />
+                  </e>
+                  <e p="CustomRenderAudio" t="Include">
+                    <e p="CustomRenderAudio.cs" t="Include" />
+                  </e>
+                  <e p="DeviceManager" t="Include">
+                    <e p="DeviceManager.cs" t="Include" />
+                  </e>
+                  <e p="JoinChannelWithUserAccount" t="Include">
+                    <e p="JoinChannelWithUserAccount.cs" t="Include" />
+                  </e>
+                  <e p="MediaPlayer" t="Include">
+                    <e p="MediaPlayerExample.cs" t="Include" />
+                  </e>
+                  <e p="MediaPlayerWithCustomDataProvider" t="Include">
+                    <e p="MediaPlayerWithCustomDataProviderExample.cs" t="Include" />
+                  </e>
+                  <e p="MediaRecorder" t="Include">
+                    <e p="MediaRecorder.cs" t="Include" />
+                  </e>
+                  <e p="Metadata" t="Include">
+                    <e p="MetadataSample.cs" t="Include" />
+                  </e>
+                  <e p="Plugin" t="Include">
+                    <e p="PluginSceneSample.cs" t="Include" />
+                  </e>
+                  <e p="ProcessAudioRawData" t="Include">
+                    <e p="ProcessAudioRawData.cs" t="Include" />
+                  </e>
+                  <e p="SetEncryption" t="Include">
+                    <e p="EncryptionSample.cs" t="Include" />
+                  </e>
+                  <e p="SpatialAudioWithMediaPlayer" t="Include">
+                    <e p="SpatialAudioWithMediaPlayer.cs" t="Include" />
+                  </e>
+                  <e p="StartDirectCdnStreaming" t="Include">
+                    <e p="StartDirectCdnStreaming.cs" t="Include" />
+                  </e>
+                  <e p="StartRhythmPlayer" t="Include">
+                    <e p="StartRhythmPlayer.cs" t="Include" />
+                  </e>
+                  <e p="StreamMessage" t="Include">
+                    <e p="StreamMessage.cs" t="Include" />
+                  </e>
+                  <e p="VoiceChanger" t="Include">
+                    <e p="VoiceChanger.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Basic" t="Include">
+                  <e p="JoinChannelAudio" t="Include">
+                    <e p="JoinChannelAudio.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="Home.cs" t="Include" />
+              <e p="prefab" t="Include" />
+              <e p="Tools" t="Include">
+                <e p="Logger.cs" t="Include" />
+                <e p="PermissionHelper.cs" t="Include" />
+                <e p="RequestToken.cs" t="Include" />
+                <e p="RingBuffer.cs" t="Include" />
+                <e p="UIElementDragger.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="FishNet" t="Include">
             <e p="CodeGenerating" t="Include">
               <e p="cecil-0.11.4" t="Include">
@@ -2393,6 +2625,7 @@
             <e p="FakePlayer.cs" t="Include" />
             <e p="PlayerSpawner.cs" t="Include" />
             <e p="UnityServicesAuthenticator.cs" t="Include" />
+            <e p="VoiceChatController.cs" t="Include" />
           </e>
           <e p="Objects" t="Include">
             <e p="AudioEventsHandler.cs" t="Include" />
@@ -2436,7 +2669,6 @@
           <e p="UI" t="Include">
             <e p="DeathRoomUI.cs" t="Include" />
             <e p="JailedPlayers.cs" t="Include" />
-            <e p="LocalizationUI.cs" t="Include" />
             <e p="Marker.cs" t="Include" />
             <e p="MarkerTarget.cs" t="Include" />
             <e p="PlayersStateUI.cs" t="Include" />
@@ -2507,6 +2739,10 @@
           </e>
           <e p="UI" t="Include" />
           <e p="Vertical Backgrounds" t="Include" />
+        </e>
+        <e p="StreamingAssets" t="Include">
+          <e p="Audio" t="Include" />
+          <e p="img" t="Include" />
         </e>
         <e p="UI" t="Include">
           <e p="UI" t="Include">
