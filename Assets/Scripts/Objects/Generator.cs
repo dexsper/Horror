@@ -19,9 +19,9 @@ public class Generator : NetworkBehaviour, IInteractable
     [SerializeField] private GeneratorSettings _settings = default;
 
     [Title("Interaction")]
-    [SerializeField] private string _startRepairRu, _startRepairEn;
-    [SerializeField] private string _stopRepairRu, _stopRepairEn;
-    [SerializeField] private int neededRepairedGeneratorsCount; 
+    [SerializeField] private string _startRepair = "Repair Generator";
+    [SerializeField] private string _stopRepair = "Stop Repair";
+    [SerializeField] private int neededRepairedGeneratorsCount;
 
     [Title("Effects")]
     [SerializeField] private ParticleSystem _repairedEffect;
@@ -43,21 +43,12 @@ public class Generator : NetworkBehaviour, IInteractable
     [ShowInInspector] public bool IsRepaired => _isRepaired;
     [ShowInInspector] public PlayerBehavior RepairInitiator => _repairInitiator;
 
-    public string InteractionPrompt => _isRepairing ? GeneratorsStopRepairLocaleText() : GeneratorsStartRepairLocaleText();
+    public string InteractionPrompt => _isRepairing ? _stopRepair : _startRepair;
     public Transform GetTransform() => this.transform;
 
     public static event Action<Generator> OnRepaired;
 
-    private string GeneratorsStartRepairLocaleText()
-    {
-        return LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? _startRepairRu : _startRepairEn;
-    }
 
-    private string GeneratorsStopRepairLocaleText()
-    {
-        return LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? _stopRepairRu : _stopRepairEn;
-    }
-    
     private void Awake()
     {
         _source = GetComponent<AudioSource>();
@@ -65,7 +56,7 @@ public class Generator : NetworkBehaviour, IInteractable
 
         Generators.Add(this);
     }
-    
+
 
     [Server]
     private void Update()
@@ -109,7 +100,7 @@ public class Generator : NetworkBehaviour, IInteractable
     {
         return RepairingProgress;
     }
-    
+
     private void On_RepairedChange(bool prev, bool next, bool asServer)
     {
         if (next)

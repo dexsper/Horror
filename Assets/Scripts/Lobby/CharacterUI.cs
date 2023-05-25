@@ -12,9 +12,6 @@ public class CharacterUI : MonoBehaviour
 
     [SerializeField] private Button _actionButton;
     [SerializeField] private Transform _modelHolder;
-
-    [SerializeField] private List<string> buttonStringsRu = new List<string>();
-    [SerializeField] private List<string> buttonStringsEn = new List<string>();
     
     private int _price;
     private string _name;
@@ -50,18 +47,18 @@ public class CharacterUI : MonoBehaviour
             if (CharacterWindowUI.Instance.SelectedCharacterName == _name)
             {
                 _actionButton.interactable = true;
-                _actionText.text = LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? buttonStringsRu[0] : buttonStringsEn[0];
+                _actionText.text = "Select";
             }
             else
             {
                 _actionButton.interactable = true;
-                _actionText.text = LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? buttonStringsRu[1] : buttonStringsEn[1];
+                _actionText.text = "Selected";
             }
         }
         else
         {
             _actionButton.interactable = true;
-            _actionText.text = LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? $"{buttonStringsRu[2]} {_price}" : $"{buttonStringsEn[2]} {_price}";
+            _actionText.text = $"Buy: {_price}";
         }
     }
 }

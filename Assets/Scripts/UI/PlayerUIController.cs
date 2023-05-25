@@ -20,10 +20,6 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField] private Button openSettingsButton, closeSettingsButton;
     [SerializeField] private Image settingsPanel;
 
-    [SerializeField] private string startTextRu, startTextEn;
-    [SerializeField] private string generatorsTextRu, generatorsTextEn;
-    [SerializeField] private string finalTextRu, finalTextEn;
-    
     private void Awake()
     {
         _interactButton.onClick.AddListener(Interact);
@@ -40,8 +36,7 @@ public class PlayerUIController : MonoBehaviour
 
     private IEnumerator PlayerTextAtStart()
     {
-        repairedGeneratorsCount.text =
-            LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? startTextRu : startTextEn;
+        repairedGeneratorsCount.text = "Find Generators";
         yield return new WaitForSeconds(5f);
         UpdateRepairedGeneratorsText(Generator.Generators.Count);
     }
@@ -75,8 +70,11 @@ public class PlayerUIController : MonoBehaviour
     private void UpdateInteraction(PlayerBehavior localPlayer)
     {
         bool canInteract = localPlayer.Interaction.CanInteract;
+
         _interactButton.gameObject.SetActive(canInteract);
         interactionSlider.gameObject.SetActive(canInteract);
+        
+        _interactionText.text = "";
 
         if (localPlayer.Interaction.CanInteract && localPlayer.Interaction.LookInteractable != null)
         {
@@ -84,7 +82,7 @@ public class PlayerUIController : MonoBehaviour
             UpdateSlider(localPlayer.Interaction.LookInteractable.GetRepairProgress());
             return;
         }
-        _interactionText.text = "";
+
     }
     private void Interact()
     {
@@ -108,18 +106,17 @@ public class PlayerUIController : MonoBehaviour
 
     private void UpdateRepairedGeneratorsText(int count)
     {
-        repairedGeneratorsCount.text = LocalizationUI.Instance.GetCurrentLocaleName() == "ru"
-            ? $"{generatorsTextRu} {count}"
-            : $"{generatorsTextEn} {count}";
+        repairedGeneratorsCount.text = $"Generators left {count}";
     }
     private void OnGeneratorRepaired(Generator generator)
     {
-        UpdateRepairedGeneratorsText(Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count());
+        int count = Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count();
 
-        if (Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count() == 0)
+        UpdateRepairedGeneratorsText(count);
+
+        if (count == 0)
         {
-            repairedGeneratorsCount.text =
-                LocalizationUI.Instance.GetCurrentLocaleName() == "ru" ? finalTextRu : finalTextEn;
+            repairedGeneratorsCount.text = "Run!";
         }
     }
 
