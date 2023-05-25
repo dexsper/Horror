@@ -20,17 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlayerCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlayerCamera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Marker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Marker.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/Agora-RTC-Plugin/Agora-Unity-RTC-SDK/Code/Tools/litjson-0.17.0/LitJSON.sln.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/Agora-RTC-Plugin/Agora-Unity-RTC-SDK/Code/Tools/litjson-0.17.0/src/LitJson/LitJSON.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/FishNet/CodeGenerating/cecil-0.11.4/Mono.Cecil.sln.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/FishNet/Runtime/Transporting/Transports/Tugboat/LiteNetLib/LiteNetLib.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +43,6 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.economy@3.1.2/Runtime/Model/CurrencyDefinition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/LocalizationUI.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">

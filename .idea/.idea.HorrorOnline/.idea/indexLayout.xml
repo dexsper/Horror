@@ -5,7 +5,6 @@
     <explicitIncludes>
       <Path>Library/PackageCache/com.unity.adaptiveperformance.samsung.android@5.0.0</Path>
       <Path>Library/PackageCache/com.unity.adaptiveperformance@5.0.0</Path>
-      <Path>Library/PackageCache/com.unity.addressables@1.19.19</Path>
       <Path>Library/PackageCache/com.unity.burst@1.8.2</Path>
       <Path>Library/PackageCache/com.unity.cinemachine@2.8.9</Path>
       <Path>Library/PackageCache/com.unity.collab-proxy@2.0.1</Path>
@@ -14,7 +13,6 @@
       <Path>Library/PackageCache/com.unity.ide.rider@3.0.18</Path>
       <Path>Library/PackageCache/com.unity.ide.visualstudio@2.0.17</Path>
       <Path>Library/PackageCache/com.unity.ide.vscode@1.2.5</Path>
-      <Path>Library/PackageCache/com.unity.localization@1.3.2</Path>
       <Path>Library/PackageCache/com.unity.mathematics@1.2.6</Path>
       <Path>Library/PackageCache/com.unity.mobile.android-logcat@1.3.2</Path>
       <Path>Library/PackageCache/com.unity.mobile.notifications@2.1.1</Path>
@@ -23,7 +21,6 @@
       <Path>Library/PackageCache/com.unity.profiling.core@1.0.2</Path>
       <Path>Library/PackageCache/com.unity.progrids@3.0.3-preview.6</Path>
       <Path>Library/PackageCache/com.unity.recorder@3.0.3</Path>
-      <Path>Library/PackageCache/com.unity.scriptablebuildpipeline@1.20.1</Path>
       <Path>Library/PackageCache/com.unity.searcher@4.9.1</Path>
       <Path>Library/PackageCache/com.unity.services.authentication@2.4.0</Path>
       <Path>Library/PackageCache/com.unity.services.core@1.7.0</Path>
