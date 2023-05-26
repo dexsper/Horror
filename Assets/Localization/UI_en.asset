@@ -66,6 +66,10 @@ MonoBehaviour:
     m_Localized: Leave
     m_Metadata:
       m_Items: []
+  - m_Id: 207600545828864
+    m_Localized: WAITING FOR OTHER PLAYERS
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

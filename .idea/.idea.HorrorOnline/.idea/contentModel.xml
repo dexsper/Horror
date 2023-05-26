@@ -57,13 +57,18 @@
           <e p="Settings" t="Include" />
         </e>
         <e p="AddressableAssetsData" t="Include">
+          <e p="Android" t="Include" />
           <e p="AssetGroups" t="Include">
             <e p="Schemas" t="Include" />
           </e>
           <e p="AssetGroupTemplates" t="Include" />
           <e p="DataBuilders" t="Include" />
+          <e p="link.xml" t="Include" />
+          <e p="windows" t="Include" />
         </e>
-        <e p="Animations" t="Include" />
+        <e p="Animations" t="Include">
+          <e p="Generator Anims" t="Include" />
+        </e>
         <e p="Assets" t="Include">
           <e p="BackRooms" t="Include">
             <e p="Source" t="Include" />
@@ -221,7 +226,7 @@
             </e>
           </e>
         </e>
-        <e p="Generator Anims" t="Include" />
+        <e p="Localization" t="Include" />
         <e p="Materials" t="Include" />
         <e p="MazeGenerator" t="Include">
           <e p="Animations" t="Include" />
@@ -2617,6 +2622,9 @@
             <e p="LobbyPlayerSingleUI.cs" t="Include" />
             <e p="LobbyUI.cs" t="Include" />
             <e p="MapWindowUI.cs" t="Include" />
+          </e>
+          <e p="Localization" t="Include">
+            <e p="LocalizationUI.cs" t="Include" />
           </e>
           <e p="Network" t="Include">
             <e p="ConnectionConntroller.cs" t="Include" />

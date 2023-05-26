@@ -18,9 +18,9 @@ public class Generator : NetworkBehaviour, IInteractable
 
     [SerializeField] private GeneratorSettings _settings = default;
 
-    [Title("Interaction")]
-    [SerializeField] private string _startRepair = "Repair Generator";
-    [SerializeField] private string _stopRepair = "Stop Repair";
+    [Title("Interaction")] 
+    [SerializeField] private string _startRepairRu, _startRepairEn;
+    [SerializeField] private string _stopRepairRu,_stopRepairEn;
     [SerializeField] private int neededRepairedGeneratorsCount;
 
     [Title("Effects")]
@@ -43,7 +43,7 @@ public class Generator : NetworkBehaviour, IInteractable
     [ShowInInspector] public bool IsRepaired => _isRepaired;
     [ShowInInspector] public PlayerBehavior RepairInitiator => _repairInitiator;
 
-    public string InteractionPrompt => _isRepairing ? _stopRepair : _startRepair;
+    public string InteractionPrompt => _isRepairing ? GetStopRepairLocale() : GetStartRepairLocale();
     public Transform GetTransform() => this.transform;
 
     public static event Action<Generator> OnRepaired;
@@ -57,6 +57,15 @@ public class Generator : NetworkBehaviour, IInteractable
         Generators.Add(this);
     }
 
+    private string GetStopRepairLocale()
+    {
+        return LocalizationUI.Instance.GetLocaleName() == "ru" ? _stopRepairRu : _stopRepairEn;
+    }
+
+    private string GetStartRepairLocale()
+    {
+        return LocalizationUI.Instance.GetLocaleName() == "ru" ? _startRepairRu : _startRepairEn;
+    }
 
     [Server]
     private void Update()

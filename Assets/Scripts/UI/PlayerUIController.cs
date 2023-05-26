@@ -5,6 +5,7 @@ using DG.Tweening;
 using FishNet;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
 public class PlayerUIController : MonoBehaviour
@@ -20,6 +21,12 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField] private Button openSettingsButton, closeSettingsButton;
     [SerializeField] private Image settingsPanel;
 
+    [SerializeField] private Image endGamePanel;
+    
+    [SerializeField] private string findGeneratorsRu, findGeneratorsEn;
+    [SerializeField] private string generatorsLeftRu, generatorsLeftEn;
+    [SerializeField] private string endRu, endEn;
+
     private void Awake()
     {
         _interactButton.onClick.AddListener(Interact);
@@ -34,20 +41,28 @@ public class PlayerUIController : MonoBehaviour
         StartCoroutine(PlayerTextAtStart());
     }
 
+    private void OnGameEnded()
+    {
+        endGamePanel.gameObject.SetActive(true);
+    }
+    
     private IEnumerator PlayerTextAtStart()
     {
-        repairedGeneratorsCount.text = "Find Generators";
+        repairedGeneratorsCount.text =
+            LocalizationUI.Instance.GetLocaleName() == "ru" ? findGeneratorsRu : findGeneratorsEn;
         yield return new WaitForSeconds(5f);
         UpdateRepairedGeneratorsText(Generator.Generators.Count);
     }
     private void OnEnable()
     {
         Generator.OnRepaired += OnGeneratorRepaired;
+        GameController.OnGameEnded += OnGameEnded;
 
     }
     private void OnDestroy()
     {
         Generator.OnRepaired -= OnGeneratorRepaired;
+        GameController.OnGameEnded -= OnGameEnded;
     }
     private void Update()
     {
@@ -106,7 +121,9 @@ public class PlayerUIController : MonoBehaviour
 
     private void UpdateRepairedGeneratorsText(int count)
     {
-        repairedGeneratorsCount.text = $"Generators left {count}";
+        repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru"
+            ? $"{generatorsLeftRu} {count}"
+            : $"{generatorsLeftEn} {count}";
     }
     private void OnGeneratorRepaired(Generator generator)
     {
@@ -116,7 +133,7 @@ public class PlayerUIController : MonoBehaviour
 
         if (count == 0)
         {
-            repairedGeneratorsCount.text = "Run!";
+            repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru" ? endRu : endEn;
         }
     }
 

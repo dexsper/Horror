@@ -519,3 +519,11 @@ MonoBehaviour:
   _actionText: {fileID: 1543327209521080804}
   _actionButton: {fileID: 1543327209964884626}
   _modelHolder: {fileID: 1543327211224869032}
+  russianButtonText:
+  - "\u0412\u044B\u0431\u0440\u0430\u0442\u044C"
+  - "\u0412\u044B\u0431\u0440\u0430\u043D\u043E"
+  - "\u041A\u0443\u043F\u0438\u0442\u044C"
+  englishButtonText:
+  - Select
+  - Selected
+  - Buy

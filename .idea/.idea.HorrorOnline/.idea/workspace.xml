@@ -20,11 +20,51 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Locales.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/AssetGroups/Localization-Locales.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/3PipeHeadInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/3PipeHeadInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/4HeadInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/4HeadInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/LightBulbInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/LightBulbInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/LightHeadInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/LightHeadInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/MegahornInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/MegahornInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/PipeLightHeadInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/PipeLightHeadInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/PoopHeadInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/PoopHeadInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/TrafficLightInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/TrafficLightInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/TvHeadInteract.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Generator Anims/TvHeadInteract.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/English (en).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/English (en).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/Russian (ru).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/Russian (ru).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI Shared Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/PlayerState.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/PlayerState.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/VoiceChatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/VoiceChatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +80,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.economy@3.1.2/Runtime/Model/CurrencyDefinition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizeStringEvent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationUI.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -70,15 +112,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCameraMarkers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Localization.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LocalizationSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LocalizationUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/FakePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/VoiceChatController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationUI.cs" />
+        <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizeStringEvent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
       </list>
     </option>
   </component>
@@ -144,6 +189,8 @@
       <workItem from="1684852986046" duration="966000" />
       <workItem from="1685006433186" duration="594000" />
       <workItem from="1685012238722" duration="6261000" />
+      <workItem from="1685090995903" duration="1560000" />
+      <workItem from="1685093045862" duration="1077000" />
     </task>
     <servers />
   </component>

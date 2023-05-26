@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,9 @@ public class CharacterUI : MonoBehaviour
 
     [SerializeField] private Button _actionButton;
     [SerializeField] private Transform _modelHolder;
+    
+    [SerializeField] private List<string> russianButtonText = new List<string>();
+    [SerializeField] private List<string> englishButtonText = new List<string>();
     
     private int _price;
     private string _name;
@@ -44,18 +48,24 @@ public class CharacterUI : MonoBehaviour
             if (CharacterWindowUI.Instance.SelectedCharacterName == _name)
             {
                 _actionButton.interactable = true;
-                _actionText.text = "Select";
+                _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
+                    ? russianButtonText[0]
+                    : englishButtonText[0];
             }
             else
             {
                 _actionButton.interactable = true;
-                _actionText.text = "Selected";
+                _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
+                    ? russianButtonText[1]
+                    : englishButtonText[1];
             }
         }
         else
         {
             _actionButton.interactable = true;
-            _actionText.text = $"Buy: {_price}";
+            _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
+                ? $"{russianButtonText[2]} {_price}"
+                : $"{englishButtonText[2]} {_price}";
         }
     }
 }

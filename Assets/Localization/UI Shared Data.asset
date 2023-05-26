@@ -67,6 +67,10 @@ MonoBehaviour:
     m_Key: LEAVE
     m_Metadata:
       m_Items: []
+  - m_Id: 207600545828864
+    m_Key: Waiting
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

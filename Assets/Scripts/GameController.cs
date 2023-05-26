@@ -18,6 +18,8 @@ public class GameController : NetworkBehaviour
     private SceneManager _sceneManager;
     private NetworkManager _networkManager;
 
+    public static event Action OnGameEnded;
+    
     public static GameController Instance
     {
         get
@@ -146,6 +148,7 @@ public class GameController : NetworkBehaviour
         PlayerEconomy.Instance.IncrementBalance(reward);
         
         LobbyManager.Instance.LeaveLobby();
+        OnGameEnded?.Invoke();
     }
 
     #endregion
