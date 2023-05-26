@@ -145,9 +145,16 @@ public class GameController : NetworkBehaviour
     [TargetRpc]
     private void FinishGame_RPC(NetworkConnection conn, int reward)
     {
-        PlayerEconomy.Instance.IncrementBalance(reward);
+        if (LobbyManager.Instance.JoinedLobby != null)
+        {
+            PlayerEconomy.Instance.IncrementBalance(reward);
+            LobbyManager.Instance.LeaveLobby();
+        }
+        else
+        {
+            InstanceFinder.ServerManager.StopConnection(true);
+        }
         
-        LobbyManager.Instance.LeaveLobby();
         OnGameEnded?.Invoke();
     }
 
