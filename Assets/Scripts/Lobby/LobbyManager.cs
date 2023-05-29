@@ -20,7 +20,6 @@ public class LobbyManager : MonoBehaviour
     private float _refreshLobbyListTimer = 5f;
     private string _playerName;
 
-    public string PlayerName => _playerName;
     public bool IsAuthenticated { get; private set; }
     public Lobby JoinedLobby { get; private set; }
 
@@ -84,11 +83,6 @@ public class LobbyManager : MonoBehaviour
             }
         }
     }
-
-    public string GetPlayer()
-    {
-        return _playerName;
-    }
     
     private async void HandleLobbyHeartbeat()
     {
@@ -101,17 +95,9 @@ public class LobbyManager : MonoBehaviour
                 float heartbeatTimerMax = 15f;
                 _heartbeatTimer = heartbeatTimerMax;
 
-                Debug.Log("Heartbeat");
-                await LobbyService.Instance.SendHeartbeatPingAsync(JoinedLobby.Id);
+                Debug.Log("Lobby Heartbeat");
 
-                if (IsPlayerInLobby())
-                {
-                    LobbyUI.Instance.EnableStartGameButton();
-                }
-                else
-                {
-                    LobbyUI.Instance.DisableStartGameButton();
-                }
+                await LobbyService.Instance.SendHeartbeatPingAsync(JoinedLobby.Id);
             }
         }
     }

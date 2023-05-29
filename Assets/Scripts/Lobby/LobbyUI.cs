@@ -1,4 +1,5 @@
 using FishNet;
+using FishNet.Managing;
 using FishNet.Managing.Scened;
 using Sirenix.OdinInspector;
 using TMPro;
@@ -26,15 +27,17 @@ public class LobbyUI : MonoBehaviour
     [SerializeField] private MapWindowUI mapWindowUI;
 
     private LobbyManager _lobbyManager;
+    private NetworkManager _networkManager;
 
     private void Awake()
     {
         Instance = this;
 
         _startButton.gameObject.SetActive(false);
-        _lobbyManager = LobbyManager.Instance;
-
         playerSingleTemplate.gameObject.SetActive(false);
+
+        _lobbyManager = LobbyManager.Instance;
+        _networkManager = InstanceFinder.NetworkManager;
 
         leaveLobbyButton.onClick.AddListener(() =>
         {
@@ -114,6 +117,7 @@ public class LobbyUI : MonoBehaviour
         playerCountText.text = lobby.Players.Count + "/" + lobby.MaxPlayers;
 
         mapWindowUI.UpdateMap(lobby.Data[LobbyManager.KEY_MAP_NAME].Value);
+        _startButton.gameObject.SetActive(_lobbyManager.IsLobbyHost() && _networkManager.IsHost);
 
         Show();
     }
