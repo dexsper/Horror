@@ -63,7 +63,6 @@
           </e>
           <e p="AssetGroupTemplates" t="Include" />
           <e p="DataBuilders" t="Include" />
-          <e p="link.xml" t="Include" />
           <e p="windows" t="Include" />
         </e>
         <e p="Animations" t="Include">
@@ -2676,6 +2675,9 @@
           <e p="UI" t="Include">
             <e p="DeathRoomUI.cs" t="Include" />
             <e p="JailedPlayers.cs" t="Include" />
+            <e p="KeyBoardInput.cs" t="Include" />
+            <e p="KeyboardRemoveButton.cs" t="Include" />
+            <e p="m_InputField.cs" t="Include" />
             <e p="Marker.cs" t="Include" />
             <e p="MarkerTarget.cs" t="Include" />
             <e p="PlayersStateUI.cs" t="Include" />

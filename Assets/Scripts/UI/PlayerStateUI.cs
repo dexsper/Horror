@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerStateUI : MonoBehaviour
 {
     [SerializeField] private Image _image;
+    [SerializeField] private TextMeshProUGUI _nameText;
 
     private PlayerBehavior _behavior;
 
@@ -11,6 +13,8 @@ public class PlayerStateUI : MonoBehaviour
     {
         _behavior = player;
 
+        _nameText.text = LobbyManager.Instance.GetPlayer();
+        
         _behavior.Health.OnDead += OnPlayerDead;
         _behavior.Health.OnRestored += OnPlayerHealthRestored;
     }

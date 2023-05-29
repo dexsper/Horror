@@ -85,6 +85,11 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
+    public string GetPlayer()
+    {
+        return _playerName;
+    }
+    
     private async void HandleLobbyHeartbeat()
     {
         if (IsLobbyHost())

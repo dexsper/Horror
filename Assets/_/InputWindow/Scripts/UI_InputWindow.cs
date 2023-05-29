@@ -28,6 +28,8 @@ public class UI_InputWindow : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private TMP_InputField inputField;
 
+    public TMP_InputField InputField => inputField;
+    
     private void Awake() {
         instance = this;
         Hide();

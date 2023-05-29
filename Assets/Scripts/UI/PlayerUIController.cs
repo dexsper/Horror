@@ -122,8 +122,8 @@ public class PlayerUIController : MonoBehaviour
     private void UpdateRepairedGeneratorsText(int count)
     {
         repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru"
-            ? $"{generatorsLeftRu} {count}"
-            : $"{generatorsLeftEn} {count}";
+            ? $"{generatorsLeftRu} {count}/{Generator.Generators.Count}"
+            : $"{generatorsLeftEn} {count}/{Generator.Generators.Count}";
     }
     private void OnGeneratorRepaired(Generator generator)
     {
