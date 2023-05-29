@@ -83,6 +83,7 @@ public class CharacterWindowUI : MonoBehaviour
             var itemDefention = PlayerEconomy.Instance.InventoryDefinitions.First(x => x.Name == characterName);
 
             PlayerEconomy.Instance.MakePurchase(itemDefention.Id);
+            AnalyticsEventManager.OnEvent("Buy skin","buyed",characterName);
         }
     }
 

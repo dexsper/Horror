@@ -112,9 +112,11 @@ public class PlayerUIController : MonoBehaviour
         if (LobbyManager.Instance.JoinedLobby != null)
         {
             LobbyManager.Instance.LeaveLobby();
+            Ads.Instance.ShowAd();
         }
         else
         {
+            Ads.Instance.ShowAd();
             InstanceFinder.ServerManager.StopConnection(true);
         }
     }
@@ -133,7 +135,12 @@ public class PlayerUIController : MonoBehaviour
 
         if (count == 0)
         {
+            AnalyticsEventManager.OnEvent("Repaired last generator","Repaired","5");
             repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru" ? endRu : endEn;
+        }
+        else if(count == 4)
+        {
+            AnalyticsEventManager.OnEvent("Repaired first generator","Repaired","1");
         }
     }
 

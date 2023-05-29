@@ -50,6 +50,7 @@ public class LobbyUI : MonoBehaviour
             sld.ReplaceScenes = ReplaceOption.All;
 
             InstanceFinder.SceneManager.LoadGlobalScenes(sld);
+            AnalyticsEventManager.OnEvent("Start the game","Start","1");
         });
     }
 

@@ -37,6 +37,7 @@ public class PlayerSpawner : NetworkBehaviour
         _networkManager.ServerManager.Spawn(nob, conn);
 
         UpdatePlayerModel(nob, player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value);
+        AnalyticsEventManager.OnEvent("Player Spawned","Spawn","1");
     }
 
     [Server]

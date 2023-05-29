@@ -21,12 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/Agora-RTC-Plugin/Agora-Unity-RTC-SDK/Code/Tools/litjson-0.17.0/LitJSON.sln.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/Agora-RTC-Plugin/Agora-Unity-RTC-SDK/Code/Tools/litjson-0.17.0/src/LitJson/LitJSON.csproj.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/FishNet/CodeGenerating/cecil-0.11.4/Mono.Cecil.sln.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/FishNet/Runtime/Transporting/Transports/Tugboat/LiteNetLib/LiteNetLib.csproj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,13 +46,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/Banner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/InterstitialAd.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/Ads.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/m_InputField.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/Review.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizeStringEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/AnalyticsEventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/AnalyticsEventManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/FireBaseScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Car/NeededCarsItems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/Firebase/FirebaseInitialization.cs" root0="FORCE_HIGHLIGHTING" />
@@ -60,6 +74,7 @@
     <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/Events/PlayerOutOfBounds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.economy@3.1.2/Runtime/Model/CurrencyDefinition.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/TrainComponents/PlayerDeath.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Interstitial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Screamer/Screamer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Player.cs" root0="SKIP_HIGHLIGHTING" />
@@ -77,9 +92,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/Interaction/IInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OfflineScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCamera.cs" />
@@ -96,12 +109,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/VoiceChatController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationUI.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizeStringEvent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerStateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/m_InputField.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardInput.cs" />
@@ -110,6 +119,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/SDK/Firebase/FirebaseInitialization.cs" />
         <option value="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SDK/AnalyticsEventManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Banner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" />
       </list>
     </option>
   </component>
@@ -179,7 +200,7 @@
       <workItem from="1685093045862" duration="1077000" />
       <workItem from="1685104346937" duration="1322000" />
       <workItem from="1685350192461" duration="6004000" />
-      <workItem from="1685365026767" duration="1341000" />
+      <workItem from="1685365026767" duration="4829000" />
     </task>
     <servers />
   </component>

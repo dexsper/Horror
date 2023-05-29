@@ -1442,7 +1442,6 @@
             </e>
           </e>
         </e>
-        <e p="PlayServicesResolver" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -2750,6 +2749,12 @@
           </e>
           <e p="OfflineScene.cs" t="Include" />
           <e p="SDK" t="Include">
+            <e p="ADS" t="Include">
+              <e p="Ads.cs" t="Include" />
+              <e p="Banner.cs" t="Include" />
+              <e p="Interstitial.cs" t="Include" />
+            </e>
+            <e p="AnalyticsEventManager.cs" t="Include" />
             <e p="AppReview" t="Include">
               <e p="Review.cs" t="Include" />
             </e>
@@ -2850,6 +2855,8 @@
         </e>
       </e>
       <e p="Async.Tests.csproj" t="IncludeRecursive" />
+      <e p="CleverAdsSolutions-Editor.csproj" t="IncludeRecursive" />
+      <e p="CleverAdsSolutions.csproj" t="IncludeRecursive" />
       <e p="Extenject-Addressable-Tests.csproj" t="IncludeRecursive" />
       <e p="Extenject-Async.csproj" t="IncludeRecursive" />
       <e p="FishNet.Codegen.Cecil.csproj" t="IncludeRecursive" />
@@ -2857,6 +2864,78 @@
       <e p="FishNet.Runtime.csproj" t="IncludeRecursive" />
       <e p="FishyUnityTransport.csproj" t="IncludeRecursive" />
       <e p="HorrorOnline.sln" t="IncludeFlat" />
+      <e p="Library" t="Include">
+        <e p="PackageCache" t="Include">
+          <e p="com.cleversolutions.ads.unity@e73dc99301" t="Include">
+            <e p="Editor" t="Include">
+              <e p="BaseAdObjectInspector.cs" t="Include" />
+              <e p="CASAndroidBaseDependencies.xml" t="Include" />
+              <e p="CASEditorSettings.cs" t="Include" />
+              <e p="CASEditorUtils.cs" t="Include" />
+              <e p="CASIcons" t="Include" />
+              <e p="CASInitSettignsInspector.cs" t="Include" />
+              <e p="CASInternal.cs" t="Include" />
+              <e p="CASiOSBaseDependencies.xml" t="Include" />
+              <e p="CASPostprocessBuild.cs" t="Include" />
+              <e p="CASPreprocessBuild.cs" t="Include" />
+              <e p="CASPreprocessGradle.cs" t="Include" />
+              <e p="CleverAdsSolutions-Editor.asmdef" t="Include" />
+              <e p="DependencyManager.cs" t="Include" />
+              <e p="ManagerIndexDrawer.cs" t="Include" />
+            </e>
+            <e p="package.json" t="Include" />
+            <e p="Plugins" t="Include">
+              <e p="Android" t="Include">
+                <e p="libs" t="Include" />
+              </e>
+              <e p="iOS" t="Include" />
+            </e>
+            <e p="Runtime" t="Include">
+              <e p="AdObject" t="Include">
+                <e p="BannerAdObject.cs" t="Include" />
+                <e p="InterstitialAdObject.cs" t="Include" />
+                <e p="ManagerAdObject.cs" t="Include" />
+                <e p="ReturnToPlayAdObject.cs" t="Include" />
+                <e p="RewardedAdObject.cs" t="Include" />
+              </e>
+              <e p="CleverAdsSolutions.asmdef" t="Include" />
+              <e p="CleverAdsSolutions.Common.xml" t="Include" />
+              <e p="Common" t="Include">
+                <e p="ATTrackingStatus.cs" t="Include" />
+                <e p="MediationExtras.cs" t="Include" />
+                <e p="MobileAds.cs" t="Include" />
+              </e>
+              <e p="Internal" t="Include">
+                <e p="Android" t="Include">
+                  <e p="CASImpressionClient.cs" t="Include" />
+                  <e p="CASJavaBridge.cs" t="Include" />
+                  <e p="CASManagerClient.cs" t="Include" />
+                  <e p="CASSettingsClient.cs" t="Include" />
+                  <e p="CASViewClient.cs" t="Include" />
+                </e>
+                <e p="CASFactory.cs" t="Include" />
+                <e p="CASInitSettings.cs" t="Include" />
+                <e p="iOS" t="Include">
+                  <e p="CASExterns.cs" t="Include" />
+                  <e p="CASImpressionClient.cs" t="Include" />
+                  <e p="CASManagerClient.cs" t="Include" />
+                  <e p="CASSettingsClient.cs" t="Include" />
+                  <e p="CASViewClient.cs" t="Include" />
+                </e>
+                <e p="Unity" t="Include">
+                  <e p="CASImpressionClient.cs" t="Include" />
+                  <e p="CASManagerClient.cs" t="Include" />
+                  <e p="CASSettingsClient.cs" t="Include" />
+                  <e p="CASViewClient.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Templates" t="Include">
+              <e p="CASSKAdNetworks.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="ParrelSync.csproj" t="IncludeRecursive" />

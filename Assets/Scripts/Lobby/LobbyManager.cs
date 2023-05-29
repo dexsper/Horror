@@ -191,6 +191,7 @@ public class LobbyManager : MonoBehaviour
             lobby = lobby
         });
 
+        AnalyticsEventManager.OnEvent("Created the lobby","Create","1");
         Debug.Log("Created Lobby " + lobby.Name);
     }
 
@@ -271,6 +272,7 @@ public class LobbyManager : MonoBehaviour
         });
 
         OnJoinedLobby?.Invoke(this, new LobbyEventArgs {lobby = lobby});
+        AnalyticsEventManager.OnEvent("Joined the lobby","Join","1");
     }
 
     public async void UpdatePlayerName(string playerName)

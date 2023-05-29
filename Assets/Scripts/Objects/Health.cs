@@ -37,7 +37,8 @@ public class Health : NetworkBehaviour
         if (next <= 0f && !IsDead)
         {
             IsDead = true;
-
+            Ads.Instance.ShowAd();
+            AnalyticsEventManager.OnEvent("Enter the jail","Jailed","1");
             OnDead?.Invoke();
         }
 

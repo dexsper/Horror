@@ -3,6 +3,7 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes>
+      <Path>Library/PackageCache/com.cleversolutions.ads.unity@e73dc99301</Path>
       <Path>Library/PackageCache/com.unity.adaptiveperformance.samsung.android@5.0.0</Path>
       <Path>Library/PackageCache/com.unity.adaptiveperformance@5.0.0</Path>
       <Path>Library/PackageCache/com.unity.addressables@1.19.19</Path>
@@ -47,9 +48,7 @@
       <Path>.git</Path>
       <Path>.idea</Path>
       <Path>.vscode</Path>
-      <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
     </explicitExcludes>
