@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.cleversolutions.ads.unity": "https://github.com/cleveradssolutions/CAS-Unity.git#3.1.6",
     "com.unity.adaptiveperformance.samsung.android": "5.0.0",
     "com.unity.cinemachine": "2.8.9",
     "com.unity.collab-proxy": "2.0.1",

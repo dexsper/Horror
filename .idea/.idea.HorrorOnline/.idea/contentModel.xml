@@ -68,6 +68,41 @@
         <e p="Animations" t="Include">
           <e p="Generator Anims" t="Include" />
         </e>
+        <e p="AppMetrica" t="Include">
+          <e p="AppMetrica.cs" t="Include" />
+          <e p="BaseYandexAppMetrica.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="AppMetricaDependencies.xml" t="Include" />
+            <e p="PostprocessBuildPlayerAppMetrica.cs" t="Include" />
+          </e>
+          <e p="IYandexAppMetrica.cs" t="Include" />
+          <e p="Plugins" t="Include">
+            <e p="iOS" t="Include" />
+          </e>
+          <e p="Profile" t="Include">
+            <e p="YandexAppMetricaAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaBirthDateAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaBooleanAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaCounterAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaGenderAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaNameAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaNotificationsEnabledAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaNumberAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaStringAttribute.cs" t="Include" />
+            <e p="YandexAppMetricaUserProfile.cs" t="Include" />
+            <e p="YandexAppMetricaUserProfileUpdate.cs" t="Include" />
+          </e>
+          <e p="YandexAppMetricaAdRevenue.cs" t="Include" />
+          <e p="YandexAppMetricaAndroid.cs" t="Include" />
+          <e p="YandexAppMetricaConfig.cs" t="Include" />
+          <e p="YandexAppMetricaDummy.cs" t="Include" />
+          <e p="YandexAppMetricaError.cs" t="Include" />
+          <e p="YandexAppMetricaErrorDetails.cs" t="Include" />
+          <e p="YandexAppMetricaIOS.cs" t="Include" />
+          <e p="YandexAppMetricaRequestTrackingStatus.cs" t="Include" />
+          <e p="YandexAppMetricaRevenue.cs" t="Include" />
+          <e p="YMMJSONUtils.cs" t="Include" />
+        </e>
         <e p="Assets" t="Include">
           <e p="BackRooms" t="Include">
             <e p="Source" t="Include" />
@@ -223,6 +258,42 @@
             <e p="Nature" t="Include">
               <e p="Textures" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="Editor Default Resources" t="Include">
+          <e p="Firebase" t="Include" />
+        </e>
+        <e p="ExternalDependencyManager" t="Include">
+          <e p="Editor" t="Include">
+            <e p="1.2.175" t="Include" />
+            <e p="external-dependency-manager_version-1.2.175_manifest.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Firebase" t="Include">
+          <e p="Editor" t="Include">
+            <e p="AnalyticsDependencies.xml" t="Include" />
+            <e p="AppDependencies.xml" t="Include" />
+            <e p="FirebaseAnalytics_version-10.6.0_manifest.txt" t="Include" />
+          </e>
+          <e p="m2repository" t="Include">
+            <e p="com" t="Include">
+              <e p="google" t="Include">
+                <e p="Firebase" t="Include">
+                  <e p="firebase-analytics-unity" t="Include">
+                    <e p="10.6.0" t="Include" />
+                    <e p="maven-metadata.xml" t="Include" />
+                  </e>
+                  <e p="firebase-app-unity" t="Include">
+                    <e p="10.6.0" t="Include" />
+                    <e p="maven-metadata.xml" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+          <e p="Plugins" t="Include">
+            <e p="iOS" t="Include" />
+            <e p="x86_64" t="Include" />
           </e>
         </e>
         <e p="Localization" t="Include" />
@@ -1371,6 +1442,7 @@
             </e>
           </e>
         </e>
+        <e p="PlayServicesResolver" t="Include" />
         <e p="Plugins" t="Include">
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
@@ -1389,6 +1461,9 @@
               </e>
               <e p="ReadMe.txt" t="Include" />
             </e>
+          </e>
+          <e p="iOS" t="Include">
+            <e p="Firebase" t="Include" />
           </e>
           <e p="ParrelSync" t="Include">
             <e p="Examples" t="Include">
@@ -1465,6 +1540,9 @@
               </e>
             </e>
             <e p="ReadMe.txt" t="Include" />
+          </e>
+          <e p="tvOS" t="Include">
+            <e p="Firebase" t="Include" />
           </e>
           <e p="Zenject" t="Include">
             <e p="LICENSE.txt" t="Include" />
@@ -2671,6 +2749,14 @@
             </e>
           </e>
           <e p="OfflineScene.cs" t="Include" />
+          <e p="SDK" t="Include">
+            <e p="AppReview" t="Include">
+              <e p="Review.cs" t="Include" />
+            </e>
+            <e p="Firebase" t="Include">
+              <e p="FirebaseInitialization.cs" t="Include" />
+            </e>
+          </e>
           <e p="SleepTIme.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="DeathRoomUI.cs" t="Include" />
