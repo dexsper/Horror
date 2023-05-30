@@ -12,7 +12,9 @@ using UnityEngine.UI;
 public class SinglePlayerUI : MonoBehaviour
 {
     [SerializeField] private CharactersData _characterData;
-    [SerializeField] private Button _startButton;
+    [SerializeField] private Button _startButton,closeButton;
+
+    [SerializeField] private GameObject authenticate, editName;
 
     private Multipass _multipassTransport;
     private NetworkManager _networkManager;
@@ -24,6 +26,7 @@ public class SinglePlayerUI : MonoBehaviour
     {
         _networkManager = InstanceFinder.NetworkManager;
         _startButton.onClick.AddListener(StartSingleGame);
+        closeButton.onClick.AddListener(CloseMenu);
 
         Instance = this;
     }
@@ -67,5 +70,12 @@ public class SinglePlayerUI : MonoBehaviour
 
         _multipassTransport.SetClientTransport(0);
         _multipassTransport.StartConnection(true, 0);
+    }
+
+    private void CloseMenu()
+    {
+        gameObject.SetActive(false);
+        authenticate.SetActive(true);
+        editName.SetActive(true);
     }
 }
