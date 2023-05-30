@@ -2775,6 +2775,7 @@
             <e p="PlayerStateUI.cs" t="Include" />
             <e p="PlayerUIController.cs" t="Include" />
             <e p="PlayerUIMarkers.cs" t="Include" />
+            <e p="SettingsPanelUI.cs" t="Include" />
             <e p="SinglePlayerUI.cs" t="Include" />
             <e p="TouchField.cs" t="Include" />
             <e p="VoiceMute.cs" t="Include" />

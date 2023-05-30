@@ -70,6 +70,31 @@ MonoBehaviour:
     m_Localized: WAITING FOR OTHER PLAYERS
     m_Metadata:
       m_Items: []
+  - m_Id: 1642028316889088
+    m_Localized: Fast tap to run out of jail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1646756299935744
+    m_Localized: Privacy Policy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1647313567748096
+    m_Localized: Sources
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1649916154351616
+    m_Localized: Consent for data processing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1653231328038912
+    m_Localized: Do you agree to the processing of personal data? This will require
+      a reboot.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1653834326347776
+    m_Localized: CONFRIM
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

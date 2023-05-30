@@ -9,6 +9,7 @@ public class CharacterUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _actionText;
 
     [SerializeField] private Button _actionButton;
+    [SerializeField] private Image _moneyImage;
     [SerializeField] private Transform _modelHolder;
     
     [SerializeField] private List<string> russianButtonText = new List<string>();
@@ -48,6 +49,7 @@ public class CharacterUI : MonoBehaviour
             if (CharacterWindowUI.Instance.SelectedCharacterName == _name)
             {
                 _actionButton.interactable = true;
+                _moneyImage.gameObject.SetActive(false);
                 _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
                     ? russianButtonText[0]
                     : englishButtonText[0];
@@ -55,6 +57,7 @@ public class CharacterUI : MonoBehaviour
             else
             {
                 _actionButton.interactable = true;
+                _moneyImage.gameObject.SetActive(false);
                 _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
                     ? russianButtonText[1]
                     : englishButtonText[1];
@@ -63,6 +66,7 @@ public class CharacterUI : MonoBehaviour
         else
         {
             _actionButton.interactable = true;
+            _moneyImage.gameObject.SetActive(true);
             _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
                 ? $"{russianButtonText[2]} {_price}"
                 : $"{englishButtonText[2]} {_price}";
