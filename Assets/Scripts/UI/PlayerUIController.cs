@@ -129,18 +129,14 @@ public class PlayerUIController : MonoBehaviour
     }
     private void OnGeneratorRepaired(Generator generator)
     {
-        int count = Generator.Generators.Where((generator1 => !generator1.IsRepaired)).Count();
+        int count = Generator.Generators.Where((generator1 => generator1.IsRepaired)).Count();
 
         UpdateRepairedGeneratorsText(count);
 
+        AnalyticsEventManager.OnEvent("Repaired generator","Repaired",count.ToString());
         if (count == 0)
         {
-            AnalyticsEventManager.OnEvent("Repaired last generator","Repaired","5");
             repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru" ? endRu : endEn;
-        }
-        else if(count == 4)
-        {
-            AnalyticsEventManager.OnEvent("Repaired first generator","Repaired","1");
         }
     }
 

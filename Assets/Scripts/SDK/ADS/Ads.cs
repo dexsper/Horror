@@ -20,6 +20,7 @@ public class Ads : MonoBehaviour
     private void Start()
     {
         Init();
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
     private void Init()
     {

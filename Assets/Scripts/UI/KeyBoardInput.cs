@@ -7,10 +7,8 @@ using UnityEngine.UI;
 
 public class KeyBoardInput : MonoBehaviour
 {
-    [SerializeField] private UI_InputWindow inputWindow;
-
-    private TMP_InputField inputField => inputWindow.InputField;
-
+    [SerializeField] private TextMeshProUGUI _inputText;
+    
     private Button _button;
     
     private string _letter;
@@ -25,6 +23,6 @@ public class KeyBoardInput : MonoBehaviour
 
     private void AddLetter()
     {
-        inputField.text += _letter;
+        _inputText.text += _letter;
     }
 }

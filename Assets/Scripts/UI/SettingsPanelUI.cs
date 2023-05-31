@@ -20,11 +20,7 @@ public class SettingsPanelUI : MonoBehaviour
         openButton.onClick.AddListener(OpenMenu);
         closeButton.onClick.AddListener(CloseMenu);
         
-        casButton.onClick.AddListener(delegate
-        {
-            CAS.MobileAds.settings.userConsent = CAS.ConsentStatus.Undefined;
-            OpenWarningPanel();
-        });
+        casButton.onClick.AddListener(OpenWarningPanel);
         
         confirmButton.onClick.AddListener(Confirm);
         cancelButton.onClick.AddListener(Cancel);
@@ -57,6 +53,7 @@ public class SettingsPanelUI : MonoBehaviour
     
     private void Confirm()
     {
+        CAS.MobileAds.settings.userConsent = CAS.ConsentStatus.Undefined;
         Application.Quit();
     }
 

@@ -7,9 +7,7 @@ using UnityEngine.UI;
 
 public class KeyboardRemoveButton : MonoBehaviour
 {
-    [SerializeField] private UI_InputWindow inputWindow;
-
-    private TMP_InputField inputField => inputWindow.InputField;
+    [SerializeField] private TextMeshProUGUI _inputText;
 
     private Button _button;
 
@@ -21,7 +19,7 @@ public class KeyboardRemoveButton : MonoBehaviour
 
     private void RemoveLetter()
     {
-        if(inputField.text.Length >= 1)
-            inputField.text = inputField.text.Remove(inputField.text.Length - 1);
+        if(_inputText.text.Length >= 1)
+            _inputText.text = _inputText.text.Remove(_inputText.text.Length - 1);
     }
 }

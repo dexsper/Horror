@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ApiKey: 
   ExceptionsReporting: 1
-  SessionTimeoutSec: 10
+  SessionTimeoutSec: 300
   LocationTracking: 0
   Logs: 0
   HandleFirstActivationAsUpdate: 0

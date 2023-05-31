@@ -27,24 +27,6 @@ public class EditPlayerName : MonoBehaviour
         Instance = this;
 
         GetComponent<Button>().onClick.AddListener(OnButtonClick);
-        GetComponent<Button>().onClick.AddListener(() =>
-        {
-            UI_InputWindow.Show_Static("Player Name", "", "abcdefghijklmnopqrstuvxywzABCDEFGHIJKLMNOPQRSTUVXYWZ .,-", 20,
-            () =>
-            {
-                CloseKeyboard();
-            },
-            (string newName) =>
-            {
-                playerName = newName;
-
-                playerNameText.text = playerName;
-
-                OnNameChanged?.Invoke(this, EventArgs.Empty);
-                CloseKeyboard();
-            });
-        });
-
         playerNameText.text = playerName;
     }
 
@@ -60,16 +42,25 @@ public class EditPlayerName : MonoBehaviour
         }
     }
 
+    public void ConfirmName(string newName)
+    {
+        playerName = newName;
+
+        playerNameText.text = playerName;
+
+        OnNameChanged?.Invoke(this, EventArgs.Empty);
+        CloseKeyboard();
+    }
+    
     private void OpenKeyBoard()
     {
-        OnNameEditOpen?.Invoke();
+        playerNameText.text = null;
         inputKeyBoard.DOLocalMoveY(startPosition.y, 0.25f).SetEase(Ease.Linear);
         _isOpened = true;
     }
 
     private void CloseKeyboard()
     {
-        OnNameEditClose?.Invoke();
         inputKeyBoard.DOLocalMoveY(endPosition.y, 0.25f).SetEase(Ease.Linear);
         _isOpened = false;
     }
