@@ -14,7 +14,7 @@ public class SinglePlayerUI : MonoBehaviour
     [SerializeField] private CharactersData _characterData;
     [SerializeField] private Button _startButton,closeButton;
 
-    [SerializeField] private GameObject authenticate, editName;
+    [SerializeField] private GameObject authenticate, editName,gameAdObject;
 
     private Multipass _multipassTransport;
     private NetworkManager _networkManager;
@@ -75,6 +75,7 @@ public class SinglePlayerUI : MonoBehaviour
     private void CloseMenu()
     {
         gameObject.SetActive(false);
+        gameAdObject.SetActive(true);
         authenticate.SetActive(true);
         editName.SetActive(true);
     }

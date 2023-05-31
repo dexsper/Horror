@@ -1,10 +1,11 @@
-
+/*
 using System;
-using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
 #if UNITY_ANDROID
 using Google.Play.Review;
 #endif
+using UnityEngine;
 
 public class Review : MonoBehaviour
 {
@@ -63,3 +64,4 @@ public class Review : MonoBehaviour
     }
 #endif
 }
+*/

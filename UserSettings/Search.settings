@@ -13,7 +13,7 @@ scopes = {
 	"last_search.B655092D" = "st:Can"
 	"OpenInspectorPreview.B655092D" = "0"
 	"currentGroup.B655092D" = "all"
-	"last_search.DE94955A" = "Locali"
+	"last_search.DE94955A" = "Device"
 	"OpenInspectorPreview.DE94955A" = "0"
 	"currentGroup.DE94955A" = "all"
 }
@@ -72,6 +72,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"D"
 	"st:LobbyName"
 	"https://www.youtube.com/watch?v=NFn74l2WA_8"
 ]

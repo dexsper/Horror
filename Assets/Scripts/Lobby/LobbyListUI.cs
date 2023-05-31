@@ -16,7 +16,8 @@ public class LobbyListUI : MonoBehaviour
     [Title("Buttons")]
     [SerializeField] private Button refreshButton;
     [SerializeField] private Button createLobbyButton;
-
+    [SerializeField] private Button closeButton;
+    
     private LobbyManager _lobbyManager;
 
 
@@ -29,8 +30,15 @@ public class LobbyListUI : MonoBehaviour
 
         refreshButton.onClick.AddListener(RefreshButtonClick);
         createLobbyButton.onClick.AddListener(CreateLobbyButtonClick);
+        closeButton.onClick.AddListener(CloseWindow);
     }
 
+    private void CloseWindow()
+    {
+        gameObject.SetActive(false);
+        CharacterWindowUI.Instance.gameObject.SetActive(true);
+    }
+    
     private void Start()
     {
         _lobbyManager.OnLobbyListChanged += LobbyManager_OnLobbyListChanged;

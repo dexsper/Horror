@@ -253,6 +253,9 @@
         <e p="Audio" t="Include">
           <e p="Player" t="Include" />
         </e>
+        <e p="CleverAdsSolutions" t="Include">
+          <e p="Editor" t="Include" />
+        </e>
         <e p="Cliff Mansion" t="Include">
           <e p="model" t="Include">
             <e p="Nature" t="Include">
@@ -294,6 +297,24 @@
           <e p="Plugins" t="Include">
             <e p="iOS" t="Include" />
             <e p="x86_64" t="Include" />
+          </e>
+        </e>
+        <e p="GeneratedLocalRepo" t="Include">
+          <e p="Firebase" t="Include">
+            <e p="m2repository" t="Include">
+              <e p="com" t="Include">
+                <e p="google" t="Include">
+                  <e p="Firebase" t="Include">
+                    <e p="firebase-analytics-unity" t="Include">
+                      <e p="10.6.0" t="Include" />
+                    </e>
+                    <e p="firebase-app-unity" t="Include">
+                      <e p="10.6.0" t="Include" />
+                    </e>
+                  </e>
+                </e>
+              </e>
+            </e>
           </e>
         </e>
         <e p="Localization" t="Include" />
@@ -1443,6 +1464,17 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
+          <e p="Android" t="Include">
+            <e p="AndroidManifest.xml" t="Include" />
+            <e p="CASPlugin.androidlib" t="Include">
+              <e p="AndroidManifest.xml" t="Include" />
+              <e p="res" t="Include">
+                <e p="xml" t="Include">
+                  <e p="meta_network_security_config.xml" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
           <e p="Demigiant" t="Include">
             <e p="DOTween" t="Include">
               <e p="Editor" t="Include">
@@ -2765,10 +2797,10 @@
           <e p="SleepTIme.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="DeathRoomUI.cs" t="Include" />
+            <e p="HideVirtualKeyboard.cs" t="Include" />
             <e p="JailedPlayers.cs" t="Include" />
             <e p="KeyBoardInput.cs" t="Include" />
             <e p="KeyboardRemoveButton.cs" t="Include" />
-            <e p="m_InputField.cs" t="Include" />
             <e p="Marker.cs" t="Include" />
             <e p="MarkerTarget.cs" t="Include" />
             <e p="PlayersStateUI.cs" t="Include" />
@@ -2776,6 +2808,7 @@
             <e p="PlayerUIController.cs" t="Include" />
             <e p="PlayerUIMarkers.cs" t="Include" />
             <e p="PulseUiAnimation.cs" t="Include" />
+            <e p="SafeZone.cs" t="Include" />
             <e p="SettingsPanelUI.cs" t="Include" />
             <e p="SinglePlayerUI.cs" t="Include" />
             <e p="TouchField.cs" t="Include" />

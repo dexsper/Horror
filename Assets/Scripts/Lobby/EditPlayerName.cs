@@ -18,6 +18,9 @@ public class EditPlayerName : MonoBehaviour
     
     public static EditPlayerName Instance { get; private set; }
     public event EventHandler OnNameChanged;
+    
+    public static event Action OnNameEditOpen;
+    public static event Action OnNameEditClose;
 
     private void Awake()
     {
@@ -59,12 +62,14 @@ public class EditPlayerName : MonoBehaviour
 
     private void OpenKeyBoard()
     {
+        OnNameEditOpen?.Invoke();
         inputKeyBoard.DOLocalMoveY(startPosition.y, 0.25f).SetEase(Ease.Linear);
         _isOpened = true;
     }
 
     private void CloseKeyboard()
     {
+        OnNameEditClose?.Invoke();
         inputKeyBoard.DOLocalMoveY(endPosition.y, 0.25f).SetEase(Ease.Linear);
         _isOpened = false;
     }

@@ -95,6 +95,14 @@ MonoBehaviour:
     m_Localized: CONFRIM
     m_Metadata:
       m_Items: []
+  - m_Id: 1732405350764544
+    m_Localized: CLICK TO DOWNLOAD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2024146561798144
+    m_Localized: 'Current money:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -99,6 +99,14 @@ MonoBehaviour:
     m_Key: Cance
     m_Metadata:
       m_Items: []
+  - m_Id: 1732405350764544
+    m_Key: ClickTOD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2024146561798144
+    m_Key: CurrentMoney
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

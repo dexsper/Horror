@@ -16,7 +16,10 @@ public class CharacterWindowUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _playerCurrentMoney;
     [SerializeField] private CharacterUI _characterViewPrefab;
     [SerializeField] private Transform _charactersContent;
+    [SerializeField] private Button _closeButton;
 
+    [SerializeField] private GameObject editPlayerName, authentificate,gameAdObject;
+    
     private static CharacterWindowUI _instance;
     private Dictionary<string, CharacterUI> _spawnedCharacters;
     private PlayerBalance _playerBalance;
@@ -50,13 +53,22 @@ public class CharacterWindowUI : MonoBehaviour
 
         PlayerEconomy.OnDataRefreshed += UpdateCharacters;
         PlayerEconomy.OnDataRefreshed += GetPlayerBalance;
+        
+        _closeButton.onClick.AddListener(CloseWindow);
     }
     
     private void Start()
     {
-        gameObject.SetActive(false);
+        CloseWindow();
     }
-   
+
+    private void CloseWindow()
+    {
+        gameObject.SetActive(false);
+        gameAdObject.SetActive(true);
+        authentificate.SetActive(true);
+        editPlayerName.SetActive(true);
+    }
     private void OnDestroy()
     {
         PlayerEconomy.OnDataRefreshed -= UpdateCharacters;
