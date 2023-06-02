@@ -208,7 +208,7 @@ MonoBehaviour:
   _stepLower: {fileID: 2463134839365918438}
   _stepSmooth: 2
   _gravityMultiplier: 30
-  _speed: 12
+  _speed: 20
   <IsMove>k__BackingField: 0
   <IsStep>k__BackingField: 0
 --- !u!114 &5539716946378381922
