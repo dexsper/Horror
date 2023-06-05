@@ -28,9 +28,6 @@ public class Marker : MonoBehaviour
     {
         _target = target;
         _target.SetMarker(this);
-        _image.gameObject.SetActive(false);
-        _distanceText.gameObject.SetActive(false);
-        StartCoroutine(EnableWaypoint());
     } 
 
     private void FixedUpdate()
@@ -45,7 +42,7 @@ public class Marker : MonoBehaviour
 
             Vector2 pos = _camera.WorldToScreenPoint(_target.transform.position + _offset);
 
-            if (Vector3.Dot((_target.transform.position - transform.position), transform.forward) < 0)
+            /*if (Vector3.Dot((_target.transform.position - transform.position), transform.forward) < 0)
             {
 
                 if (pos.x < Screen.width / 2)
@@ -56,7 +53,7 @@ public class Marker : MonoBehaviour
                 {
                     pos.x = minX;
                 }
-            }
+            }*/
 
             pos.x = Mathf.Clamp(pos.x, minX, maxX);
             pos.y = Mathf.Clamp(pos.y, minY, maxY);
@@ -65,12 +62,5 @@ public class Marker : MonoBehaviour
             float distance = Vector3.Distance(_camera.transform.position, _target.transform.position);
             _distanceText.text = $"{Mathf.RoundToInt(distance)}m";
         }
-    }
-
-    private IEnumerator EnableWaypoint()
-    {
-        yield return new WaitForSeconds(0.2f);
-        _image.gameObject.SetActive(true);
-        _distanceText.gameObject.SetActive(true);
     }
 }
