@@ -64,7 +64,7 @@ public class Marker : MonoBehaviour
             pos.x = Mathf.Clamp(pos.x, minX, maxX);
             pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
-            _image.transform.position = pos;
+            _image.transform.position = new Vector3(pos.x,pos.y,0);
             float distance = Vector3.Distance(_camera.transform.position, _target.transform.position);
             _distanceText.text = $"{Mathf.RoundToInt(distance)}m";
         }

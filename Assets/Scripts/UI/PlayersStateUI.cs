@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayersStateUI : MonoBehaviour
 {
     [SerializeField] private PlayerStateUI _playerUIPrefab;
+    [SerializeField] private Vector3 startPosition;
 
     private Dictionary<PlayerBehavior, PlayerStateUI> _playersState = new Dictionary<PlayerBehavior, PlayerStateUI>();
 
@@ -17,6 +19,11 @@ public class PlayersStateUI : MonoBehaviour
     {
         PlayerBehavior.OnRespawned -= OnPlayerSpawned;
         PlayerBehavior.OnDead -= OnPlayerDestroy;
+    }
+
+    private void Start()
+    {
+        transform.position = startPosition;
     }
 
     private void OnPlayerDestroy(PlayerBehavior player)

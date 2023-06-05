@@ -149,8 +149,7 @@ public class GameController : NetworkBehaviour
         {
             PlayerEconomy.Instance.IncrementBalance(reward);
             LobbyManager.Instance.LeaveLobby();
-            Ads.Instance.ShowAd();
-            //Review.Instance.OnReview();
+            Review.Instance.OnReview();
         }
         else
         {
