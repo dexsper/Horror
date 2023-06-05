@@ -107,6 +107,14 @@ MonoBehaviour:
     m_Key: CurrentMoney
     m_Metadata:
       m_Items: []
+  - m_Id: 3906632464076800
+    m_Key: Jail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3907048530644992
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

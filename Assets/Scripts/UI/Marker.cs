@@ -51,15 +51,21 @@ public class Marker : MonoBehaviour
                 {
                     pos.x = minX;
                 }
+                if (pos.y < Screen.height / 2)
+                {
+                    pos.y = maxY;
+                }
+                else
+                {
+                    pos.y = minY;
+                }
             }
 
             pos.x = Mathf.Clamp(pos.x, minX, maxX);
             pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
             _image.transform.position = pos;
-
             float distance = Vector3.Distance(_camera.transform.position, _target.transform.position);
-
             _distanceText.text = $"{Mathf.RoundToInt(distance)}m";
         }
     }

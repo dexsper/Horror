@@ -19,7 +19,6 @@ MonoBehaviour:
     - {fileID: 3719918880673111641, guid: 39395501454723a439502786317eafbf, type: 3}
     - {fileID: 1510934210050103546, guid: bb67dd2a3beb9874183b19a1aa923a18, type: 3}
     - {fileID: 2073377337748512125, guid: 9dcebe30c6d618e4c84a37545c4d81f4, type: 3}
-    - {fileID: 2964804334225436267, guid: dc4f185bfadc51f4eba2d3c917f60ba9, type: 3}
     - {fileID: 7757458051237347922, guid: d69e4ace30dccb24fb7589f7600cefb5, type: 3}
     - {fileID: 347959593597801454, guid: 41949a7e3690b8d4a9b232374e9753f4, type: 3}
     - {fileID: 1219949562360389022, guid: 46ca02955e38dff41ba877d510b58bda, type: 3}
@@ -43,7 +42,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 9
+      Data: 8
     - Name: 
       Entry: 7
       Data: 
@@ -85,7 +84,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: 4HeadCharacter
+      Data: PipeLight
     - Name: $v
       Entry: 10
       Data: 3
@@ -97,7 +96,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PipeLight
+      Data: PoopHead
     - Name: $v
       Entry: 10
       Data: 4
@@ -109,7 +108,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PoopHead
+      Data: PipeHead
     - Name: $v
       Entry: 10
       Data: 5
@@ -121,7 +120,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: SirenHead
+      Data: TrafficHead
     - Name: $v
       Entry: 10
       Data: 6
@@ -133,22 +132,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: TrafficHead
-    - Name: $v
-      Entry: 10
-      Data: 7
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 1
       Data: TvHead
     - Name: $v
       Entry: 10
-      Data: 8
+      Data: 7
     - Name: 
       Entry: 8
       Data: 

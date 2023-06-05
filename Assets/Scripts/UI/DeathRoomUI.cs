@@ -7,9 +7,14 @@ public class DeathRoomUI : MonoBehaviour
     [SerializeField] private DeathRoom _deathRoom;
     [SerializeField] private Slider _progressSlider;
 
+
+    [SerializeField] private Button confirmButton;
+    [SerializeField] private GameObject tutorialInfo;
+
     private void Awake()
     {
         _progressButton.onClick.AddListener(OnProgressClick);
+        confirmButton.onClick.AddListener(HideTutorial);
     }
 
     public void OnProgressClick()
@@ -20,5 +25,16 @@ public class DeathRoomUI : MonoBehaviour
     public void UpdateProgress(float v)
     {
         _progressSlider.value = v;
+    }
+
+    public void ShowTutorial()
+    {
+        tutorialInfo.gameObject.SetActive(true);
+    }
+
+    private void HideTutorial()
+    {
+        tutorialInfo.gameObject.SetActive(false);
+        Ads.Instance.ShowAd();
     }
 }

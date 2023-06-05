@@ -79,6 +79,7 @@ public class DeathRoom : NetworkBehaviour
         player.transform.SetPositionAndRotation(position, rotation);
 
         RPC_SetInterfaceActive(player.Owner, true);
+        _ui.ShowTutorial();
     }
 
     [Server]

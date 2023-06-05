@@ -103,6 +103,10 @@ MonoBehaviour:
     m_Localized: 'Current money:'
     m_Metadata:
       m_Items: []
+  - m_Id: 3906632464076800
+    m_Localized: You're in jail. Tap many times to get out of it
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

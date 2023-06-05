@@ -5,14 +5,15 @@ public class MarkerTarget : MonoBehaviour
     private Marker _marker;
     private Generator _generator;
 
+    public Marker Marker => _marker;
+    
     private void Awake()
     {
         if (GetComponent<Generator>())
         {
             _generator = GetComponent<Generator>();
-            
-            Generator.OnRepaired += OnGeneratorRepaired;
         }
+        Generator.OnRepaired += OnGeneratorRepaired;
     }
 
     private void OnDestroy()

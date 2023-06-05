@@ -20,35 +20,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AppMetrica/AppMetrica.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AppMetrica/AppMetrica.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/True_Horror_Creatures/Horror_creature6_v1.0/Materials/thc6.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/True_Horror_Creatures/Horror_creature6_v1.0/Materials/thc6.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/Material lamps evelator/Lamp A.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/Material lamps evelator/Lamp A.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/Material lamps evelator/Lamp B.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/Material lamps evelator/Lamp B.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/Material lamps evelator/Lamp C.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/Material lamps evelator/Lamp C.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/material props/Mirror.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/material props/Mirror.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/material props/exit sign.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/material props/exit sign.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/materials Building/Door roof.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/materials Building/Door roof.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/materials Building/Enery room door.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/materials Building/Enery room door.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Bottle.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Bottle.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Clock.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Clock.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Coffee cup.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Coffee cup.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Cupboard.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Cupboard.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Exit sign.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Exit sign.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/File box.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/File box.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Little cactus 1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Little cactus 1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Little cactus 2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Little cactus 2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Noteblock.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Noteblock.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Pen holder.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Pen holder.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Plant 2.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Plant 2.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Plant 3.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Plant 3.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Storage sign.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Storage sign.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Table.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Table.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Toilet paper.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Toilet paper.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Toilet sign.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Toilet sign.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Trash bin.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/Trash bin.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/carton.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/carton.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/couch office.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/couch office.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/elevator cabin.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/elevator cabin.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/evelator floor number.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/evelator floor number.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/lobby table.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/lobby table.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/office building.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/office building.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/paper box.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/paper box.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/paper.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/paper.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/plant 1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/plant 1.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/water dispenser.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Enviroment/enviroment/Office building/meshes/water dispenser.fbx.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Light Bulb Head/Materials 2/SKin 3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Light Bulb Head/Materials 2/SKin 3.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/EditPlayerName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/EditPlayerName.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/KeyboardRemoveButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/KeyboardRemoveButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/LeaveZone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/LeaveZone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/CharactersData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/CharactersData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Office.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Office.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SettingsPanelUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SettingsPanelUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,51 +84,50 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/Banner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PulseUiAnimation.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/InterstitialAd.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/Ads.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.2/Runtime/BurstCompiler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HideVirtualKeyboard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/Review.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizeStringEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/InterstitialAd.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/FireBaseScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardConfirm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/UI/TargetWaypoint.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Car/WinCondition.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/Ads.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/AnalyticsEventManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/AnalyticsEventManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/FireBaseScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../PixelFisher/Assets/Scripts/UI/SafeArea/SafeArea.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SettingsPanelUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Interstitial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Car/NeededCarsItems.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/Firebase/FirebaseInitialization.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Player/PlayerComponents.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.economy@3.1.2/Runtime/Model/PlayerBalance.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Car/WinCondition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/KeyboardRemoveButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SafeZone.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SettingsPanelUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/Ads/Ads.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardConfirm.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/FireBaseScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/Events/EventsManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/Events/PlayerOutOfBounds.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../PixelFisher/Assets/Scripts/UI/SafeArea/SafeArea.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.economy@3.1.2/Runtime/Model/CurrencyDefinition.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/TrainComponents/PlayerDeath.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Interstitial.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizeStringEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/KeyboardRemoveButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/Events/EventsManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.2/Runtime/BurstCompiler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/Events/PlayerOutOfBounds.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.economy@3.1.2/Runtime/Model/CurrencyDefinition.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.localization@1.3.2/Runtime/Component Localizers/LocalizedMonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Screamer/Screamer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/AnalyticsEventManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Player/PlayerComponents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Ads/Banner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SafeZone.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/PlayerDataObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.economy@3.1.2/Runtime/Model/PlayerBalance.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Player.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/HideVirtualKeyboard.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/FireBaseScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../CharlesTrain/Assets/Scripts/Ads/Ads.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/PulseUiAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/TrainComponents/PlayerDeath.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacChaseState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/Interaction/IInteractable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/OfflineScene.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacBehaviour.cs" />
@@ -115,8 +139,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Localization.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LocalizationSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LocalizationUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/FakePlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/VoiceChatController.cs" />
@@ -130,8 +152,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PulseUiAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
@@ -146,13 +166,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SettingsPanelUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/Android/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/KeyboardRemoveButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardConfirm.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/EditPlayerName.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" />
       </list>
     </option>
   </component>
@@ -227,6 +253,7 @@
       <workItem from="1685456665999" duration="2075000" />
       <workItem from="1685524626683" duration="3256000" />
       <workItem from="1685558125989" duration="3191000" />
+      <workItem from="1685971144084" duration="2930000" />
     </task>
     <servers />
   </component>

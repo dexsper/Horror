@@ -41,7 +41,7 @@ public class Ads : MonoBehaviour
         adViewAdaptive = manager.GetAdView(AdSize.AdaptiveFullWidth);
         adViewAdaptive.SetActive(true);
 
-        adViewAdaptive.position = AdPosition.BottomCenter;
+        adViewAdaptive.position = AdPosition.TopCenter;
     }
 
     public void ShowAd()

@@ -134,7 +134,7 @@ public class PlayerUIController : MonoBehaviour
         UpdateRepairedGeneratorsText(count);
 
         AnalyticsEventManager.OnEvent("Repaired generator","Repaired",count.ToString());
-        if (count == 0)
+        if (count == 5)
         {
             repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru" ? endRu : endEn;
         }
