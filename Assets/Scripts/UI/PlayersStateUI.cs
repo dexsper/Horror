@@ -23,9 +23,15 @@ public class PlayersStateUI : MonoBehaviour
 
     private void Start()
     {
-        transform.position = startPosition;
+        
     }
 
+    [ContextMenu("Test")]
+    private void SetPosition()
+    {
+        transform.localPosition = startPosition;
+    }
+    
     private void OnPlayerDestroy(PlayerBehavior player)
     {
         if (player == null)

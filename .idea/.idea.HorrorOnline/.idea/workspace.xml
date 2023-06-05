@@ -20,13 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Level(Backrroms).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Level(Backrroms).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Marker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Marker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Backrooms.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Backrooms.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Labyrint.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Labyrint.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Office.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Office.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +101,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/TargetWaypoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCameraMarkers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Localization.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/LocalizationSettings.cs" />
@@ -106,7 +119,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PulseUiAnimation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/m_InputField.cs" />
         <option value="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/HideVirtualKeyboard.cs" />
@@ -123,14 +135,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/KeyboardRemoveButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardConfirm.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/EditPlayerName.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" />
       </list>
     </option>
@@ -206,7 +220,9 @@
       <workItem from="1685456665999" duration="2075000" />
       <workItem from="1685524626683" duration="3256000" />
       <workItem from="1685558125989" duration="3191000" />
-      <workItem from="1685971144084" duration="6432000" />
+      <workItem from="1685971144084" duration="6693000" />
+      <workItem from="1685980511544" duration="2015000" />
+      <workItem from="1685982687362" duration="508000" />
     </task>
     <servers />
   </component>

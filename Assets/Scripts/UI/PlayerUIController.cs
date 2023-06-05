@@ -51,7 +51,7 @@ public class PlayerUIController : MonoBehaviour
         repairedGeneratorsCount.text =
             LocalizationUI.Instance.GetLocaleName() == "ru" ? findGeneratorsRu : findGeneratorsEn;
         yield return new WaitForSeconds(5f);
-        UpdateRepairedGeneratorsText(Generator.Generators.Count);
+        UpdateRepairedGeneratorsText(Generator.Generators.Where((generator1 => generator1.IsRepaired)).Count());
     }
     private void OnEnable()
     {

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerUIMarkers : MonoBehaviour
@@ -5,14 +6,19 @@ public class PlayerUIMarkers : MonoBehaviour
     [SerializeField] private Marker _markerPrefab;
     [SerializeField] private Transform _markersParent;
 
+    [SerializeField] private List<MarkerTarget> _markerTargets = new List<MarkerTarget>();
+    
     private void Start()
     {
-        var markerTargets = FindObjectsOfType<MarkerTarget>(true);
+        SpawnMarkers();
+    }
 
-        for (int i = 0; i < markerTargets.Length; i++)
+    private void SpawnMarkers()
+    {
+        for (int i = 0; i < _markerTargets.Count; i++)
         {
             var marker = Instantiate(_markerPrefab, _markersParent);
-            marker.SetTarget(markerTargets[i]);
+            marker.SetTarget(_markerTargets[i]);
         }
     }
 }

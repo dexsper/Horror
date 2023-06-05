@@ -29,7 +29,7 @@ public class Marker : MonoBehaviour
         _target.SetMarker(this);
     } 
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (_target != null && _image != null) 
         {
@@ -39,7 +39,7 @@ public class Marker : MonoBehaviour
             float minY = _image.GetPixelAdjustedRect().height / 2;
             float maxY = Screen.height - minY;
 
-            Vector2 pos = _camera.WorldToScreenPoint(_target.transform.position + _offset);
+            Vector3 pos = _camera.WorldToScreenPoint(_target.transform.position + _offset);
 
             if (Vector3.Dot((_target.transform.position - transform.position), transform.forward) < 0)
             {
