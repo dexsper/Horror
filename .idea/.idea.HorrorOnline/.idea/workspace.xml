@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -125,8 +123,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" />
       </list>
     </option>
   </component>
@@ -204,7 +202,7 @@
       <workItem from="1685971144084" duration="6693000" />
       <workItem from="1685980511544" duration="2015000" />
       <workItem from="1685982687362" duration="508000" />
-      <workItem from="1685985446993" duration="2606000" />
+      <workItem from="1685985446993" duration="3220000" />
     </task>
     <servers />
   </component>
