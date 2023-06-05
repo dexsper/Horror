@@ -235,6 +235,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4393252310969058991, guid: 0570b6f7f713dc44a90463654bbcd8d0,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4393252310969058995, guid: 0570b6f7f713dc44a90463654bbcd8d0,
         type: 3}
       propertyPath: m_Name
@@ -643,4 +648,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ab3e335bec8384cb663d6e71f8c338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterName: PoopHead
+  CharacterName: 

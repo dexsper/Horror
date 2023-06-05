@@ -1,3 +1,4 @@
+using System.Collections;
 using FishNet.Object;
 using TMPro;
 using UnityEngine;
@@ -27,6 +28,9 @@ public class Marker : MonoBehaviour
     {
         _target = target;
         _target.SetMarker(this);
+        _image.gameObject.SetActive(false);
+        _distanceText.gameObject.SetActive(false);
+        StartCoroutine(EnableWaypoint());
     } 
 
     private void FixedUpdate()
@@ -39,10 +43,11 @@ public class Marker : MonoBehaviour
             float minY = _image.GetPixelAdjustedRect().height / 2;
             float maxY = Screen.height - minY;
 
-            Vector3 pos = _camera.WorldToScreenPoint(_target.transform.position + _offset);
+            Vector2 pos = _camera.WorldToScreenPoint(_target.transform.position + _offset);
 
             if (Vector3.Dot((_target.transform.position - transform.position), transform.forward) < 0)
             {
+
                 if (pos.x < Screen.width / 2)
                 {
                     pos.x = maxX;
@@ -51,22 +56,21 @@ public class Marker : MonoBehaviour
                 {
                     pos.x = minX;
                 }
-                if (pos.y < Screen.height / 2)
-                {
-                    pos.y = maxY;
-                }
-                else
-                {
-                    pos.y = minY;
-                }
             }
 
             pos.x = Mathf.Clamp(pos.x, minX, maxX);
             pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
-            _image.transform.position = new Vector3(pos.x,pos.y,0);
+            _image.transform.position = pos;
             float distance = Vector3.Distance(_camera.transform.position, _target.transform.position);
             _distanceText.text = $"{Mathf.RoundToInt(distance)}m";
         }
+    }
+
+    private IEnumerator EnableWaypoint()
+    {
+        yield return new WaitForSeconds(0.2f);
+        _image.gameObject.SetActive(true);
+        _distanceText.gameObject.SetActive(true);
     }
 }

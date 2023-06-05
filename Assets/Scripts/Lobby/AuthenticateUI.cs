@@ -9,6 +9,7 @@ public class AuthenticateUI : MonoBehaviour
     [SerializeField] private GameObject editPlayerName;
     [SerializeField] private GameObject characterWindowUI;
     [SerializeField] private GameObject gameAdObject;
+    [SerializeField] private GameObject settingsButton;
 
     private void Awake()
     {
@@ -43,5 +44,6 @@ public class AuthenticateUI : MonoBehaviour
         editPlayerName.SetActive(false);
         gameAdObject.SetActive(false);
         gameObject.SetActive(false);
+        settingsButton.SetActive(false);
     }
 }
