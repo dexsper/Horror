@@ -23,7 +23,7 @@ public class PlayersStateUI : MonoBehaviour
 
     private void Start()
     {
-        
+        SetPosition();
     }
 
     [ContextMenu("Test")]
