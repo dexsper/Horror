@@ -27,8 +27,6 @@ GameObject:
   - component: {fileID: 8590535102796727616}
   - component: {fileID: 7830469801405659051}
   - component: {fileID: 5398802315561544480}
-  - component: {fileID: 575357268364332296}
-  - component: {fileID: 1237867387803667552}
   - component: {fileID: 7314469319987556729}
   m_Layer: 0
   m_Name: NetworkManager
@@ -346,54 +344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3913483aed20404fb58bf11d462340c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &575357268364332296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3109863210216630129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0bdaf1febfde6841a8628693240e396, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1237867387803667552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3109863210216630129}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 843e5b43b4dcf427780c1376ee0473ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  managerId:
-    android: 0
-    ios: 0
-  adPosition: 3
-  adOffset: {x: 0, y: 0}
-  adSize: 2
-  OnAdLoaded:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAdFailedToLoad:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAdShown:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAdClicked:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAdHidden:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAdImpression:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &7314469319987556729
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -63,6 +63,7 @@
           </e>
           <e p="AssetGroupTemplates" t="Include" />
           <e p="DataBuilders" t="Include" />
+          <e p="link.xml" t="Include" />
           <e p="windows" t="Include" />
         </e>
         <e p="Animations" t="Include">

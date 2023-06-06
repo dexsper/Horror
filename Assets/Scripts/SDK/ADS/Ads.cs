@@ -44,13 +44,25 @@ public class Ads : MonoBehaviour
         adViewAdaptive.position = AdPosition.TopCenter;
     }
 
+    private void CheckConnection()
+    {
+        
+    }
+    
     public void ShowAd()
     {
-        if (manager.IsReadyAd(AdType.Interstitial))
+        if (Application.internetReachability != NetworkReachability.NotReachable)
         {
-            manager.ShowAd(AdType.Interstitial);
-            InterstitialAndRewardedEvent();
-            Debug.Log("Ad showed");
+            if (manager.IsReadyAd(AdType.Interstitial))
+            {
+                manager.ShowAd(AdType.Interstitial);
+                InterstitialAndRewardedEvent();
+                Debug.Log("Ad showed");
+            }
+            else
+            {
+                Debug.Log("Ad can not be showed");
+            }
         }
     }
     
