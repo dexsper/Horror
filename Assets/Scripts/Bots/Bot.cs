@@ -6,9 +6,9 @@ public abstract class Bot : MonoBehaviour
 {
     [SerializeField] private float _maxRandomWalk;
 
-    protected PlayerModel _playerModel;
+    //protected PlayerModel _playerModel;
     protected FieldOfView _fieldOfView;
-    protected SurvivorBehaviour _playerBehaviour;
+    //protected SurvivorBehaviour _playerBehaviour;
     protected NavMeshAgent _agent;
 
     protected Vector3 _targetPosition;
@@ -16,10 +16,10 @@ public abstract class Bot : MonoBehaviour
 
     protected virtual void Awake()
     {
-        _playerModel = GetComponent<PlayerModel>();
+        //_playerModel = GetComponent<PlayerModel>();
         _agent = GetComponent<NavMeshAgent>();
         _fieldOfView = GetComponent<FieldOfView>();
-        _playerBehaviour = GetComponent<SurvivorBehaviour>();
+        //_playerBehaviour = GetComponent<SurvivorBehaviour>();
     }
 
     private void Update()
@@ -36,7 +36,7 @@ public abstract class Bot : MonoBehaviour
             _targetPosition = Vector3.zero;
         }
 
-        _playerModel.Animator.SetBool(nameof(IsMove), IsMove);
+        //_playerModel.Animator.SetBool(nameof(IsMove), IsMove);
     }
     protected virtual void Move()
     {

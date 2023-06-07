@@ -7,7 +7,7 @@ public class PlayerBot : Bot
     [SerializeField] private List<string> _names;
     [SerializeField] private TextMeshProUGUI _nameText;
     
-    private Door _door;
+    //private Door _door;
 
     protected override void Awake()
     {
@@ -19,7 +19,7 @@ public class PlayerBot : Bot
         }
     }
 
-    protected override Vector3 GetTargetPosition()
+    /*protected override Vector3 GetTargetPosition()
     {
         if (!_playerBehaviour.KeyTaken)
         {
@@ -47,5 +47,5 @@ public class PlayerBot : Bot
         }
 
         return Vector3.zero;
-    }
+    }*/
 }
