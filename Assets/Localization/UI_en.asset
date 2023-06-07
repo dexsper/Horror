@@ -111,6 +111,10 @@ MonoBehaviour:
     m_Localized: The ad will be displayed further
     m_Metadata:
       m_Items: []
+  - m_Id: 4269008266858496
+    m_Localized: Welcome to the game. Find and repair all generators
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

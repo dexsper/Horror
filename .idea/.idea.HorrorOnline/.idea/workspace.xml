@@ -21,26 +21,14 @@
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/Ghoul.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/Ghoul.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/thc6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ManiacAssets/thc6.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Localization/UI Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI Shared Data.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Maniac.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Maniac.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Backrooms.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Backrooms.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DeathRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DeathRoom.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Labyrint.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Labyrint.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,6 +218,7 @@
       <workItem from="1685991796457" duration="620000" />
       <workItem from="1686042567614" duration="1335000" />
       <workItem from="1686056063298" duration="989000" />
+      <workItem from="1686127760714" duration="40000" />
     </task>
     <servers />
   </component>
