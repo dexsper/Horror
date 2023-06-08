@@ -8,17 +8,17 @@ using UnityEngine;
 using Zenject;
 
 [RequireComponent(typeof(PredictedObject), typeof(PlayerInteraction))]
-[RequireComponent(typeof(PlayerMovement), typeof(Health))]
+[RequireComponent(typeof(Health))]
 public class PlayerBehavior : NetworkBehaviour
 {
-    private Animator _playerAnimator;
 
     public PredictedObject PredictedObject { get; private set; }
     public Health Health { get; private set; }
     public PlayerInteraction Interaction { get; private set; }
     public PlayerMovement Movement { get; private set; }
     public IPlayerInput Input { get; private set; }
-    
+
+    public Animator Animator { get; private set; }
     public PlayerCamera PlayerCamera { get; private set; }
     public PlayerUI PlayerUI { get; private set; }
 
@@ -49,8 +49,6 @@ public class PlayerBehavior : NetworkBehaviour
 
         Health.OnDead += () => OnDead?.Invoke(this);
         Health.OnRestored += () => OnRespawned?.Invoke(this);
-        
-        //PlayerUI.SetPlayerNickNameOnUI(this.Owner.GetPlayer());
     }
 
     public override void OnStartClient()
@@ -99,15 +97,20 @@ public class PlayerBehavior : NetworkBehaviour
 
     private void UpdateAnimations()
     {
-        if (_playerAnimator == null)
+        if (Animator == null)
             return;
 
-        _playerAnimator.SetBool(nameof(Movement.IsMove), Movement.IsMove);
-        _playerAnimator.SetBool(nameof(Interaction.IsInteract), Interaction.IsInteract);
+        if (Movement != null)
+            Animator.SetBool(nameof(Movement.IsMove), Movement.IsMove);
+
+        if (Interaction != null)
+            Animator.SetBool(nameof(Interaction.IsInteract), Interaction.IsInteract);
     }
 
     public void UpdateModel(GameObject model)
     {
+        Debug.Log(model);
+
         Model = Instantiate(model, PredictedObject.GetGraphicalObject());
 
         foreach (var render in Model.GetComponentsInChildren<Renderer>())
@@ -115,6 +118,6 @@ public class PlayerBehavior : NetworkBehaviour
             render.enabled = !base.IsOwner;
         }
 
-        _playerAnimator = Model.GetComponent<Animator>();
+        Animator = Model.GetComponent<Animator>();
     }
 }

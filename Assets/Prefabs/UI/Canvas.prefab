@@ -2365,7 +2365,13 @@ MonoBehaviour:
   _markerPrefab: {fileID: 1079416370537627446, guid: 84762f7f10e3fa245af2ad760ed68935,
     type: 3}
   _markersParent: {fileID: 5791044543585757034}
-  _markerTargets: []
+  _markerTargets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &807662667561804350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2726,7 +2732,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -175}
+  m_AnchoredPosition: {x: 0, y: 0.9284668}
   m_SizeDelta: {x: 675, y: 95}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &2088350926075966587

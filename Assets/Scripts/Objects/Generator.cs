@@ -18,9 +18,9 @@ public class Generator : NetworkBehaviour, IInteractable
 
     [SerializeField] private GeneratorSettings _settings = default;
 
-    [Title("Interaction")] 
+    [Title("Interaction")]
     [SerializeField] private string _startRepairRu, _startRepairEn;
-    [SerializeField] private string _stopRepairRu,_stopRepairEn;
+    [SerializeField] private string _stopRepairRu, _stopRepairEn;
     [SerializeField] private int neededRepairedGeneratorsCount;
 
     [Title("Effects")]
@@ -129,8 +129,17 @@ public class Generator : NetworkBehaviour, IInteractable
     }
 
     [ServerRpc(RequireOwnership = false)]
+    public void Interact_RPC(PlayerBehavior player)
+    {
+        Interact(player);
+    }
+
+    [Server]
     public void Interact(PlayerBehavior player)
     {
+        if (RepairInitiator != null && RepairInitiator != player)
+            return;
+
         _isRepairing = !_isRepairing;
         _repairInitiator = player;
 

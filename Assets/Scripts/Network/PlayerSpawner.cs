@@ -37,7 +37,7 @@ public class PlayerSpawner : NetworkBehaviour
         _networkManager.ServerManager.Spawn(nob, conn);
 
         UpdatePlayerModel(nob, player.Data[LobbyManager.KEY_PLAYER_CHARACTER].Value);
-        AnalyticsEventManager.OnEvent("Player Spawned","Spawn","1");
+        AnalyticsEventManager.OnEvent("Player Spawned", "Spawn", "1");
     }
 
     [Server]
@@ -50,11 +50,13 @@ public class PlayerSpawner : NetworkBehaviour
     [ObserversRpc(BufferLast = true)]
     private void UpdatePlayerModel(NetworkObject nob, string prefabName)
     {
-        var prefab = _characterData[prefabName];
-        nob.GetComponent<PlayerBehavior>().UpdateModel(prefab);
+        if (_characterData.Characters.TryGetValue(prefabName, out GameObject prefab))
+        {
+            nob.GetComponent<PlayerBehavior>().UpdateModel(prefab);
+        }
     }
 
-    private void GetSpawn(out Vector3 pos, out Quaternion rot)
+    public void GetSpawn(out Vector3 pos, out Quaternion rot)
     {
         if (_spawns.Count == 0)
         {

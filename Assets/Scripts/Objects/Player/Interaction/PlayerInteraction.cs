@@ -37,7 +37,7 @@ public class PlayerInteraction : NetworkBehaviour
     {
         if (LookInteractable != null && _player.IsOwner)
         {
-            LookInteractable.Interact(_player);
+            LookInteractable.Interact_RPC(_player);
         }
     }
 

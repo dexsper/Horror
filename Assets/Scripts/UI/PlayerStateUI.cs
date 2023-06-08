@@ -16,8 +16,14 @@ public class PlayerStateUI : MonoBehaviour
         _behavior.Health.OnDead += OnPlayerDead;
         _behavior.Health.OnRestored += OnPlayerHealthRestored;
 
-        var data = _behavior.Owner.GetPlayer().Data;
-        _nameText.text = data[LobbyManager.KEY_PLAYER_NAME].Value;
+
+        var playerInfo = _behavior.Owner.GetPlayer();
+
+        if (playerInfo != null)
+        {
+            var data = playerInfo.Data;
+            _nameText.text = data[LobbyManager.KEY_PLAYER_NAME].Value;
+        }
     }
 
     private void OnDestroy()

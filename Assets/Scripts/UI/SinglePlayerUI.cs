@@ -65,7 +65,8 @@ public class SinglePlayerUI : MonoBehaviour
         Destroy(_networkManager.gameObject.GetComponent<UnityServicesAuthenticator>());
 
         var fakePlayer = _networkManager.gameObject.AddComponent<FakePlayer>();
-
+        
+        fakePlayer.PlayerName = EditPlayerName.Instance.GetPlayerName();
         fakePlayer.CharacterName = _characterData.Characters.Keys.ElementAt(0);
 
         _multipassTransport.SetClientTransport(0);

@@ -10,6 +10,8 @@ using UnityEngine;
 public class GameController : NetworkBehaviour
 {
     [SerializeField] private int _winReward = 10;
+    [SerializeField] private PlayerBot _playerBot;
+
     [SerializeField, Scene] private string _deathRoomScene;
 
     private static GameController _instance;
@@ -19,7 +21,7 @@ public class GameController : NetworkBehaviour
     private NetworkManager _networkManager;
 
     public static event Action OnGameEnded;
-    
+
     public static GameController Instance
     {
         get
@@ -58,6 +60,20 @@ public class GameController : NetworkBehaviour
         if (base.IsServer)
         {
             _sceneManager.LoadGlobalScenes(new SceneLoadData(_deathRoomScene));
+
+            if (LobbyManager.Instance == null || !LobbyManager.Instance.IsLobbyHost())
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    _spawner.GetSpawn(out Vector3 position, out Quaternion rotation);
+
+
+                    NetworkObject nob = _networkManager.GetPooledInstantiated(_playerBot.gameObject, true);
+
+                    nob.transform.SetPositionAndRotation(position, rotation);
+                    _networkManager.ServerManager.Spawn(nob);
+                }
+            }
         }
     }
 
@@ -114,7 +130,7 @@ public class GameController : NetworkBehaviour
     [Server]
     private void OnPlayerRemoved()
     {
-        if(PlayerBehavior.Players.Count == 0)
+        if (PlayerBehavior.Players.Count == 0)
         {
             _networkManager.ServerManager.StopConnection(true);
         }
@@ -155,7 +171,7 @@ public class GameController : NetworkBehaviour
         {
             InstanceFinder.ServerManager.StopConnection(true);
         }
-        
+
         OnGameEnded?.Invoke();
     }
 

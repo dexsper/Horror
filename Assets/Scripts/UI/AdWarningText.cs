@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,7 +13,11 @@ public class AdWarningText : MonoBehaviour
     private void ConfirmAndShowAd()
     {
         gameObject.SetActive(false);
-        Ads.Instance.ShowAd();
+        
+        if (Ads.Instance != null)
+        {
+            Ads.Instance.ShowAd();
+        }
     }
-    
+
 }

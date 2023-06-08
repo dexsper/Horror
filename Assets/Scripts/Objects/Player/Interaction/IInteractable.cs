@@ -8,7 +8,9 @@ public interface IInteractable
 
     bool IsInteract(PlayerBehavior player);
     bool CanInteract(PlayerBehavior player);
-    void Interact(PlayerBehavior player);
+    
+    void Interact(PlayerBehavior  player);
+    void Interact_RPC(PlayerBehavior player);
 
     float GetRepairProgress();
 }

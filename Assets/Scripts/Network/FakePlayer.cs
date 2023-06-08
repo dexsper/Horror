@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class FakePlayer : MonoBehaviour
 {
+    public string PlayerName;
     public string CharacterName;
 
     private ServerManager _serverManager;
@@ -23,11 +24,16 @@ public class FakePlayer : MonoBehaviour
     {
         if (args.ConnectionState == RemoteConnectionState.Started)
         {
+            if (string.IsNullOrEmpty(PlayerName))
+            {
+                PlayerName = $"Fake_{_serverManager.Clients.Count}_Player";
+            }
+
             ConnectionIdentity.Players[conn.ClientId] = new Player($"Fake_{_serverManager.Clients.Count}")
             {
                 Data = new Dictionary<string, PlayerDataObject>
                 {
-                    {LobbyManager.KEY_PLAYER_NAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, $"Fake_{_serverManager.Clients.Count}_Player")},
+                    {LobbyManager.KEY_PLAYER_NAME, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, PlayerName)},
                     {LobbyManager.KEY_PLAYER_CHARACTER, new PlayerDataObject(PlayerDataObject.VisibilityOptions.Public, CharacterName)}
                 }
             };
