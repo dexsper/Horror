@@ -394,7 +394,7 @@ MonoBehaviour:
   NetworkObserver: {fileID: 0}
   <PrefabId>k__BackingField: 6
   <SpawnableCollectionId>k__BackingField: 0
-  _scenePathHash: 3047991809
+  _scenePathHash: 0
   <SceneId>k__BackingField: 0
   <AssetPathHash>k__BackingField: 16724120281653386486
   _sceneNetworkObjects:
@@ -533,7 +533,10 @@ MonoBehaviour:
   _maxRandomWalk: 15
   _characterData: {fileID: 11400000, guid: 026af8e03a0f1b144892d98db4bb3f3d, type: 2}
   _names:
-  - LOX
+  - John
+  - Ivan
+  - Dmitriy
+  - George
   _nameText: {fileID: 5781422896510293608}
 --- !u!114 &-1799325541612363247
 MonoBehaviour:

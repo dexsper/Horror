@@ -15,16 +15,15 @@ public class LobbyCreateUI : MonoBehaviour {
     [SerializeField] private Button lobbyNameButton;
     [SerializeField] private Button publicPrivateButton;
     [SerializeField] private Button maxPlayersButton;
-    [SerializeField] private Button gameModeButton;
     [SerializeField] private TextMeshProUGUI lobbyNameText;
     [SerializeField] private TextMeshProUGUI publicPrivateText;
     [SerializeField] private TextMeshProUGUI maxPlayersText;
-    [SerializeField] private TextMeshProUGUI gameModeText;
 
 
     private string lobbyName;
     private bool isPrivate;
     private int maxPlayers;
+    private int botsCount;
 
     private void Awake() {
         Instance = this;

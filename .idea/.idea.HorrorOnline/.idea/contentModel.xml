@@ -2867,10 +2867,6 @@
           <e p="Office" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="Bots" t="Include">
-            <e p="Bot.cs" t="Include" />
-            <e p="PlayerBot.cs" t="Include" />
-          </e>
           <e p="Data" t="Include">
             <e p="CharactersData.cs" t="Include" />
             <e p="PlayerEconomy.cs" t="Include" />
@@ -2942,6 +2938,10 @@
               <e p="ManiacState.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
+              <e p="Bot" t="Include">
+                <e p="Bot.cs" t="Include" />
+                <e p="PlayerBot.cs" t="Include" />
+              </e>
               <e p="Interaction" t="Include">
                 <e p="IInteractable.cs" t="Include" />
                 <e p="PlayerInteraction.cs" t="Include" />

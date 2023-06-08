@@ -1151,6 +1151,7 @@ MonoBehaviour:
   _componentIndexCache: 1
   _addedNetworkObject: {fileID: 3353939863789235066}
   _networkObjectCache: {fileID: 3353939863789235066}
+  botsCount: 2
   _winReward: 10
   _playerBot: {fileID: -314221151685715940, guid: f3236fdd7c77fde40af727faf2333cce,
     type: 3}

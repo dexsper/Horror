@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class GameController : NetworkBehaviour
 {
+    [SerializeField] private int botsCount =2;
     [SerializeField] private int _winReward = 10;
     [SerializeField] private PlayerBot _playerBot;
 
@@ -63,7 +64,7 @@ public class GameController : NetworkBehaviour
 
             if (LobbyManager.Instance == null || !LobbyManager.Instance.IsLobbyHost())
             {
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < botsCount; i++)
                 {
                     _spawner.GetSpawn(out Vector3 position, out Quaternion rotation);
 
