@@ -115,6 +115,10 @@ MonoBehaviour:
     m_Localized: Welcome to the game. Find and repair all generators
     m_Metadata:
       m_Items: []
+  - m_Id: 6413076186238976
+    m_Localized: Do you want to watch an ad and get a new player model as a reward?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -20,11 +20,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/3 Pipe Head/Materials/Anims/New Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/3 Pipe Head/Materials/Anims/New Animator Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/4 Head/4 Head.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/4 Head/4 Head.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Light Bulb Head/Materials 2/Anims/New Animator Controller.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Light Bulb Head/Materials 2/Anims/New Animator Controller.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Light Head First/LightHeadCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Light Head First/LightHeadCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Megahorn Head/MegahornCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Megahorn Head/MegahornCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Pipe Light Head/PipeLightHeadCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Pipe Light Head/PipeLightHeadCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Poop Head/PoopHeadCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Poop Head/PoopHeadCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/TV Head/TvHeadCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/TV Head/TvHeadCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Traffic Head/TrafficHeadCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/HorrorModels/Traffic Head/TrafficHeadCharacter.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI Shared Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI Shared Data.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetworkManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetworkManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Character.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Search.settings" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Search.settings" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +89,7 @@
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Screamer/Screamer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Telegram Desktop/TargetWaypoint (2).cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/RewardedMenuImage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/AnalyticsEventManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/Player/PlayerComponents.cs" root0="SKIP_HIGHLIGHTING" />
@@ -81,7 +108,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerCamera.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/TargetWaypoint.cs" />
@@ -101,14 +127,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PulseUiAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/m_InputField.cs" />
         <option value="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/HideVirtualKeyboard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SinglePlayerUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SafeZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SettingsPanelUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" />
@@ -120,18 +144,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AdWarningText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/RewardedMenuImage.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" />
       </list>
     </option>
   </component>
@@ -216,6 +243,8 @@
       <workItem from="1686127760714" duration="40000" />
       <workItem from="1686243011542" duration="781000" />
       <workItem from="1686245633319" duration="209000" />
+      <workItem from="1686563424726" duration="2056000" />
+      <workItem from="1686570058317" duration="6043000" />
     </task>
     <servers />
   </component>
@@ -242,5 +271,9 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="777" y="195" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1684777611199" />
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup" timestamp="1686572745909">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="623" y="223" width="672" height="678" key="search.everywhere.popup/0.0.1920.1032/1920.0.1920.1032@0.0.1920.1032" timestamp="1686572745909" />
   </component>
 </project>

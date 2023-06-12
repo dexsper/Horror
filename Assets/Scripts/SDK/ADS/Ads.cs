@@ -1,6 +1,7 @@
 using System;
 using CAS;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Ads : MonoBehaviour
 {
@@ -44,11 +45,6 @@ public class Ads : MonoBehaviour
         adViewAdaptive.position = AdPosition.TopCenter;
     }
 
-    private void CheckConnection()
-    {
-        
-    }
-    
     public void ShowAd()
     {
         if (Application.internetReachability != NetworkReachability.NotReachable)
@@ -65,7 +61,24 @@ public class Ads : MonoBehaviour
             }
         }
     }
-    
+
+    public void ShowRewardedAd(Action action)
+    {
+        if (Application.internetReachability != NetworkReachability.NotReachable)
+        {
+            if (manager.IsReadyAd(AdType.Rewarded))
+            {
+                manager.ShowAd(AdType.Rewarded);
+                manager.OnRewardedAdCompleted += () => action?.Invoke();
+                Debug.Log("rewarded showed");
+            }
+            else
+            {
+                Debug.Log("rewarded can not be showed");
+            }
+        }
+    }
+
     private void InterstitialAndRewardedEvent()
     {
         if (PlayerPrefs.HasKey("InterstitialAndRewarded"))

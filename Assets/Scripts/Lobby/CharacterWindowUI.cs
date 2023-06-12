@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using TMPro;
+using Unity.Services.Economy;
 using Unity.Services.Economy.Model;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,8 @@ public class CharacterWindowUI : MonoBehaviour
     [SerializeField] private Button _closeButton;
 
     [SerializeField] private GameObject editPlayerName, authentificate,gameAdObject;
+
+    [SerializeField] private string rewardedSkinID;
     
     private static CharacterWindowUI _instance;
     private Dictionary<string, CharacterUI> _spawnedCharacters;
@@ -53,6 +56,7 @@ public class CharacterWindowUI : MonoBehaviour
 
         PlayerEconomy.OnDataRefreshed += UpdateCharacters;
         PlayerEconomy.OnDataRefreshed += GetPlayerBalance;
+        PlayerEconomy.OnDataRefreshed += UpdateUI;
         
         _closeButton.onClick.AddListener(CloseWindow);
     }
@@ -73,6 +77,7 @@ public class CharacterWindowUI : MonoBehaviour
     {
         PlayerEconomy.OnDataRefreshed -= UpdateCharacters;
         PlayerEconomy.OnDataRefreshed -= GetPlayerBalance;
+        PlayerEconomy.OnDataRefreshed -= UpdateUI;
     }
 
     private async void GetPlayerBalance()
@@ -81,6 +86,19 @@ public class CharacterWindowUI : MonoBehaviour
         _playerCurrentMoney.text = $"{_playerBalance.Balance}";
     }
 
+    public void ShowRewardedAdd()
+    {
+        Ads.Instance.ShowRewardedAd(OnRewardedAdPurchase);
+    }
+
+    private async void OnRewardedAdPurchase()
+    {
+        AnalyticsEventManager.OnEvent("Rewarded Ad closed", "rewardAd","1");
+        PlayersInventoryItem createdInventoryItem =
+            await EconomyService.Instance.PlayerInventory.AddInventoryItemAsync(rewardedSkinID);
+        PlayerEconomy.Instance.Refresh();
+    }
+    
     public void CharacterAction(string characterName)
     {
         if (CharacterIsPurchased(characterName))

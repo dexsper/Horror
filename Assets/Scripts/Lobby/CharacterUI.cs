@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class CharacterUI : MonoBehaviour
     [SerializeField] private Button _actionButton;
     [SerializeField] private Image _moneyImage;
     [SerializeField] private Transform _modelHolder;
+    [SerializeField] private Vector3 _rotationVector;
     
     [SerializeField] private List<string> russianButtonText = new List<string>();
     [SerializeField] private List<string> englishButtonText = new List<string>();
@@ -21,6 +23,13 @@ public class CharacterUI : MonoBehaviour
     private void Awake()
     {
         _actionButton.onClick.AddListener(Action);
+
+        PlayerEconomy.OnDataRefreshed += UpdateUI;
+    }
+
+    private void OnDestroy()
+    {
+        PlayerEconomy.OnDataRefreshed -= UpdateUI;
     }
 
     private void Action()
@@ -38,6 +47,11 @@ public class CharacterUI : MonoBehaviour
 
         Instantiate(model, _modelHolder);
         UpdateUI();
+    }
+
+    private void FixedUpdate()
+    {
+        _modelHolder.Rotate(_rotationVector);
     }
 
     public void UpdateUI()

@@ -521,6 +521,7 @@ MonoBehaviour:
   _actionButton: {fileID: 1543327209964884626}
   _moneyImage: {fileID: 7218106647425537586}
   _modelHolder: {fileID: 1543327211224869032}
+  _rotationVector: {x: 0, y: 0.35, z: 0}
   russianButtonText:
   - "\u0412\u044B\u0431\u0440\u0430\u0442\u044C"
   - "\u0412\u044B\u0431\u0440\u0430\u043D\u043E"

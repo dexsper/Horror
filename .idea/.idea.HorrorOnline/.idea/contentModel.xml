@@ -2994,6 +2994,7 @@
             <e p="PlayerUIController.cs" t="Include" />
             <e p="PlayerUIMarkers.cs" t="Include" />
             <e p="PulseUiAnimation.cs" t="Include" />
+            <e p="RewardedMenuImage.cs" t="Include" />
             <e p="SafeZone.cs" t="Include" />
             <e p="SettingsPanelUI.cs" t="Include" />
             <e p="SinglePlayerUI.cs" t="Include" />
