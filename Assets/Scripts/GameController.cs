@@ -58,8 +58,10 @@ public class GameController : NetworkBehaviour
 
     private void Start()
     {
+        Debug.Log("Start");
         if (base.IsServer)
         {
+            Debug.Log("StartServer");
             _sceneManager.LoadGlobalScenes(new SceneLoadData(_deathRoomScene));
 
             if (LobbyManager.Instance == null || !LobbyManager.Instance.IsLobbyHost())
@@ -67,7 +69,6 @@ public class GameController : NetworkBehaviour
                 for (int i = 0; i < botsCount; i++)
                 {
                     _spawner.GetSpawn(out Vector3 position, out Quaternion rotation);
-
 
                     NetworkObject nob = _networkManager.GetPooledInstantiated(_playerBot.gameObject, true);
 
