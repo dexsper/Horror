@@ -7001,18 +7001,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740805177}
   m_CullTransparentMesh: 1
---- !u!114 &750584470 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2983679996502370562, guid: 7c1fec50c39fb404d9c68202c5933625,
-    type: 3}
-  m_PrefabInstance: {fileID: 1254143430}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &753410439
 GameObject:
   m_ObjectHideFlags: 0
@@ -12287,100 +12275,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246020705}
   m_CullTransparentMesh: 1
---- !u!1001 &1254143430
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.615185
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.426758
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.39451146
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347628, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 568508737476347629, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: m_Name
-      value: Game Network
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983679996502370562, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: _scenePathHash
-      value: 4144696771
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983679996502370562, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: <SceneId>k__BackingField
-      value: 17801337084309027507
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983679996502370562, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: _sceneNetworkObjects.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2983679996502370562, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: _sceneNetworkObjects.Array.data[0]
-      value: 
-      objectReference: {fileID: 750584470}
-    - target: {fileID: 2983679996502370562, guid: 7c1fec50c39fb404d9c68202c5933625,
-        type: 3}
-      propertyPath: _sceneNetworkObjects.Array.data[1]
-      value: 
-      objectReference: {fileID: 5349510328716183066}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7c1fec50c39fb404d9c68202c5933625, type: 3}
 --- !u!1 &1263359709
 GameObject:
   m_ObjectHideFlags: 0
