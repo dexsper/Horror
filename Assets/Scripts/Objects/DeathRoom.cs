@@ -9,8 +9,7 @@ using UnityEngine;
 
 public class DeathRoom : NetworkBehaviour
 {
-    [SerializeField] private float _leaveProgressStep;
-    [SerializeField] private float _leaveProgressAmount;
+    [SerializeField] private float _timeToLeft = 5f;
 
     [Title("Interface")]
     [SerializeField] private DeathRoomUI _ui;
@@ -63,48 +62,34 @@ public class DeathRoom : NetworkBehaviour
 
         foreach (var key in keys)
         {
-            if (_leaveProgress[key] > 0f)
-                _leaveProgress[key] -= Time.deltaTime;
-            else
-                _leaveProgress[key] = 0f;
+            _leaveProgress[key] -= Time.deltaTime;
+
+            if (_leaveProgress[key] <= 0)
+            {
+                _leaveProgress.Remove(key);
+                RemovePlayer(key);
+            }
         }
     }
 
     [Server]
     public void AddPlayer(PlayerBehavior player)
     {
-        _leaveProgress.Add(player, 0);
+        _leaveProgress.Add(player, _timeToLeft);
 
         GetSpawn(out Vector3 position, out Quaternion rotation);
         player.transform.SetPositionAndRotation(position, rotation);
 
         RPC_SetInterfaceActive(player.Owner, true);
-        _ui.ShowTutorial();
     }
 
     [Server]
     private void RemovePlayer(PlayerBehavior player)
     {
         RPC_SetInterfaceActive(player.Owner, false);
-        
-        AnalyticsEventManager.OnEvent("Leave jail","Jail Leave","1");
+
+        AnalyticsEventManager.OnEvent("Leave jail", "Jail Leave", "1");
         OnPlayerLeave?.Invoke(player);
-    }
-
-    [ServerRpc(RequireOwnership = false, RunLocally = true)]
-    public void AddLeaveProgress(PlayerBehavior player)
-    {
-        if (!_leaveProgress.ContainsKey(player))
-            return;
-
-        _leaveProgress[player] += _leaveProgressStep;
-
-        if (_leaveProgress[player] >= _leaveProgressAmount)
-        {
-            _leaveProgress.Remove(player);
-
-            RemovePlayer(player);
-        }
     }
 
     [TargetRpc]

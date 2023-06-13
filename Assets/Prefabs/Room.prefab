@@ -641,8 +641,7 @@ MonoBehaviour:
   _componentIndexCache: 0
   _addedNetworkObject: {fileID: 5097552341839561800}
   _networkObjectCache: {fileID: 5097552341839561800}
-  _leaveProgressStep: 0
-  _leaveProgressAmount: 3
+  _timeToLeft: 5
   _ui: {fileID: 0}
   _spawns:
   - {fileID: 5097552341835232134}
