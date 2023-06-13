@@ -21,7 +21,7 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField] private Image settingsPanel;
 
     [SerializeField] private Image endGamePanel;
-    
+
     [SerializeField] private string findGeneratorsRu, findGeneratorsEn;
     [SerializeField] private string generatorsLeftRu, generatorsLeftEn;
     [SerializeField] private string endRu, endEn;
@@ -44,7 +44,7 @@ public class PlayerUIController : MonoBehaviour
     {
         endGamePanel.gameObject.SetActive(true);
     }
-    
+
     private IEnumerator PlayerTextAtStart()
     {
         repairedGeneratorsCount.text =
@@ -84,9 +84,10 @@ public class PlayerUIController : MonoBehaviour
     private void UpdateInteraction(PlayerBehavior localPlayer)
     {
         bool canInteract = localPlayer.Interaction.CanInteract;
+        bool isInteract = localPlayer.Interaction.IsInteract;
 
-        _interactButton.gameObject.SetActive(canInteract);
-        interactionSlider.gameObject.SetActive(canInteract);
+        _interactButton.gameObject.SetActive(canInteract && !isInteract);
+        interactionSlider.gameObject.SetActive(isInteract);
 
         if (localPlayer.Interaction.CanInteract && localPlayer.Interaction.LookInteractable != null)
         {
@@ -129,7 +130,7 @@ public class PlayerUIController : MonoBehaviour
 
         UpdateRepairedGeneratorsText(count);
 
-        AnalyticsEventManager.OnEvent("Repaired generator","Repaired",count.ToString());
+        AnalyticsEventManager.OnEvent("Repaired generator", "Repaired", count.ToString());
         if (count == 5)
         {
             repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru" ? endRu : endEn;
