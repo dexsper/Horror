@@ -26,7 +26,7 @@ public class FakePlayer : MonoBehaviour
         {
             if (string.IsNullOrEmpty(PlayerName))
             {
-                PlayerName = $"Fake_{_serverManager.Clients.Count}_Player";
+                PlayerName = $"Player";
             }
 
             ConnectionIdentity.Players[conn.ClientId] = new Player($"Fake_{_serverManager.Clients.Count}")

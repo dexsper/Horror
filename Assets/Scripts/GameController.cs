@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class GameController : NetworkBehaviour
 {
-    [SerializeField] private int botsCount =2;
+    [SerializeField] private int botsCount = 2;
     [SerializeField] private int _winReward = 10;
     [SerializeField] private PlayerBot _playerBot;
 
@@ -56,9 +56,10 @@ public class GameController : NetworkBehaviour
         PlayerBehavior.OnPlayerRemoved += OnPlayerRemoved;
     }
 
-    private void Start()
+    public override void OnStartServer()
     {
-        Debug.Log("Start");
+        base.OnStartServer();
+
         if (base.IsServer)
         {
             Debug.Log("StartServer");
