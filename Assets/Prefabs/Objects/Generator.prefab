@@ -80,7 +80,7 @@ MonoBehaviour:
   _initializeOrder: 0
   _defaultDespawnType: 0
   NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 3
+  <PrefabId>k__BackingField: 5
   <SpawnableCollectionId>k__BackingField: 0
   _scenePathHash: 0
   <SceneId>k__BackingField: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   _addedNetworkObject: {fileID: 2948829331850969883}
   _networkObjectCache: {fileID: 2948829331850969883}
   _settings:
-    RepairTime: 10
+    RepairTime: 5
   _startRepairRu: "\u041D\u0430\u0447\u0430\u0442\u044C \u0440\u0435\u043C\u043E\u043D\u0442"
   _startRepairEn: Start Repair
   _stopRepairRu: "\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C \u0440\u0435\u043C\u043E\u043D\u0442"

@@ -10,7 +10,6 @@ using UnityEngine.UI;
 
 public class PlayerUIController : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _interactionText;
     [SerializeField] private Button _interactButton;
     [SerializeField] private Button _leaveButton;
 
@@ -88,12 +87,9 @@ public class PlayerUIController : MonoBehaviour
 
         _interactButton.gameObject.SetActive(canInteract);
         interactionSlider.gameObject.SetActive(canInteract);
-        
-        _interactionText.text = "";
 
         if (localPlayer.Interaction.CanInteract && localPlayer.Interaction.LookInteractable != null)
         {
-            _interactionText.text = localPlayer.Interaction.LookInteractable.InteractionPrompt;
             UpdateSlider(localPlayer.Interaction.LookInteractable.GetRepairProgress());
             return;
         }
