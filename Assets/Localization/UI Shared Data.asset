@@ -127,6 +127,10 @@ MonoBehaviour:
     m_Key: WatchReward
     m_Metadata:
       m_Items: []
+  - m_Id: 6857849804132352
+    m_Key: GetSkin
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

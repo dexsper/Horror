@@ -89,6 +89,7 @@ public class DeathRoom : NetworkBehaviour
         RPC_SetInterfaceActive(player.Owner, false);
 
         AnalyticsEventManager.OnEvent("Leave jail", "Jail Leave", "1");
+        Ads.Instance.ShowAd();
         OnPlayerLeave?.Invoke(player);
     }
 

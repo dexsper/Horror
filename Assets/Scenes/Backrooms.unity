@@ -167,9 +167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1e42f3eacb31b4986cd7f37a9e5479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
+  _componentIndexCache: 1
   _addedNetworkObject: {fileID: 34919007}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 34919007}
   _characterData: {fileID: 11400000, guid: 026af8e03a0f1b144892d98db4bb3f3d, type: 2}
   _prefab: {fileID: 201277550, guid: 1e03388a5f06c66459e32aafd02b7fed, type: 3}
   _spawns:
@@ -187,9 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00ec1e9c67e31341ab2ad9e50d1fcca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 1
+  _componentIndexCache: 0
   _addedNetworkObject: {fileID: 34919007}
-  _networkObjectCache: {fileID: 0}
+  _networkObjectCache: {fileID: 34919007}
   botsCount: 2
   _winReward: 10
   _playerBot: {fileID: -314221151685715940, guid: f3236fdd7c77fde40af727faf2333cce,
@@ -210,7 +210,9 @@ MonoBehaviour:
   <IsNested>k__BackingField: 0
   <ComponentIndex>k__BackingField: 0
   <PredictedSpawn>k__BackingField: {fileID: 0}
-  _networkBehaviours: []
+  _networkBehaviours:
+  - {fileID: 34919006}
+  - {fileID: 34919005}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
@@ -228,8 +230,8 @@ MonoBehaviour:
   <SceneId>k__BackingField: 13091025139150660667
   <AssetPathHash>k__BackingField: 1041254613164578855
   _sceneNetworkObjects:
-  - {fileID: 34919007}
   - {fileID: 22105483}
+  - {fileID: 34919007}
   - {fileID: 845875232}
   - {fileID: 1280850577}
   - {fileID: 1454965319}
@@ -772,18 +774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1681704837 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7274418668193298997, guid: 550698a0d2bcbfe4a9e148c003707dbf,
-    type: 3}
-  m_PrefabInstance: {fileID: 5500344655075953737}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1691999343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1120,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20b957bbe3aa96f42b037b1d43e7a256, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 1681704837}
+  joystick: {fileID: 5500344655075953738}
   touchField: {fileID: 1083203653}
 --- !u!4 &3353939862748685338
 Transform:
@@ -1451,6 +1441,18 @@ PrefabInstance:
       objectReference: {fileID: 8454523138129609949}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 550698a0d2bcbfe4a9e148c003707dbf, type: 3}
+--- !u!114 &5500344655075953738 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2155700001484242213, guid: 550698a0d2bcbfe4a9e148c003707dbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 5500344655075953737}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7541888735847664593
 PrefabInstance:
   m_ObjectHideFlags: 0

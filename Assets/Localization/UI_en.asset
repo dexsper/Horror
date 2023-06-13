@@ -119,6 +119,10 @@ MonoBehaviour:
     m_Localized: Do you want to watch an ad and get a new player model as a reward?
     m_Metadata:
       m_Items: []
+  - m_Id: 6857849804132352
+    m_Localized: Get the skin
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -299,6 +299,7 @@
             <e p="x86_64" t="Include" />
           </e>
         </e>
+        <e p="Fonts" t="Include" />
         <e p="GeneratedLocalRepo" t="Include">
           <e p="Firebase" t="Include">
             <e p="m2repository" t="Include">
