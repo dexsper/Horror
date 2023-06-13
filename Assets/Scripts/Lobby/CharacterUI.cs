@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class CharacterUI : MonoBehaviour
 {
@@ -17,6 +18,9 @@ public class CharacterUI : MonoBehaviour
     [SerializeField] private List<string> russianButtonText = new List<string>();
     [SerializeField] private List<string> englishButtonText = new List<string>();
     
+    public Button ActionButton { get; private set; }
+
+    [Inject] private RewardedMenuImage _rewardedMenuImage;
     private int _price;
     private string _name;
 

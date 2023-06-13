@@ -7,6 +7,7 @@ using Unity.Services.Economy;
 using Unity.Services.Economy.Model;
 using UnityEngine;
 using UnityEngine.UI;
+using Zenject;
 
 public class CharacterWindowUI : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class CharacterWindowUI : MonoBehaviour
     [SerializeField] private GameObject editPlayerName, authentificate,gameAdObject;
 
     [SerializeField] private string rewardedSkinID;
+
+    [Inject] private RewardedMenuImage _rewardedMenuImage;
     
     private static CharacterWindowUI _instance;
     private Dictionary<string, CharacterUI> _spawnedCharacters;
@@ -42,6 +45,8 @@ public class CharacterWindowUI : MonoBehaviour
         set => _instance = value;
     }
     public event Action OnCharacterSelected;
+
+    public static event Action OnRewardedSkinAdded;
     public string SelectedCharacterName { get; private set; }
 
     private void Awake()
@@ -97,6 +102,7 @@ public class CharacterWindowUI : MonoBehaviour
         PlayersInventoryItem createdInventoryItem =
             await EconomyService.Instance.PlayerInventory.AddInventoryItemAsync(rewardedSkinID);
         PlayerEconomy.Instance.Refresh();
+        OnRewardedSkinAdded?.Invoke();
     }
     
     public void CharacterAction(string characterName)

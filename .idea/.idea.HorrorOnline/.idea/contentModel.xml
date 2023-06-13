@@ -2880,6 +2880,7 @@
             <e p="DiContainerInstaller.cs" t="Include" />
             <e p="InputInstaller.cs" t="Include" />
             <e p="LobbyManagerInstaller.cs" t="Include" />
+            <e p="RewardedInstaller.cs" t="Include" />
           </e>
           <e p="Joysticks" t="Include">
             <e p="Base" t="Include">

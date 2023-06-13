@@ -14,9 +14,25 @@ public class RewardedMenuImage : MonoBehaviour
 
     private void Awake()
     {
+        CharacterWindowUI.OnRewardedSkinAdded += OnRewardedSkinAdded;
+        
         confirmButton.onClick.AddListener(CloseMenu);
         openButton.onClick.AddListener(OpenMenu);
         cancelButton.onClick.AddListener(CloseMenu);
+
+        //openButton.gameObject.SetActive(false);
+    }
+
+    public void SetButtonPosition(Vector3 position,Transform transform)
+    {
+        openButton.transform.parent = transform;
+        openButton.transform.localPosition = position;
+        openButton.gameObject.SetActive(true);
+    }
+    
+    private void OnDestroy()
+    {
+        CharacterWindowUI.OnRewardedSkinAdded -= OnRewardedSkinAdded;
     }
 
     private void CloseMenu()
@@ -31,4 +47,9 @@ public class RewardedMenuImage : MonoBehaviour
         menuImage.DOScale(1f, 0.25f).SetEase(Ease.Linear).From(0f);
     }
 
+    private void OnRewardedSkinAdded()
+    {
+        openButton.gameObject.SetActive(false);
+    }
+    
 }
