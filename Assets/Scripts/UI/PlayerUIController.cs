@@ -87,7 +87,7 @@ public class PlayerUIController : MonoBehaviour
         bool isInteract = localPlayer.Interaction.IsInteract;
 
         _interactButton.gameObject.SetActive(canInteract && !isInteract);
-        interactionSlider.gameObject.SetActive(isInteract);
+        interactionSlider.gameObject.SetActive(canInteract);
 
         if (localPlayer.Interaction.CanInteract && localPlayer.Interaction.LookInteractable != null)
         {

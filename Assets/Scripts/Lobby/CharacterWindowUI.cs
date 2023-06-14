@@ -24,8 +24,6 @@ public class CharacterWindowUI : MonoBehaviour
 
     [SerializeField] private string rewardedSkinID;
 
-    [Inject] private RewardedMenuImage _rewardedMenuImage;
-    
     private static CharacterWindowUI _instance;
     private Dictionary<string, CharacterUI> _spawnedCharacters;
     private PlayerBalance _playerBalance;

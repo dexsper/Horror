@@ -2881,7 +2881,6 @@
             <e p="DiContainerInstaller.cs" t="Include" />
             <e p="InputInstaller.cs" t="Include" />
             <e p="LobbyManagerInstaller.cs" t="Include" />
-            <e p="RewardedInstaller.cs" t="Include" />
           </e>
           <e p="Joysticks" t="Include">
             <e p="Base" t="Include">
@@ -2996,7 +2995,6 @@
             <e p="PlayerUIController.cs" t="Include" />
             <e p="PlayerUIMarkers.cs" t="Include" />
             <e p="PulseUiAnimation.cs" t="Include" />
-            <e p="RewardedMenuImage.cs" t="Include" />
             <e p="SafeZone.cs" t="Include" />
             <e p="SettingsPanelUI.cs" t="Include" />
             <e p="SinglePlayerUI.cs" t="Include" />

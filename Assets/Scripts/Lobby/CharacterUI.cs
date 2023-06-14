@@ -19,8 +19,7 @@ public class CharacterUI : MonoBehaviour
     [SerializeField] private List<string> englishButtonText = new List<string>();
     
     public Button ActionButton { get; private set; }
-
-    [Inject] private RewardedMenuImage _rewardedMenuImage;
+    
     private int _price;
     private string _name;
 
