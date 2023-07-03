@@ -73,6 +73,7 @@ public class SinglePlayerUI : MonoBehaviour
         _multipassTransport.StartConnection(true, 0);
     }
 
+    
     private void CloseMenu()
     {
         gameObject.SetActive(false);

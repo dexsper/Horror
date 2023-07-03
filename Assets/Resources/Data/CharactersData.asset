@@ -24,6 +24,7 @@ MonoBehaviour:
     - {fileID: 1219949562360389022, guid: 46ca02955e38dff41ba877d510b58bda, type: 3}
     - {fileID: 520233711753490511, guid: 05f7335ff91294b4eace7af92915211b, type: 3}
     - {fileID: 8504073792377151915, guid: abe2390177481304e9ecefb3361c8c92, type: 3}
+    - {fileID: 8504073792377151915, guid: c0935b59d84c7c94c986a29d8c5656e7, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -42,13 +43,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 8
+      Data: 9
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 1
-      Data: LightBulb
+      Data: LIGHTBULB
     - Name: $v
       Entry: 10
       Data: 0
@@ -60,7 +61,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: LightHead
+      Data: LIGHTHEAD
     - Name: $v
       Entry: 10
       Data: 1
@@ -72,7 +73,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: Megahorn
+      Data: MEGAHORN
     - Name: $v
       Entry: 10
       Data: 2
@@ -84,7 +85,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PipeLight
+      Data: PIPELIGHT
     - Name: $v
       Entry: 10
       Data: 3
@@ -96,7 +97,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PoopHead
+      Data: POOPHEAD
     - Name: $v
       Entry: 10
       Data: 4
@@ -108,7 +109,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: PipeHead
+      Data: PIPEHEAD
     - Name: $v
       Entry: 10
       Data: 5
@@ -120,7 +121,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 1
-      Data: TrafficHead
+      Data: TRAFFICHEAD
     - Name: $v
       Entry: 10
       Data: 6
@@ -136,6 +137,18 @@ MonoBehaviour:
     - Name: $v
       Entry: 10
       Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: SKIBIDITOILET
+    - Name: $v
+      Entry: 10
+      Data: 8
     - Name: 
       Entry: 8
       Data: 

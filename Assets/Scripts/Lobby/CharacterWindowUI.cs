@@ -69,6 +69,11 @@ public class CharacterWindowUI : MonoBehaviour
         CloseWindow();
     }
 
+    public void OpenWindow()
+    {
+        gameObject.SetActive(true);
+    }
+    
     private void CloseWindow()
     {
         gameObject.SetActive(false);

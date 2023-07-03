@@ -54,18 +54,6 @@ public class LobbyUI : MonoBehaviour
         });
     }
 
-    public void EnableStartGameButton()
-    {
-        if(_startButton != null)
-            _startButton.gameObject.SetActive(true);
-    }
-
-    public void DisableStartGameButton()
-    {
-        if(_startButton != null)
-            _startButton.gameObject.SetActive(false);
-    }
-
     private void Start()
     {
         _lobbyManager.OnJoinedLobby += UpdateLobby_Event;
@@ -137,7 +125,7 @@ public class LobbyUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private void Show()
+    public void Show()
     {
         gameObject.SetActive(true);
     }

@@ -53,7 +53,7 @@ public class LobbyListUI : MonoBehaviour
 
     private void SetActive()
     {
-        gameObject.SetActive(true);
+        //gameObject.SetActive(true);
 
         LobbyManager.Instance.RefreshLobbyList();
     }

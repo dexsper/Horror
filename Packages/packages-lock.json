@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.cleversolutions.ads.unity": {
-      "version": "https://github.com/cleveradssolutions/CAS-Unity.git#3.1.8",
+      "version": "https://github.com/cleveradssolutions/CAS-Unity.git#3.1.9",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5ec265382f453aa53a29c046f971fd6c6fbae09f"
+      "hash": "6a3302097af33b04a9f37117ec1293793417adc3"
     },
     "com.unity.adaptiveperformance": {
       "version": "5.0.0",

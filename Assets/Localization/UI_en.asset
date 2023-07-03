@@ -123,6 +123,18 @@ MonoBehaviour:
     m_Localized: Get the skin
     m_Metadata:
       m_Items: []
+  - m_Id: 13982983128059904
+    m_Localized: NO OPEN LOBBIES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14032267626123264
+    m_Localized: CLICK TO OPEN SHOP AND SELECT YOUR INGAME SKIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14032545591037952
+    m_Localized: CLICK TO OPEN LOBBY CREATE MENU
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

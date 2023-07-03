@@ -370,6 +370,8 @@ public class LobbyManager : MonoBehaviour
         }
     }
 
+    public static event Action OnCantFindOpenLobby;
+    
     public async void QuickJoinLobby()
     {
         try
@@ -384,6 +386,7 @@ public class LobbyManager : MonoBehaviour
         }
         catch (LobbyServiceException e)
         {
+            OnCantFindOpenLobby?.Invoke();
             Debug.Log(e);
         }
     }

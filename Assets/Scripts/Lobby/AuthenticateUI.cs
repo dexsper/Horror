@@ -7,7 +7,7 @@ public class AuthenticateUI : MonoBehaviour
     [SerializeField] private Button authenticateButton;
     [SerializeField] private Button singlePlayerButton;
     [SerializeField] private GameObject editPlayerName;
-    [SerializeField] private GameObject characterWindowUI;
+    [SerializeField] private MultiplayerWindow multiplayerWindow;
     [SerializeField] private GameObject gameAdObject;
     [SerializeField] private GameObject settingsButton;
 
@@ -25,17 +25,17 @@ public class AuthenticateUI : MonoBehaviour
 
     private void Authenticate()
     {
-        characterWindowUI.SetActive(true);
-
         if (LobbyManager.Instance.IsAuthenticated)
         {
             PlayerEconomy.Instance.Refresh();
 
             Hide();
+            multiplayerWindow.OpenMenu();
             return;
         }
         
         LobbyManager.Instance.Authenticate(EditPlayerName.Instance.GetPlayerName());
+        multiplayerWindow.OpenMenu();
         Hide();
     }
 

@@ -244,6 +244,9 @@
             <e p="model" t="Include" />
             <e p="prefab" t="Include" />
           </e>
+          <e p="Skibidi" t="Include">
+            <e p="Materials" t="Include" />
+          </e>
           <e p="True_Horror" t="Include">
             <e p="True_Crawler" t="Include">
               <e p="Materials" t="Include" />
@@ -2980,6 +2983,9 @@
             </e>
           </e>
           <e p="SleepTIme.cs" t="Include" />
+          <e p="Tutorial" t="Include">
+            <e p="TutorialAnimator.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="AdWarningText.cs" t="Include" />
             <e p="DeathRoomUI.cs" t="Include" />
@@ -2990,6 +2996,9 @@
             <e p="KeyboardRemoveButton.cs" t="Include" />
             <e p="Marker.cs" t="Include" />
             <e p="MarkerTarget.cs" t="Include" />
+            <e p="MultiplayerWindow" t="Include">
+              <e p="MultiplayerWindow.cs" t="Include" />
+            </e>
             <e p="PlayersStateUI.cs" t="Include" />
             <e p="PlayerStateUI.cs" t="Include" />
             <e p="PlayerUIController.cs" t="Include" />
@@ -3092,7 +3101,7 @@
       <e p="HorrorOnline.sln" t="IncludeFlat" />
       <e p="Library" t="Include">
         <e p="PackageCache" t="Include">
-          <e p="com.cleversolutions.ads.unity@5ec265382f" t="Include">
+          <e p="com.cleversolutions.ads.unity@6a3302097a" t="Include">
             <e p="Editor" t="Include">
               <e p="BaseAdObjectInspector.cs" t="Include" />
               <e p="CASAndroidBaseDependencies.xml" t="Include" />
