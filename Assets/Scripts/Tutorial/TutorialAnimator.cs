@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,20 +6,38 @@ using UnityEngine.UI;
 
 public class TutorialAnimator : MonoBehaviour
 {
-    [SerializeField] private Button playButton, shopButton, lobbyButton;
+    [SerializeField] private GameObject firstTutorial,secondTutorial,thirdTutorial;
 
-    public void OnStart()
+    private void Awake()
     {
-        playButton.interactable = false;
-        shopButton.interactable = false;
-        lobbyButton.interactable = false;
+        if (!PlayerPrefs.HasKey("Tutorial"))
+        {
+            PlayerPrefs.SetInt("Tutorial",1);
+
+            secondTutorial.SetActive(false);
+            thirdTutorial.SetActive(false);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 
-    public void OnFinish()
+    private void OnMenuOpened()
     {
-        playButton.interactable = true;
-        shopButton.interactable = true;
-        lobbyButton.interactable = true;
+        firstTutorial.SetActive(false);
+        secondTutorial.SetActive(true);
+    }
+
+    private void OnCharacterSelected()
+    {
+        secondTutorial.SetActive(false);
+        thirdTutorial.SetActive(true);
+    }
+
+    private void OnShopClosed()
+    {
+        thirdTutorial.SetActive(false);
     }
     
     public void CancelTutorial()

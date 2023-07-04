@@ -12,6 +12,7 @@ public class LobbyListUI : MonoBehaviour
     [Title("References")]
     [SerializeField] private LobbyListSingleUI _lobbyTemplate;
     [SerializeField] private Transform _lobbyContainer;
+    [SerializeField] private List<GameObject> objectsToDisable;
 
     [Title("Buttons")]
     [SerializeField] private Button refreshButton;
@@ -36,7 +37,10 @@ public class LobbyListUI : MonoBehaviour
     private void CloseWindow()
     {
         gameObject.SetActive(false);
-        CharacterWindowUI.Instance.gameObject.SetActive(true);
+        for (int i = 0; i < objectsToDisable.Count; i++)
+        {
+            objectsToDisable[i].SetActive(true);
+        }
     }
     
     private void Start()

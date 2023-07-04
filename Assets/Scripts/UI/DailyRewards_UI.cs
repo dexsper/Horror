@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Economy;
 using UnityEngine;
@@ -25,6 +26,7 @@ public class DailyRewards_UI : MonoBehaviour
     [SerializeField] private CharactersData _charactersData;
     [SerializeField] private List<DailyReward> _rewards;
     [SerializeField] private List<Image> _rewardsImages;
+    [SerializeField] private List<TextMeshProUGUI> _rewardTexts;
 
     private bool _canClaimReward;
 
@@ -87,6 +89,7 @@ public class DailyRewards_UI : MonoBehaviour
                     break;
                 case < 1:
                     _canClaimReward = false;
+                    gameObject.SetActive(false);
                     break;
             }
         }
@@ -133,6 +136,14 @@ public class DailyRewards_UI : MonoBehaviour
             }
 
             _rewardsImages[i].color = new Color(1, 1, 1, opacity);
+        }
+
+        for (int i = 0; i < _rewards.Count; i++)
+        {
+            if (_rewards[i].Type == DailyReward.RewardType.Currency)
+            {
+                _rewardTexts[i].text = $"{_rewards[i].Amount}";
+            }
         }
     }
 }

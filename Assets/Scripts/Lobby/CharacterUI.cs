@@ -70,6 +70,7 @@ public class CharacterUI : MonoBehaviour
                 _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
                     ? russianButtonText[0]
                     : englishButtonText[0];
+                _actionButton.GetComponent<Image>().color = Color.green;
             }
             else
             {
@@ -78,6 +79,7 @@ public class CharacterUI : MonoBehaviour
                 _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
                     ? russianButtonText[1]
                     : englishButtonText[1];
+                _actionButton.GetComponent<Image>().color = Color.red;
             }
         }
         else
@@ -87,6 +89,7 @@ public class CharacterUI : MonoBehaviour
             _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
                 ? $"{russianButtonText[2]} {_price}"
                 : $"{englishButtonText[2]} {_price}";
+            _actionButton.GetComponent<Image>().color = Color.green;
         }
     }
 }

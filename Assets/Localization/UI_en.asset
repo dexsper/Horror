@@ -128,7 +128,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14032267626123264
-    m_Localized: CLICK TO OPEN SHOP AND SELECT YOUR INGAME SKIN
+    m_Localized: CHOOSE A SKIN THAT YOU HAVE ENOUGH MONEY ON AND BUY IT
     m_Metadata:
       m_Items: []
   - m_Id: 14032545591037952
@@ -136,7 +136,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14224069327290368
-    m_Localized: Daily Reward
+    m_Localized: DAILY REWARD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14327800357949440
+    m_Localized: TAKE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14397617416933376
+    m_Localized: CLICK TO OPEN THE STORE AND SELECT AN IN-GAME SKIN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14397712019460096
+    m_Localized: PRESS THE BUTTON TO CLOSE SHOP
     m_Metadata:
       m_Items: []
   references:

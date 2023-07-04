@@ -147,6 +147,18 @@ MonoBehaviour:
     m_Key: DailyReward
     m_Metadata:
       m_Items: []
+  - m_Id: 14327800357949440
+    m_Key: TAke
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14397617416933376
+    m_Key: Open
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14397712019460096
+    m_Key: CloseShop
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

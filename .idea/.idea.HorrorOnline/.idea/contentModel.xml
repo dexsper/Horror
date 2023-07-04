@@ -2988,6 +2988,7 @@
           </e>
           <e p="UI" t="Include">
             <e p="AdWarningText.cs" t="Include" />
+            <e p="DailyRewards_UI.cs" t="Include" />
             <e p="DeathRoomUI.cs" t="Include" />
             <e p="HideVirtualKeyboard.cs" t="Include" />
             <e p="JailedPlayers.cs" t="Include" />

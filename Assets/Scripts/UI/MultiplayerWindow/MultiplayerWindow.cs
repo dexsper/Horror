@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,12 +14,18 @@ public class MultiplayerWindow : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI quickPlayText;
 
-    [SerializeField] private GameObject lobbyCreateUI, characterWindowUI;
+    [SerializeField] private CharacterWindowUI characterWindowUI;
+    
+    [SerializeField] private GameObject lobbyCreateUI;
     
     [SerializeField] private GameObject authentificateObject, editNameObject;
 
-    [SerializeField] private GameObject tutorialObject;
+    [SerializeField] private GameObject tutorialObject,settingsMenuButton,settingsMpMenuButton;
 
+    [SerializeField] private List<GameObject> objectsToDisable;
+
+    private GameObject _openCharacters, _openLobby;
+    
     private float _timerCounter, _timer = 2f;
     private bool _timerStart;
     private void Awake()
@@ -27,45 +34,28 @@ public class MultiplayerWindow : MonoBehaviour
         openLobbyWindowButton.onClick.AddListener(OpenLobbyWindow);
         quickGameButton.onClick.AddListener(QuickGame);
         closeButton.onClick.AddListener(CloseMenu);
-        
-        openLobbyWindowButton.interactable = false;
-        quickGameButton.interactable = false;
 
-        CharacterWindowUI.Instance.OnCharacterSelected += OnCharacterSelected;
         LobbyManager.OnCantFindOpenLobby += OnCantFindOpenLobby;
+        
+        settingsMpMenuButton.SetActive(false);
         
         CloseQuickText();
     }
 
     private void CheckForFirstEntry()
     {
-        if (PlayerPrefs.HasKey("FirstPlay"))
+        if (PlayerPrefs.HasKey("PlayedOnce"))
         {
-            openCharacterWindowButton.gameObject.SetActive(true);
-            openLobbyWindowButton.gameObject.SetActive(true);
-            openLobbyWindowButton.interactable = true;
-            openCharacterWindowButton.interactable = true;
-            quickGameButton.interactable = true;
-            Debug.Log("HasKey");
             tutorialObject.SetActive(true);
-            if (PlayerPrefs.HasKey("TutorialShowed"))
-            {
-                tutorialObject.SetActive(false);
-            }
-            else
-            {
-                PlayerPrefs.SetInt("TutorialShowed",1);
-                
-            }
+            _openCharacters.SetActive(true);
+            _openLobby.SetActive(true);
         }
         else
         {
-            PlayerPrefs.SetInt("FirstPlay",1);
-            openCharacterWindowButton.gameObject.SetActive(false);
-            openLobbyWindowButton.gameObject.SetActive(false);
-            quickGameButton.interactable = true;
             tutorialObject.SetActive(false);
-            Debug.Log("HasNoKey");
+            _openCharacters.SetActive(false);
+            _openLobby.SetActive(false);
+            PlayerPrefs.SetInt("PlayedOnce",1);
         }
     }
 
@@ -75,9 +65,8 @@ public class MultiplayerWindow : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
     
-    private void OnDisable()
+    private void OnDestroy()
     {
-        CharacterWindowUI.Instance.OnCharacterSelected -= OnCharacterSelected;
         LobbyManager.OnCantFindOpenLobby -= OnCantFindOpenLobby;
     }
 
@@ -108,15 +97,14 @@ public class MultiplayerWindow : MonoBehaviour
         }
     }
 
-    private void OnCharacterSelected()
-    {
-        openLobbyWindowButton.interactable = true;
-        quickGameButton.interactable = true;
-    }
-    
     public void OpenMenu()
     {
         gameObject.SetActive(true);
+        
+        settingsMenuButton.SetActive(false);
+        settingsMpMenuButton.SetActive(true);
+        _openCharacters = openCharacterWindowButton.gameObject;
+        _openLobby = openLobbyWindowButton.gameObject;
         
         authentificateObject.SetActive(false);
         editNameObject.SetActive(false);
@@ -128,18 +116,29 @@ public class MultiplayerWindow : MonoBehaviour
     {
         gameObject.SetActive(false);
         
+        settingsMenuButton.SetActive(true);
+        settingsMpMenuButton.SetActive(false);
+        
         authentificateObject.SetActive(true);
         editNameObject.SetActive(true);
     }
     
     private void OpenCharacterWindow()
     {
-        characterWindowUI.gameObject.SetActive(true);
+        characterWindowUI.OpenWindow();
+        for (int i = 0; i < objectsToDisable.Count; i++)
+        {
+            objectsToDisable[i].SetActive(false);
+        }
     }
 
     private void OpenLobbyWindow()
     {
         lobbyCreateUI.SetActive(true);
+        for (int i = 0; i < objectsToDisable.Count; i++)
+        {
+            objectsToDisable[i].SetActive(false);
+        }
     }
 
     private void QuickGame()

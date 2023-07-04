@@ -22,6 +22,8 @@ public class CharacterWindowUI : MonoBehaviour
 
     [SerializeField] private string rewardedSkinID;
 
+    [SerializeField] private List<GameObject> objectsToDisable;
+    
     private static CharacterWindowUI _instance;
     private Dictionary<string, CharacterUI> _spawnedCharacters;
     private PlayerBalance _playerBalance;
@@ -41,6 +43,8 @@ public class CharacterWindowUI : MonoBehaviour
         private set => _instance = value;
     }
     public event Action OnCharacterSelected;
+    public event Action OnShopOpened;
+    public event Action OnShopClosed;
     public string SelectedCharacterName { get; private set; }
 
     private void Awake()
@@ -74,14 +78,20 @@ public class CharacterWindowUI : MonoBehaviour
     public void OpenWindow()
     {
         gameObject.SetActive(true);
+        OnShopOpened?.Invoke();
     }
     
     private void CloseWindow()
     {
+        OnShopClosed?.Invoke();
         gameObject.SetActive(false);
         gameAdObject.SetActive(true);
         authentificate.SetActive(true);
         editPlayerName.SetActive(true);
+        for (int i = 0; i < objectsToDisable.Count; i++)
+        {
+            objectsToDisable[i].SetActive(true);
+        }
     }
     private void OnDestroy()
     {
@@ -117,6 +127,10 @@ public class CharacterWindowUI : MonoBehaviour
             SelectedCharacterName = characterName;
             OnCharacterSelected?.Invoke();
 
+            for (int i = 0; i < objectsToDisable.Count; i++)
+            {
+                objectsToDisable[i].SetActive(true);
+            }
             gameObject.SetActive(false);
         }
         else
