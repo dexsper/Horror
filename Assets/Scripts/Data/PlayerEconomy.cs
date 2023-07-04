@@ -79,6 +79,13 @@ public class PlayerEconomy : MonoBehaviour
         Refresh();
     }
 
+    public async void AddItem(string id)
+    {
+        await EconomyService.Instance.PlayerInventory.AddInventoryItemAsync(id);
+        Refresh();
+    }
+    
+
     public int GetItemPrice(string id)
     {
         string purchaseID = $"{id}_PURCHASE";

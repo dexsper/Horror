@@ -143,6 +143,10 @@ MonoBehaviour:
     m_Key: Lobby
     m_Metadata:
       m_Items: []
+  - m_Id: 14224069327290368
+    m_Key: DailyReward
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

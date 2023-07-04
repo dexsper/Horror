@@ -135,6 +135,10 @@ MonoBehaviour:
     m_Localized: CLICK TO OPEN LOBBY CREATE MENU
     m_Metadata:
       m_Items: []
+  - m_Id: 14224069327290368
+    m_Localized: Daily Reward
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

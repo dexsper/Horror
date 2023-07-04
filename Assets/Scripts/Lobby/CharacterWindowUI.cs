@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using TMPro;
-using Unity.Services.Economy;
 using Unity.Services.Economy.Model;
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
 
 public class CharacterWindowUI : MonoBehaviour
 {
@@ -40,11 +38,9 @@ public class CharacterWindowUI : MonoBehaviour
             return _instance;
         }
 
-        set => _instance = value;
+        private set => _instance = value;
     }
     public event Action OnCharacterSelected;
-
-    public static event Action OnRewardedSkinAdded;
     public string SelectedCharacterName { get; private set; }
 
     private void Awake()
@@ -63,7 +59,13 @@ public class CharacterWindowUI : MonoBehaviour
         
         _closeButton.onClick.AddListener(CloseWindow);
     }
-    
+
+    private void OnEnable()
+    {
+        GetPlayerBalance();
+        UpdateUI();
+    }
+
     private void Start()
     {
         CloseWindow();
@@ -90,6 +92,9 @@ public class CharacterWindowUI : MonoBehaviour
 
     private async void GetPlayerBalance()
     {
+        if (PlayerEconomy.Instance == null)
+            return;
+        
         _playerBalance = await PlayerEconomy.Instance.CurrencyDefinition.GetPlayerBalanceAsync();
         _playerCurrentMoney.text = $"{_playerBalance.Balance}";
     }
@@ -99,13 +104,10 @@ public class CharacterWindowUI : MonoBehaviour
         Ads.Instance.ShowRewardedAd(OnRewardedAdPurchase);
     }
 
-    private async void OnRewardedAdPurchase()
+    private void OnRewardedAdPurchase()
     {
+        PlayerEconomy.Instance.AddItem(rewardedSkinID);
         AnalyticsEventManager.OnEvent("Rewarded Ad closed", "rewardAd","1");
-        PlayersInventoryItem createdInventoryItem =
-            await EconomyService.Instance.PlayerInventory.AddInventoryItemAsync(rewardedSkinID);
-        PlayerEconomy.Instance.Refresh();
-        OnRewardedSkinAdded?.Invoke();
     }
     
     public void CharacterAction(string characterName)
@@ -119,9 +121,9 @@ public class CharacterWindowUI : MonoBehaviour
         }
         else
         {
-            var itemDefention = PlayerEconomy.Instance.InventoryDefinitions.First(x => x.Name == characterName);
+            var itemDefinition = PlayerEconomy.Instance.InventoryDefinitions.First(x => x.Name == characterName);
 
-            PlayerEconomy.Instance.MakePurchase(itemDefention.Id);
+            PlayerEconomy.Instance.MakePurchase(itemDefinition.Id);
             AnalyticsEventManager.OnEvent("Buy skin","buyed",characterName);
         }
     }
@@ -144,8 +146,8 @@ public class CharacterWindowUI : MonoBehaviour
             {
                 var characterUI = Instantiate(_characterViewPrefab, _charactersContent);
 
-                var itemDefention = PlayerEconomy.Instance.InventoryDefinitions.First(x => x.Name == characterName);
-                var price = PlayerEconomy.Instance.GetItemPrice(itemDefention.Id);
+                var itemDefinition = PlayerEconomy.Instance.InventoryDefinitions.First(x => x.Name == characterName);
+                var price = PlayerEconomy.Instance.GetItemPrice(itemDefinition.Id);
 
                 characterUI.Initialize(characterName, price, _characters[characterName]);
 
@@ -171,13 +173,13 @@ public class CharacterWindowUI : MonoBehaviour
         }
     }
 
-    public bool CharacterIsPurchased(string name)
+    public bool CharacterIsPurchased(string characterName)
     {
         bool purchased = PlayerEconomy.Instance.InventoryItems.Exists((x) =>
         {
-            var defention = x.GetItemDefinition();
+            var definition = x.GetItemDefinition();
 
-            return defention.Name == name;
+            return definition.Name == characterName;
         });
 
         return purchased;
