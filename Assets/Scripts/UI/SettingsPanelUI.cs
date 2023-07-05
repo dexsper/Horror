@@ -9,7 +9,8 @@ public class SettingsPanelUI : MonoBehaviour
 {
     [SerializeField] private float timeToOpen = 0.25f;
 
-    [SerializeField] private Button openButton, closeButton;
+    [SerializeField] private List<Button> openButtons;
+    [SerializeField] private Button closeButton;
     [SerializeField] private Button casButton;
 
     [SerializeField] private Transform warningPanel;
@@ -17,7 +18,10 @@ public class SettingsPanelUI : MonoBehaviour
 
     private void Awake()
     {
-        openButton.onClick.AddListener(OpenMenu);
+        for (int i = 0; i < openButtons.Count; i++)
+        {
+            openButtons[i].onClick.AddListener(OpenMenu);
+        }
         closeButton.onClick.AddListener(CloseMenu);
         
         casButton.onClick.AddListener(OpenWarningPanel);

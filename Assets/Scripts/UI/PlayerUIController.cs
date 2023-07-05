@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using FishNet;
@@ -26,13 +27,59 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField] private string generatorsLeftRu, generatorsLeftEn;
     [SerializeField] private string endRu, endEn;
 
+    [SerializeField] private List<Vector3> endPositions;
+    [SerializeField] private List<Button> emojiButtons;
+
+    [SerializeField] private Button _openButton;
+
+    private bool _isOpen;
+
     private void Awake()
     {
+        _openButton.onClick.AddListener(OnButtonClick);
+
         _interactButton.onClick.AddListener(Interact);
         _leaveButton.onClick.AddListener(Leave);
 
         openSettingsButton.onClick.AddListener(OnSettingsButtonClick);
         closeSettingsButton.onClick.AddListener(InSettingsButtonClick);
+    }
+
+    private void OnButtonClick()
+    {
+        if (!_isOpen)
+        {
+            Open();
+        }
+        else
+        {
+            Close();
+        }
+    }
+
+    private void Open()
+    {
+        _isOpen = true;
+        for (int i = 0; i < emojiButtons.Count; i++)
+        {
+            emojiButtons[i].transform.DOLocalMove(endPositions[i], 0.2f).SetEase(Ease.Linear);
+            emojiButtons[i].transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        }
+    }
+
+    private void Close()
+    {
+        _isOpen = false;
+        for (int i = 0; i < emojiButtons.Count; i++)
+        {
+            emojiButtons[i].transform.DOLocalMove(Vector3.zero, 0.2f).SetEase(Ease.Linear);
+            emojiButtons[i].transform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.Linear);
+        }
+    }
+
+    public void CreateEmoji(ParticleSystem emoji)
+    {
+        Instantiate(emoji, PlayerBehavior.LocalPlayer.transform, PlayerBehavior.LocalPlayer.Model.transform);
     }
 
     private void Start()
@@ -131,10 +178,13 @@ public class PlayerUIController : MonoBehaviour
         UpdateRepairedGeneratorsText(count);
 
         AnalyticsEventManager.OnEvent("Repaired generator", "Repaired", count.ToString());
-        if (count == 5)
+        
+        for (int i = 0; i < Generator.Generators.Count; i++)
         {
-            repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru" ? endRu : endEn;
+            if (!Generator.Generators[i].IsRepaired)
+                return;
         }
+        repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru" ? endRu : endEn;
     }
 
     private void UpdateSlider(float value)

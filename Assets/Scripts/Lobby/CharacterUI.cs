@@ -70,7 +70,7 @@ public class CharacterUI : MonoBehaviour
                 _actionText.text = LocalizationUI.Instance.GetLocaleName() == "ru"
                     ? russianButtonText[0]
                     : englishButtonText[0];
-                _actionButton.GetComponent<Image>().color = Color.green;
+                _actionButton.GetComponent<Image>().color = Color.red;
             }
             else
             {

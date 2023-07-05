@@ -17,7 +17,6 @@ public class PlayerBehavior : NetworkBehaviour
     public PlayerInteraction Interaction { get; private set; }
     public PlayerMovement Movement { get; private set; }
     public IPlayerInput Input { get; private set; }
-
     public Animator Animator { get; private set; }
     public PlayerCamera PlayerCamera { get; private set; }
     public PlayerUI PlayerUI { get; private set; }

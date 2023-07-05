@@ -114,6 +114,13 @@
               <e p="prefab" t="Include" />
             </e>
           </e>
+          <e p="Cliff Mansion" t="Include">
+            <e p="model" t="Include">
+              <e p="Nature" t="Include">
+                <e p="Textures" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="ElecticBox" t="Include">
             <e p="Electric box" t="Include">
               <e p="Material.001" t="Include" />
@@ -226,6 +233,49 @@
               </e>
             </e>
           </e>
+          <e p="POLYGON city pack" t="Include">
+            <e p="Materials" t="Include">
+              <e p="color_windows" t="Include" />
+              <e p="Colors_buildings" t="Include" />
+              <e p="Material_meshs" t="Include" />
+              <e p="traffic light" t="Include" />
+            </e>
+            <e p="Meshes,textures" t="Include">
+              <e p="Buildings_FBX" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="lamps fbx" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Letters FBX" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="props_FBX" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="Shops_FBX" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="traffic signs FBX" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+              <e p="ways_FBX" t="Include">
+                <e p="Materials" t="Include" />
+              </e>
+            </e>
+            <e p="Prefabs" t="Include">
+              <e p="Buildings" t="Include" />
+              <e p="Floor" t="Include" />
+              <e p="lamps" t="Include" />
+              <e p="Letters" t="Include" />
+              <e p="props" t="Include" />
+              <e p="traffic signs" t="Include" />
+            </e>
+            <e p="Read_me.txt" t="Include" />
+            <e p="scene" t="Include">
+              <e p="DemoScene" t="Include" />
+            </e>
+          </e>
           <e p="School" t="Include">
             <e p="material" t="Include">
               <e p="Materials" t="Include" />
@@ -259,15 +309,26 @@
         <e p="CleverAdsSolutions" t="Include">
           <e p="Editor" t="Include" />
         </e>
-        <e p="Cliff Mansion" t="Include">
-          <e p="model" t="Include">
-            <e p="Nature" t="Include">
-              <e p="Textures" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Editor Default Resources" t="Include">
           <e p="Firebase" t="Include" />
+        </e>
+        <e p="Epic Toon FX" t="Include">
+          <e p="Materials" t="Include">
+            <e p="Basics" t="Include" />
+            <e p="Misc" t="Include">
+              <e p="Emojis" t="Include">
+                <e p="Part 1" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Interactive" t="Include">
+              <e p="Emojis" t="Include" />
+            </e>
+          </e>
+          <e p="Textures" t="Include">
+            <e p="Emojis" t="Include" />
+          </e>
         </e>
         <e p="ExternalDependencyManager" t="Include">
           <e p="Editor" t="Include">
@@ -526,6 +587,7 @@
           <e p="Sounds" t="Include" />
           <e p="Textures" t="Include" />
         </e>
+        <e p="Memes" t="Include" />
         <e p="Models" t="Include" />
         <e p="Packages" t="Include">
           <e p="Agora-RTC-Plugin" t="Include">
@@ -2867,6 +2929,7 @@
         </e>
         <e p="Scenes" t="Include">
           <e p="BackRooms" t="Include" />
+          <e p="city" t="Include" />
           <e p="Labyrint" t="Include" />
           <e p="Office" t="Include" />
         </e>
@@ -2917,6 +2980,9 @@
           </e>
           <e p="Localization" t="Include">
             <e p="LocalizationUI.cs" t="Include" />
+          </e>
+          <e p="Memes" t="Include">
+            <e p="Meme.cs" t="Include" />
           </e>
           <e p="Network" t="Include">
             <e p="ConnectionConntroller.cs" t="Include" />
@@ -2990,6 +3056,7 @@
             <e p="AdWarningText.cs" t="Include" />
             <e p="DailyRewards_UI.cs" t="Include" />
             <e p="DeathRoomUI.cs" t="Include" />
+            <e p="EmojiController.cs" t="Include" />
             <e p="HideVirtualKeyboard.cs" t="Include" />
             <e p="JailedPlayers.cs" t="Include" />
             <e p="KeyBoardConfirm.cs" t="Include" />

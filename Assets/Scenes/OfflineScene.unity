@@ -2278,7 +2278,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -63.14406}
+  m_AnchoredPosition: {x: 0, y: -63.144043}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &166101943
@@ -5836,7 +5836,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &509014012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10071,7 +10071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 24.023438, y: -204.02344}
+  m_AnchoredPosition: {x: 24.023438, y: -190}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &953602245
@@ -13676,6 +13676,8 @@ MonoBehaviour:
     mapName: Office
   - mapSprite: {fileID: 21300000, guid: 14118779a039cc346959281c27376eec, type: 3}
     mapName: Labyrint
+  - mapSprite: {fileID: 21300000, guid: a4abd2e70bf37f049be93127fb54aed2, type: 3}
+    mapName: City
   nextButton: {fileID: 1949809888}
   prevButton: {fileID: 1457966350}
   mapNameText: {fileID: 1732866115}
@@ -20317,8 +20319,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50.00003}
-  m_SizeDelta: {x: 1765, y: 100}
+  m_AnchoredPosition: {x: 50, y: -218.35999}
+  m_SizeDelta: {x: -150, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1613111028
 MonoBehaviour:
@@ -20411,12 +20413,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.75
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -23148,7 +23150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1897110889
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23234,7 +23236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -130.00008}
+  m_AnchoredPosition: {x: 0, y: -130.00006}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913864690
@@ -23258,6 +23260,7 @@ MonoBehaviour:
   editPlayerName: {fileID: 898201147}
   authentificate: {fileID: 166101941}
   gameAdObject: {fileID: 1969264656}
+  multiplayerSettingsButton: {fileID: 953602243}
   rewardedSkinID: POOPHEAD
   objectsToDisable:
   - {fileID: 1792666420}
@@ -24305,10 +24308,10 @@ RectTransform:
   m_Father: {fileID: 509014012}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 156.36765}
-  m_SizeDelta: {x: 155, y: 467.7353}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &2025568144
 Animator:
@@ -24382,7 +24385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 24.023438, y: -204.02344}
+  m_AnchoredPosition: {x: 24.023438, y: -190}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2040317093
@@ -25024,6 +25027,8 @@ MonoBehaviour:
     mapName: Office
   - mapSprite: {fileID: 21300000, guid: 14118779a039cc346959281c27376eec, type: 3}
     mapName: Labyrint
+  - mapSprite: {fileID: 21300000, guid: a4abd2e70bf37f049be93127fb54aed2, type: 3}
+    mapName: City
   nextButton: {fileID: 1982794758}
   prevButton: {fileID: 1461721218}
   mapNameText: {fileID: 1382814145}
@@ -25262,6 +25267,36 @@ PrefabInstance:
     - target: {fileID: 5535378358849122580, guid: a9432413cf35fa1498e52ca85fd77b66,
         type: 3}
       propertyPath: openButton
+      value: 
+      objectReference: {fileID: 2040317095}
+    - target: {fileID: 5535378358849122580, guid: a9432413cf35fa1498e52ca85fd77b66,
+        type: 3}
+      propertyPath: openButtons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535378358849122580, guid: a9432413cf35fa1498e52ca85fd77b66,
+        type: 3}
+      propertyPath: closeButtons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535378358849122580, guid: a9432413cf35fa1498e52ca85fd77b66,
+        type: 3}
+      propertyPath: openButtons.Array.data[0]
+      value: 
+      objectReference: {fileID: 953602245}
+    - target: {fileID: 5535378358849122580, guid: a9432413cf35fa1498e52ca85fd77b66,
+        type: 3}
+      propertyPath: openButtons.Array.data[1]
+      value: 
+      objectReference: {fileID: 2040317095}
+    - target: {fileID: 5535378358849122580, guid: a9432413cf35fa1498e52ca85fd77b66,
+        type: 3}
+      propertyPath: closeButtons.Array.data[0]
+      value: 
+      objectReference: {fileID: 953602245}
+    - target: {fileID: 5535378358849122580, guid: a9432413cf35fa1498e52ca85fd77b66,
+        type: 3}
+      propertyPath: closeButtons.Array.data[1]
       value: 
       objectReference: {fileID: 2040317095}
     - target: {fileID: 5535378360085764323, guid: a9432413cf35fa1498e52ca85fd77b66,

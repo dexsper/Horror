@@ -23,6 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Labyrint.unity
     guid: 5d55e41d4f85b5b4fac6866a32764c52
+  - enabled: 1
+    path: Assets/Scenes/City.unity
+    guid: 0af5c56ed30750246af59134b73f84a7
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 962fc19f93b0dd44b83064f43b026341,
       type: 2}

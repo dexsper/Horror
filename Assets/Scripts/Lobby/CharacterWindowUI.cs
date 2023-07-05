@@ -18,7 +18,7 @@ public class CharacterWindowUI : MonoBehaviour
     [SerializeField] private Transform _charactersContent;
     [SerializeField] private Button _closeButton;
 
-    [SerializeField] private GameObject editPlayerName, authentificate,gameAdObject;
+    [SerializeField] private GameObject editPlayerName, authentificate,gameAdObject,multiplayerSettingsButton;
 
     [SerializeField] private string rewardedSkinID;
 
@@ -78,12 +78,14 @@ public class CharacterWindowUI : MonoBehaviour
     public void OpenWindow()
     {
         gameObject.SetActive(true);
+        multiplayerSettingsButton.SetActive(false);
         OnShopOpened?.Invoke();
     }
     
     private void CloseWindow()
     {
         OnShopClosed?.Invoke();
+        multiplayerSettingsButton.SetActive(true);
         gameObject.SetActive(false);
         gameAdObject.SetActive(true);
         authentificate.SetActive(true);
