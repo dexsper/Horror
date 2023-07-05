@@ -144,6 +144,7 @@ MonoBehaviour:
   - {fileID: 8662986836516071234}
   - {fileID: 6428369254693963360}
   - {fileID: 755230378346370276}
+  - {fileID: 4516835109344779352}
   <ParentNetworkObject>k__BackingField: {fileID: 0}
   <ChildNetworkObjects>k__BackingField: []
   SerializedTransformProperties:
@@ -310,8 +311,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e527ccc7cb76f624f88e87caed55e07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentIndexCache: 7
+  _addedNetworkObject: {fileID: 201277550}
+  _networkObjectCache: {fileID: 201277550}
   playerNickName: {fileID: 1024315442876679227}
   emojiParticle: {fileID: 2599176024898834207}
+  materials:
+  - {fileID: 2100000, guid: 9f34070364e48d24297908866dd6762f, type: 2}
+  - {fileID: 2100000, guid: 5691aad654871084bb7f84be6dc98391, type: 2}
+  - {fileID: 2100000, guid: b4f1adaa536553c48b2f5173e9537d38, type: 2}
+  - {fileID: 2100000, guid: c98e44ac41ae3d541863cc2a3dc1596b, type: 2}
 --- !u!1 &767175850263084852
 GameObject:
   m_ObjectHideFlags: 0
