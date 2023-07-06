@@ -4,14 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using FishNet;
-using FishNet.Connection;
-using FishNet.Object;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms;
 using UnityEngine.UI;
 
-public class PlayerUIController : NetworkBehaviour
+public class PlayerUIController : MonoBehaviour
 {
     [SerializeField] private Button _interactButton;
     [SerializeField] private Button _leaveButton;
@@ -38,7 +35,7 @@ public class PlayerUIController : NetworkBehaviour
 
     private void Awake()
     {
-        //_openButton.onClick.AddListener(PlayEmoji);
+        _openButton.onClick.AddListener(OnButtonClick);
 
         _interactButton.onClick.AddListener(Interact);
         _leaveButton.onClick.AddListener(Leave);
@@ -78,11 +75,10 @@ public class PlayerUIController : NetworkBehaviour
             emojiButtons[i].transform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.Linear);
         }
     }
-
-    [ServerRpc(RequireOwnership = false)]
-    public void CreateEmoji(int index, NetworkConnection conn = null)
+    
+    public void CreateEmoji(int index)
     {
-        PlayerBehavior.Players[conn.ClientId].PlayerUI.PlayEmojiParticle(index,conn);
+        PlayerBehavior.LocalPlayer.PlayerUI.CreateEmoji(index);
     }
 
     private void Start()

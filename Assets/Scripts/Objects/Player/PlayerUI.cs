@@ -18,13 +18,22 @@ public class PlayerUI : NetworkBehaviour
         playerNickName.text = player.Data[LobbyManager.KEY_PLAYER_NAME].Value;
     }
 
-    [ObserversRpc]
-    public void PlayEmojiParticle(int emojiMaterialIndex,NetworkConnection conn)
+    [ServerRpc]
+    public void CreateEmoji(int index, NetworkConnection conn = null)
     {
-        emojiParticle.gameObject.SetActive(false);
+        
+        PlayEmojiParticle(index,conn);
+    }
+    
+    [ObserversRpc]
+    private void PlayEmojiParticle(int emojiMaterialIndex, NetworkConnection conn)
+    {
+        if(this.Owner != conn)
+            return;
         ParticleSystemRenderer particleSystemRenderer = emojiParticle.GetComponent<ParticleSystemRenderer>();
         particleSystemRenderer.material = materials[emojiMaterialIndex];
         emojiParticle.GetComponent<ParticleSystemRenderer>().material = particleSystemRenderer.material;
         emojiParticle.gameObject.SetActive(true);
+        emojiParticle.Play();
     }
 }

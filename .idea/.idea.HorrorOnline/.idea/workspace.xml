@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Windows/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Windows/addressables_content_state.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Player.prefab" afterDir="false" />
@@ -29,6 +30,9 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,8 +142,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Memes/Meme.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" />
       </list>
     </option>
   </component>

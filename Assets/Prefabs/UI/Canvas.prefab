@@ -581,12 +581,11 @@ MonoBehaviour:
       - m_Target: {fileID: 5500344655624269673}
         m_TargetAssemblyTypeName: PlayerUIController, Assembly-CSharp
         m_MethodName: CreateEmoji
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 19886694, guid: 69359de5f8759454bbfe449e619129bc,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1250,11 +1249,10 @@ MonoBehaviour:
       - m_Target: {fileID: 5500344655624269673}
         m_TargetAssemblyTypeName: PlayerUIController, Assembly-CSharp
         m_MethodName: CreateEmoji
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 19848974, guid: f276f55eadaf0e34ba03d5b43bfbfae0,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2181,12 +2179,11 @@ MonoBehaviour:
       - m_Target: {fileID: 5500344655624269673}
         m_TargetAssemblyTypeName: PlayerUIController, Assembly-CSharp
         m_MethodName: CreateEmoji
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 19887480, guid: 93a7485b7f1564c4aae6a739c3edc50e,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2631,7 +2628,6 @@ GameObject:
   - component: {fileID: 5500344655624269673}
   - component: {fileID: 9026958922621350355}
   - component: {fileID: 807662667561804350}
-  - component: {fileID: 3656974769476878863}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2745,9 +2741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb64748911bfd8459f2879809fdbdba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _componentIndexCache: 0
-  _addedNetworkObject: {fileID: 3656974769476878863}
-  _networkObjectCache: {fileID: 3656974769476878863}
   _interactButton: {fileID: 5500344653942886644}
   _leaveButton: {fileID: 1232674978}
   repairedGeneratorsCount: {fileID: 5500344655407274271}
@@ -2808,40 +2801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d652797b1fbb70a4e8cf1d4d9f519c7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3656974769476878863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5500344655624269654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26b716c41e9b56b4baafaf13a523ba2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <IsNested>k__BackingField: 0
-  <ComponentIndex>k__BackingField: 0
-  <PredictedSpawn>k__BackingField: {fileID: 0}
-  _networkBehaviours:
-  - {fileID: 5500344655624269673}
-  <ParentNetworkObject>k__BackingField: {fileID: 0}
-  <ChildNetworkObjects>k__BackingField: []
-  SerializedTransformProperties:
-    Position: {x: 960, y: 540, z: 0}
-    Rotation: {x: 0, y: 0, z: 0, w: 1}
-    LocalScale: {x: 1, y: 1, z: 1}
-  _isNetworked: 1
-  _isGlobal: 0
-  _initializeOrder: 0
-  _defaultDespawnType: 0
-  NetworkObserver: {fileID: 0}
-  <PrefabId>k__BackingField: 8
-  <SpawnableCollectionId>k__BackingField: 0
-  _scenePathHash: 0
-  <SceneId>k__BackingField: 0
-  <AssetPathHash>k__BackingField: 6903469541983927214
-  _sceneNetworkObjects: []
 --- !u!1 &7030662826240147571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,12 +3199,11 @@ MonoBehaviour:
       - m_Target: {fileID: 5500344655624269673}
         m_TargetAssemblyTypeName: PlayerUIController, Assembly-CSharp
         m_MethodName: CreateEmoji
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 19845558, guid: 4a9bb31a555add44ba9d0dbc0c220e70,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.ParticleSystem, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

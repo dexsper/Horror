@@ -634,7 +634,7 @@ MonoBehaviour:
   _useGlobalScenes: 1
   _startInOffline: 1
   _offlineScene: Assets/Scenes/OfflineSceneTest.unity
-  _onlineScene: Assets/Scenes/Backrooms.unity
+  _onlineScene: Assets/Scenes/Office.unity
   _replaceScenes: 0
 --- !u!114 &8227389857763731881
 MonoBehaviour:
@@ -648,4 +648,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ab3e335bec8384cb663d6e71f8c338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerName: 
   CharacterName: 
