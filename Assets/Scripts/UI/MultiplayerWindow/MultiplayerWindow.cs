@@ -144,5 +144,9 @@ public class MultiplayerWindow : MonoBehaviour
     private void QuickGame()
     {
         LobbyManager.Instance.QuickJoinLobby();
+        for (int i = 0; i < objectsToDisable.Count; i++)
+        {
+            objectsToDisable[i].SetActive(false);
+        }
     }
 }

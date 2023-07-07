@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using FishNet.Connection;
 using FishNet.Object;
 using TMPro;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerUI : NetworkBehaviour
 {
@@ -13,15 +15,22 @@ public class PlayerUI : NetworkBehaviour
     [SerializeField] private ParticleSystem emojiParticle;
     [SerializeField] private List<Material> materials = new List<Material>();
 
+    [SerializeField] private Image damageImage;
+    
     public void SetPlayerNickNameOnUI(Player player)
     {
         playerNickName.text = player.Data[LobbyManager.KEY_PLAYER_NAME].Value;
     }
+    
+    public void PlayDamageImage()
+    {
+        damageImage.DOColor(new Color(1f, 1f, 1f, 0f), 0.25f).From(Color.white).SetEase(Ease.Linear);
+    }
+    
 
     [ServerRpc]
     public void CreateEmoji(int index, NetworkConnection conn = null)
     {
-        
         PlayEmojiParticle(index,conn);
     }
     

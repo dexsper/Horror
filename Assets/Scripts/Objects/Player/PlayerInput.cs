@@ -15,6 +15,7 @@ public class PlayerInput : MonoBehaviour, IPlayerInput
         if (_joystick == null && _touchField == null)
             return;
 
+        lookSensitivity = new Vector2(PlayerPrefs.GetFloat("Sensitivity"),2);
         Movement = _joystick.Direction;
         
 #if UNITY_EDITOR

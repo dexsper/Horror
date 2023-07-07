@@ -530,7 +530,7 @@ MonoBehaviour:
   _componentIndexCache: 6
   _addedNetworkObject: {fileID: 6776971901868544573}
   _networkObjectCache: {fileID: 6776971901868544573}
-  _maxRandomWalk: 15
+  _maxRandomWalk: 70
   _characterData: {fileID: 11400000, guid: 026af8e03a0f1b144892d98db4bb3f3d, type: 2}
   _names:
   - John

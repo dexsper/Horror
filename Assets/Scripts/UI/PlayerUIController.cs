@@ -79,6 +79,7 @@ public class PlayerUIController : MonoBehaviour
     public void CreateEmoji(int index)
     {
         PlayerBehavior.LocalPlayer.PlayerUI.CreateEmoji(index);
+        Close();
     }
 
     private void Start()

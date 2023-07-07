@@ -94,17 +94,18 @@ public class LobbyListUI : MonoBehaviour
 
     private void UpdateLobbyList(List<Lobby> lobbyList)
     {
-        foreach (Transform child in _lobbyContainer)
-        {
-            if (child == _lobbyTemplate) continue;
+        foreach (Transform child in _lobbyContainer) {
+            if (child == _lobbyContainer) continue;
+
+            Destroy(child.gameObject);
         }
 
         foreach (Lobby lobby in lobbyList)
         {
-            LobbyListSingleUI lobbyInstance = Instantiate(_lobbyTemplate, _lobbyContainer);
-
-            lobbyInstance.UpdateLobby(lobby);
-            lobbyInstance.gameObject.SetActive(true);
+            Transform lobbySingleTransform = Instantiate(_lobbyTemplate.transform, _lobbyContainer);
+            lobbySingleTransform.gameObject.SetActive(true);
+            LobbyListSingleUI lobbyListSingleUI = lobbySingleTransform.GetComponent<LobbyListSingleUI>();
+            lobbyListSingleUI.UpdateLobby(lobby);
         }
     }
 

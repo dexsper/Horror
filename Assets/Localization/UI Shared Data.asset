@@ -159,6 +159,10 @@ MonoBehaviour:
     m_Key: CloseShop
     m_Metadata:
       m_Items: []
+  - m_Id: 15130589560541184
+    m_Key: Sens
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

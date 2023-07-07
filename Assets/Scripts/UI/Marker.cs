@@ -28,8 +28,10 @@ public class Marker : MonoBehaviour
     {
         _target = target;
         _target.SetMarker(this);
-    } 
+    }
 
+    public float dis;
+    
     private void FixedUpdate()
     {
         if (_target != null && _image != null) 
@@ -40,11 +42,10 @@ public class Marker : MonoBehaviour
             float minY = _image.GetPixelAdjustedRect().height / 2;
             float maxY = Screen.height - minY;
 
-            Vector2 pos = _camera.WorldToScreenPoint(_target.transform.position + _offset);
+            Vector2 pos = _camera.ScreenToWorldPoint(_target.transform.position + _offset);
 
-            /*if (Vector3.Dot((_target.transform.position - transform.position), transform.forward) < 0)
+            if (Vector3.Dot((_target.transform.position - transform.position),transform.forward) < 0)
             {
-
                 if (pos.x < Screen.width / 2)
                 {
                     pos.x = maxX;
@@ -53,12 +54,13 @@ public class Marker : MonoBehaviour
                 {
                     pos.x = minX;
                 }
-            }*/
+            }
 
             pos.x = Mathf.Clamp(pos.x, minX, maxX);
             pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
             _image.transform.position = pos;
+            
             float distance = Vector3.Distance(_camera.transform.position, _target.transform.position);
             _distanceText.text = $"{Mathf.RoundToInt(distance)}m";
         }

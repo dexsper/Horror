@@ -1,8 +1,11 @@
 using System;
+using DG.Tweening;
+using FishNet.Connection;
 using FishNet.Object;
 using FishNet.Object.Synchronizing;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : NetworkBehaviour
 {
@@ -14,15 +17,21 @@ public class Health : NetworkBehaviour
     public float CurrentHealth { get; private set; }
 
     public bool IsDead { get; private set; }
+
+    private PlayerUI _playerUI;
     public event Action OnDead;
     public event Action OnRestored;
+
+    private void Awake()
+    {
+        _playerUI = GetComponent<PlayerUI>();
+    }
 
     [Server]
     public void Damage(float amount)
     {
         if (IsDead)
             return;
-
         CurrentHealth = Mathf.Clamp(CurrentHealth - amount, 0, 100f);
     }
 
@@ -34,6 +43,11 @@ public class Health : NetworkBehaviour
 
     private void On_HealthChange(float prev, float next, bool asServer)
     {
+        if (next < prev && base.IsOwner)
+        {
+            _playerUI.PlayDamageImage();
+        }
+        
         if (next <= 0f && !IsDead)
         {
             IsDead = true;

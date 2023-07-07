@@ -6605,7 +6605,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1583.4999, y: -87.5}
+  m_AnchoredPosition: {x: 1583.5, y: -87.5}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &617460872
@@ -6917,7 +6917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1800.4999, y: -250}
+  m_AnchoredPosition: {x: 1800.5, y: -250}
   m_SizeDelta: {x: 145, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &655939868
@@ -7754,7 +7754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1800.4999, y: -100}
+  m_AnchoredPosition: {x: 1800.5, y: -100}
   m_SizeDelta: {x: 145, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &740805179
@@ -9315,7 +9315,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: 167.99997}
+  m_AnchoredPosition: {x: -25, y: 167.99995}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &893806844
@@ -12393,6 +12393,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126027969}
   m_CullTransparentMesh: 1
+--- !u!1 &1136180984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5911122394923745114, guid: 7ce8c3d041077b549b1ff51e8b25470d,
+    type: 3}
+  m_PrefabInstance: {fileID: 5911122394159056208}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1151375296
 GameObject:
   m_ObjectHideFlags: 0
@@ -13672,11 +13678,11 @@ MonoBehaviour:
   maps:
   - mapSprite: {fileID: 21300000, guid: db6ba96dfc519e642892388490c35e0c, type: 3}
     mapName: Backrooms
-  - mapSprite: {fileID: 21300000, guid: c8033726688169a4cb6ab6d3c4a7615a, type: 3}
+  - mapSprite: {fileID: 21300000, guid: 99e2b10fa64b6d04db368cb7cc788d8b, type: 3}
     mapName: Office
-  - mapSprite: {fileID: 21300000, guid: 14118779a039cc346959281c27376eec, type: 3}
+  - mapSprite: {fileID: 21300000, guid: eb46c460124cde34392bb802d1cf8eeb, type: 3}
     mapName: Labyrint
-  - mapSprite: {fileID: 21300000, guid: a4abd2e70bf37f049be93127fb54aed2, type: 3}
+  - mapSprite: {fileID: 21300000, guid: 09ee8e3597465794a803f5fc0f2a49fd, type: 3}
     mapName: City
   nextButton: {fileID: 1949809888}
   prevButton: {fileID: 1457966350}
@@ -16637,6 +16643,27 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 5911122394159056208}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1392261648
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136180984}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f97e7a4820bd89846b91e81a140fed48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1394115245
 GameObject:
   m_ObjectHideFlags: 0
@@ -16983,7 +17010,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105, y: 167.99997}
+  m_AnchoredPosition: {x: 105, y: 167.99995}
   m_SizeDelta: {x: 125, y: 125}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1402478518
@@ -20905,7 +20932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24705882, g: 0.24705882, b: 0.24705882, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -25023,11 +25050,11 @@ MonoBehaviour:
   maps:
   - mapSprite: {fileID: 21300000, guid: db6ba96dfc519e642892388490c35e0c, type: 3}
     mapName: Backrooms
-  - mapSprite: {fileID: 21300000, guid: c8033726688169a4cb6ab6d3c4a7615a, type: 3}
+  - mapSprite: {fileID: 21300000, guid: 99e2b10fa64b6d04db368cb7cc788d8b, type: 3}
     mapName: Office
-  - mapSprite: {fileID: 21300000, guid: 14118779a039cc346959281c27376eec, type: 3}
+  - mapSprite: {fileID: 21300000, guid: eb46c460124cde34392bb802d1cf8eeb, type: 3}
     mapName: Labyrint
-  - mapSprite: {fileID: 21300000, guid: a4abd2e70bf37f049be93127fb54aed2, type: 3}
+  - mapSprite: {fileID: 21300000, guid: 09ee8e3597465794a803f5fc0f2a49fd, type: 3}
     mapName: City
   nextButton: {fileID: 1982794758}
   prevButton: {fileID: 1461721218}
@@ -25422,6 +25449,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5911122394923745116, guid: 7ce8c3d041077b549b1ff51e8b25470d,
+        type: 3}
+      propertyPath: voiceSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0a980ef26c8e71746a8a26487ff29f3d,
+        type: 3}
+    - target: {fileID: 5911122394923745118, guid: 7ce8c3d041077b549b1ff51e8b25470d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ce8c3d041077b549b1ff51e8b25470d, type: 3}

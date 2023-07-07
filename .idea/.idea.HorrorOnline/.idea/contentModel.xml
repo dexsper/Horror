@@ -67,6 +67,7 @@
         </e>
         <e p="Animations" t="Include">
           <e p="Generator Anims" t="Include" />
+          <e p="MicroAnimation" t="Include" />
         </e>
         <e p="AppMetrica" t="Include">
           <e p="AppMetrica.cs" t="Include" />
@@ -233,49 +234,6 @@
               </e>
             </e>
           </e>
-          <e p="POLYGON city pack" t="Include">
-            <e p="Materials" t="Include">
-              <e p="color_windows" t="Include" />
-              <e p="Colors_buildings" t="Include" />
-              <e p="Material_meshs" t="Include" />
-              <e p="traffic light" t="Include" />
-            </e>
-            <e p="Meshes,textures" t="Include">
-              <e p="Buildings_FBX" t="Include">
-                <e p="Materials" t="Include" />
-              </e>
-              <e p="lamps fbx" t="Include">
-                <e p="Materials" t="Include" />
-              </e>
-              <e p="Letters FBX" t="Include">
-                <e p="Materials" t="Include" />
-              </e>
-              <e p="props_FBX" t="Include">
-                <e p="Materials" t="Include" />
-              </e>
-              <e p="Shops_FBX" t="Include">
-                <e p="Materials" t="Include" />
-              </e>
-              <e p="traffic signs FBX" t="Include">
-                <e p="Materials" t="Include" />
-              </e>
-              <e p="ways_FBX" t="Include">
-                <e p="Materials" t="Include" />
-              </e>
-            </e>
-            <e p="Prefabs" t="Include">
-              <e p="Buildings" t="Include" />
-              <e p="Floor" t="Include" />
-              <e p="lamps" t="Include" />
-              <e p="Letters" t="Include" />
-              <e p="props" t="Include" />
-              <e p="traffic signs" t="Include" />
-            </e>
-            <e p="Read_me.txt" t="Include" />
-            <e p="scene" t="Include">
-              <e p="DemoScene" t="Include" />
-            </e>
-          </e>
           <e p="School" t="Include">
             <e p="material" t="Include">
               <e p="Materials" t="Include" />
@@ -286,6 +244,43 @@
             </e>
             <e p="props" t="Include" />
             <e p="road" t="Include" />
+          </e>
+          <e p="SimplePoly - Town Pack" t="Include">
+            <e p="DemoScene" t="Include">
+              <e p="DemoScene" t="Include" />
+              <e p="FlyCamera.cs" t="Include" />
+            </e>
+            <e p="Materials" t="Include" />
+            <e p="meshes" t="Include">
+              <e p="Buildings" t="Include" />
+              <e p="Nature" t="Include" />
+              <e p="props" t="Include">
+                <e p="Animators" t="Include" />
+              </e>
+              <e p="RoadSegments" t="Include" />
+            </e>
+            <e p="Prefabs" t="Include">
+              <e p="Buildings" t="Include" />
+              <e p="Nature" t="Include" />
+              <e p="props" t="Include" />
+              <e p="RoadSegments" t="Include" />
+            </e>
+            <e p="Standard Assets" t="Include">
+              <e p="Effects" t="Include">
+                <e p="ImageEffects" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="PostEffectsBase.cs" t="Include" />
+                    <e p="Quads.cs" t="Include" />
+                    <e p="SunShafts.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="SimpleClear.shader" t="Include" />
+                    <e p="SunShaftsComposite.shader" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+            <e p="Textures" t="Include" />
           </e>
           <e p="SimpleSkeleton" t="Include">
             <e p="material" t="Include">
@@ -3073,6 +3068,7 @@
             <e p="PlayerUIMarkers.cs" t="Include" />
             <e p="PulseUiAnimation.cs" t="Include" />
             <e p="SafeZone.cs" t="Include" />
+            <e p="Settings.cs" t="Include" />
             <e p="SettingsPanelUI.cs" t="Include" />
             <e p="SinglePlayerUI.cs" t="Include" />
             <e p="TouchField.cs" t="Include" />
