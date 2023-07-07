@@ -3000,6 +3000,7 @@
               <e p="ManiacBehaviour.cs" t="Include" />
               <e p="ManiacChaseState.cs" t="Include" />
               <e p="ManiacPatrolState.cs" t="Include" />
+              <e p="ManiacSound.cs" t="Include" />
               <e p="ManiacState.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
@@ -3062,6 +3063,7 @@
             <e p="MultiplayerWindow" t="Include">
               <e p="MultiplayerWindow.cs" t="Include" />
             </e>
+            <e p="OnButtonClick.cs" t="Include" />
             <e p="PlayersStateUI.cs" t="Include" />
             <e p="PlayerStateUI.cs" t="Include" />
             <e p="PlayerUIController.cs" t="Include" />

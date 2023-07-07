@@ -10,7 +10,7 @@ public class PlayerUIMarkers : MonoBehaviour
     
     private void Start()
     {
-        SpawnMarkers();
+        //SpawnMarkers();
     }
 
     private void SpawnMarkers()

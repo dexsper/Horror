@@ -12,7 +12,7 @@ public class VoiceMute : MonoBehaviour
     [SerializeField] private Sprite mutedSprite, unMutedSprite;
     [SerializeField] private Sprite voiceSprite;
  
-    private bool _isMuted;
+    private bool _isMuted = true;
     private Animator _animator;
 
     private void Awake()
@@ -22,11 +22,6 @@ public class VoiceMute : MonoBehaviour
         _animator = GetComponent<Animator>();
         
         _button.onClick.AddListener(MuteUnMute);
-    }
-
-    private void Start()
-    {
-        MuteVoice();
     }
 
     private void Update()
@@ -68,6 +63,6 @@ public class VoiceMute : MonoBehaviour
     private void UpdateAnimator(bool status)
     {
         if(_animator != null)
-            _animator.SetBool(nameof(status),status);
+            _animator.SetBool("_isMuted",status);
     }
 }

@@ -27,7 +27,7 @@ public class VoiceChatController : MonoBehaviour
         _engine = RtcEngine.CreateAgoraRtcEngine();
         _engine.Initialize(context);
         
-        SetMute(false);
+        SetMute(true);
     }
 
     private void Start()
@@ -52,6 +52,7 @@ public class VoiceChatController : MonoBehaviour
     private void OnJoinedLobby(object sender, LobbyEventArgs args)
     {
         JoinChannel(args.lobby.Name);
+        SetMute(true);
     }
 
     private void OnLeftLobby(object sender, EventArgs e)
@@ -64,6 +65,7 @@ public class VoiceChatController : MonoBehaviour
         _engine.EnableAudio();
         _engine.AdjustRecordingSignalVolume(120);
         _engine.JoinChannel("", channelName);
+        SetMute(true);
     }
 
     private void LeaveChannel()

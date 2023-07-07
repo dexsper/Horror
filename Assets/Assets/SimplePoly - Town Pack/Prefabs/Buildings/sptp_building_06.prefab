@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 408672}
   - component: {fileID: 3379310}
   - component: {fileID: 2302508}
-  - component: {fileID: 6457148}
+  - component: {fileID: 8101820831383523555}
   m_Layer: 0
   m_Name: sptp_building_06
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6457148
-MeshCollider:
+--- !u!65 &8101820831383523555
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,7 +94,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 3cfd88e81c5eeb743838d6c224c7b3a7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 8.91044, y: 7.9049706, z: 10.498152}
+  m_Center: {x: 0.16711068, y: 3.9520538, z: 0}

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -99,7 +100,7 @@ public class MultiplayerWindow : MonoBehaviour
 
     public void OpenMenu()
     {
-        gameObject.SetActive(true);
+        transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         
         settingsMenuButton.SetActive(false);
         settingsMpMenuButton.SetActive(true);
@@ -112,9 +113,9 @@ public class MultiplayerWindow : MonoBehaviour
         CheckForFirstEntry();
     }
 
-    public void CloseMenu()
+    private void CloseMenu()
     {
-        gameObject.SetActive(false);
+        transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         
         settingsMenuButton.SetActive(true);
         settingsMpMenuButton.SetActive(false);

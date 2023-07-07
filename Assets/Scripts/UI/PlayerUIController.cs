@@ -13,7 +13,7 @@ public class PlayerUIController : MonoBehaviour
     [SerializeField] private Button _interactButton;
     [SerializeField] private Button _leaveButton;
 
-    [SerializeField] private TextMeshProUGUI repairedGeneratorsCount;
+    [SerializeField] private Text repairedGeneratorsCount;
 
     [SerializeField] private Slider interactionSlider;
 
@@ -31,10 +31,14 @@ public class PlayerUIController : MonoBehaviour
 
     [SerializeField] private Button _openButton;
 
+    private AudioSource _source;
+    
     private bool _isOpen;
 
     private void Awake()
     {
+        _source = GetComponent<AudioSource>();
+        
         _openButton.onClick.AddListener(OnButtonClick);
 
         _interactButton.onClick.AddListener(Interact);
@@ -185,6 +189,7 @@ public class PlayerUIController : MonoBehaviour
                 return;
         }
         repairedGeneratorsCount.text = LocalizationUI.Instance.GetLocaleName() == "ru" ? endRu : endEn;
+        _source.Play();
     }
 
     private void UpdateSlider(float value)

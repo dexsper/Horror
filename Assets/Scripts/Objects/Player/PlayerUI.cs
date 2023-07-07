@@ -7,6 +7,7 @@ using TMPro;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PlayerUI : NetworkBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerUI : NetworkBehaviour
     [SerializeField] private List<Material> materials = new List<Material>();
 
     [SerializeField] private Image damageImage;
+    [SerializeField] private List<Sprite> bloodImagesList = new List<Sprite>();
     
     public void SetPlayerNickNameOnUI(Player player)
     {
@@ -24,6 +26,9 @@ public class PlayerUI : NetworkBehaviour
     
     public void PlayDamageImage()
     {
+        var index = Random.Range(0, bloodImagesList.Count);
+        damageImage.sprite = bloodImagesList[index];
+        
         damageImage.DOColor(new Color(1f, 1f, 1f, 0f), 0.25f).From(Color.white).SetEase(Ease.Linear);
     }
     

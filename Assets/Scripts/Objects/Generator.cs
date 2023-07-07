@@ -117,7 +117,8 @@ public class Generator : NetworkBehaviour, IInteractable
             _repairInitiator = null;
             _repairedEffect.Play();
             _lightEffect.SetActive(true);
-            _source.PlayOneShot(repairClip);
+            _source.loop = true;
+            _source.Play();
 
             OnRepaired?.Invoke(this);
         }

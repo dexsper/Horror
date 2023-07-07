@@ -210,7 +210,7 @@ MonoBehaviour:
   _stepLower: {fileID: 2463134839365918438}
   _stepSmooth: 2
   _gravityMultiplier: 65
-  _speed: 10
+  _speed: 15
   <IsMove>k__BackingField: 0
   <IsStep>k__BackingField: 0
 --- !u!114 &5539716946378381922
@@ -322,6 +322,11 @@ MonoBehaviour:
   - {fileID: 2100000, guid: b4f1adaa536553c48b2f5173e9537d38, type: 2}
   - {fileID: 2100000, guid: c98e44ac41ae3d541863cc2a3dc1596b, type: 2}
   damageImage: {fileID: 7089598589293230863}
+  bloodImagesList:
+  - {fileID: 21300000, guid: 79ec14e048a7d3e43a9ac8a934ac242e, type: 3}
+  - {fileID: 21300000, guid: 2ca51923cd80cab4c95b48d1f08c6542, type: 3}
+  - {fileID: 21300000, guid: f091356afd99a104a8871526eeeef843, type: 3}
+  - {fileID: 21300000, guid: 2bb3862319217464bb4fde65d1f69c1f, type: 3}
 --- !u!1 &767175850263084852
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,15 +17,15 @@ public class LeaveZone : NetworkBehaviour
 
         LeaveZones.Add(this);
 
-        _markerTarget = GetComponent<MarkerTarget>();
-        _markerTarget.Marker.gameObject.SetActive(false);
+        //_markerTarget = GetComponent<MarkerTarget>();
+       // _markerTarget.Marker.gameObject.SetActive(false);
     }
 
     [Server]
     public void Activate()
     {
         gameObject.SetActive(true);
-        _markerTarget.Marker.gameObject.SetActive(true);
+//        _markerTarget.Marker.gameObject.SetActive(true);
         
         SetActive_RPC(true);
     }

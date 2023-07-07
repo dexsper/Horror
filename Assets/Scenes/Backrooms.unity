@@ -1530,6 +1530,31 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3353444524387647860, guid: 550698a0d2bcbfe4a9e148c003707dbf,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353444524387647860, guid: 550698a0d2bcbfe4a9e148c003707dbf,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353444525366142011, guid: 550698a0d2bcbfe4a9e148c003707dbf,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353444525366142011, guid: 550698a0d2bcbfe4a9e148c003707dbf,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353444525366142011, guid: 550698a0d2bcbfe4a9e148c003707dbf,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5500344655624269654, guid: 550698a0d2bcbfe4a9e148c003707dbf,
         type: 3}
       propertyPath: m_Name
@@ -1981,6 +2006,11 @@ PrefabInstance:
       propertyPath: _sceneNetworkObjects.Array.data[7]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8454523138974305533, guid: a0f3e30af19c3bc48865d9648b0bee0e,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c92a69e7e1efe94ba58f41777785d7b, type: 3}
     - target: {fileID: 8454523139630536046, guid: a0f3e30af19c3bc48865d9648b0bee0e,
         type: 3}
       propertyPath: <SceneId>k__BackingField
