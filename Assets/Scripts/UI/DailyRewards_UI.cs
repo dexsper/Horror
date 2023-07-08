@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using TMPro;
 using Unity.Services.Authentication;
 using Unity.Services.Economy;
@@ -59,7 +60,7 @@ public class DailyRewards_UI : MonoBehaviour
     private void Awake()
     {
         AuthenticationService.Instance.SignedIn += Activate;
-        gameObject.SetActive(false);
+        gameObject.transform.DOScale(0f,0.2f).SetEase(Ease.Linear);
     }
 
     private void OnDestroy()
@@ -69,7 +70,7 @@ public class DailyRewards_UI : MonoBehaviour
 
     private void Activate()
     {
-        gameObject.SetActive(true);
+        gameObject.transform.DOScale(1f,0.2f).SetEase(Ease.Linear);
         UpdateRewardsState();
     }
 
@@ -86,10 +87,11 @@ public class DailyRewards_UI : MonoBehaviour
                 case >= 2:
                     _lastClaimTime = null;
                     _currentStreak = 0;
+                    gameObject.transform.DOScale(1f,0.2f).SetEase(Ease.Linear);
                     break;
                 case < 1:
                     _canClaimReward = false;
-                    gameObject.SetActive(false);
+                    gameObject.transform.DOScale(0f,0.2f).SetEase(Ease.Linear);
                     break;
             }
         }

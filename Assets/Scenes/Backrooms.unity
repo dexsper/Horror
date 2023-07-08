@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6bfab16f387f95e4bb60f866299be241, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -473,7 +473,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: bbc8a6311612dbb4d97e7b697aa4c982, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 22e81ab242199c347962b5cb510c9e3b, type: 2}
 --- !u!4 &242141445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8454523138102234585, guid: a0f3e30af19c3bc48865d9648b0bee0e,

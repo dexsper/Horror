@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -74,11 +75,11 @@ public class LobbyCreateUI : MonoBehaviour {
     }
 
     public void Hide() {
-        gameObject.SetActive(false);
+        gameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
 
     public void Show() {
-        gameObject.SetActive(true);
+        gameObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
 
         lobbyName = "MyLobby";
         isPrivate = false;

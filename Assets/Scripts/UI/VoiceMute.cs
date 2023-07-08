@@ -10,8 +10,7 @@ public class VoiceMute : MonoBehaviour
     private Button _button;
     
     [SerializeField] private Sprite mutedSprite, unMutedSprite;
-    [SerializeField] private Sprite voiceSprite;
- 
+
     private bool _isMuted = true;
     private Animator _animator;
 
@@ -26,11 +25,8 @@ public class VoiceMute : MonoBehaviour
 
     private void Update()
     {
-        if (!_isMuted)
-        {
-            _image.sprite = voiceSprite;
-        }
-        
+        _image.sprite = !_isMuted ? unMutedSprite : mutedSprite;
+
         UpdateAnimator(_isMuted);
     }
 
@@ -49,14 +45,12 @@ public class VoiceMute : MonoBehaviour
     private void MuteVoice()
     {
         _isMuted = true;
-        _image.sprite = unMutedSprite;
         VoiceChatController.Instance.SetMute(_isMuted);
     }
 
     private void UnMuteVoice()
     {
         _isMuted = false;
-        _image.sprite = mutedSprite;
         VoiceChatController.Instance.SetMute(_isMuted);
     }
 

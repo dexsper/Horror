@@ -20,71 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Windows/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Windows/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/Micro.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/Micro.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_01.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_01.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_02.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_03.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_03.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_04.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_04.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_05.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_05.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_06.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_06.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_07.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_07.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_08.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_08.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_09.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_09.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_11.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_11.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_12.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_12.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_13.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_13.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_14.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_14.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_15.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_15.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_16.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_16.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_17.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_17.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_18.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_18.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_19.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_19.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_20.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_20.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_21.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_21.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_22.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_22.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_23.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_23.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_24.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_24.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_25.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_25.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_26.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_26.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_27.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_27.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_28.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_28.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_29.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_29.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_30.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_30.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_31.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_31.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_32.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_32.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_33.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_33.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_34.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_34.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_35.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/SimplePoly - Town Pack/Prefabs/Buildings/sptp_building_35.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/Mute_Unmute.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/Mute_Unmute.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Maniac.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Maniac.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SettingsPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SettingsPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Backrooms.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Backrooms.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/City.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/City.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/City/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/City/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Labyrint.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Labyrint.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Office.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Office.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Mute_Unmute.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Mute_Unmute.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineSceneTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineSceneTest.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/VoiceChatController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/VoiceChatController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +119,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AdWarningText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SDK/ADS/Ads.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Installers/RewardedInstaller.cs" />
@@ -173,12 +126,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/RewardedMenuImage.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/WrappedLobbyService.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SinglePlayerUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialAnimator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SettingsPanelUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/EmojiController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerBehavior.cs" />
@@ -187,20 +136,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerInput.cs" />
         <option value="$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/UI/TargetWaypoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Marker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Health.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/VoiceChatController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/PlayerUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/OnButtonClick.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Maniac/ManiacSound.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayerUIMarkers.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" />
       </list>
     </option>
   </component>

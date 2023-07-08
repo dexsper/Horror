@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using TMPro;
 using Unity.Services.Economy.Model;
@@ -77,7 +78,8 @@ public class CharacterWindowUI : MonoBehaviour
 
     public void OpenWindow()
     {
-        gameObject.SetActive(true);
+        gameObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        _charactersContent.gameObject.SetActive(true);
         multiplayerSettingsButton.SetActive(false);
         OnShopOpened?.Invoke();
     }
@@ -86,13 +88,14 @@ public class CharacterWindowUI : MonoBehaviour
     {
         OnShopClosed?.Invoke();
         multiplayerSettingsButton.SetActive(true);
-        gameObject.SetActive(false);
+        gameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        _charactersContent.gameObject.SetActive(false);
         gameAdObject.SetActive(true);
         authentificate.SetActive(true);
         editPlayerName.SetActive(true);
         for (int i = 0; i < objectsToDisable.Count; i++)
         {
-            objectsToDisable[i].SetActive(true);
+            objectsToDisable[i].transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         }
     }
     private void OnDestroy()
@@ -131,9 +134,10 @@ public class CharacterWindowUI : MonoBehaviour
 
             for (int i = 0; i < objectsToDisable.Count; i++)
             {
-                objectsToDisable[i].SetActive(true);
+                objectsToDisable[i].transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
             }
-            gameObject.SetActive(false);
+            gameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+            _charactersContent.gameObject.SetActive(false);
         }
         else
         {

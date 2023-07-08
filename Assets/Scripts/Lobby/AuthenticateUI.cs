@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +21,7 @@ public class AuthenticateUI : MonoBehaviour
 
     private void SinglePlayer()
     {
-        SinglePlayerUI.Instance.gameObject.SetActive(true);
+        SinglePlayerUI.Instance.gameObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         Hide();
     }
 
@@ -49,9 +50,9 @@ public class AuthenticateUI : MonoBehaviour
 
     private void Hide()
     {
-        editPlayerName.SetActive(false);
-        gameAdObject.SetActive(false);
-        gameObject.SetActive(false);
-        settingsButton.SetActive(false);
+        editPlayerName.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        gameAdObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        gameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        settingsButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
 }

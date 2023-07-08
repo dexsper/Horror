@@ -38,7 +38,7 @@ public class MultiplayerWindow : MonoBehaviour
 
         LobbyManager.OnCantFindOpenLobby += OnCantFindOpenLobby;
         
-        settingsMpMenuButton.SetActive(false);
+        settingsMpMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         
         CloseQuickText();
     }
@@ -48,14 +48,14 @@ public class MultiplayerWindow : MonoBehaviour
         if (PlayerPrefs.HasKey("PlayedOnce"))
         {
             tutorialObject.SetActive(true);
-            _openCharacters.SetActive(true);
-            _openLobby.SetActive(true);
+            _openCharacters.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+            _openLobby.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         }
         else
         {
             tutorialObject.SetActive(false);
-            _openCharacters.SetActive(false);
-            _openLobby.SetActive(false);
+            _openCharacters.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+            _openLobby.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
             PlayerPrefs.SetInt("PlayedOnce",1);
         }
     }
@@ -102,13 +102,13 @@ public class MultiplayerWindow : MonoBehaviour
     {
         transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         
-        settingsMenuButton.SetActive(false);
-        settingsMpMenuButton.SetActive(true);
+        settingsMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        settingsMpMenuButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         _openCharacters = openCharacterWindowButton.gameObject;
         _openLobby = openLobbyWindowButton.gameObject;
         
-        authentificateObject.SetActive(false);
-        editNameObject.SetActive(false);
+        authentificateObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        editNameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         
         CheckForFirstEntry();
     }
@@ -117,11 +117,11 @@ public class MultiplayerWindow : MonoBehaviour
     {
         transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         
-        settingsMenuButton.SetActive(true);
-        settingsMpMenuButton.SetActive(false);
+        settingsMenuButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        settingsMpMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         
-        authentificateObject.SetActive(true);
-        editNameObject.SetActive(true);
+        authentificateObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        editNameObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
     }
     
     private void OpenCharacterWindow()
@@ -129,7 +129,7 @@ public class MultiplayerWindow : MonoBehaviour
         characterWindowUI.OpenWindow();
         for (int i = 0; i < objectsToDisable.Count; i++)
         {
-            objectsToDisable[i].SetActive(false);
+            objectsToDisable[i].transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         }
     }
 
@@ -138,7 +138,7 @@ public class MultiplayerWindow : MonoBehaviour
         lobbyCreateUI.SetActive(true);
         for (int i = 0; i < objectsToDisable.Count; i++)
         {
-            objectsToDisable[i].SetActive(false);
+            objectsToDisable[i].transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         }
     }
 
@@ -147,7 +147,7 @@ public class MultiplayerWindow : MonoBehaviour
         LobbyManager.Instance.QuickJoinLobby();
         for (int i = 0; i < objectsToDisable.Count; i++)
         {
-            objectsToDisable[i].SetActive(false);
+            objectsToDisable[i].transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         }
     }
 }

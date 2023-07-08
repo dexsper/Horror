@@ -1,3 +1,4 @@
+using DG.Tweening;
 using FishNet;
 using FishNet.Managing;
 using FishNet.Managing.Scened;
@@ -122,12 +123,12 @@ public class LobbyUI : MonoBehaviour
 
     private void Hide()
     {
-        gameObject.SetActive(false);
+        gameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
 
     public void Show()
     {
-        gameObject.SetActive(true);
+        gameObject.transform.DOScale(1.5f, 0.2f).SetEase(Ease.Linear);
     }
 
 }
