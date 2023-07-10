@@ -1,8 +1,10 @@
 using System;
 using DG.Tweening;
 using TMPro;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 
 public class EditPlayerName : MonoBehaviour
@@ -44,11 +46,26 @@ public class EditPlayerName : MonoBehaviour
 
     public void ConfirmName(string newName)
     {
-        playerName = newName;
+        if (newName == "Player" || newName == "PLAYER")
+        {
+            var index = Random.Range(100, 1000);
 
-        playerNameText.text = playerName;
+            newName = $"Player{index}";
+            
+            playerName = newName;
 
-        OnNameChanged?.Invoke(this, EventArgs.Empty);
+            playerNameText.text = playerName;
+
+            OnNameChanged?.Invoke(this, EventArgs.Empty);
+        }
+        else
+        {
+            playerName = newName;
+
+            playerNameText.text = playerName;
+
+            OnNameChanged?.Invoke(this, EventArgs.Empty);
+        }
         CloseKeyboard();
     }
     
@@ -68,6 +85,11 @@ public class EditPlayerName : MonoBehaviour
     private void Start()
     {
         OnNameChanged += EditPlayerName_OnNameChanged;
+    }
+
+    private void OnDestroy()
+    {
+        OnNameChanged -= EditPlayerName_OnNameChanged;
     }
 
     private void EditPlayerName_OnNameChanged(object sender, EventArgs e)

@@ -9,7 +9,7 @@ using Zenject;
 public class LobbyPlayerSingleUI : MonoBehaviour {
 
 
-    [SerializeField] private TextMeshProUGUI playerNameText;
+    [SerializeField] private Text playerNameText;
     [SerializeField] private Image characterImage;
     [SerializeField] private Button kickPlayerButton;
 

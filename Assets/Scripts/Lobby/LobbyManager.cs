@@ -6,6 +6,7 @@ using Unity.Services.Core;
 using Unity.Services.Lobbies;
 using Unity.Services.Lobbies.Models;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class LobbyManager : MonoBehaviour
 {
@@ -162,6 +163,13 @@ public class LobbyManager : MonoBehaviour
 
     public async void CreateLobby(string lobbyName, int maxPlayers, bool isPrivate)
     {
+        if (_playerName == "Player" || _playerName == "PLAYER" || _playerName == "player")
+        {
+            var index = Random.Range(100, 1000);
+            
+            _playerName = $"Player{index}";
+        }
+        
         Player player = GetNewPlayerInstance();
 
         CreateLobbyOptions options = new CreateLobbyOptions
