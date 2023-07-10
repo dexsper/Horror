@@ -20,8 +20,8 @@ public class Settings : MonoBehaviour
 
     private void Start()
     {
-        cameraSensitivity.value = PlayerPrefs.HasKey("Sensitivity") ? PlayerPrefs.GetFloat("Sensitivity") : 0.14f;
-        sensitivitySliderValue.text = $"{Math.Round(cameraSensitivity.value,2) * 100}%";
+        cameraSensitivity.value = PlayerPrefs.HasKey("Sensitivity") ? PlayerPrefs.GetFloat("Sensitivity") / 100 : 0.05f;
+        sensitivitySliderValue.text = $"{Math.Round(PlayerPrefs.GetFloat("Sensitivity"),2)}%";
     }
 
     public static event Action<float> OnSensetivityChange;

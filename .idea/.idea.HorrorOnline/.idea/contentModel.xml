@@ -561,6 +561,7 @@
           </e>
         </e>
         <e p="Localization" t="Include" />
+        <e p="MapVolumes" t="Include" />
         <e p="Materials" t="Include" />
         <e p="MazeGenerator" t="Include">
           <e p="Animations" t="Include" />

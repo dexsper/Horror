@@ -21,7 +21,7 @@ public class AuthenticateUI : MonoBehaviour
 
     private void SinglePlayer()
     {
-        SinglePlayerUI.Instance.gameObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        SinglePlayerUI.Instance.OpenMenu();
         Hide();
     }
 

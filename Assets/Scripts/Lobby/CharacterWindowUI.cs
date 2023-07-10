@@ -65,12 +65,6 @@ public class CharacterWindowUI : MonoBehaviour
         _closeButton.onClick.AddListener(CloseWindow);
     }
 
-    private void OnEnable()
-    {
-        GetPlayerBalance();
-        UpdateUI();
-    }
-
     private void Start()
     {
         CloseWindow();
@@ -78,6 +72,8 @@ public class CharacterWindowUI : MonoBehaviour
 
     public void OpenWindow()
     {
+        GetPlayerBalance();
+        UpdateUI();
         gameObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         _charactersContent.gameObject.SetActive(true);
         multiplayerSettingsButton.SetActive(false);

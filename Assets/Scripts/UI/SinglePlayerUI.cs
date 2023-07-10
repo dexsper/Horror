@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using DG.Tweening;
 using FishNet;
 using FishNet.Managing;
 using FishNet.Managing.Scened;
@@ -73,11 +74,16 @@ public class SinglePlayerUI : MonoBehaviour
         _multipassTransport.StartConnection(true, 0);
     }
 
+    public void OpenMenu()
+    {
+        transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        gameAdObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+    }
     
     private void CloseMenu()
     {
         gameObject.SetActive(false);
-        gameAdObject.SetActive(true);
+        gameAdObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         authenticate.SetActive(true);
         editName.SetActive(true);
     }
