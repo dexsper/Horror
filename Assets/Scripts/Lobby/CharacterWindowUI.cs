@@ -67,7 +67,7 @@ public class CharacterWindowUI : MonoBehaviour
 
     private void Start()
     {
-        CloseWindow();
+        //CloseWindow();
     }
 
     public void OpenWindow()

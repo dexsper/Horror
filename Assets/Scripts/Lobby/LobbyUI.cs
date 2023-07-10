@@ -19,7 +19,7 @@ public class LobbyUI : MonoBehaviour
 
     [Title("Text")]
     [SerializeField] private TextMeshProUGUI lobbyNameText;
-    [SerializeField] private TextMeshProUGUI playerCountText;
+    [SerializeField] private Text playerCountText;
 
     [Title("Buttons")]
     [SerializeField] private Button leaveLobbyButton;

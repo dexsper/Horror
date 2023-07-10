@@ -1,7 +1,6 @@
 using System;
 using DG.Tweening;
 using TMPro;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;

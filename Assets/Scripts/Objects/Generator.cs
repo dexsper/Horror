@@ -102,6 +102,8 @@ public class Generator : NetworkBehaviour, IInteractable
         {
             _repairTime = 0f;
             RepairingProgress = 0f;
+            _repairInitiator = null;
+            _isRepairing = false;
         }
     }
 

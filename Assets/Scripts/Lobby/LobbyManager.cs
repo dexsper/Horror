@@ -48,6 +48,7 @@ public class LobbyManager : MonoBehaviour
     {
         HandleLobbyHeartbeat();
         HandleLobbyPolling();
+        HandleRefreshLobbyList();
     }
 
     public async void Authenticate(string playerName)

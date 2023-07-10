@@ -62,6 +62,7 @@ public class PlayerInteraction : NetworkBehaviour
             }
         }
 
+        IsInteract = false;
         CanInteract = false;
         LookInteractable = null;
     }

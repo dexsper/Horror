@@ -41,6 +41,9 @@ public class MultiplayerWindow : MonoBehaviour
         settingsMpMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         
         CloseQuickText();
+        
+        OpenCharacterWindow();
+        openCharacterWindowButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
 
     private void CheckForFirstEntry()
@@ -107,7 +110,7 @@ public class MultiplayerWindow : MonoBehaviour
     public void OpenMenu()
     {
         transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
-        
+
         settingsMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         settingsMpMenuButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
 
