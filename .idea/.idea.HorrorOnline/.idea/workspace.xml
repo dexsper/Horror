@@ -20,25 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/Mute_Unmute.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/Mute_Unmute.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DefaultPrefabObjects.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/free-icon-sound-waves-1792737.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/free-icon-sound-waves-1792737.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/free-icon-sound-waves-1792737.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/MicroAnimation/free-icon-sound-waves-1792737.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backrooms.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Backrooms.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/City.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/City.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fog (2).asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fog (2).asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_ru.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Maze.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Maze.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Office.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Office.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Mute_Unmute.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Mute_Unmute.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DeathRoom.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/DeathRoom.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineSceneTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineSceneTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GvhProjectSettings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +124,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/KeyboardRemoveButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/KeyBoardConfirm.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/EditPlayerName.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/AdWarningText.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/PlayerSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/PlayersStateUI.cs" />
@@ -125,7 +133,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/DeathRoom.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/RewardedMenuImage.cs" />
         <option value="$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/SDK/WrappedLobbyService.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SinglePlayerUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tutorial/TutorialAnimator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SettingsPanelUI.cs" />
@@ -148,13 +155,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MarkerTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/LeaveZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" />
       </list>
     </option>
   </component>
@@ -259,6 +268,7 @@
       <workItem from="1688730397636" duration="954000" />
       <workItem from="1688731418943" duration="683000" />
       <workItem from="1688740429860" duration="3029000" />
+      <workItem from="1688978734473" duration="1666000" />
     </task>
     <servers />
   </component>

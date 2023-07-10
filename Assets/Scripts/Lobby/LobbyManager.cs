@@ -10,7 +10,7 @@ using UnityEngine;
 public class LobbyManager : MonoBehaviour
 {
     public const string KEY_PLAYER_NAME = "PlayerName";
-    public const string KEY_PLAYER_CHARACTER = "Character";
+    public const string KEY_PLAYER_CHARACTER = "PIPELIGHT";
     public const string KEY_CONNECTION_CODE = "ConnectionJoinCode";
     public const string KEY_MAP_NAME = "MapName";
 

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,8 +26,6 @@ public class MultiplayerWindow : MonoBehaviour
 
     [SerializeField] private List<GameObject> objectsToDisable;
 
-    private GameObject _openCharacters, _openLobby;
-    
     private float _timerCounter, _timer = 2f;
     private bool _timerStart;
     private void Awake()
@@ -37,6 +36,7 @@ public class MultiplayerWindow : MonoBehaviour
         closeButton.onClick.AddListener(CloseMenu);
 
         LobbyManager.OnCantFindOpenLobby += OnCantFindOpenLobby;
+        characterWindowUI.OnCharacterSelected += OnCharacterAction;
         
         settingsMpMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         
@@ -48,18 +48,23 @@ public class MultiplayerWindow : MonoBehaviour
         if (PlayerPrefs.HasKey("PlayedOnce"))
         {
             tutorialObject.SetActive(true);
-            _openCharacters.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
-            _openLobby.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         }
         else
         {
             tutorialObject.SetActive(false);
-            _openCharacters.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
-            _openLobby.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
             PlayerPrefs.SetInt("PlayedOnce",1);
         }
+        
+        quickGameButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        openLobbyWindowButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
 
+    private void OnCharacterAction()
+    {
+        quickGameButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        openLobbyWindowButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+    }
+    
     [ContextMenu("Clear Prefs")]
     private void ClearPrefs()
     {
@@ -69,6 +74,7 @@ public class MultiplayerWindow : MonoBehaviour
     private void OnDestroy()
     {
         LobbyManager.OnCantFindOpenLobby -= OnCantFindOpenLobby;
+        characterWindowUI.OnCharacterSelected -= OnCharacterAction;
     }
 
     private void OnCantFindOpenLobby()
@@ -104,9 +110,7 @@ public class MultiplayerWindow : MonoBehaviour
         
         settingsMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         settingsMpMenuButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
-        _openCharacters = openCharacterWindowButton.gameObject;
-        _openLobby = openLobbyWindowButton.gameObject;
-        
+
         authentificateObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         editNameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         

@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class DeathRoomUI : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _progressText;
+    [SerializeField] private Text _progressText;
 
     public void UpdateProgress(float v)
     {
         int value = (int)v;
         
-        _progressText.text = $"Вы возрадитесь через {value}...";
+        _progressText.text = $"{value}...";
     }
 }
