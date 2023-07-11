@@ -59,13 +59,17 @@ public class DailyRewards_UI : MonoBehaviour
 
     private void Awake()
     {
-        AuthenticationService.Instance.SignedIn += Activate;
         gameObject.transform.DOScale(0f,0.2f).SetEase(Ease.Linear);
+    }
+
+    private void Start()
+    {
+        LobbyManager.OnServicesInitialized += Activate;
     }
 
     private void OnDestroy()
     {
-        AuthenticationService.Instance.SignedIn -= Activate;
+        LobbyManager.OnServicesInitialized -= Activate;
     }
 
     private void Activate()

@@ -317,6 +317,7 @@
               <e p="Emojis" t="Include">
                 <e p="Part 1" t="Include" />
               </e>
+              <e p="Lightning" t="Include" />
             </e>
           </e>
           <e p="Prefabs" t="Include">

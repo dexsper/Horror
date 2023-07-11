@@ -61,7 +61,7 @@ public class CharacterWindowUI : MonoBehaviour
         PlayerEconomy.OnDataRefreshed += UpdateCharacters;
         PlayerEconomy.OnDataRefreshed += GetPlayerBalance;
         PlayerEconomy.OnDataRefreshed += UpdateUI;
-        
+
         _closeButton.onClick.AddListener(CloseWindow);
     }
 
@@ -70,10 +70,14 @@ public class CharacterWindowUI : MonoBehaviour
         //CloseWindow();
     }
 
-    public void OpenWindow()
+    private void RefreshWindow()
     {
         GetPlayerBalance();
         UpdateUI();
+    }
+    
+    public void OpenWindow()
+    {
         gameObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
         _charactersContent.gameObject.SetActive(true);
         multiplayerSettingsButton.SetActive(false);

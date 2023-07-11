@@ -1,8 +1,5 @@
-using System;
 using System.Collections.Generic;
 using DG.Tweening;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,8 +11,6 @@ public class MultiplayerWindow : MonoBehaviour
 
     [SerializeField] private Button closeButton;
 
-    [SerializeField] private TextMeshProUGUI quickPlayText;
-
     [SerializeField] private CharacterWindowUI characterWindowUI;
     
     [SerializeField] private GameObject lobbyCreateUI;
@@ -26,8 +21,10 @@ public class MultiplayerWindow : MonoBehaviour
 
     [SerializeField] private List<GameObject> objectsToDisable;
 
-    private float _timerCounter, _timer = 2f;
-    private bool _timerStart;
+    private string lobbyName = "OpenLobby";
+    private bool isPrivate;
+    private int maxPlayers = 4;
+    
     private void Awake()
     {
         openCharacterWindowButton.onClick.AddListener(OpenCharacterWindow);
@@ -39,9 +36,7 @@ public class MultiplayerWindow : MonoBehaviour
         characterWindowUI.OnCharacterSelected += OnCharacterAction;
         
         settingsMpMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
-        
-        CloseQuickText();
-        
+
         OpenCharacterWindow();
         openCharacterWindowButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
@@ -82,29 +77,12 @@ public class MultiplayerWindow : MonoBehaviour
 
     private void OnCantFindOpenLobby()
     {
-        quickPlayText.gameObject.SetActive(true);
-        _timerStart = true;
         OpenLobbyWindow();
-    }
-
-    private void CloseQuickText()
-    {
-        quickPlayText.gameObject.SetActive(false);
-        _timerStart = false;
-        _timerCounter = 0f;
-    }
-
-    private void Update()
-    {
-        if (_timerStart)
-        {
-            _timerCounter += Time.deltaTime;
-            if (_timerCounter >= _timer)
-            {
-                _timerCounter = _timer;
-                CloseQuickText();
-            }
-        }
+        LobbyManager.Instance.CreateLobby(
+            lobbyName,
+            maxPlayers,
+            isPrivate
+        );
     }
 
     public void OpenMenu()

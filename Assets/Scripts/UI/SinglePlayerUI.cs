@@ -58,7 +58,7 @@ public class SinglePlayerUI : MonoBehaviour
 
     private void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
 
     private void StartSingleGame()
@@ -77,13 +77,13 @@ public class SinglePlayerUI : MonoBehaviour
     public void OpenMenu()
     {
         transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
-        gameAdObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        gameAdObject.SetActive(false);
     }
     
     private void CloseMenu()
     {
-        gameObject.SetActive(false);
-        gameAdObject.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        gameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        gameAdObject.SetActive(true);
         authenticate.SetActive(true);
         editName.SetActive(true);
     }

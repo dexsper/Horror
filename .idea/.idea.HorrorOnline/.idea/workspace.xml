@@ -20,26 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="033e4076-2ad6-40ea-bda8-7ac785d6e5e9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HorrorOnline/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/AddressableAssetsData/Android/addressables_content_state.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ElecticBox/Electric box/Material.015/Electric box_Material.015_normalmap.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ElecticBox/Electric box/Material.015/Electric box_Material.015_normalmap.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/ElecticBox/Electric box/Material.015/Electric.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/ElecticBox/Electric box/Material.015/Electric.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Localization/UI_en.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/AddressableAssetsData/link.xml.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Roboto-Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/Generator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Canvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/OfflineScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerEconomy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerEconomy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/EditPlayerName.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/EditPlayerName.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SinglePlayerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SinglePlayerUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/AndroidLogcatSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +82,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/UI/TargetWaypoint.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.lobby@1.0.3/Runtime/Models/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.authentication@2.4.0/Runtime/IAuthenticationService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/EmojiController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../TrainHorrorClone/Assets/Scripts/FireBaseScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.services.economy@3.1.2/Runtime/Model/CurrencyDefinition.cs" root0="SKIP_HIGHLIGHTING" />
@@ -107,8 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/m_InputField.cs" />
-        <option value="$PROJECT_DIR$/Assets/_/InputWindow/Scripts/UI_InputWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/HideVirtualKeyboard.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SafeZone.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SDK/AppReview/Review.cs" />
@@ -146,18 +139,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/VoiceMute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyCreateUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyListUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/DeathRoomUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/SinglePlayerUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyPlayerSingleUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/EditPlayerName.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/AuthenticateUI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Generator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Objects/Player/Interaction/PlayerInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/SinglePlayerUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/PlayerEconomy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/DailyRewards_UI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/CharacterWindowUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MultiplayerWindow/MultiplayerWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lobby/LobbyManager.cs" />
       </list>
     </option>
   </component>
@@ -264,7 +259,8 @@
       <workItem from="1688740429860" duration="3029000" />
       <workItem from="1688978734473" duration="1666000" />
       <workItem from="1688985348193" duration="209000" />
-      <workItem from="1688987159426" duration="2698000" />
+      <workItem from="1688987159426" duration="3504000" />
+      <workItem from="1689065609078" duration="4389000" />
     </task>
     <servers />
   </component>
