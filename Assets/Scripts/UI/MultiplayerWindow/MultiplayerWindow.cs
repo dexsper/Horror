@@ -14,20 +14,20 @@ public class MultiplayerWindow : MonoBehaviour
 
     [SerializeField] private Button closeButton;
 
-    [SerializeField] private TextMeshProUGUI quickPlayText;
-
     [SerializeField] private CharacterWindowUI characterWindowUI;
     
     [SerializeField] private GameObject lobbyCreateUI;
     
     [SerializeField] private GameObject authentificateObject, editNameObject;
 
-    [SerializeField] private GameObject tutorialObject,settingsMenuButton,settingsMpMenuButton;
+    [SerializeField] private GameObject settingsMenuButton,settingsMpMenuButton,closeCharactersButton;
 
     [SerializeField] private List<GameObject> objectsToDisable;
 
-    private float _timerCounter, _timer = 2f;
-    private bool _timerStart;
+    private string lobbyName = "OpenLobby";
+    private bool isPrivate;
+    private int maxPlayers = 4;
+    
     private void Awake()
     {
         openCharacterWindowButton.onClick.AddListener(OpenCharacterWindow);
@@ -39,25 +39,13 @@ public class MultiplayerWindow : MonoBehaviour
         characterWindowUI.OnCharacterSelected += OnCharacterAction;
         
         settingsMpMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
-        
-        CloseQuickText();
-        
+
         OpenCharacterWindow();
         openCharacterWindowButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
 
     private void CheckForFirstEntry()
     {
-        if (PlayerPrefs.HasKey("PlayedOnce"))
-        {
-            tutorialObject.SetActive(true);
-        }
-        else
-        {
-            tutorialObject.SetActive(false);
-            PlayerPrefs.SetInt("PlayedOnce",1);
-        }
-        
         quickGameButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         openLobbyWindowButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
@@ -82,35 +70,18 @@ public class MultiplayerWindow : MonoBehaviour
 
     private void OnCantFindOpenLobby()
     {
-        quickPlayText.gameObject.SetActive(true);
-        _timerStart = true;
-        OpenLobbyWindow();
-    }
-
-    private void CloseQuickText()
-    {
-        quickPlayText.gameObject.SetActive(false);
-        _timerStart = false;
-        _timerCounter = 0f;
-    }
-
-    private void Update()
-    {
-        if (_timerStart)
-        {
-            _timerCounter += Time.deltaTime;
-            if (_timerCounter >= _timer)
-            {
-                _timerCounter = _timer;
-                CloseQuickText();
-            }
-        }
+        LobbyManager.Instance.CreateLobby(
+            lobbyName,
+            maxPlayers,
+            isPrivate
+        );
     }
 
     public void OpenMenu()
     {
         transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
 
+        closeCharactersButton.SetActive(false);
         settingsMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         settingsMpMenuButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
 

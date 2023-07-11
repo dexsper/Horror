@@ -8,7 +8,7 @@ using Zenject;
 public class CharacterUI : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _nameText;
-    [SerializeField] private TextMeshProUGUI _actionText;
+    [SerializeField] private Text _actionText;
 
     [SerializeField] private Button _actionButton;
     [SerializeField] private Image _moneyImage;
