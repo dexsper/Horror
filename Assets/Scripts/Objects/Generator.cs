@@ -24,7 +24,7 @@ public class Generator : NetworkBehaviour, IInteractable
     [SerializeField] private int neededRepairedGeneratorsCount;
 
     [Title("Effects")]
-    [SerializeField] private ParticleSystem _repairedEffect;
+    [SerializeField] private ParticleSystem _repairedEffect,_onRepairEffect;
     [SerializeField] private GameObject _lightEffect;
     [SerializeField] private AudioClip repairClip;
 
@@ -118,6 +118,7 @@ public class Generator : NetworkBehaviour, IInteractable
         {
             _repairInitiator = null;
             _repairedEffect.Play();
+            _onRepairEffect.Stop();
             _lightEffect.SetActive(true);
             _source.loop = true;
             _source.Play();

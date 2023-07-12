@@ -14,7 +14,7 @@ public class CharacterWindowUI : MonoBehaviour
     [SerializeField] private CharactersData _characters;
 
     [Title("Interface", TitleAlignment = TitleAlignments.Centered)]
-    [SerializeField] private TextMeshProUGUI _playerCurrentMoney;
+    [SerializeField] private Text _playerCurrentMoney;
     [SerializeField] private CharacterUI _characterViewPrefab;
     [SerializeField] private Transform _charactersContent;
     [SerializeField] private Button _closeButton;

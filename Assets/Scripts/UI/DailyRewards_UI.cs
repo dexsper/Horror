@@ -27,7 +27,7 @@ public class DailyRewards_UI : MonoBehaviour
     [SerializeField] private CharactersData _charactersData;
     [SerializeField] private List<DailyReward> _rewards;
     [SerializeField] private List<Image> _rewardsImages;
-    [SerializeField] private List<TextMeshProUGUI> _rewardTexts;
+    [SerializeField] private List<Text> _rewardTexts;
 
     private bool _canClaimReward;
 
@@ -59,13 +59,15 @@ public class DailyRewards_UI : MonoBehaviour
 
     private void Awake()
     {
-        LobbyManager.OnServicesInitialized += Activate;
+        CharacterWindowUI.Instance.OnShopClosed += Activate;
+        CharacterWindowUI.Instance.OnCharacterSelected += Activate;
         gameObject.transform.DOScale(0f,0.2f).SetEase(Ease.Linear);
     }
 
     private void OnDestroy()
     {
-        LobbyManager.OnServicesInitialized -= Activate;
+        CharacterWindowUI.Instance.OnShopClosed -= Activate;
+        CharacterWindowUI.Instance.OnCharacterSelected -= Activate;
     }
 
     private void Activate()
@@ -142,10 +144,7 @@ public class DailyRewards_UI : MonoBehaviour
 
         for (int i = 0; i < _rewards.Count; i++)
         {
-            if (_rewards[i].Type == DailyReward.RewardType.Currency)
-            {
-                _rewardTexts[i].text = $"{_rewards[i].Amount}";
-            }
+            _rewardTexts[i].text = $"{_rewards[i].Amount}";
         }
     }
 }

@@ -36,6 +36,7 @@ public class MultiplayerWindow : MonoBehaviour
         closeButton.onClick.AddListener(CloseMenu);
 
         LobbyManager.OnCantFindOpenLobby += OnCantFindOpenLobby;
+        LobbyManager.Instance.OnLeftLobby += OnLeaveLobby;
         characterWindowUI.OnCharacterSelected += OnCharacterAction;
         
         settingsMpMenuButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
@@ -66,6 +67,7 @@ public class MultiplayerWindow : MonoBehaviour
     {
         LobbyManager.OnCantFindOpenLobby -= OnCantFindOpenLobby;
         characterWindowUI.OnCharacterSelected -= OnCharacterAction;
+        LobbyManager.Instance.OnLeftLobby -= OnLeaveLobby;
     }
 
     private void OnCantFindOpenLobby()
@@ -77,6 +79,13 @@ public class MultiplayerWindow : MonoBehaviour
         );
     }
 
+    private void OnLeaveLobby(object sender, EventArgs e)
+    {
+        quickGameButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        openCharacterWindowButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+        openLobbyWindowButton.transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);
+    }
+    
     public void OpenMenu()
     {
         transform.DOScale(1f, 0.2f).SetEase(Ease.Linear);

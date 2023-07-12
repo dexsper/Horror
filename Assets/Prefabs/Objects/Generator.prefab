@@ -405,6 +405,7 @@ MonoBehaviour:
   _stopRepairEn: Stop repair
   neededRepairedGeneratorsCount: 4
   _repairedEffect: {fileID: 1660099001397583359}
+  _onRepairEffect: {fileID: 8889415731797894849}
   _lightEffect: {fileID: 4740812467335796762}
   repairClip: {fileID: 8300000, guid: ea00d7e1b183b084e8fc2a70178d36a8, type: 3}
   _isRepairing: 0
@@ -1405,6 +1406,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95df0fedd67f87749be32490d6b70d8c, type: 3}
+--- !u!198 &8889415731797894849 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5842458729626802333, guid: 95df0fedd67f87749be32490d6b70d8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3046994935331700316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8889415731817346187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5842458729645198039, guid: 95df0fedd67f87749be32490d6b70d8c,

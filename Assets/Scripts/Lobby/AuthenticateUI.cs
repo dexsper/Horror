@@ -51,7 +51,7 @@ public class AuthenticateUI : MonoBehaviour
     private void Hide()
     {
         editPlayerName.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
-        gameAdObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
+        gameAdObject.SetActive(false);
         gameObject.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
         settingsButton.transform.DOScale(0f, 0.2f).SetEase(Ease.Linear);
     }
